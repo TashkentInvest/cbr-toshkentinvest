@@ -1,0 +1,909 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="zoom:lang" content="ru">
+    <meta name="zoom:last-modified" content="Fri, 08 Dec 2023 10:41:59 GMT">
+<title>Инициативы участников финансового рынка | Банк России</title>
+
+
+
+    <meta property="og:image" content="/common/images/share-1.jpg">
+
+    
+
+
+            <link rel="stylesheet" type="text/css" href="../../common/libs/jquery-ui/jquery-ui.min.css?v=v478607061" media="all">
+
+            <!--[if IE 9]><link rel="stylesheet" type="text/css" href="/common/style/main-ie9.css?v=v2358109689" media="all"><![endif]-->
+
+            <!--[if gt IE 9]><!--><link rel="stylesheet" type="text/css" href="../../common/style/main.min.css?v=v2358109689" media="all"><!--<![endif]-->
+
+
+        <script type="text/javascript" src="/common/libs/jquery-3.6.1.min.js?v=v478607061"></script>
+
+
+
+        <script type="text/javascript" src="/common/libs/jquery-ui/jquery-ui.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.inputmask.min.js?v=v478607061"></script>
+
+
+        <script type="text/javascript" src="/common/scripts/vendor.js?v=v3694197594"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.floatThead.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/popper.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/tippy.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/scripts/main.min.js?v=v2358109689"></script>
+
+
+        <script type="text/javascript" src="/common/libs/localization-ru.js?v=v478607061"></script>
+        <script type="text/javascript" src="/js/jquery.ui.autocomplete-ru.js?v=v1043438991"></script>
+
+        <script type="text/javascript" src="/js/jquery.cookie.min.js?v=v4260771145"></script>
+
+        <script type="text/javascript" src="/js/site.js?v=v1395547681"></script>
+
+
+
+
+
+    <script type="text/javascript">
+    $(function () {
+        var $menu = $('[data-menu]'),
+            $menuItemBtn = $menu.find('[data-menu-item-btn]'),
+            $menuShow = $('[data-menu-show]'),
+            $menuClose = $('[data-menu-close]');
+        var config = $menu.data('config');
+
+        $menu.find('[data-cms-wholesite-header-right]').html($('#header .header_right').html());
+
+        $menuShow.on('click.cms_loadwholesite', function (event) {
+            loadWholeSite(true);
+        });
+        $menuShow.on('mouseenter.cms_loadwholesite', function (event) {
+            loadWholeSite(false);
+        });
+
+        var xhr = null, g_openMenu = false;
+        function loadWholeSite(openmenu) {
+            g_openMenu = g_openMenu || openmenu;
+            $menuShow.off('click.cms_loadwholesite mouseenter.cms_loadwholesite');
+            if (xhr === null) {
+                $('.menu_wrap .networks-circle').html($('.networks-circle.footer_networks').html());
+                $('.menu_wrap .header_search').html($('.header .offsetMenu .header_search').html());
+
+                xhr = $.ajax(config.url, {
+                    dataType: "html",
+                    method: "get",
+                    success: function (html) {
+                        $('[data-cms-wholesite-placeholder]').replaceWith(html);
+
+                        $menu.find('.menu_tab[data-tabs-tab]').each(function () {
+                            var tab = $(this).data('tabs-tab');
+                            $(this).toggle($menu.find('[data-tabs-content="' + tab + '"]').length != 0);
+                        });
+
+                        app.init($menu);
+
+                        for (var i in config.catalogPath) {
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .addClass("_active");
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .closest('[data-tabs-content]')
+                                .trigger('open-anchor');
+                        }
+
+                        
+                        xhr = true;
+                    },
+                    error: function () {
+                        xhr = null;
+                    }
+                });
+            }
+        }
+    });
+    </script>
+
+
+<script>
+    if (window.localStorage) {
+        if (localStorage.getItem('vision-impaired'))
+            document.getElementsByTagName('html')[0].className += ' vision-impaired';
+    }
+</script>
+<script>
+    document.documentElement.style.setProperty('--scrollbar-width', '17px');
+    setTimeout(function () {
+        
+        var div = document.createElement('div');
+
+        div.style.overflowY = 'scroll';
+        div.style.width = '50px';
+        div.style.height = '50px';
+
+        
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+        var scrollWidth = Math.max(div.offsetWidth - div.clientWidth, 0.15); 
+        document.body.removeChild(div);
+        
+        document.documentElement.style.setProperty('--scrollbar-width', scrollWidth + 'px');
+    }, 0);
+</script>
+
+
+
+    
+</head>
+<body>
+    
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(5774506, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/5774506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <!-- /Yandex.Metrika counter -->   
+
+    
+    
+
+    <div class="header-print">
+    <div class="offsetMenu">
+        <div class="header-print_inner">
+            <img class="header-print_logo" alt="cbr" src="/common/images/logo.svg">
+            <ul class="header-print_contacts">
+<li>107016, Москва, ул. Неглинная, д.&nbsp;12, к. В, Банк России</li>
+<li><nobr class="phone">8 800 300-30-00</nobr></li>
+<li>www.cbr.ru</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+    <header class="header" id="header">
+        
+<div class="top-line" data-top-line="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="top-line_inner header_inner">
+                <div class="row">
+                    <div class="col-xl-5 col-md-9">
+                        <div class="header_left">
+                                <div class="header_menu" data-menu-show=""></div>
+                            <a class="header_logo" href="../../index.htm"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                        <div class="header_search">
+                                <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="header_right">
+                                <div class="header_link"><a href="../../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2Fdevelop%2Ffm_initiatives%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="offsetMenu">
+            <div class="col-md-23 offset-md-1">
+                <div class="header_inner">
+                    <div class="row">
+                        <div class="col-xl-5 col-md-9">
+                            <div class="header_left">
+                                    <div class="header_menu" data-menu-show=""></div>
+                                <a class="header_logo" href="../../index.htm"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                            <div class="header_search">
+                                    <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                            </div>
+                            <div class="d-none d-md-block">
+                                <div class="header_right">
+                                    <div class="header_link"><a href="../../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2Fdevelop%2Ffm_initiatives%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <form class="search-form" action="/search/" method="get" data-search-form="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="search-form_inner">
+                <div class="search-form_title">Что вы хотите найти?</div>
+                <div class="search-form_content">
+                    <div class="search-form_block">
+                        <div class="search-form_icon"></div>
+                        <div class="search-form_field">
+                            <input name="text" type="text" placeholder="Начните писать" data-search-form-input="">
+                        </div>
+                    </div>
+                    <div class="search-form_btn">
+                        <button class="b-btn _blue" data-search-form-btn="">Искать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<div class="menu_wrap" data-menu="" data-config="{&quot;catalogPath&quot;:[27031,19231],&quot;url&quot;:&quot;/Catalog/SiteMap/GetWholeSiteHtml?blockId=59191&quot;}">
+    <div class="offsetMenu">
+        <div class="header_menu _close menu_close d-none d-md-block" data-menu-close=""></div>
+        <div class="header_inner top-line_inner d-block d-md-none">
+            <div class="row">
+                <div class="col-xl-5 col-md-9">
+                    <div class="header_left">
+                        <div role="button" tabindex="0" aria-label="Закрыть меню" class="header_menu _close" data-menu-close=""></div><a class="header_logo" href="../../index.htm"></a>
+                    </div>
+                </div>
+                <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                    <div class="header_search"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu row" data-tabs="data-tabs">
+            <div class="menu_quick col-md-7">
+                <div role="tablist" class="menu_quick_tabs">
+    <a role="tab" id="menu_tab_Activity" aria-controls="menu_content_Activity" aria-selected="true" class="menu_tab _active" href="#" data-tabs-tab="Activity">Деятельность</a>
+    <a role="tab" id="menu_tab_FinancialMarkets" aria-controls="menu_content_FinancialMarkets" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="FinancialMarkets">Финансовые рынки</a>
+    <a role="tab" id="menu_tab_Documents" aria-controls="menu_content_Documents" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Documents">Документы и данные</a>
+    <a role="tab" id="menu_tab_AboutBank" aria-controls="menu_content_AboutBank" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="AboutBank">О Банке России</a>
+    <a role="tab" id="menu_tab_Services" aria-controls="menu_content_Services" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Services">Сервисы</a>
+</div>
+<div class="menu_quick_links">
+    <div class="inner_links"><a href="../../support_measures/index.htm" title="Меры зашиты финансового рынка" style="color:red">Меры защиты финансового рынка</a>
+  </div>
+<div class="phones"><a class="menu_phone_val" href="tel:+74993003000">
+<div class="plus">+</div>7 499 300-30-00</a><a class="menu_phone_val" href="tel:88003003000">8 800 300-30-00</a><a class="menu_phone_val" href="tel:300">300</a><span>Бесплатно для звонков с мобильных телефонов</span></div>
+<div class="inner_links">
+  <a href="../../news/index.htm" title="Новости">Новости</a>
+  <a href="../../rbr/index.htm" title="Решения Банка России">Решения Банка России</a>
+  <a href="../../contacts/index.htm" title="Контактная информация">Контактная информация</a>
+  <a href="../../sitemap.html" title="Карта сайта">Карта сайта</a>
+  <a href="../../about/index.htm" title="О сайте">О сайте</a>
+  </div>
+<div class="networks-circle">
+  <a class="networks-circle_item _vk" href="https://vk.com/cbr_official" title="ВКонтакте"></a>
+  <a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia" title="Youtube"></a>
+  <a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+  <a class="networks-circle_item _ydzen" href="https://zen.yandex.ru/id/622372d6a565892091994ea9" title="Яндекс Дзен"></a>
+  <a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+            </div>
+            <div class="d-md-none link-above">
+                <div class="header_right" data-cms-wholesite-header-right="">
+                </div>
+                    <div class="header_right">
+                        <div class="header_link"><a href="../../finorg/index.htm">Проверить участника финансового рынка</a></div>
+                    </div>
+            </div>
+            <div class="menu_content_container col-md with-centered-loader" data-cms-wholesite-placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <main id="content">
+        <div class="offsetMenu ">
+            <div class="container-fluid">
+                <div class="col-md-23 offset-md-1">
+                    <div class="breadcrumbs">
+    <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="../../index.htm"></a></div>
+        <div class="breadcrumbs_item">
+            <a href="/develop/"><!--noindex-->Развитие финансового рынка<!--/noindex--></a>
+        </div>
+    </div>
+
+                    <!--index-->
+<h1><span class="referenceable">Инициативы участников финансового рынка</span>
+</h1>
+                                                            <div class="lead-text">Банк России уделяет особое внимание взаимодействию с&nbsp;участниками финансового рынка. Их&nbsp;предложения по&nbsp;совершенствованию регулирования и&nbsp;развитию финансового рынка учитываются при&nbsp;подготовке стратегических и&nbsp;среднесрочных документов, а&nbsp;также при&nbsp;обсуждении консультативных докладов, проектов нормативных актов и&nbsp;концепций.</div>                                            <div class="landing-text">
+                            <p>Кроме того, на&nbsp;постоянной основе действует Рабочая группа регулятора по&nbsp;рассмотрению инициатив участников финансового рынка. Ее&nbsp;возглавляет первый заместитель Председателя Банка России В.В. Чистюхин.</p>
+<p>Для&nbsp;наиболее эффективной оценки поступающие инициативы распределяются по&nbsp;тематическим рабочим подгруппам.</p>
+<p>Рассмотрение проходит в&nbsp;два&nbsp;этапа: обсуждение на&nbsp;профильной рабочей подгруппе и&nbsp;обсуждение на&nbsp;Рабочей группе.</p>
+<p>Утвержденные Рабочей группой инициативы включаются в&nbsp;пакет предложений для&nbsp;реализации, который публикуется на&nbsp;сайте.</p>
+<p>Перечень рассмотренных и&nbsp;реализованных Банком России предложений по&nbsp;совершенствованию регулирования обновляется ежегодно.</p><span>Инициативы для&nbsp;рассмотрения можно направлять на&nbsp;адрес </span><a href="mailto:initiatives@cbr.ru" target="_blank" rel="noopener">initiatives@cbr.ru</a>.
+                        </div>
+                                        <div class="row constructor">
+<div class="col-md-4 offset-md-1 constructor_icon"><img src="/StaticHtml/File/154857/info.svg"></div>
+<div class="col-md-15 offset-md-1 constructor_info">
+<div class="title_24 constructor_info_title">Рабочие подгруппы:</div>
+<div class="body-2 constructor_info_subtitle">
+<ol>
+<li>По&nbsp;формированию и&nbsp;направлению в&nbsp;Банк России отчетности кредитными организациями.</li>
+<li>По&nbsp;формированию и&nbsp;направлению в&nbsp;Банк России отчетности некредитными финансовыми организациями и&nbsp;лицами, оказывающими профессиональные услуги на&nbsp;финансовом рынке.</li>
+<li>По&nbsp;противодействию легализации (отмыванию) доходов, полученных преступным путем, и&nbsp;финансированию терроризма.</li>
+<li>По&nbsp;корпоративным отношениям, раскрытию информации и&nbsp;эмиссии ценных бумаг.</li>
+<li>По&nbsp;привлечению к&nbsp;административной ответственности (в&nbsp;соответствии с&nbsp;КоАП РФ).</li>
+<li><span>По&nbsp;инструментам финансового рынка&nbsp;</span><span>и&nbsp;деятельности&nbsp;лиц, оказывающих профессиональные услуги на&nbsp;финансовом рынке.</span></li>
+<li>По&nbsp;вопросам допуска финансовых организаций.</li>
+<li>По&nbsp;банковской деятельности.</li>
+<li>По&nbsp;инфраструктуре финансового рынка.</li>
+<li>По&nbsp;деятельности субъектов рынка коллективных инвестиций и&nbsp;профессиональных участников рынка ценных бумаг.</li>
+<li>По&nbsp;деятельности участников страхового рынка.</li>
+<li>По&nbsp;деятельности микрофинансовых организаций, кредитных потребительских кооперативов, сельскохозяйственных кредитных потребительских кооперативов, жилищных накопительных кооперативов, ломбардов.</li>
+<li>По&nbsp;деятельности субъектов, оказывающих платежные услуги.</li>
+<li>По&nbsp;информационной безопасности.</li>
+<li>По&nbsp;вопросам защиты прав потребителей финансовых и&nbsp;банковских услуг.</li>
+<li>По&nbsp;финансовым технологиям.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_left_icon"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/develop/fm_initiatives/rekomendacii-po-oformleniyu-iniciativ/" id="a_155953page">                        <span class="document-regular_name_visible">Рекомендации по оформлению инициатив</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block155952/zone" id="a_155952" role="button" tabindex="0">Отчетные документы</a>
+
+    <div id="DropDown_content" role="region" aria-labelledby="a_155952" class="dropdown_content">
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/101525/list_2022-10-07.pdf" id="a_101525file" target="_blank">                        <span class="document-regular_name_visible">Перечень одобренных Банком России предложений по актуализации нормативного регулирования</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="document-regular file-collection">
+        <div class="document-regular_inner">
+            <div class="document-regular_top">
+                    <div class="document-regular_format icon-pdf"></div>
+            </div>
+            <div class="body-2 document-regular_main">
+                <div class="document-regular_texts">
+                    <div class="document-regular_name" data-toggle="">
+<span class="referenceable" id="a_103967">                            <span class="document-regular_name_visible">Сводный портфель инициатив участников профессионального сообщества по&#160;совершенствованию регулирования финансового рынка</span>
+</span>
+                                            </div>
+                            <div class="document-regular_comment">
+По состоянию на:         </div>
+
+                </div>
+            </div>
+
+                    <div class="versions" data-versions="data-versions">
+            <div class="versions_select_wrap">
+                <select data-versions-select="" class="versions_select">
+                        <option value="2022 г.">2022 г.</option>
+                        <option value="2021 г.">2021 г.</option>
+                        <option value="2020 г.">2020 г.</option>
+                        <option value="2019 г.">2019 г.</option>
+                        <option value="2018 г.">2018 г.</option>
+                        <option value="2017 г.">2017 г.</option>
+                        <option value="2016 г.">2016 г.</option>
+                </select>
+                <div class="dropdown_select"></div>
+            </div>
+                <div class="versions_items _active" data-versions-items="2022 г." data-item-select="2022 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/42369/init_0922.pdf" data-tooltip="" data-tooltip-content="Опубликовано 29 сентября 2022" target="_blank" data-versions-item="">сентябрь</a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2021 г." data-item-select="2021 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/36591/init_0921.pdf" data-tooltip="" data-tooltip-content="Опубликовано 01 сентября 2021" target="_blank" data-versions-item="">сентябрь</a>
+    <a class="versions_item" href="/Collection/Collection/File/31951/init_0221.pdf" data-tooltip="" data-tooltip-content="Опубликовано 04 февраля 2021" target="_blank" data-versions-item="">февраль</a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2020 г." data-item-select="2020 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27407/init_0120.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">январь</a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2019 г." data-item-select="2019 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27408/init_1219.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">декабрь</a>
+    <a class="versions_item" href="/Collection/Collection/File/27409/init_1219.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">ноябрь</a>
+    <a class="versions_item" href="/Collection/Collection/File/27410/init_0719.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">июль</a>
+    <a class="versions_item" href="/Collection/Collection/File/27411/init_310519.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">апрель </a>
+    <a class="versions_item" href="/Collection/Collection/File/27412/init_120219.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">январь </a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2018 г." data-item-select="2018 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27413/init_210218.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">февраль </a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2017 г." data-item-select="2017 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27414/init_170301.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">февраль</a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2016 г." data-item-select="2016 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27415/init_070716.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" target="_blank" data-versions-item="">июль</a>
+                                    </div>
+            <button class="more _hide" data-versions-toggle="" aria-expanded="false">
+                <span class="open">Ещё +</span><span class="close">Свернуть -</span>
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<div class="subdocuments" data-subdocuments="data-subdocuments" data-toggle="">
+    <button class="subdocuments_title" type="button" data-toggle-class-btn="" aria-expanded="false">
+Связанные документы (1)    </button>
+    <div class="subdocuments_items" data-toggle-content="">
+
+
+    <div class="document-regular file-collection">
+        <div class="document-regular_inner">
+            <div class="document-regular_top">
+                    <div class="document-regular_format icon-xlsx"></div>
+            </div>
+            <div class="body-2 document-regular_main">
+                <div class="document-regular_texts">
+                    <div class="document-regular_name" data-toggle="">
+<span class="referenceable" id="a_103969">                            <span class="document-regular_name_visible">Сводный портфель инициатив участников профессионального сообщества по&#160;совершенствованию регулирования финансового рынка </span>
+</span>
+                                            </div>
+                            <div class="document-regular_comment">
+По состоянию на:        </div>
+
+                </div>
+            </div>
+
+                    <div class="versions" data-versions="data-versions">
+            <div class="versions_select_wrap">
+                <select data-versions-select="" class="versions_select">
+                        <option value="2021 г.">2021 г.</option>
+                        <option value="2020 г.">2020 г.</option>
+                        <option value="2019 г.">2019 г.</option>
+                        <option value="2018 г.">2018 г.</option>
+                        <option value="2017 г.">2017 г.</option>
+                </select>
+                <div class="dropdown_select"></div>
+            </div>
+                <div class="versions_items _active" data-versions-items="2021 г." data-item-select="2021 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/36595/init_0921.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 01 сентября 2021" data-versions-item="">сентябрь</a>
+    <a class="versions_item" href="/Collection/Collection/File/31952/init_0221.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 04 февраля 2021" data-versions-item="">февраль</a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2020 г." data-item-select="2020 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27416/init_0120.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" data-versions-item="">январь </a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2019 г." data-item-select="2019 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27417/init_1219.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" data-versions-item="">декабрь </a>
+    <a class="versions_item" href="/Collection/Collection/File/27418/init_1119.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" data-versions-item="">ноябрь </a>
+    <a class="versions_item" href="/Collection/Collection/File/27419/init_0719.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" data-versions-item="">июль</a>
+    <a class="versions_item" href="/Collection/Collection/File/27420/init_310519.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" data-versions-item="">апрель </a>
+    <a class="versions_item" href="/Collection/Collection/File/27421/init_120219.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" data-versions-item="">январь</a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2018 г." data-item-select="2018 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27422/init_210218.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" data-versions-item="">февраль</a>
+                                    </div>
+                <div class="versions_items " data-versions-items="2017 г." data-item-select="2017 г.">
+                                            <a class="versions_item" href="/Collection/Collection/File/27423/init_170301.xlsx" data-tooltip="" data-tooltip-content="Опубликовано 27 февраля 2020" data-versions-item="">февраль </a>
+                                    </div>
+            <button class="more _hide" data-versions-toggle="" aria-expanded="false">
+                <span class="open">Ещё +</span><span class="close">Свернуть -</span>
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84679/init_070716(2).pdf" id="a_84679file" target="_blank">                        <span class="document-regular_name_visible">Предложения, перенесенные в дорожную карту по реализации Основных направлений развития финансового рынка Российской Федерации на период 2016 - 2018 годов, и исключенные предложения</span>
+</a>
+                                    </div>
+                        <div class="document-regular_comment">
+По состоянию на 01.07.2016        </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="title-container">
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/119528/inf_note_mar_1821.pdf" id="a_119528file" target="_blank">                        <span class="document-regular_name_visible">Отчет об итогах реализации инициатив за 2020 год</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84695/press_19042019.pdf" id="a_84695file" target="_blank">                        <span class="document-regular_name_visible">Отчет об итогах реализации инициатив за 2018 год</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84696/ofv_graph.pdf" id="a_84696file" target="_blank">                        <span class="document-regular_name_visible">График анализа реализованных предложений</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84697/init_160331.pdf" id="a_84697file" target="_blank">                        <span class="document-regular_name_visible">Отчет об оценке фактического воздействия реализованных предложений, представленных участниками страхового рынка</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84698/ofv_infr.pdf" id="a_84698file" target="_blank">                        <span class="document-regular_name_visible">Отчет об оценке фактического воздействия реализованных предложений в области деятельности инфраструктуры и инструментария</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84699/ofv_listing_emission.pdf" id="a_84699file" target="_blank">                        <span class="document-regular_name_visible">Отчет об оценке фактического воздействия реализованных предложений в области эмиссии и листинга</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84700/ofv_corp_gov.pdf" id="a_84700file" target="_blank">                        <span class="document-regular_name_visible">Отчет об оценке фактического воздействия реализованных предложений в области корпоративного управления</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84701/ofv_mfo.pdf" id="a_84701file" target="_blank">                        <span class="document-regular_name_visible">Отчет об оценке фактического воздействия реализованных предложений в области деятельности микрофинансовых организаций</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84702/ofv_act.pdf" id="a_84702file" target="_blank">                        <span class="document-regular_name_visible">Отчет об оценке фактического воздействия реализованных предложений в области деятельности актуариев</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_format icon-pdf"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/Content/Document/File/84703/ofv_rating.pdf" id="a_84703file" target="_blank">                        <span class="document-regular_name_visible">Отчет об оценке фактического воздействия реализованных предложений в области деятельности кредитных рейтинговых агентств</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>    </div>
+</div>
+<div class="responsible-unit">
+              <div class="responsible-unit_text">Ответственное структурное подразделение: <a href="/about_br/bankstructute/dsrr/"> Департамент стратегического развития финансового рынка </a>
+              </div>
+            </div>
+                    
+                    <!--/index-->
+                    
+    <div class="page-info">
+        <!--noindex-->
+        
+
+
+<div class="page-info_helpful" data-page-feedback="" data-feedback-url="/Content/PageInfo/RegisterFeedback">
+    <!--noindex-->
+    <div class="helpful" data-helpful="">
+        Страница была полезной?
+        <div class="helpful_btns">
+            <button class="helpful_btn _yes" data-helpful-btn="yes"><i class="helpful_icon"></i><span>Да</span></button>
+            <button class="helpful_btn _no" data-helpful-btn="no"><i class="helpful_icon"></i><span>Нет</span></button>
+        </div>
+    </div>
+    <!--/noindex-->
+</div>
+
+            <div class="page-info_last-update">Последнее обновление страницы: 08.12.2023</div>
+        <!--/noindex-->
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer">
+    <div class="offsetMenu">
+        <div class="footer_main">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2">
+                <div class="footer_top">
+                    <a class="footer_logo" href="../../index.htm"></a>
+                    <div class="footer_up gotoUp">
+                        <div class="footer_up_title">Наверх</div>
+                        <div class="footer_up_icon"></div>
+                    </div>
+                </div>
+                
+<div class="footer_contacts">
+<div class="footer_address">107016, Москва, ул. Неглинная, д.&nbsp;12, к. В, Банк
+России</div>
+<div class="footer_phones">
+<div class="footer_phone"><a class="footer_phone_val" href="tel:300">300</a><span>(круглосуточно, бесплатно для&nbsp;звонков с&nbsp;мобильных телефонов)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:88003003000">8&nbsp;800 300-30-00</a><span>(круглосуточно, бесплатно для&nbsp;звонков из&nbsp;регионов России)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:+74993003000">+7&nbsp;499 300-30-00</a><span>(круглосуточно, в&nbsp;соответствии с&nbsp;тарифами вашего оператора)</span></div>
+
+</div>
+</div>
+<div class="footer_main_block">
+<div class="footer_left-menu">
+<div class="footer_left-menu_item"><a href="../../lk_uio/index.htm">Личный кабинет участников рынка</a></div>
+<div class="footer_left-menu_item"><a href="../../about_br/irp/index.htm">Отношения с&nbsp;инвесторами</a></div>
+<div class="footer_left-menu_item"><a href="../../rbr/list_inside/index.htm">Перечень инсайдерской информации Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../../analytics/na_vr/index.htm">Официальное опубликование нормативных актов Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../../project_na/index.htm">Проекты нормативных актов Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../../other/holidays/index.htm">Перечень нерабочих праздничных дней и&nbsp;перенесенных выходных дней</a></div>
+</div>
+<div class="networks-circle footer_networks">
+<a class="networks-circle_item _vk" href="https://vk.com/cbr_official"></a>
+<a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia"></a>
+<a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+<a class="networks-circle_item _ydzen" href="https://dzen.ru/cbr" title="Яндекс Дзен"></a>
+<a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+<div class="footer_menu">
+<div class="footer_menu_items">
+<div class="footer_menu_item"><a href="../../about/index.htm">О&nbsp;сайте</a></div>
+<div class="footer_menu_item"><a href="../../contacts/index.htm">Контакты</a></div>
+<div class="footer_menu_item"><a href="../../about_br/anticor/index.htm">Противодействие коррупции</a></div>
+<div class="footer_menu_item"><a href="../../development/index.htm">Технические ресурсы</a></div>
+</div>
+			 <div class="footer_menu_item _visually-impaired"><a href="#" title="Версия для слабовидящих"><span class="visually-impaired-on">Версия для&nbsp;слабовидящих</span><span class="visually-impaired-off">Обычная версия</span></a></div>
+</div>
+
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2 row">
+                <div class="footer_bottom_text col-md-12 col-xl-11">&#169; Банк России, 2000–2024.</div>
+<div class="footer_bottom_aic col-md-11">Дизайн сайта — <a href="https://aic.ru" target="_blank"><img src="/common/images/icons/aic-logo.svg"></a></div>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+        <div class="popup-cookies" data-popup-cookies="">
+            <div class="popup-cookies_title">
+                На сайте Банка России используются файлы cookie
+            </div>
+            <div class="popup-cookies_subtitle">
+                Оставаясь на <a href="../../index.htm">www.cbr.ru</a>, вы принимаете
+                <a href='/user_agreement/'>пользовательское соглашение</a>
+            </div>
+            <button class="btn _medium _blue " data-popup-cookies-btn="">
+                Подтвердить
+            </button>
+        </div>
+
+    
+<!--[if IE 9]><script>$('body').addClass('ie9')</script><![endif]-->
+<script src="/Modules/Content/Scripts/PageInfo.js?v=v3116962712" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            Content_PageInfo.init($('[data-page-feedback]'));
+        });
+    </script>
+
+
+
+</body>
+</html>

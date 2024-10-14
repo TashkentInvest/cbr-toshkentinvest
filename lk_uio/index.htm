@@ -1,0 +1,773 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="zoom:lang" content="ru">
+    <meta name="zoom:last-modified" content="Sun, 29 Sep 2024 21:00:00 GMT">
+<title>Личный кабинет участника информационного обмена | Банк России</title>
+
+
+
+    <meta property="og:image" content="/common/images/share-1.jpg">
+
+    
+
+
+            <link rel="stylesheet" type="text/css" href="../common/libs/jquery-ui/jquery-ui.min.css?v=v478607061" media="all">
+
+            <!--[if IE 9]><link rel="stylesheet" type="text/css" href="/common/style/main-ie9.css?v=v2358109689" media="all"><![endif]-->
+
+            <!--[if gt IE 9]><!--><link rel="stylesheet" type="text/css" href="../common/style/main.min.css?v=v2358109689" media="all"><!--<![endif]-->
+
+
+        <script type="text/javascript" src="/common/libs/jquery-3.6.1.min.js?v=v478607061"></script>
+
+
+
+        <script type="text/javascript" src="/common/libs/jquery-ui/jquery-ui.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.inputmask.min.js?v=v478607061"></script>
+
+
+        <script type="text/javascript" src="/common/scripts/vendor.js?v=v3694197594"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.floatThead.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/popper.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/tippy.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/scripts/main.min.js?v=v2358109689"></script>
+
+
+        <script type="text/javascript" src="/common/libs/localization-ru.js?v=v478607061"></script>
+        <script type="text/javascript" src="/js/jquery.ui.autocomplete-ru.js?v=v1043438991"></script>
+
+        <script type="text/javascript" src="/js/jquery.cookie.min.js?v=v4260771145"></script>
+
+        <script type="text/javascript" src="/js/site.js?v=v1395547681"></script>
+
+
+
+<link href="/Modules/Migration/Content/migration-ui.css?v=v3116962712" rel="stylesheet" type="text/css">
+
+
+<script src="/Modules/Queries/Scripts/queries-ui.js?v=v662783731" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+        var $menu = $('[data-menu]'),
+            $menuItemBtn = $menu.find('[data-menu-item-btn]'),
+            $menuShow = $('[data-menu-show]'),
+            $menuClose = $('[data-menu-close]');
+        var config = $menu.data('config');
+
+        $menu.find('[data-cms-wholesite-header-right]').html($('#header .header_right').html());
+
+        $menuShow.on('click.cms_loadwholesite', function (event) {
+            loadWholeSite(true);
+        });
+        $menuShow.on('mouseenter.cms_loadwholesite', function (event) {
+            loadWholeSite(false);
+        });
+
+        var xhr = null, g_openMenu = false;
+        function loadWholeSite(openmenu) {
+            g_openMenu = g_openMenu || openmenu;
+            $menuShow.off('click.cms_loadwholesite mouseenter.cms_loadwholesite');
+            if (xhr === null) {
+                $('.menu_wrap .networks-circle').html($('.networks-circle.footer_networks').html());
+                $('.menu_wrap .header_search').html($('.header .offsetMenu .header_search').html());
+
+                xhr = $.ajax(config.url, {
+                    dataType: "html",
+                    method: "get",
+                    success: function (html) {
+                        $('[data-cms-wholesite-placeholder]').replaceWith(html);
+
+                        $menu.find('.menu_tab[data-tabs-tab]').each(function () {
+                            var tab = $(this).data('tabs-tab');
+                            $(this).toggle($menu.find('[data-tabs-content="' + tab + '"]').length != 0);
+                        });
+
+                        app.init($menu);
+
+                        for (var i in config.catalogPath) {
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .addClass("_active");
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .closest('[data-tabs-content]')
+                                .trigger('open-anchor');
+                        }
+
+                        
+                        xhr = true;
+                    },
+                    error: function () {
+                        xhr = null;
+                    }
+                });
+            }
+        }
+    });
+    </script>
+
+
+<script>
+    if (window.localStorage) {
+        if (localStorage.getItem('vision-impaired'))
+            document.getElementsByTagName('html')[0].className += ' vision-impaired';
+    }
+</script>
+<script>
+    document.documentElement.style.setProperty('--scrollbar-width', '17px');
+    setTimeout(function () {
+        
+        var div = document.createElement('div');
+
+        div.style.overflowY = 'scroll';
+        div.style.width = '50px';
+        div.style.height = '50px';
+
+        
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+        var scrollWidth = Math.max(div.offsetWidth - div.clientWidth, 0.15); 
+        document.body.removeChild(div);
+        
+        document.documentElement.style.setProperty('--scrollbar-width', scrollWidth + 'px');
+    }, 0);
+</script>
+
+
+
+    
+</head>
+<body>
+    
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(5774506, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/5774506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <!-- /Yandex.Metrika counter -->   
+
+    
+    
+
+    <div class="header-print">
+    <div class="offsetMenu">
+        <div class="header-print_inner">
+            <img class="header-print_logo" alt="cbr" src="/common/images/logo.svg">
+            <ul class="header-print_contacts">
+<li>107016, Москва, ул. Неглинная, д.&nbsp;12, к. В, Банк России</li>
+<li><nobr class="phone">8 800 300-30-00</nobr></li>
+<li>www.cbr.ru</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+    <header class="header" id="header">
+        
+<div class="top-line" data-top-line="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="top-line_inner header_inner">
+                <div class="row">
+                    <div class="col-xl-5 col-md-9">
+                        <div class="header_left">
+                                <div class="header_menu" data-menu-show=""></div>
+                            <a class="header_logo" href="../index.htm"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                        <div class="header_search">
+                                <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="header_right">
+                                <div class="header_link"><a href="../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2Flk_uio%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="offsetMenu">
+            <div class="col-md-23 offset-md-1">
+                <div class="header_inner">
+                    <div class="row">
+                        <div class="col-xl-5 col-md-9">
+                            <div class="header_left">
+                                    <div class="header_menu" data-menu-show=""></div>
+                                <a class="header_logo" href="../index.htm"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                            <div class="header_search">
+                                    <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                            </div>
+                            <div class="d-none d-md-block">
+                                <div class="header_right">
+                                    <div class="header_link"><a href="../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2Flk_uio%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <form class="search-form" action="/search/" method="get" data-search-form="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="search-form_inner">
+                <div class="search-form_title">Что вы хотите найти?</div>
+                <div class="search-form_content">
+                    <div class="search-form_block">
+                        <div class="search-form_icon"></div>
+                        <div class="search-form_field">
+                            <input name="text" type="text" placeholder="Начните писать" data-search-form-input="">
+                        </div>
+                    </div>
+                    <div class="search-form_btn">
+                        <button class="b-btn _blue" data-search-form-btn="">Искать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<div class="menu_wrap" data-menu="" data-config="{&quot;catalogPath&quot;:[19477],&quot;url&quot;:&quot;/Catalog/SiteMap/GetWholeSiteHtml?blockId=59191&quot;}">
+    <div class="offsetMenu">
+        <div class="header_menu _close menu_close d-none d-md-block" data-menu-close=""></div>
+        <div class="header_inner top-line_inner d-block d-md-none">
+            <div class="row">
+                <div class="col-xl-5 col-md-9">
+                    <div class="header_left">
+                        <div role="button" tabindex="0" aria-label="Закрыть меню" class="header_menu _close" data-menu-close=""></div><a class="header_logo" href="../index.htm"></a>
+                    </div>
+                </div>
+                <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                    <div class="header_search"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu row" data-tabs="data-tabs">
+            <div class="menu_quick col-md-7">
+                <div role="tablist" class="menu_quick_tabs">
+    <a role="tab" id="menu_tab_Activity" aria-controls="menu_content_Activity" aria-selected="true" class="menu_tab _active" href="#" data-tabs-tab="Activity">Деятельность</a>
+    <a role="tab" id="menu_tab_FinancialMarkets" aria-controls="menu_content_FinancialMarkets" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="FinancialMarkets">Финансовые рынки</a>
+    <a role="tab" id="menu_tab_Documents" aria-controls="menu_content_Documents" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Documents">Документы и данные</a>
+    <a role="tab" id="menu_tab_AboutBank" aria-controls="menu_content_AboutBank" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="AboutBank">О Банке России</a>
+    <a role="tab" id="menu_tab_Services" aria-controls="menu_content_Services" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Services">Сервисы</a>
+</div>
+<div class="menu_quick_links">
+    <div class="inner_links"><a href="../support_measures/index.htm" title="Меры зашиты финансового рынка" style="color:red">Меры защиты финансового рынка</a>
+  </div>
+<div class="phones"><a class="menu_phone_val" href="tel:+74993003000">
+<div class="plus">+</div>7 499 300-30-00</a><a class="menu_phone_val" href="tel:88003003000">8 800 300-30-00</a><a class="menu_phone_val" href="tel:300">300</a><span>Бесплатно для звонков с мобильных телефонов</span></div>
+<div class="inner_links">
+  <a href="../news/index.htm" title="Новости">Новости</a>
+  <a href="../rbr/index.htm" title="Решения Банка России">Решения Банка России</a>
+  <a href="../contacts/index.htm" title="Контактная информация">Контактная информация</a>
+  <a href="../sitemap.html" title="Карта сайта">Карта сайта</a>
+  <a href="../about/index.htm" title="О сайте">О сайте</a>
+  </div>
+<div class="networks-circle">
+  <a class="networks-circle_item _vk" href="https://vk.com/cbr_official" title="ВКонтакте"></a>
+  <a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia" title="Youtube"></a>
+  <a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+  <a class="networks-circle_item _ydzen" href="https://zen.yandex.ru/id/622372d6a565892091994ea9" title="Яндекс Дзен"></a>
+  <a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+            </div>
+            <div class="d-md-none link-above">
+                <div class="header_right" data-cms-wholesite-header-right="">
+                </div>
+                    <div class="header_right">
+                        <div class="header_link"><a href="../finorg/index.htm">Проверить участника финансового рынка</a></div>
+                    </div>
+            </div>
+            <div class="menu_content_container col-md with-centered-loader" data-cms-wholesite-placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <main id="content">
+        <div class="offsetMenu ">
+            <div class="container-fluid">
+                <div class="col-md-23 offset-md-1">
+                    
+                    <!--index-->
+<h1><span class="referenceable">Личный кабинет участника информационного обмена</span>
+</h1>
+                                        
+    <div class="page-nav">
+            <div class="row-fixed">
+                <div class="col-md-5">
+                    <div class="page-nav_title">Навигация по разделу:</div>
+                </div>
+                    <div class="col-md-8 offset-md-1 page-nav_list">
+                        <ul class="without_dash without_indent">
+                                <li class="page-nav_item"><a href="/lk_uio/fcsm/"><!--noindex-->Программы и материалы подготовки электронных документов участников информационного обмена<!--/noindex--></a></li>
+                                <li class="page-nav_item"><a href="/lk_uio/requisites_certificates/"><!--noindex-->Реквизиты сертификатов актуальных ключей ЭП<!--/noindex--></a></li>
+                                <li class="page-nav_item"><a href="/lk_uio/guide/"><!--noindex-->Инструкции и иная информация о технологии подготовки и направления электронных документов в Банк России<!--/noindex--></a></li>
+                                <li class="page-nav_item"><a href="/lk_uio/account_err/"><!--noindex-->Информация о сбоях при представлении электронных документов в Банк России<!--/noindex--></a></li>
+                                <li class="page-nav_item"><a href="/lk_uio/md/"><!--noindex-->Машиночитаемая доверенность<!--/noindex--></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 offset-md-1 page-nav_list">
+                        <ul class="without_dash without_indent">
+                                <li class="page-nav_item"><a href="/lk_uio/video_instructions/"><!--noindex-->Видеоинструкции по работе с личным кабинетом<!--/noindex--></a></li>
+                                <li class="page-nav_item"><a href="../projects_xbrl/index.htm"><!--noindex-->Открытый стандарт отчетности XBRL <!--/noindex--></a></li>
+                                <li class="page-nav_item"><a href="/lk_uio/acts/"><!--noindex-->Правовые акты<!--/noindex--></a></li>
+                                <li class="page-nav_item"><a href="/lk_uio/explain/"><!--noindex-->Разъяснения<!--/noindex--></a></li>
+                        </ul>
+                    </div>
+            </div>
+            </div>
+
+
+
+
+
+
+                    <div class="lead-text-bold"><p>Личный кабинет используется для&nbsp;электронного взаимодействия между Банком России и&nbsp;участниками информационного обмена, в&nbsp;том&nbsp;числе поднадзорными организациями.</p></div>                                            <div class="landing-text">
+                            <p> Личный кабинет представляет собой раздел на&nbsp;официальном сайте Банка России, доступ к&nbsp;которому осуществляется по&nbsp;защищенному соединению.</p>
+<p>Участникам информационного обмена предоставлена возможность отправки инициативных запросов, а&nbsp;также ответов на&nbsp;предписания и&nbsp;запросы Банка России.</p>
+<p>Некредитные финансовые организации предоставляют отчетность посредством личного кабинета, в&nbsp;том&nbsp;числе в&nbsp;формате XBRL.</p>
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_left_icon"></div>
+                            <div class="document_link"></div>
+        </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="https://portal5.cbr.ru/" id="a_90079link">                        <span class="document-regular_name_visible">Вход в Личный кабинет</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="title-container"><div class="block-title"><h2><span class="referenceable" id="a_85876">Открытие личного кабинета участника информационного обмена</span></h2></div><p>Необходимым условием открытия личного кабинета является наличие активной записи участника в&nbsp;государственных и&nbsp;иных реестрах, ведение которых осуществляется Банком России в&nbsp;соответствии с&nbsp;законодательством Российской Федерации (далее&nbsp;&mdash; реестр). При&nbsp;включении участника в&nbsp;соответствующий реестр Банк России направляет ему&nbsp;письмо с&nbsp;уведомлением о&nbsp;создании личного кабинета.</p></div><div class="title-container"><div class="block-title"><h2><span class="referenceable" id="a_85880">Проверить наличие открытого личного кабинета</span></h2></div><p>В&nbsp;случае если участник информационного обмена не&nbsp;получил от&nbsp;Банка России уведомление о&nbsp;создании личного кабинета, ему&nbsp;необходимо пройти по&nbsp;<a class=" outerlink" href="https://portal5.cbr.ru/Account/Activation" target="_blank">ссылке</a> и&nbsp;ввести свой ИНН, ОГРН/ОГРНИП, e-mail и&nbsp;актуальный сертификат открытого ключа электронной подписи. После успешной активации, система автоматически направит пользователю письмо с&nbsp;зашифрованным файлом, где&nbsp;указаны логин и&nbsp;пароль.</p>
+<p>При&nbsp;возникновении информационного сообщения &laquo;Не&nbsp;обнаружен соответствующий абонент&raquo; участнику необходимо <a href="/lk_uio/anketa" target="_blank">подать заявку на&nbsp;создание личного кабинета.</a></p></div><div class="title-container"><div class="block-title"><h2><span class="referenceable" id="a_85883">Кто может подать заявку на создание личного кабинета</span></h2></div><p>Юридические и&nbsp;физические лица&nbsp;&mdash; соискатели соответствующего статуса/лицензии, а&nbsp;также приобретатели акций (долей) финансовой организации&nbsp;и&nbsp;(или) лица, устанавливающие контроль в&nbsp;отношении акционеров (участников) финансовой организации,<a href="/issuers_corporate/el_reg_issue/"> эмитенты ценных бумаг</a>, а&nbsp;также иные лица, в&nbsp;том&nbsp;числе операторы товарных поставок, информационные агентства, которые проводят действия по&nbsp;раскрытию информации о&nbsp;ценных бумагах и&nbsp;об&nbsp;иных финансовых инструментах в&nbsp;соответствии с&nbsp;законодательством Российской Федерации, в&nbsp;том&nbsp;числе при&nbsp;осуществлении защиты прав и&nbsp;законных интересов акционеров и&nbsp;инвесторов на&nbsp;финансовых рынках, и&nbsp;лица, обжалующие решение о&nbsp;признании их&nbsp;не&nbsp;соответствующими требованиям к&nbsp;квалификации&nbsp;и&nbsp;(или) деловой репутации в&nbsp;Комиссию Банка России по&nbsp;рассмотрению жалоб.</p></div>
+                        </div>
+                                        <div class="title-container"><div class="block-title"><h2><span class="referenceable" id="a_85968">Новости</span></h2></div><div class="rss-lent">
+<a class="btn_rss-lent" href="/rss/lkuio/"><img class="icon_rss-lent" src="/common/images/icons/rss-orange.svg">RSS&nbsp;Лента</a>
+</div>
+
+<script type="text/javascript">
+<!--
+    var UniDbQuery_Data = {};
+// -->
+</script>
+
+        <!--noindex-->
+<div class="block-part">
+<form action="/lk_uio/" data-auto-submit="true" method="post"><input id="UniDbQuery_Posted" name="UniDbQuery.Posted" type="hidden" value="True">        <div class="block-part" id="UniDbQuery_form">
+
+
+
+
+    <div class="filters_wrapper">
+        <div class="filters">
+
+
+
+    <div class="filter">
+            <div class="datepicker-filter" data-datepicker-period-filter="" data-min-date="20.11.2017" data-max-date="30.09.2024" data-default-value-from="16.09.2024" data-default-value-to="30.09.2024">
+        <input class="datepicker-filter_input-from" type="hidden" name="UniDbQuery.From" value="16.09.2024">
+        <input class="datepicker-filter_input-to" type="hidden" name="UniDbQuery.To" value="30.09.2024">
+        <button class="datepicker-filter_button" type="button">16.09.2024 - 30.09.2024</button>
+        <div class="datepicker-filter_modal">
+            <div class="datepicker-filter_head">
+                <div class="datepicker-filter_close"></div>
+            </div>
+            <div class="datepicker-filter_tabs">
+                <div class="datepicker-filter_tab-from"></div>&nbsp;-&nbsp;
+                <div class="datepicker-filter_tab-to"></div>
+            </div>
+            <div class="datepicker-filter_body">
+                <div class="datepicker-filter_datepicker-from datepicker-custom"></div>
+                <div class="datepicker-filter_datepicker-to datepicker-custom"></div>
+            </div>
+            <div class="datepicker-filter_footer">
+                <button class="datepicker-filter_apply-btn" type="button">Применить</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="filter" data-filter="select" data-default-value="0">
+                <div class="filter_placeholder">Тип&#160;участника информационного обмена</div>
+            <button class="filter_title" type="button" data-filter-title="" data-tooltip="">0</button>
+            <div class="filter_content" data-filter-content="">
+                <div class="filter_content_top">
+                    <div class="filter_content_close" data-filter-close=""></div>
+                </div>
+                <div class="filter-select">
+
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_1" value="0" checked="">
+                            <label for="UniDbQuery_MemberType_1">Все</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_2" value="1">
+                            <label for="UniDbQuery_MemberType_2">КО</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_3" value="2">
+                            <label for="UniDbQuery_MemberType_3">НФО</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_4" value="3">
+                            <label for="UniDbQuery_MemberType_4">Сдающие отчетность в XBRL</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_5" value="4">
+                            <label for="UniDbQuery_MemberType_5">Рынок ценных бумаг и товарный рынок</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_6" value="5">
+                            <label for="UniDbQuery_MemberType_6">Рынок коллективных инвестиций</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_7" value="6">
+                            <label for="UniDbQuery_MemberType_7">Микрофинансирование</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_8" value="7">
+                            <label for="UniDbQuery_MemberType_8">Субъекты страхового дела</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_9" value="8">
+                            <label for="UniDbQuery_MemberType_9">Аккредитованные организации</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_10" value="9">
+                            <label for="UniDbQuery_MemberType_10">СРО</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_11" value="10">
+                            <label for="UniDbQuery_MemberType_11">Актуарии</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_12" value="11">
+                            <label for="UniDbQuery_MemberType_12">БКИ</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_13" value="12">
+                            <label for="UniDbQuery_MemberType_13">КРА</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_14" value="13">
+                            <label for="UniDbQuery_MemberType_14">Центральный контрагент</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_15" value="14">
+                            <label for="UniDbQuery_MemberType_15">Информационные агентства</label>
+                        </div>
+                        <div class="filter-select_option">
+                            <input type="radio" name="UniDbQuery.MemberType" id="UniDbQuery_MemberType_16" value="15">
+                            <label for="UniDbQuery_MemberType_16">Операторы платежных систем</label>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+        </div>
+</form></div>        <!--/noindex-->
+<div class="calendar-main-events">
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1899">30.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1899">Вниманию профессиональных участников рынка ценных бумаг! </span></div>
+        <div class="info col-md-15"><p>Для отражения сведений о наименовании, ИНН и ОГРН юридического лица при составлении отчётности по формам <b>ОКУД 0420415 «Отчет профессионального участника рынка ценных бумаг, клиринговой организации и организатора торговли по ценным бумагам и цифровым правам» и ОКУД 0420459 «Реестр ценных бумаг» </b>(далее – Отчёты) необходимо использовать Справочник ИНН и ОГРН юридических лиц по состоянию на 30.09.2024 (далее – Справочник), размещённый на официальном сайте Банка России в информационно-телекоммуникационной сети «Интернет» в разделе «Финансовые рынки / Рынок ценных бумаг / Реестры / Справочник ИНН и ОГРН юридических лиц».</p><p>Обращаем внимание, что в качестве справочной информации в Справочник включены сведения о сокращённых наименованиях юридических лиц из Единого государственного реестра юридических лиц (ЕГРЮЛ).</p><p>Профессиональным участникам рынка ценных бумаг при заполнении Отчётов необходимо использовать <b>последнюю актуальную версию Справочника</b>.</p><p><a href="/Collection/Collection/File/50675/list_INN_OGRN_org_20240930.rar" target="_blank"><u>Справочник ИНН и ОГРН юридических лиц (скачать)</u></a></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1898">30.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1898">Вниманию сельскохозяйственных кредитных потребительских кооперативов и саморегулируемых организаций сельскохозяйственных кредитных потребительских кооперативов!</span></div>
+        <div class="info col-md-15"><p>Обращаем внимание, что отчетность по форме ОКУД 0420816 за девять месяцев 2024 года составляется в соответствии с Указанием Банка России от 02.02.2021 № 5721-У в редакции Указания Банка России от 31.03.2023 № 6389-У, отчетность форме ОКУД 0420818 за третий квартал 2024 года составляется в соответствии с Указанием Банка России от 02.02.2021 № 5721-У в редакции Указания Банка России от 14.07.2022 № 6201-У.</p><p>Для подготовки файлов отчетов в Программе-анкете подготовки электронных документов для сельскохозяйственных кредитных потребительских кооперативов <a href="http://download.cbr.ru/ANKETA_SKPK_20240401_2.16.4_1.3.20.6-202407251630.zip" target="_blank" class="outerlink">сборки 1.3.20.6 от 01.04.2024</a> представлены электронные формы:</p><p>- Отчет о деятельности сельскохозяйственного кредитного потребительского кооператива (XSD-схема ОКУД0420816_2_16_4_4, версия 2.16.4.4);</p><p>- Отчет о деятельности сельскохозяйственного кредитного потребительского кооператива, в котором по состоянию на последний календарный день отчетного периода общее число членов и ассоциированных членов составляет менее 200 лиц и размер активов составляет менее 50 миллионов рублей (XSD-схема ОКУД0420816_ДляМалогоСКПК_2_16_4_4, версия 2.16.4.4);</p><p>- Информация о лицах, которым сельскохозяйственным кредитным потребительским кооперативом поручено проведение идентификации или упрощенной идентификации, обновление информации (XSD-схема ОКУД0420818_2_16_4_2, версия 2.16.4.2).</p><p>Замечания и предложения по функционированию Программ-анкет предлагаем направлять по электронной почте на адрес: <a href="mailto:cbrsupport@swgroup.ru" target="_blank">cbrsupport@swgroup.ru</a>. В теме письма необходимо указывать ИНН и наименование организации в виде: «ИНН, Наименование организации. Тема обращения».</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1897">30.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1897">Вниманию ломбардов!</span></div>
+        <div class="info col-md-15"><p>Обращаем внимание, что отчетность за девять месяцев 2024 года по форме ОКУД 0420890 составляется в соответствии с Указанием Банка России от 30.12.2015 № 3927-У в редакции Указания Банка России от 14.07.2022 № 6200-У (изм. с 01.04.2023).</p><p>Для подготовки файлов отчетов в Программе-анкете подготовки электронных документов для ломбардов <a href="http://download.cbr.ru/ANKETA_LOMB_20240221_2.16.4_1.3.20.2-202407251701.zip" target="_blank" class="outerlink">сборки 1.3.20.2 от 21.02.2024</a> представлены электронные формы:</p><p>- Отчет о деятельности ломбарда (XSD-схема ОКУД0420890_2_16_4_3, версия 2.16.4.3);</p><p>- Отчет о деятельности ломбарда, у которого на последний календарный день отчетного периода сумма задолженности по основному долгу по предоставленным займам составляет менее 50 миллионов рублей (XSD-схема ОКУД0420890_ДляМалогоЛомбарда2_16_4_3, версия 2.16.4.3).</p><p>Замечания и предложения по функционированию Программ-анкет предлагаем направлять по электронной почте на адрес: <a href="mailto:cbrsupport@swgroup.ru" target="_blank">cbrsupport@swgroup.ru</a>. В теме письма необходимо указывать ИНН и наименование организации в виде: «ИНН, Наименование организации. Тема обращения».</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1896">30.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1896">Вниманию кредитных потребительских кооперативов и саморегулируемых организаций кредитных потребительских кооперативов!</span></div>
+        <div class="info col-md-15"><p>Обращаем внимание, что отчетность по форме ОКУД 0420820 за девять месяцев 2024 года составляется в соответствии с Указанием Банка России от 02.02.2021 № 5722-У в редакции Указания Банка России от 31.03.2023 № 6390-У, отчетность по форме ОКУД 0420822 за третий квартал 2024 года составляется в соответствии с Указанием Банка России от 02.02.2021 № 5722-У в редакции Указания Банка России от 14.07.2022 № 6202-У.</p><p>Для подготовки файлов отчетов в Программе-анкете подготовки электронных документов для  кредитных потребительских кооперативов <a href="http://download.cbr.ru/ANKETA_KPK_20240401_2.16.4_1.3.20.5-202409051600.zip" target="_blank" class="outerlink">сборки 1.3.20.5 от 01.04.2024</a> представлены электронные формы:</p><p>- Отчет о деятельности кредитного потребительского кооператива (XSD-схема ОКУД0420820_2_16_4_4, версия 2.16.4.4);</p><p>- Отчет о деятельности кредитного потребительского кооператива, у которого по состоянию на отчетную дату общее число членов составляет менее 200 лиц и размер активов составляет менее 50 миллионов рублей (за исключением КПК второго уровня и КПК, не являющихся членами СРО) (XSD-схема ОКУД0420820_ДляМалогоКПК_2_16_4_4, версия 2.16.4.4);</p><p>- Информация о лицах, которым кредитным потребительским кооперативом поручено проведение идентификации или упрощенной идентификации, обновление информации (XSD-схема ОКУД0420822_2_16_4_2, версия 2.16.4.2).</p><p>Замечания и предложения по функционированию Программ-анкет предлагаем направлять по электронной почте на адрес: <a href="mailto:cbrsupport@swgroup.ru" target="_blank">cbrsupport@swgroup.ru</a>. В теме письма необходимо указывать ИНН и наименование организации в виде: «ИНН, Наименование организации. Тема обращения».</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1895">30.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1895">Вниманию микрофинансовых компаний, микрокредитных компаний и саморегулируемых организаций микрофинансовых организаций!</span></div>
+        <div class="info col-md-15"><p>Обращаем внимание, что отчетность по форме 0420832 за третий квартал 2024 года составляется в соответствии с Указанием Банка России от 16.11.2022 № 6316-У в редакции Указания Банка России от 28.06.2024 № 6788-У, отчетность по форме ОКУД 0420833 за третий квартал 2024 года составляется в соответствии с Указанием Банка России от 16.11.2022 № 6316-У в редакции Указания Банка России от 07.11.2023 № 6597-У, отчетность по форме ОКУД 0420840 за сентябрь 2024 года, отчетность по формам ОКУД 0420847 и 0420839 за третий квартал 2024 года, отчетность по форме ОКУД 0420846 за 9 месяцев 2024 года составляется в соответствии с Указанием Банка России от 16.11.2022 № 6316-У.</p><p>Для подготовки файлов отчетов в Программе-анкете подготовки электронных документов для  микрофинансовых компаний и микрокредитных компаний <a href="http://download.cbr.ru/ANKETA_MFO_20240902_2.16.4_1.3.20.8-202409191500.zip" target="_blank" class="outerlink">сборки 1.3.20.8 от 02.09.2024</a> представлены электронные формы:</p><p>- Отчет о микрофинансовой деятельности микрофинансовой компании (XSD-схема ОКУД0420840_2_16_4_2, версия 2.16.4.2);</p><p>- Отчет о микрофинансовой деятельности микрокредитной компании (XSD-схема ОКУД0420846_2_16_4_2, версия 2.16.4.2);</p><p>- Отчет о средневзвешенных значениях полной стоимости потребительских займов микрофинансовой компании и микрокредитной компании (XSD-схема ОКУД0420847_2_16_4_2, версия 2.16.4.2);</p><p>- Отчет о долговой нагрузке заемщиков – физических лиц (XSD-схема ОКУД0420833_2_16_4_3, версия 2.16.4.3;</p><p>- Отчет об объемах потребительских кредитов (займов), в том числе об объемах потребительских кредитов (займов), в отношении которых устанавливаются макропруденциальные лимиты (XSD-схема ОКУД0420832_2_16_4_5, версия 2.16.4.5);</p><p>- Отчет о лицах, которым микрофинансовой компанией и микрокредитной компанией поручено проведение идентификации или упрощенной идентификации, обновление информации (XSD-схема ОКУД0420839_2_16_4_2, версия 2.16.4.2).</p><p>Замечания и предложения по функционированию Программ-анкет предлагаем направлять по электронной почте на адрес: <a href="mailto:cbrsupport@swgroup.ru" target="_blank">cbrsupport@swgroup.ru</a>. В теме письма необходимо указывать ИНН и наименование организации в виде: «ИНН, Наименование организации. Тема обращения».</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1894">27.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1894">Вниманию кредитных организаций, банковских холдингов и субъектов национальной платежной системы!</span></div>
+        <div class="info col-md-15"><p><em>На официальном сайте Банка России в разделе <a href="/lk_uio/fcsm/programmnyy-produkt-delta/#t2" target="_blank">«Личный кабинет участника информационного обмена / Программы и материалы подготовки электронных документов участников информационного обмена / Программный продукт «Дельта» / Расширение «Отчетность КО»</a> размещены следующие программные продукты и обновления:</em></p><p><em><p><em><em>а) метаданные расширения «Отчетность КО» ПП «Дельта» версии 1.86.1:</em></em></p><p><em><em>1) в связи с изменениями требований доработаны следующие формы отчётности: 0403203.</em></em></p><p><em><em>Детальное описание выполненных доработок форм отчетности приведено в обязательном для ознакомления файле «Readme_delta_ko_meta-1.86.1.docx» в архиве модификации метаданных.</em></em></p></em></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1893">26.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1893">Вниманию кредитных организаций, банковских холдингов и субъектов национальной платежной системы!</span></div>
+        <div class="info col-md-15"><p><em>На официальном сайте Банка России в разделе <a href="/lk_uio/fcsm/programmnyy-produkt-delta/#t2" target="_blank">«Личный кабинет участника информационного обмена / Программы и материалы подготовки электронных документов участников информационного обмена / Программный продукт «Дельта» / Расширение «Отчетность КО»</a> размещены следующие программные продукты и обновления:</em></p><p><em>а) дистрибутив расширения «Отчетность КО» ПП «Дельта» версии 2.34 под Windows и Linux: 
+<p><em>1) реализован постраничный просмотр результатов функционального контроля;</em></p><p><em>б) документация расширения «Отчетность КО» ПП «Дельта» версии 2.34;</em></p><p><em>в) метаданные расширения «Отчетность КО» ПП «Дельта» версии 1.86:</em></p><p><em>1) в связи с изменениями требований доработаны следующие формы отчётности: 0409110, 0409126, 0409265, 0409501, 0409603, 0409728, 800Р, MSAZ, MSPRIM, 0415001.</em></p><p><em>Детальное описание выполненных доработок форм отчетности приведено в обязательном для ознакомления файле «Readme_delta_ko_meta-1.86.docx» в архиве модификации метаданных.</em></p><p><em>На 15.10.2024 запланирован выпуск модификации метаданных расширения «Отчетность КО» версии 1.87 в связи с изменениями требований по следующим формам отчетности: 0409159, 0409639, 0409714, 0409715, 0409716, 0409731.  Детальное описание изменений для планируемой модификации метаданных приведено в файле «Информация о планируемой модификации метаданных «Отчетность КО» ПП Дельта версии 1.87» (delta-ko-info_meta-1.87.zip) (вкладка ПП «Дельта» расширение «Отчетность КО»).</em></p></em></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1892">20.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1892">Вниманию кредитных организаций, банковских холдингов и субъектов национальной платежной системы!</span></div>
+        <div class="info col-md-15"><p><em><p><em><em>На официальном сайте Банка России в разделе </em><em><a href="/lk_uio/fcsm/programmnyy-produkt-delta/#t1" target="_blank">«Личный кабинет участника информационного обмена / Программы и материалы подготовки электронных документов участников информационного обмена / Программный продукт «Дельта» / ПП «Дельта». Оболочка»</a></em><em><a href="/lk_uio/fcsm/programmnyy-produkt-delta/#t1" target="_blank"></a>размещены следующие программные продукты и обновления:</em></em></p><p><em><em>а) дистрибутив оболочки ПП «Дельта» версии 4.5.10:</em></em></p><p><em><em>1)        доработан приём квитанций ИЭС1, ИЭС2 с периодичностью «еженедельная»;</em></em></p><em>2)        доработка по исправлению отсутствия запуска ПП «Дельта» версии 4.5.9 в отдельных случаях.</em></em></p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1891">20.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1891">Вниманию участников информационного обмена!</span></div>
+        <div class="info col-md-15"><p>В связи с проведением технических работ в период с 09:00 до 18:00 21.09.2024 возможны незначительные затруднения при работе с Личным кабинетом в части функций при получении извещений Банка России о дате регистрации электронных документов в течение более, чем двух часов. Просим учесть данную информацию в работе. Приносим извинения за доставленные неудобства. </p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1890">19.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1890">Вниманию микрофинансовых компаний, микрокредитных компаний и саморегулируемых организаций микрофинансовых организаций!</span></div>
+        <div class="info col-md-15"><p>Обновлена Программа-анкета подготовки электронных документов для микрофинансовых компаний и микрокредитных компаний - версия 2.16.4, сборка 1.3.20.8 от 2 сентября 2024 года (далее - Программа-анкета) (<a href="//download.cbr.ru/ANKETA_MFO_20240902_2.16.4_1.3.20.8-202409191500.zip" target="_blank">Скачать</a>).</p><p>В обновленную версию Программы-анкеты внесены следующие изменения:</p><p>- добавлена электронная форма ОКУД 0420832 «Отчет об объемах потребительских кредитов (займов), в том числе об объемах потребительских кредитов (займов), в отношении которых устанавливаются макропруденциальные лимиты» с изменениями, внесёнными <a href="/Queries/UniDbQuery/File/90134/4089" target="_blank">Указанием Банка России от 28.06.2024 № 6788-У</a> «О внесении изменений в Указание Банка России от 16 ноября 2022 года № 6316-У» (XSD-схема ОКУД0420832_2_16_4_5, версия 2.16.4.5).</p><p>Обращаем внимание, что отчетность по форме ОКУД 0420832 за третий квартал 2024 года должна представляться всеми микрофинансовыми организациями в соответствии с порядком, установленным в Приложении 9 Указания Банка России от 16.11.2022 № 6316-У в редакции <a href="/Queries/UniDbQuery/File/90134/4089" target="_blank">Указания Банка России от 28.06.2024 № 6788-У</a>.</p><p>Дополнительно сообщаем, что микрофинансовые организации в отчетности за сентябрь 2024 года по форме ОКУД 0420840 и в отчетности за 9 месяцев 2024 года по форме ОКУД 0420846 не должны отражать информацию об отсутствии обязанности по представлению отчетности по форме ОКУД 0420832.</p><p>Замечания и предложения по функционированию Программ-анкет предлагаем направлять по электронной почте на адрес: <a href="mailto:cbrsupport@swgroup.ru" target="_blank">cbrsupport@swgroup.ru</a>. В теме письма необходимо указывать ИНН и наименование организации в виде: «ИНН, Наименование организации. Тема обращения».</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-events_day">
+    <div class="date col-md-5" title="1889">18.09.2024</div>
+    <div class="main-events offset-md-1 col-md-17">
+      <div class="main-event">
+        <div class="title"><span class="col-md-15 referenceable" id="a_msg1889">Вниманию кредитных организаций, банковских холдингов и субъектов национальной платежной системы!</span></div>
+        <div class="info col-md-15"><p><em><p><em><em> </em></em><em><em>На официальном сайте Банка России в разделе </em><em><a href="/lk_uio/fcsm/programmnyy-produkt-delta/#t1" target="_blank">«Личный кабинет участника информационного обмена / Программы и материалы подготовки электронных документов участников информационного обмена / Программный продукт «Дельта» / ПП «Дельта»</a></em><em><a href="/lk_uio/fcsm/programmnyy-produkt-delta/#t1" target="_blank">. Оболочка» </a>размещены следующие программные продукты и обновления:</em></em></p><p><em><em>а) дистрибутив оболочки ПП «Дельта» версии 4.5.9:</em></em></p><p><em><em>1)        доработаны сервисные функции для поддержки функциональности расширения «ФОИВ» версии 1.6;</em></em></p><p><em><em>2)        реализовано отображение ФИО подписанта из сертификата КриптоПРО при подписании транспортного архива Личного кабинета;</em></em></p><p><em><em>3)        реализованы функции по обмену информацией между кредитной организацией и АС «Центральный каталог кредитных историй» согласно указанию Банка России от 11.12.2015 № 3893-У;</em></em></p><p><em><em>4)        увеличена скорость отображения информации на экранной форме «Подготовка ЭД – Входящие»;</em></em></p><p><em><em>5)        увеличена производительность оболочки при отображении уведомлений пользователей;</em></em></p><p><em><em>6)        удалена возможность настройки утилиты командной строки cryptcp в личных настройка пользователя;</em></em></p><p><em><em>б) документация оболочки ПП «Дельта» версии 4.5.9;</em></em></p><p><em><em>в) дистрибутив технологического расширения Адаптер «СКЗИ» версии 2.5.5:</em></em></p><p><em><em>1)        доработаны сервисные функции для поддержки функциональности расширения «ФОИВ» версии 1.6.</em></em></p><p><em><em>Кроме того, на официальном сайте Банка России в разделе </em><em><a href="/lk_uio/fcsm/programmnyy-produkt-delta/#t3" target="_blank">«Личный кабинет участника информационного обмена / Программы и материалы подготовки электронных документов участников информационного обмена / Программный продукт «Дельта» / Расширение «ФОИВ»</a></em><em> размещены следующие обновления:</em></em></p><p><em><em>а) дистрибутив расширения «ФОИВ» версии 1.6:</em></em></p><p><em><em>1)        реализована криптографическая обработка электронных сообщений кредитных организаций по всем видам информационно-технического взаимодействия с использованием СКАД Сигнатура;</em></em></p><p><em><em>2)        реализована экранная форма «Подготовка АФ», которая предназначена для формирования архивных файлов кредитных организаций по видам информационно-технического взаимодействия с кодами tr, tz, pz и tq;</em></em></p><p><em><em>3)        монитор сканирования входных каталогов расширения «ФОИВ» доработан для поддержки круглосуточного режима работы;</em></em></p><p><em><em>4)        реализованы функции по обработке информации передаваемой между кредитной организацией и АС «Центральный каталог кредитных историй» согласно указанию 3893-У от 11.12.2015;</em></em></p><p><em><em>б) документация расширения «ФОИВ» версии 1.6.</em></em></p></em></p></div>
+      </div>
+    </div>
+  </div>
+</div></div><div class="responsible-unit">
+<div class="responsible-unit_text">Ответственное структурное подразделение: Департамент данных, проектов и&nbsp;процессов
+</div>
+</div>
+                    
+                    <!--/index-->
+                    
+    <div class="page-info">
+        <!--noindex-->
+        
+
+
+<div class="page-info_helpful" data-page-feedback="" data-feedback-url="/Content/PageInfo/RegisterFeedback">
+    <!--noindex-->
+    <div class="helpful" data-helpful="">
+        Страница была полезной?
+        <div class="helpful_btns">
+            <button class="helpful_btn _yes" data-helpful-btn="yes"><i class="helpful_icon"></i><span>Да</span></button>
+            <button class="helpful_btn _no" data-helpful-btn="no"><i class="helpful_icon"></i><span>Нет</span></button>
+        </div>
+    </div>
+    <!--/noindex-->
+</div>
+
+            <div class="page-info_last-update">Последнее обновление страницы: 30.09.2024</div>
+        <!--/noindex-->
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer">
+    <div class="offsetMenu">
+        <div class="footer_main">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2">
+                <div class="footer_top">
+                    <a class="footer_logo" href="../index.htm"></a>
+                    <div class="footer_up gotoUp">
+                        <div class="footer_up_title">Наверх</div>
+                        <div class="footer_up_icon"></div>
+                    </div>
+                </div>
+                
+<div class="footer_contacts">
+<div class="footer_address">107016, Москва, ул. Неглинная, д.&nbsp;12, к. В, Банк
+России</div>
+<div class="footer_phones">
+<div class="footer_phone"><a class="footer_phone_val" href="tel:300">300</a><span>(круглосуточно, бесплатно для&nbsp;звонков с&nbsp;мобильных телефонов)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:88003003000">8&nbsp;800 300-30-00</a><span>(круглосуточно, бесплатно для&nbsp;звонков из&nbsp;регионов России)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:+74993003000">+7&nbsp;499 300-30-00</a><span>(круглосуточно, в&nbsp;соответствии с&nbsp;тарифами вашего оператора)</span></div>
+
+</div>
+</div>
+<div class="footer_main_block">
+<div class="footer_left-menu">
+<div class="footer_left-menu_item"><a href="index.htm">Личный кабинет участников рынка</a></div>
+<div class="footer_left-menu_item"><a href="../about_br/irp/index.htm">Отношения с&nbsp;инвесторами</a></div>
+<div class="footer_left-menu_item"><a href="../rbr/list_inside/index.htm">Перечень инсайдерской информации Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../analytics/na_vr/index.htm">Официальное опубликование нормативных актов Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../project_na/index.htm">Проекты нормативных актов Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../other/holidays/index.htm">Перечень нерабочих праздничных дней и&nbsp;перенесенных выходных дней</a></div>
+</div>
+<div class="networks-circle footer_networks">
+<a class="networks-circle_item _vk" href="https://vk.com/cbr_official"></a>
+<a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia"></a>
+<a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+<a class="networks-circle_item _ydzen" href="https://dzen.ru/cbr" title="Яндекс Дзен"></a>
+<a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+<div class="footer_menu">
+<div class="footer_menu_items">
+<div class="footer_menu_item"><a href="../about/index.htm">О&nbsp;сайте</a></div>
+<div class="footer_menu_item"><a href="../contacts/index.htm">Контакты</a></div>
+<div class="footer_menu_item"><a href="../about_br/anticor/index.htm">Противодействие коррупции</a></div>
+<div class="footer_menu_item"><a href="../development/index.htm">Технические ресурсы</a></div>
+</div>
+			 <div class="footer_menu_item _visually-impaired"><a href="#" title="Версия для слабовидящих"><span class="visually-impaired-on">Версия для&nbsp;слабовидящих</span><span class="visually-impaired-off">Обычная версия</span></a></div>
+</div>
+
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2 row">
+                <div class="footer_bottom_text col-md-12 col-xl-11">&#169; Банк России, 2000–2024.</div>
+<div class="footer_bottom_aic col-md-11">Дизайн сайта — <a href="https://aic.ru" target="_blank"><img src="/common/images/icons/aic-logo.svg"></a></div>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+        <div class="popup-cookies" data-popup-cookies="">
+            <div class="popup-cookies_title">
+                На сайте Банка России используются файлы cookie
+            </div>
+            <div class="popup-cookies_subtitle">
+                Оставаясь на <a href="../index.htm">www.cbr.ru</a>, вы принимаете
+                <a href='/user_agreement/'>пользовательское соглашение</a>
+            </div>
+            <button class="btn _medium _blue " data-popup-cookies-btn="">
+                Подтвердить
+            </button>
+        </div>
+
+    
+<!--[if IE 9]><script>$('body').addClass('ie9')</script><![endif]-->
+<script src="/Modules/Content/Scripts/PageInfo.js?v=v3116962712" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            Content_PageInfo.init($('[data-page-feedback]'));
+        });
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,916 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="zoom:lang" content="ru">
+    <meta name="zoom:last-modified" content="Fri, 24 May 2024 11:30:00 GMT">
+<title>Обзор финансовой стабильности | Банк России</title>
+
+
+
+    <meta property="og:image" content="/common/images/share-1.jpg">
+
+    
+
+
+            <link rel="stylesheet" type="text/css" href="../../../../common/libs/jquery-ui/jquery-ui.min.css?v=v478607061" media="all">
+
+            <!--[if IE 9]><link rel="stylesheet" type="text/css" href="/common/style/main-ie9.css?v=v2358109689" media="all"><![endif]-->
+
+            <!--[if gt IE 9]><!--><link rel="stylesheet" type="text/css" href="../../../../common/style/main.min.css?v=v2358109689" media="all"><!--<![endif]-->
+
+
+        <script type="text/javascript" src="/common/libs/jquery-3.6.1.min.js?v=v478607061"></script>
+
+
+
+        <script type="text/javascript" src="/common/libs/jquery-ui/jquery-ui.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.inputmask.min.js?v=v478607061"></script>
+
+
+        <script type="text/javascript" src="/common/scripts/vendor.js?v=v3694197594"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.floatThead.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/highcharts.js?v=v478607061"></script>
+        <script type="text/javascript" src="/common/libs/popper.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/tippy.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/scripts/main.min.js?v=v2358109689"></script>
+
+
+        <script type="text/javascript" src="/common/libs/localization-ru.js?v=v478607061"></script>
+        <script type="text/javascript" src="/js/jquery.ui.autocomplete-ru.js?v=v1043438991"></script>
+
+        <script type="text/javascript" src="/js/jquery.cookie.min.js?v=v4260771145"></script>
+
+        <script type="text/javascript" src="/js/site.js?v=v1395547681"></script>
+
+
+
+
+
+<script src="/common/libs/exporting.js?v=v478607061" type="text/javascript"></script>
+<script src="/js/highcharts/grouped-categories.js?v=v3238537569" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+        var $menu = $('[data-menu]'),
+            $menuItemBtn = $menu.find('[data-menu-item-btn]'),
+            $menuShow = $('[data-menu-show]'),
+            $menuClose = $('[data-menu-close]');
+        var config = $menu.data('config');
+
+        $menu.find('[data-cms-wholesite-header-right]').html($('#header .header_right').html());
+
+        $menuShow.on('click.cms_loadwholesite', function (event) {
+            loadWholeSite(true);
+        });
+        $menuShow.on('mouseenter.cms_loadwholesite', function (event) {
+            loadWholeSite(false);
+        });
+
+        var xhr = null, g_openMenu = false;
+        function loadWholeSite(openmenu) {
+            g_openMenu = g_openMenu || openmenu;
+            $menuShow.off('click.cms_loadwholesite mouseenter.cms_loadwholesite');
+            if (xhr === null) {
+                $('.menu_wrap .networks-circle').html($('.networks-circle.footer_networks').html());
+                $('.menu_wrap .header_search').html($('.header .offsetMenu .header_search').html());
+
+                xhr = $.ajax(config.url, {
+                    dataType: "html",
+                    method: "get",
+                    success: function (html) {
+                        $('[data-cms-wholesite-placeholder]').replaceWith(html);
+
+                        $menu.find('.menu_tab[data-tabs-tab]').each(function () {
+                            var tab = $(this).data('tabs-tab');
+                            $(this).toggle($menu.find('[data-tabs-content="' + tab + '"]').length != 0);
+                        });
+
+                        app.init($menu);
+
+                        for (var i in config.catalogPath) {
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .addClass("_active");
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .closest('[data-tabs-content]')
+                                .trigger('open-anchor');
+                        }
+
+                        
+                        xhr = true;
+                    },
+                    error: function () {
+                        xhr = null;
+                    }
+                });
+            }
+        }
+    });
+    </script>
+
+
+<script>
+    if (window.localStorage) {
+        if (localStorage.getItem('vision-impaired'))
+            document.getElementsByTagName('html')[0].className += ' vision-impaired';
+    }
+</script>
+<script>
+    document.documentElement.style.setProperty('--scrollbar-width', '17px');
+    setTimeout(function () {
+        
+        var div = document.createElement('div');
+
+        div.style.overflowY = 'scroll';
+        div.style.width = '50px';
+        div.style.height = '50px';
+
+        
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+        var scrollWidth = Math.max(div.offsetWidth - div.clientWidth, 0.15); 
+        document.body.removeChild(div);
+        
+        document.documentElement.style.setProperty('--scrollbar-width', scrollWidth + 'px');
+    }, 0);
+</script>
+
+
+
+    
+</head>
+<body class="" id="">
+    
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(5774506, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/5774506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <!-- /Yandex.Metrika counter -->   
+
+    
+    <div class="header-print">
+    <div class="offsetMenu">
+        <div class="header-print_inner">
+            <img class="header-print_logo" alt="cbr" src="/common/images/logo.svg">
+            <ul class="header-print_contacts">
+<li>107016, Москва, ул. Неглинная, д.&nbsp;12, к. В, Банк России</li>
+<li><nobr class="phone">8 800 300-30-00</nobr></li>
+<li>www.cbr.ru</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+        <div class="banner-header">
+            <header class="header" id="header" style="background-image: url(/StaticHtml/File/130917/ofs_1.jpg);">
+                <div class="header-image"><img class="banner-header_image" src="/StaticHtml/File/130917/ofs_1.jpg"></div>
+                
+<div class="top-line" data-top-line="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="top-line_inner header_inner">
+                <div class="row">
+                    <div class="col-xl-5 col-md-9">
+                        <div class="header_left">
+                                <div class="header_menu" data-menu-show=""></div>
+                            <a class="header_logo" href="../../../../index.htm"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                        <div class="header_search">
+                                <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="header_right">
+                                <div class="header_link"><a href="../../../../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2Fanalytics%2Ffinstab%2Fofs%2F4_2023_1_q_2024%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="offsetMenu banner-header_header">
+                    <div class="col-md-23 offset-md-1">
+                        <div class="header_inner">
+                            <div class="row">
+                                <div class="col-xl-5 col-md-9">
+                                    <div class="header_left">
+                                        <div class="header_menu" data-menu-show=""></div><a class="header_logo" href="../../../../index.htm"></a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                                    <div class="header_search">
+                                            <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                                    </div>
+                                    <div class="d-none d-md-block">
+                                        <div class="header_right">
+                                            <div class="header_link"><a href="../../../../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2Fanalytics%2Ffinstab%2Fofs%2F4_2023_1_q_2024%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="banner-header_main">
+                <div class="offsetMenu banner-header_breadcumbs">
+                    <div class="col-md-23 offset-md-1">
+                        <div class="breadcrumbs">
+    <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="../../../../index.htm"></a></div>
+        <div class="breadcrumbs_item">
+            <a href="/analytics/"><!--noindex-->Аналитика<!--/noindex--></a>
+        </div>
+        <div class="breadcrumbs_item">
+            <a href="/analytics/finstab/"><!--noindex-->Финансовая стабильность<!--/noindex--></a>
+        </div>
+    </div>
+
+                    </div>
+                </div>
+                <div class="offsetMenu">
+                    <div class="col-md-23 offset-md-1">
+                        <!--index-->
+                        <h1><span class="referenceable">Обзор финансовой стабильности</span>
+</h1>
+
+                        <!--/index-->
+                    </div>
+                </div>
+            </div>
+            <div class="banner-header_bottom">
+<div class="offsetMenu"><div class="col-md-23 offset-md-1"><div class="banner-header_vestnik"><div class="banner-header_vestnik_subtitle"></div><div class="banner-header_vestnik_title">IV квартал 2023 - I квартал 2024 года</div><div class="banner-header_vestnik_btn"><a class="b-btn _blue" href="/Collection/Collection/File/49151/4_q_2023_1_q_2024.pdf">Скачать</a></div></div><div class="news-header_author"><!--	Фото:  copyright --></div><div class="news-info-line row news-info-line__dark"><div class="col-md-6 col-12 news-info-line_date">24 мая 2024 года</div><div class="col-md-11 col-13 news-info-line_type"></div><div class="col-md-6 d-none d-md-block news-info-line_share"><span class="news-info-line_share-btn" tabindex="0" data-share-btn="data-share-btn">Поделиться</span><div class="news-info-line_share-select _hide"><a class="news-info-line_share-vkontakte" target="_blank" href="https://vkontakte.ru/share.php?url=http%3a%2f%2fwww.cbr.ru%2fanalytics%2ffinstab%2fofs%2f4_2023_1_q_2024%2f">ВКонтакте</a><a class="news-info-line_share-whatsapp" target="_blank" href="https://web.whatsapp.com/send?text=http%3a%2f%2fwww.cbr.ru%2fanalytics%2ffinstab%2fofs%2f4_2023_1_q_2024%2f&utm_source=share2" data-action="share/whatsapp/share">WhatsApp</a><a class="news-info-line_share-telegram" target="_blank" href="https://t.me/share/url?url=http%3a%2f%2fwww.cbr.ru%2fanalytics%2ffinstab%2fofs%2f4_2023_1_q_2024%2f">Telegram</a></div></div></div></div></div>            </div>
+        </div>
+    <form class="search-form" action="/search/" method="get" data-search-form="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="search-form_inner">
+                <div class="search-form_title">Что вы хотите найти?</div>
+                <div class="search-form_content">
+                    <div class="search-form_block">
+                        <div class="search-form_icon"></div>
+                        <div class="search-form_field">
+                            <input name="text" type="text" placeholder="Начните писать" data-search-form-input="">
+                        </div>
+                    </div>
+                    <div class="search-form_btn">
+                        <button class="b-btn _blue" data-search-form-btn="">Искать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<div class="menu_wrap" data-menu="" data-config="{&quot;catalogPath&quot;:[19373,16629],&quot;url&quot;:&quot;/Catalog/SiteMap/GetWholeSiteHtml?blockId=59191&quot;}">
+    <div class="offsetMenu">
+        <div class="header_menu _close menu_close d-none d-md-block" data-menu-close=""></div>
+        <div class="header_inner top-line_inner d-block d-md-none">
+            <div class="row">
+                <div class="col-xl-5 col-md-9">
+                    <div class="header_left">
+                        <div role="button" tabindex="0" aria-label="Закрыть меню" class="header_menu _close" data-menu-close=""></div><a class="header_logo" href="../../../../index.htm"></a>
+                    </div>
+                </div>
+                <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                    <div class="header_search"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu row" data-tabs="data-tabs">
+            <div class="menu_quick col-md-7">
+                <div role="tablist" class="menu_quick_tabs">
+    <a role="tab" id="menu_tab_Activity" aria-controls="menu_content_Activity" aria-selected="true" class="menu_tab _active" href="#" data-tabs-tab="Activity">Деятельность</a>
+    <a role="tab" id="menu_tab_FinancialMarkets" aria-controls="menu_content_FinancialMarkets" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="FinancialMarkets">Финансовые рынки</a>
+    <a role="tab" id="menu_tab_Documents" aria-controls="menu_content_Documents" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Documents">Документы и данные</a>
+    <a role="tab" id="menu_tab_AboutBank" aria-controls="menu_content_AboutBank" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="AboutBank">О Банке России</a>
+    <a role="tab" id="menu_tab_Services" aria-controls="menu_content_Services" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Services">Сервисы</a>
+</div>
+<div class="menu_quick_links">
+    <div class="inner_links"><a href="../../../../support_measures/index.htm" title="Меры зашиты финансового рынка" style="color:red">Меры защиты финансового рынка</a>
+  </div>
+<div class="phones"><a class="menu_phone_val" href="tel:+74993003000">
+<div class="plus">+</div>7 499 300-30-00</a><a class="menu_phone_val" href="tel:88003003000">8 800 300-30-00</a><a class="menu_phone_val" href="tel:300">300</a><span>Бесплатно для звонков с мобильных телефонов</span></div>
+<div class="inner_links">
+  <a href="../../../../news/index.htm" title="Новости">Новости</a>
+  <a href="../../../../rbr/index.htm" title="Решения Банка России">Решения Банка России</a>
+  <a href="../../../../contacts/index.htm" title="Контактная информация">Контактная информация</a>
+  <a href="../../../../sitemap.html" title="Карта сайта">Карта сайта</a>
+  <a href="../../../../about/index.htm" title="О сайте">О сайте</a>
+  </div>
+<div class="networks-circle">
+  <a class="networks-circle_item _vk" href="https://vk.com/cbr_official" title="ВКонтакте"></a>
+  <a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia" title="Youtube"></a>
+  <a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+  <a class="networks-circle_item _ydzen" href="https://zen.yandex.ru/id/622372d6a565892091994ea9" title="Яндекс Дзен"></a>
+  <a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+            </div>
+            <div class="d-md-none link-above">
+                <div class="header_right" data-cms-wholesite-header-right="">
+                </div>
+                    <div class="header_right">
+                        <div class="header_link"><a href="../../../../finorg/index.htm">Проверить участника финансового рынка</a></div>
+                    </div>
+            </div>
+            <div class="menu_content_container col-md with-centered-loader" data-cms-wholesite-placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <main id="content">
+        <div class="offsetMenu">
+            <div class="container-fluid">
+                <div class="col-md-23 offset-md-1">
+                    <!--index-->
+                    
+        <div class="versions-tabs tabs_wrap" data-tabs="">
+            <div class="versions" data-versions="">
+                <div class="versions_items _active" data-versions-items="" data-item-select="">
+    <a class="versions_item _active" href="index.htm" data-versions-item="">IV&#160;квартал&#160;2023&#160;г.&#160;— I&#160;квартал&#160;2024&#160;г.</a>
+    <a class="versions_item" href="/analytics/finstab/ofs/2_3_q_2023/" data-versions-item="">II&#160;– III&#160;кварталы&#160;2023&#160;г.</a>
+    <a class="versions_item" href="/analytics/finstab/ofs/4_q_2022_1_q_2023/" data-versions-item="">IV&#160;квартал&#160;2022&#160;г.&#160;— I&#160;квартал&#160;2023&#160;г.</a>
+    <a class="versions_item" href="/analytics/finstab/ofs/2_3_q_2022/" data-versions-item="">II&#160;– III&#160;кварталы&#160;2022&#160;г.</a>
+    <a class="versions_item" href="/analytics/finstab/ofs/4q_2021-1q_2022/" data-versions-item="">IV&#160;квартал&#160;2021&#160;г.&#160;– I&#160;квартал&#160;2022&#160;г.</a>
+    <a class="versions_item" href="/analytics/finstab/ofs/2_3_q_2021/" data-versions-item="">II&#160;– III&#160;кварталы&#160;2021&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/33327/OFS_21-1.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 мая 2021" target="_blank" data-versions-item="">IV&#160;квартал&#160;2020&#160;г.&#160;– I&#160;квартал&#160;2021&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/31582/OFS_20-2.pdf" data-tooltip="" data-tooltip-content="Опубликовано 26 ноября 2020" target="_blank" data-versions-item="">II-III&#160;кварталы&#160;2020&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/27911/OFS_20-01.pdf" data-tooltip="" data-tooltip-content="Опубликовано 28 мая 2020" target="_blank" data-versions-item="">IV&#160;квартал&#160;2019&#160;г.&#160;– I&#160;квартал&#160;2020&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/25489/OFS_19-02.pdf" data-tooltip="" data-tooltip-content="Опубликовано 02 декабря 2019" target="_blank" data-versions-item="">II-III&#160;кварталы&#160;2019&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/19790/OFS_19-01.pdf" data-tooltip="" data-tooltip-content="Опубликовано 18 июня 2019" target="_blank" data-versions-item="">IV&#160;квартал&#160;2018&#160;г.&#160;– I&#160;квартал&#160;2019&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/10438/OFS_18-02.pdf" data-tooltip="" data-tooltip-content="Опубликовано 29 ноября 2018" target="_blank" data-versions-item="">II–III&#160;кварталы&#160;2018&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7858/OFS_17-03.pdf" data-tooltip="" data-tooltip-content="Опубликовано 30 мая 2018" target="_blank" data-versions-item="">IV&#160;квартал&#160;2017&#160;г.&#160;— I&#160;квартал&#160;2018&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7859/OFS_17-02.pdf" data-tooltip="" data-tooltip-content="Опубликовано 27 ноября 2017" target="_blank" data-versions-item="">II-III&#160;кварталы&#160;2017&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7860/OFS_17-01.pdf" data-tooltip="" data-tooltip-content="Опубликовано 26 мая 2017" target="_blank" data-versions-item="">IV&#160;квартал&#160;2016&#160;г.&#160;— I&#160;квартал&#160;2017&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7861/fin-stab-2016_2-3r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 02 декабря 2016" target="_blank" data-versions-item="">II-III&#160;кварталы&#160;2016&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7862/fin-stab-2015-16_4-1r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 31 мая 2016" target="_blank" data-versions-item="">IV&#160;квартал&#160;2015&#160;г.&#160;— I&#160;квартал&#160;2016&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7863/fin-stab-2015_2-3r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 26 января 2016" target="_blank" data-versions-item="">II-III&#160;кварталы&#160;2015&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7864/fin-stab-2014-15_4-1r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 26 июня 2015" target="_blank" data-versions-item="">IV&#160;квартал&#160;2014&#160;г.&#160;— I&#160;квартал&#160;2015&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7865/fin-stab-2014_2-3r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 17 ноября 2014" target="_blank" data-versions-item="">II-III&#160;кварталы&#160;2014&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7866/fin-stab-2013-14_4-1r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 08 июля 2014" target="_blank" data-versions-item="">IV&#160;квартал&#160;2013&#160;г.&#160;— I&#160;квартал&#160;2014&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7867/fin-stab-2013_2-3r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 26 декабря 2013" target="_blank" data-versions-item="">II-III&#160;кварталы&#160;2013&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7868/fin-stab-2012-13_4-1r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 26 июля 2013" target="_blank" data-versions-item="">IV&#160;квартал&#160;2012&#160;г.&#160;— I&#160;квартал&#160;2013&#160;г.</a>
+    <a class="versions_item" href="/Collection/Collection/File/7869/fin-stab-2012_2-3r.pdf" data-tooltip="" data-tooltip-content="Опубликовано 24 декабря 2012" target="_blank" data-versions-item="">II-III&#160;кварталы&#160;2012&#160;г.</a>
+                </div>
+                <button class="more _hide" data-versions-toggle="" aria-expanded="false">
+                    <span class="open">Ещё +</span><span class="close">Свернуть -</span>
+                </button>
+            </div>
+        </div>
+
+
+
+
+    <script>
+        $(function () {
+            try {
+                if (window.sessionStorage && window.sessionStorage.setItem) {
+                    var scrollKey = "/Modules/Collection/Views/PageSwitcher/Display.cshtml";
+
+                    $('.versions-tabs .versions_item').click(function () {
+                        var scroll = $(window.document).scrollTop();
+                        window.sessionStorage.setItem(scrollKey, scroll);
+                    });
+
+                    var oldScroll = window.sessionStorage.getItem(scrollKey);
+                    if (oldScroll) {
+                        window.sessionStorage.removeItem(scrollKey);
+                        $(window.document).scrollTop(oldScroll);
+                        setTimeout(function () { $(window.document).scrollTop(oldScroll); }, 200);
+                    }
+                }
+            }
+            catch (e) { console.error(e); }
+        });
+    </script>
+
+                                            <div class="landing-text">
+                            <style type='text/css'>
+/*<![CDATA[*/
+@media print{
+.dropdown_content{
+  display:block;
+}
+}
+/*]]*/
+</style><div class="title-container"><div class="block-title"><h2><span class="referenceable" id="a_161122">Общая картина</span></h2></div><p>В&nbsp;обзоре описываются риски для&nbsp;мировой экономики, которые могут распространиться на&nbsp;Россию, рассматриваются основные уязвимости нефинансового и&nbsp;финансового секторов России и&nbsp;дается общая оценка их&nbsp;устойчивости.</p>
+<p>Основной глобальный риск сейчас связан с&nbsp;сохранением высокой инфляции и&nbsp;высоких ставок в&nbsp;США&nbsp;более длительное время, что&nbsp;может усиливать кредитные риски и&nbsp;приводить к&nbsp;волатильности потоков капитала. Для&nbsp;России этот канал влияния стал менее значимым в&nbsp;условиях санкций и&nbsp;ответных мер&nbsp;валютного регулирования. Угроза может возникнуть, если проблемы распространятся на&nbsp;глобальные сырьевые рынки или&nbsp;если риски для&nbsp;финансовой стабильности возникнут у&nbsp;ключевых торговых партнеров России.</p>
+<p>Корпоративный сектор Российской Федерации, несмотря на&nbsp;усиление санкционного давления, в&nbsp;целом показывает улучшение показателей рентабельности и&nbsp;долговой нагрузки за&nbsp;счет восстановления объемов продаж.</p>
+<p>Конфигурация уязвимостей финансового сектора в&nbsp;целом осталась неизменной. Впервые в&nbsp;качестве уязвимости в&nbsp;обзоре выделяется риск кредитной концентрации, так&nbsp;как&nbsp;на&nbsp;фоне активного погашения внешнего долга крупнейшими российскими компаниями заметно вырос объем их&nbsp;финансирования со&nbsp;стороны российских банков. В&nbsp;свою очередь, уязвимость, связанная с&nbsp;вложениями граждан в&nbsp;иностранные инструменты, не&nbsp;выделяется в&nbsp;числе основных, так&nbsp;как&nbsp;она&nbsp;уже&nbsp;реализовалась ввиду санкций&nbsp;США&nbsp;на&nbsp;ПАО&nbsp;&laquo;СПБ&nbsp;Биржа&raquo; и&nbsp;сейчас стала менее актуальной, поскольку россияне размещают б<em>о</em>льшую часть своих накоплений в&nbsp;рублевые депозиты и&nbsp;российские ценные бумаги.</p></div>
+                        </div>
+                    <meta property="og:title" content="Обзор финансовой стабильности">
+<meta property="og:type" content="article">
+<meta property="article:section" content="Деятельность - ДФС">
+<style type='text/css'>
+/*<![CDATA[*/
+#a_161182 {
+font-size: calc(12px + 12 * ((100vw - 320px) / 1043));
+}
+/*]]*/
+</style>
+
+
+<div class="dropdown">
+<a aria-controls="DropDown_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block161182/zone" id="a_161182" role="button" tabindex="0">Уязвимости и устойчивость нефинансового сектора</a>
+
+    <div id="DropDown_content" role="region" aria-labelledby="a_161182" class="dropdown_content">
+<div class="landing-text"><p>Принятые в&nbsp;IV&nbsp;квартале 2023 года и&nbsp;I&nbsp;квартале 2024 года новые ограничительные меры направлены не&nbsp;только на&nbsp;российские компании, но&nbsp;и&nbsp;на&nbsp;компании из&nbsp;дружественных стран. Их&nbsp;результатом становится усложнение логистики и&nbsp;трансграничных платежей, что&nbsp;негативно отражается на&nbsp;динамике экспорта и&nbsp;импорта.</p>
+<p>Несмотря на&nbsp;геополитические риски, по&nbsp;итогам 2023 года финансовые показатели большинства компаний в&nbsp;ключевых отраслях экономики России улучшились или&nbsp;остались на&nbsp;уровне прошлого года. Лишь у&nbsp;отдельных крупных заемщиков наблюдался рост долговой нагрузки. В&nbsp;целом чувствительность корпоративного сектора к&nbsp;жесткой денежно-кредитной политике Банка России снизилась. Подавляющая часть заемщиков имеет достаточный объем операционной прибыли для&nbsp;обслуживания процентных расходов по&nbsp;кредитам. <em>&nbsp;</em></p></div>    </div>
+</div>
+<div class="title-container"><div class="block-title"><h2><span class="referenceable" id="a_161180">Уязвимости российского финансового сектора</span></h2></div>
+
+
+<div class="dropdown">
+<a aria-controls="DropDown2_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block161127/zone" id="a_161127" role="button" tabindex="0">Структурные дисбалансы на внутреннем валютном рынке</a>
+
+    <div id="DropDown2_content" role="region" aria-labelledby="a_161127" class="dropdown_content">
+<div class="landing-text"><p>Устойчивый профицит текущего счета платежного баланса и&nbsp;сохранение жесткой денежно-кредитной политики способствовали стабилизации курса рубля к&nbsp;иностранным валютам. Продолжилась тенденция ухудшения корреспондентских связей с&nbsp;банками-нерезидентами в&nbsp;&laquo;токсичных&raquo; валютах. При&nbsp;этом расширение корреспондентской сети в&nbsp;&laquo;нетоксичных&raquo; валютах <span>замедлилось&nbsp;</span>на&nbsp;фоне угрозы применения недружественными странами вторичных санкций.</p>
+<p>Снижение остатков российских банков на&nbsp;корсчетах в&nbsp;иностранных банках сопровождалось ростом кредитования корпоративных клиентов в&nbsp;юанях и&nbsp;периодическим обострением ситуации с&nbsp;юаневой ликвидностью.<strong><em> </em></strong>В&nbsp;результате в&nbsp;отдельные&nbsp;дни&nbsp;(в&nbsp;конце и&nbsp;начале месяца) на&nbsp;рынке валютных свопов наблюдались эпизоды нехватки юаневой ликвидности. Банк России принял решение в&nbsp;дни&nbsp;пикового спроса на&nbsp;юани расширять свой лимит по&nbsp;однодневному свопу с&nbsp;10&nbsp;до&nbsp;20&nbsp;млрд юаней. Хотя юань стал основной иностранной валютой в&nbsp;России, рынок валютных свопов с&nbsp;юанем носит локальный характер. В&nbsp;силу валютных ограничений в&nbsp;Китае и&nbsp;рисков вторичных санкций китайские банки не&nbsp;могут выполнять функции провайдеров юаневой ликвидности. Основным источником фондирования юаневых активов российских банков являются внутренние сбережения российских компаний и&nbsp;граждан.</p></div>    </div>
+</div>
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown3_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block161131/zone" id="a_161131" role="button" tabindex="0">Долговая нагрузка граждан</a>
+
+    <div id="DropDown3_content" role="region" aria-labelledby="a_161131" class="dropdown_content">
+<div class="landing-text"><p>Несмотря на&nbsp;жесткую денежно-кредитную и&nbsp;макропруденциальную политику Банка России, темпы роста <em>необеспеченного потребительского кредитования</em> остаются высокими (17%&nbsp;г/г на&nbsp;1&nbsp;апреля). В&nbsp;I&nbsp;квартале 2024 года рост портфеля потребительских кредитов происходил за&nbsp;счет сегмента кредитных карт, на&nbsp;который макропруденциальные лимиты (МПЛ) действуют с&nbsp;лагом.</p>
+<p>На&nbsp;фоне действия&nbsp;МПЛ риски, связанные с&nbsp;закредитованностью граждан, уменьшились: доля предоставленных кредитов с&nbsp;ПДН более&nbsp;50% снизилась с&nbsp;63% в&nbsp;IV квартале 2022 года до&nbsp;34% в&nbsp;I квартале 2024&nbsp;года. Однако на&nbsp;фоне повышения ключевой ставки и&nbsp;временной отмены ограничений на&nbsp;полную стоимость кредита (ПСК) по&nbsp;потребительским кредитам банки нарастили кредитование заемщиков с&nbsp;более высоким профилем риска, закладывая дополнительные издержки в&nbsp;процентную ставку. Ранние индикаторы указывают на&nbsp;ухудшение качества обслуживания заемщиками кредитов наличными, предоставленных после&nbsp;III квартала 2023 года по&nbsp;высоким ставкам.</p>
+
+<h4 class="h3">Доля предоставленных кредитов с&#160;ПДН&#160;50-80% и&#160;с&#160;ПДН&#160;более 80% в&#160;общем объеме выдач необеспеченных потребительских кредитов, %</h4><div data-cms-chart-container="" class="chart-container " id="GrafChart_ChartModel_chart"></div>
+    <div class="chart-comment">Источник: данные форм отчетности 0409135, 0409704.</div>
+        <script>
+            //<![CDATA[
+            $(function () {
+                Highcharts.setOptions({
+                    lang: {
+                        decimalPoint: ",",
+                        thousandsSep: " ",
+                    },
+                });
+            })
+            //]]>
+        </script>
+    <script>
+        //<![CDATA[
+        $(function () {
+            Highcharts.setOptions({
+                chart: {
+                    numberFormatter: numberFormatNoExponent
+                }
+            });
+        });
+        function numberFormatNoExponent(number, decimals, decimalPoint, thousandsSep) {
+            let defaultFormatted = Highcharts.numberFormat(number, decimals, decimalPoint, thousandsSep);
+            if (defaultFormatted.indexOf('e') < 0)
+                return defaultFormatted;
+
+            let exponent = defaultFormatted.split('e');
+            if (exponent[1] < 0) {
+                let intNumber = Math.floor(number);
+                let intStr = Highcharts.numberFormat(intNumber, 0, decimalPoint, thousandsSep);
+                let tailStr = number.toFixed(20);
+                let lailStrSplit = tailStr.split('.');
+                if (tailStr.indexOf('e') >= 0) { //toFixed() may still return exponent notation for really long numbers, we simply return it as is
+                    return defaultFormatted;
+                }
+                else if (lailStrSplit[1]) {
+                    return intStr + decimalPoint + lailStrSplit[1].replace(/0+$/, "");
+                }
+                else
+                    return intStr;
+            }
+            else if (exponent[1] > 0) {
+                var modNumber = Highcharts.numberFormat(number / 1000, decimals, decimalPoint, thousandsSep);
+                var parts = modNumber.split(decimalPoint);
+                return parts[0] + thousandsSep + "000" + decimalPoint + parts[1];
+            }
+            else
+                return defaultFormatted;
+        }
+        //]]>
+    </script>
+
+<script>
+//<![CDATA[
+    $(function () {
+        var chartId = "GrafChart_ChartModel_chart";
+        var $chart = $('#' + chartId);
+
+
+        var settings = {"chart":{"spacingBottom":5},"xAxis":{"type":"category","labels":{"style":{}},"categories":["I кв. 2020","II кв. 2020","III кв. 2020","IV кв. 2020","I кв. 2021","II кв. 2021","III кв. 2021","IV кв. 2021","I кв. 2022","II кв. 2022","III кв. 2022","IV кв. 2022","I кв. 2023","II кв. 2023","III кв. 2023","IV кв. 2023","I кв. 2024"],"title":{},"crosshair":{"color":"#f5f5f5","zIndex":0}},"yAxis":[{"tickAmount":5,"title":{"text":""},"labels":{"format":"{value:,.f}","style":{}}}],"legend":{"navigation":{"enabled":false}},"title":{},"subtitle":{},"series":[{"dataLabels":{"enabled":true,"format":"{point.name}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.0f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"marker":{"symbol":"circle"},"data":[{"y":31.6062,"name":"32"},31.5103,31.9304,29.0724,{"y":27.3762,"name":"27"},29.4385,28.6883,27.6072,{"y":27.2147,"name":"27"},27.2013,28.7626,26.9521,{"y":34.6000,"name":"35"},34.8000,35.2000,25.7000,{"y":21.2000,"name":"21"}],"color":"#0088cc","id":"s0","name":"ПДН 50-80%"},{"dataLabels":{"enabled":true,"format":"{point.name}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.0f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"marker":{"symbol":"circle"},"data":[{"y":26.6398,"name":"27"},23.3085,25.4845,31.6217,{"y":34.5469,"name":"35"},30.2752,30.9690,33.4021,{"y":34.1591,"name":"34"},28.4146,32.3910,36.4712,{"y":26.6000,"name":"27"},25.5000,22.6000,14.3000,{"y":12.9000,"name":"13"}],"color":"#ED1A34","id":"s1","name":"ПДН более 80%"}],"tooltip":{"shared":true,"headerFormat":"<div class=\"chart-tooltip-header\">{point.x}</div>","pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.f}{series.options.units}</div>\r\n</div>","positioner":app.chartTooltipPositioner},"responsive":
+{
+rules: [
+]}};
+        var patch = $chart.data('highchartsPatch');
+        settings = typeof (patch) === 'function' ? (patch(settings) || settings) : $.extend(true, settings, patch);
+
+        $chart.trigger('cms:loadHighchart', [settings]);
+
+
+        var chart = Highcharts.chart(chartId, settings);
+
+        
+
+            app.chartLegendDataHighlighter(chartId, chart);
+
+                app.chartsPrint(chart);
+                })
+//]]>
+</script>
+
+<p>В&nbsp;<em>автокредитовании</em> существенный рост портфеля (53%&nbsp;г/г на&nbsp;1&nbsp;апреля) сопровождался ростом долговой нагрузки заемщиков: доля выданных автокредитов с&nbsp;ПДН более&nbsp;50% возросла с&nbsp;45% в&nbsp;IV квартале 2022 года до&nbsp;61% в&nbsp;I квартале 2024&nbsp;года.</p>
+<p>Для&nbsp;повышения устойчивости банков в&nbsp;условиях ухудшения качества выдаваемых кредитов с&nbsp;1&nbsp;июля 2024 года повышены макропруденциальные надбавки к&nbsp;коэффициентам риска по&nbsp;потребительским кредитам и&nbsp;автокредитам.</p>
+<p>Быстрый рост <em>ипотеки</em> в&nbsp;2023 году также происходил за&nbsp;счет закредитованных заемщиков. В&nbsp;IV&nbsp;квартале 2023 года доля ипотечных кредитов, предоставленных заемщикам с&nbsp;чрезмерно высокой долговой нагрузкой (ПДН&nbsp;более&nbsp;80%), увеличилась до&nbsp;45%&nbsp;выдач (+15&nbsp;п.п.&nbsp;за&nbsp;2&nbsp;года). Банк России трижды повышал макропруденциальные требования в&nbsp;ипотеке, с&nbsp;1&nbsp;марта 2024 года их&nbsp;значения для&nbsp;заемщиков с&nbsp;ПДН&nbsp;более&nbsp;80%&nbsp;достигли &laquo;запретительного уровня&raquo;. В&nbsp;результате принятых мер&nbsp;доля ипотеки с&nbsp;ПДН&nbsp;более&nbsp;80%&nbsp;снизилась в&nbsp;I&nbsp;квартале 2024 года до&nbsp;34%&nbsp;выдач: в&nbsp;сегменте строящегося жилья&nbsp;&mdash; до&nbsp;27% (-15 п.п. кв/кв), в&nbsp;сегменте готового жилья&nbsp;&mdash; до&nbsp;39% (-9 п.п. кв/кв).</p></div><div class="title-container"><div class="block-title"><h4><span class="referenceable" id="a_161351">Распределение выдач ипотечных кредитов по ПДН, %</span></h4></div>
+    <div class="chart-double-container">
+
+                <div class="chart-double-container_inner ">
+                                            <div class="chart-subtitle">Кредиты на&#160;приобретение строящегося жилья (ДДУ)</div>
+                </div>
+                <div class="chart-double-container_inner _right">
+                                            <div class="chart-subtitle">Кредиты под&#160;залог жилья (не-ДДУ)</div>
+                </div>
+
+            <div class="chart-double-container_inner ">
+                
+
+<div data-cms-chart-container="" class="chart-container " id="GrafChart4_ChartGroupModel_Charts_0__chart"></div>
+
+<script>
+//<![CDATA[
+    $(function () {
+        var chartId = "GrafChart4_ChartGroupModel_Charts_0__chart";
+        var $chart = $('#' + chartId);
+
+
+        var settings = {"chart":{"height":"300","spacingBottom":5},"xAxis":{"type":"category","labels":{"style":{}},"categories":["I кв. 2020","II кв. 2020","III кв. 2020","IV кв. 2020","I кв. 2021","II кв. 2021","III кв. 2021","IV кв. 2021","I кв. 2022","II кв. 2022","III кв. 2022","IV кв. 2022","I кв. 2023","II кв. 2023","III кв. 2023","IV кв. 2023","I кв. 2024"],"title":{},"crosshair":{"color":"#f5f5f5","zIndex":0}},"yAxis":[{"tickAmount":5,"title":{"text":""},"labels":{"format":"{value:,.f}","style":{}}}],"legend":{"floating":true,"navigation":{"enabled":false}},"title":{},"subtitle":{},"series":[{"dataLabels":{"enabled":true,"format":"{point.name}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.0f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"marker":{"symbol":"circle"},"data":[{"y":28.4000,"name":"28"},26.8000,26.4000,26.4000,{"y":25.3000,"name":"25"},25.8000,27.0000,25.7000,{"y":24.9000,"name":"25"},25.2000,25.8000,28.1000,{"y":29.0000,"name":"29"},27.7000,25.9000,25.8000,{"y":26.9000,"name":"27"}],"color":"#0088cc","id":"s0","name":"ПДН 50-80%"},{"dataLabels":{"enabled":true,"format":"{point.name}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.0f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"marker":{"symbol":"circle"},"data":[{"y":23.4000,"name":"23"},21.1000,19.1000,22.0000,{"y":23.4000,"name":"23"},20.9000,24.4000,30.2000,{"y":32.2000,"name":"32"},29.6000,28.9000,33.6000,{"y":37.1000,"name":"37"},39.1000,45.7000,42.5000,{"y":27.2000,"name":"27"}],"color":"#ED1A34","id":"s1","name":"ПДН более 80%"}],"tooltip":{"shared":true,"headerFormat":"<div class=\"chart-tooltip-header\">{point.x}</div>","pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.f}{series.options.units}</div>\r\n</div>","positioner":app.chartTooltipPositioner},"responsive":
+{
+rules: [
+]}};
+        var patch = $chart.data('highchartsPatch');
+        settings = typeof (patch) === 'function' ? (patch(settings) || settings) : $.extend(true, settings, patch);
+
+        $chart.trigger('cms:loadHighchart', [settings]);
+
+
+        var chart = Highcharts.chart(chartId, settings);
+
+        
+
+            app.chartLegendDataHighlighter(chartId, chart);
+
+            app.chartAutoHeight(chartId, chart);
+                })
+//]]>
+</script>
+
+
+            </div>
+            <div class="chart-double-container_inner _right">
+                
+
+<div data-cms-chart-container="" class="chart-container " id="GrafChart4_ChartGroupModel_Charts_1__chart"></div>
+
+<script>
+//<![CDATA[
+    $(function () {
+        var chartId = "GrafChart4_ChartGroupModel_Charts_1__chart";
+        var $chart = $('#' + chartId);
+
+
+        var settings = {"chart":{"height":"300","spacingBottom":5},"xAxis":{"type":"category","labels":{"style":{}},"categories":["I кв. 2020","II кв. 2020","III кв. 2020","IV кв. 2020","I кв. 2021","II кв. 2021","III кв. 2021","IV кв. 2021","I кв. 2022","II кв. 2022","III кв. 2022","IV кв. 2022","I кв. 2023","II кв. 2023","III кв. 2023","IV кв. 2023","I кв. 2024"],"title":{},"crosshair":{"color":"#f5f5f5","zIndex":0}},"yAxis":[{"tickAmount":5,"title":{"text":""},"labels":{"format":"{value:,.f}","style":{}}}],"legend":{"floating":true,"navigation":{"enabled":false}},"title":{},"subtitle":{},"series":[{"dataLabels":{"enabled":true,"format":"{point.name}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.0f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"marker":{"symbol":"circle"},"data":[{"y":31.2000,"name":"31"},31.7000,31.0000,30.1000,{"y":29.0000,"name":"29"},30.2000,30.7000,30.8000,{"y":28.7000,"name":"29"},26.1000,31.9000,32.4000,{"y":31.5000,"name":"32"},30.7000,28.5000,26.9000,{"y":27.8000,"name":"28"}],"color":"#0088cc","id":"s0","name":"ПДН 50-80%"},{"dataLabels":{"enabled":true,"format":"{point.name}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.0f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"marker":{"symbol":"circle"},"data":[{"y":27.5000,"name":"28"},23.7000,20.3000,22.3000,{"y":24.1000,"name":"24"},23.2000,26.1000,31.1000,{"y":37.8000,"name":"38"},29.1000,34.1000,39.4000,{"y":41.9000,"name":"42"},42.7000,47.2000,48.1000,{"y":38.7000,"name":"39"}],"color":"#ED1A34","id":"s1","name":"ПДН более 80%"}],"tooltip":{"shared":true,"headerFormat":"<div class=\"chart-tooltip-header\">{point.x}</div>","pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.f}{series.options.units}</div>\r\n</div>","positioner":app.chartTooltipPositioner},"responsive":
+{
+rules: [
+]}};
+        var patch = $chart.data('highchartsPatch');
+        settings = typeof (patch) === 'function' ? (patch(settings) || settings) : $.extend(true, settings, patch);
+
+        $chart.trigger('cms:loadHighchart', [settings]);
+
+
+        var chart = Highcharts.chart(chartId, settings);
+
+        
+
+            app.chartLegendDataHighlighter(chartId, chart);
+
+            app.chartAutoHeight(chartId, chart);
+                })
+//]]>
+</script>
+
+
+            </div>
+
+
+    </div>
+        <div class="chart-comment">Источник: данные формы отчетности 0409704.</div>
+</div>    </div>
+</div>
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown4_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block161136/zone" id="a_161136" role="button" tabindex="0">Дисбалансы на рынке жилой недвижимости и риски проектного финансирования</a>
+
+    <div id="DropDown4_content" role="region" aria-labelledby="a_161136" class="dropdown_content">
+<div class="landing-text"><p>В&nbsp;ипотеке наблюдается сокращение выдач в&nbsp;результате падения спроса на&nbsp;кредиты по&nbsp;рыночным ставкам и&nbsp;ужесточения условий <span data-footnote="Для потенциальных покупателей &ndash; снижение максимального размера кредита, увеличение требования по минимальному первоначальному взносу, для банков &ndash; сокращение надбавки, по которой для кредиторов рассчитывается возмещение за выдачу льготных кредитов из бюджета." class="footnote">льготной ипотеки</span>, при&nbsp;этом около&nbsp;70% выдач в&nbsp;I квартале 2024 года пришлось на&nbsp;программы с&nbsp;господдержкой.</p>
+<p>Дисбаланс, связанный с&nbsp;разницей в&nbsp;ценах на&nbsp;новостройки и&nbsp;жилье на&nbsp;вторичном рынке, оставался большим. На&nbsp;это&nbsp;указывают данные как&nbsp;Росстата, так&nbsp;и&nbsp;&laquo;Домклик&raquo;. Разрыв между ценами на&nbsp;первичном и&nbsp;вторичном рынках в&nbsp;I&nbsp;квартале 2024 года составил&nbsp;55%&nbsp;по&nbsp;данным Росстата (44%&nbsp;в&nbsp;IV&nbsp;квартале 2023&nbsp;года) и&nbsp;45%&nbsp;по&nbsp;данным &laquo;Домклик&raquo; (43%&nbsp;в&nbsp;IV&nbsp;квартале 2023&nbsp;года).</p>
+
+<h4 class="h3">Динамика разрыва цен&#160;на&#160;рынке жилья, %</h4><div data-cms-chart-container="" class="chart-container " id="GrafChart2_ChartModel_chart"></div>
+
+<script>
+//<![CDATA[
+    $(function () {
+        var chartId = "GrafChart2_ChartModel_chart";
+        var $chart = $('#' + chartId);
+
+
+        var settings = {"chart":{"spacingBottom":5,"events":{"load":function() {
+if (this.tooltip.options.categoryHeaders) {
+    Highcharts.addEvent(this.tooltip, 'headerFormatter', function(e) {
+        e.labelConfig.tooltipHeader = e.labelConfig.series.chart.tooltip.options.categoryHeaders[e.labelConfig.point.x];
+        return true;
+    });
+}
+}}},"xAxis":{"type":"category","labels":{"style":{}},"categories":[{"name":"2016","categories":["2016-03-31","2016-06-30","2016-09-30","2016-12-31"]},{"name":"2017","categories":["2017-03-31","2017-06-30","2017-09-30","2017-12-31"]},{"name":"2018","categories":["2018-03-31","2018-06-30","2018-09-30","2018-12-31"]},{"name":"2019","categories":["2019-03-31","2019-06-30","2019-09-30","2019-12-31"]},{"name":"2020","categories":["2020-03-31","2020-06-30","2020-09-30","2020-12-31"]},{"name":"2021","categories":["2021-03-31","2021-06-30","2021-09-30","2021-12-31"]},{"name":"2022","categories":["2022-03-31","2022-06-30","2022-09-30","2022-12-31"]},{"name":"2023","categories":["2023-03-31","2023-06-30","2023-09-30","2023-12-31"]},{"name":"2024","categories":["2024-03-31"]}],"title":{},"drawHorizontalBorders":false,"hideFirstLevelLabels":true,"crosshair":{"color":"#f5f5f5","zIndex":0}},"yAxis":[{"tickInterval":10.0,"title":{"text":"%"},"labels":{"format":"{value:,.f}","style":{}}}],"legend":{"navigation":{"enabled":false}},"title":{},"subtitle":{},"series":[{"dataLabels":{"enabled":false,"format":"{point.y:,.1f}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.1f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"dashStyle":"Dash","marker":{"enabled":false,"symbol":"circle"},"data":[-3.0266,-2.2533,-1.3634,-1.2893,6.2593,7.1247,8.1682,8.6577,10.7427,11.9380,12.9829,12.5767,6.4877,7.5800,7.8478,9.4519,17.0889,18.6336,19.1667,18.4254,22.6329,25.7353,27.7392,28.9787,21.5093,26.8901,30.5977,29.6516,39.9789,39.4809,41.8630,44.0907,55.3398],"color":"#0088cc","id":"s0","name":"Росстат"},{"dataLabels":{"enabled":false,"format":"{point.y:,.1f}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.1f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"marker":{"enabled":false,"symbol":"circle"},"data":[8.6419,8.1790,8.8416,10.2186,11.3565,12.9517,15.2789,15.8968,16.9858,17.7097,19.5967,19.8834,19.6723,19.5187,20.5540,21.9473,23.6145,26.0933,27.8288,31.6232,32.4958,32.8924,35.0557,35.3951,35.8143,39.2348,44.8232,46.7024,44.6210,40.8634,40.4128,43.2364,44.7117],"color":"#ED1A34","id":"s1","name":"«Домклик»"}],"tooltip":{"shared":true,"headerFormat":"<div class=\"chart-tooltip-header\">{point.tooltipHeader}</div>","pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.f}{series.options.units}</div>\r\n</div>","categoryHeaders":["Март 2016","Июнь 2016","Сентябрь 2016","Декабрь 2016","Март 2017","Июнь 2017","Сентябрь 2017","Декабрь 2017","Март 2018","Июнь 2018","Сентябрь 2018","Декабрь 2018","Март 2019","Июнь 2019","Сентябрь 2019","Декабрь 2019","Март 2020","Июнь 2020","Сентябрь 2020","Декабрь 2020","Март 2021","Июнь 2021","Сентябрь 2021","Декабрь 2021","Март 2022","Июнь 2022","Сентябрь 2022","Декабрь 2022","Март 2023","Июнь 2023","Сентябрь 2023","Декабрь 2023","Март 2024"],"positioner":app.chartTooltipPositioner},"responsive":
+{
+rules: [
+]}};
+        var patch = $chart.data('highchartsPatch');
+        settings = typeof (patch) === 'function' ? (patch(settings) || settings) : $.extend(true, settings, patch);
+
+        $chart.trigger('cms:loadHighchart', [settings]);
+
+
+        var chart = Highcharts.chart(chartId, settings);
+
+        
+
+            app.chartLegendDataHighlighter(chartId, chart);
+
+                app.chartsPrint(chart);
+                })
+//]]>
+</script>
+
+<p>Прекращение действия массовой льготной ипотеки с&nbsp;1&nbsp;июля 2024 года и&nbsp;корректировка условий прочих льготных программ могут привести к&nbsp;временному сокращению спроса на&nbsp;жилье. По&nbsp;оценкам Банка России, это&nbsp;не&nbsp;окажет значимого негативного влияния на&nbsp;застройщиков (большинство проектов имеют существенный запас прочности), но&nbsp;будет способствовать адресности льготных программ, постепенному сокращению дисбаланса между первичным и&nbsp;вторичным рынками жилья, поддержанию доступности жилья для&nbsp;граждан.</p></div>    </div>
+</div>
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown5_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block161141/zone" id="a_161141" role="button" tabindex="0">Рост концентрации в корпоративном кредитовании</a>
+
+    <div id="DropDown5_content" role="region" aria-labelledby="a_161141" class="dropdown_content">
+<div class="landing-text"><p>Несмотря на&nbsp;ужесточение денежно-кредитной политики Банка России, качество корпоративного кредитного портфеля, в&nbsp;том&nbsp;числе по&nbsp;плавающим ставкам, находится на&nbsp;приемлемом уровне. На&nbsp;1&nbsp;апреля 2024 года доля проблемных корпоративных кредитов составляла лишь&nbsp;4%, значимого роста реструктуризаций по&nbsp;причине ухудшения платежеспособности заемщиков не&nbsp;наблюдалось.</p>
+<p>Вместе с&nbsp;тем&nbsp;с&nbsp;начала 2022 года существенно вырос риск концентрации в&nbsp;корпоративном кредитовании. Замещение компаниями внешнего долга, а&nbsp;также возросшая потребность в&nbsp;увеличении оборотного капитала и&nbsp;финансировании инвестиционных проектов привели к&nbsp;росту кредитования, в&nbsp;результате чего размер долговых обязательств пяти крупнейших компаний перед банками достиг&nbsp;56%&nbsp;капитала банковского сектора.</p>
+<p>Банк России планирует совершенствовать подходы к&nbsp;ограничению концентрации кредитных рисков в&nbsp;рамках банковского регулирования. Также кредиторам рекомендуется развивать синдицированное кредитование крупнейших проектов.</p>
+
+<h4 class="h3">Отношение задолженности крупнейших компаний к&#160;капиталу банковского сектора (%)</h4><div data-cms-chart-container="" class="chart-container " id="GrafChart3_ChartModel_chart"></div>
+    <div class="chart-comment">Источники: формы отчетности 0409123, 0409303, 0409711, 0409501, 0409603, данные НКЦ.</div>
+
+<script>
+//<![CDATA[
+    $(function () {
+        var chartId = "GrafChart3_ChartModel_chart";
+        var $chart = $('#' + chartId);
+
+
+        var settings = {"chart":{"spacingBottom":5,"events":{"load":function() {
+if (this.tooltip.options.categoryHeaders) {
+    Highcharts.addEvent(this.tooltip, 'headerFormatter', function(e) {
+        e.labelConfig.tooltipHeader = e.labelConfig.series.chart.tooltip.options.categoryHeaders[e.labelConfig.point.x];
+        return true;
+    });
+}
+}}},"xAxis":{"type":"category","labels":{"style":{}},"categories":[{"name":"2021","categories":["1.01","1.02","1.03","1.04","1.05","1.06","1.07","1.08","1.09","1.10","1.11","1.12"]},{"name":"2022","categories":["1.01","1.02","1.03","1.04","1.05","1.06","1.07","1.08","1.09","1.10","1.11","1.12"]},{"name":"2023","categories":["1.01","1.02","1.03","1.04","1.05","1.06","1.07","1.08","1.09","1.10","1.11","1.12"]},{"name":"2024","categories":["1.01","1.02","1.03","1.04"]}],"title":{},"crosshair":{"color":"#f5f5f5","zIndex":0}},"yAxis":[{"tickAmount":5,"title":{"text":""},"labels":{"format":"{value:,.f}","style":{}}}],"legend":{"enabled":false},"title":{},"subtitle":{},"series":[{"dataLabels":{"enabled":true,"format":"{point.name}","style":{}},"tooltip":{"pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.0f}{series.options.units}</div>\r\n</div>"},"type":"line","lineWidth":2,"marker":{"enabled":false,"symbol":"circle"},"data":[37.7986,36.7200,37.5783,39.1843,38.2209,38.5979,37.4050,36.7341,36.9040,37.5601,36.7536,37.7210,36.5138,36.3834,41.0758,38.8824,40.6942,39.4488,36.9060,38.5481,38.8261,43.4070,45.9252,45.9417,52.4474,53.3080,55.7173,55.2540,55.8609,56.8663,56.0972,57.3873,56.1119,55.6791,54.8150,53.4386,56.1335,56.5171,54.0000,56.0000],"color":"#0088cc","id":"s0","name":"Отношение задолженности крупнейших компаний к капиталу банковского сектора (%)"}],"tooltip":{"headerFormat":"<div class=\"chart-tooltip-header\">{point.tooltipHeader}</div>","pointFormat":"<div class=\"chart-tooltip-line\">\r\n<div class=\"chart-tooltip-dot\" style=\"color:{point.color}\">●</div>\r\n<div class=\"chart-tooltip-series\">{series.name}: </div>\r\n<div class=\"chart-tooltip-value\">{point.y:,.f}{series.options.units}</div>\r\n</div>","categoryHeaders":["Январь 2021","Февраль 2021","Март 2021","Апрель 2021","Май 2021","Июнь 2021","Июль 2021","Август 2021","Сентябрь 2021","Октябрь 2021","Ноябрь 2021","Декабрь 2021","Январь 2022","Февраль 2022","Март 2022","Апрель 2022","Май 2022","Июнь 2022","Июль 2022","Август 2022","Сентябрь 2022","Октябрь 2022","Ноябрь 2022","Декабрь 2022","Январь 2023","Февраль 2023","Март 2023","Апрель 2023","Май 2023","Июнь 2023","Июль 2023","Август 2023","Сентябрь 2023","Октябрь 2023","Ноябрь 2023","Декабрь 2023","Январь 2024","Февраль 2024","Март 2024","Апрель 2024"]},"responsive":
+{
+rules: [
+]}};
+        var patch = $chart.data('highchartsPatch');
+        settings = typeof (patch) === 'function' ? (patch(settings) || settings) : $.extend(true, settings, patch);
+
+        $chart.trigger('cms:loadHighchart', [settings]);
+
+
+        var chart = Highcharts.chart(chartId, settings);
+
+        
+
+            app.chartLegendDataHighlighter(chartId, chart);
+
+                app.chartsPrint(chart);
+                })
+//]]>
+</script>
+
+</div>    </div>
+</div>
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown6_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block161146/zone" id="a_161146" role="button" tabindex="0">Процентный риск банков</a>
+
+    <div id="DropDown6_content" role="region" aria-labelledby="a_161146" class="dropdown_content">
+<div class="landing-text"><p>Несмотря на&nbsp;значимый рост ставок денежного рынка с&nbsp;июля 2023&nbsp;года, реализация процентного риска пока не&nbsp;оказала существенного влияния на&nbsp;устойчивость банковского сектора. Процентный риск в&nbsp;части облигационного портфеля (снижение стоимости облигаций на&nbsp;фоне роста ставок) ограничен с&nbsp;учетом высокой доли облигаций с&nbsp;плавающим купоном и&nbsp;облигаций, удерживаемых до&nbsp;погашения. В&nbsp;результате отрицательная переоценка составила в&nbsp;октябре 2023&nbsp;&mdash; марте 2024 года менее&nbsp;1%&nbsp;капитала банковского сектора. Чистая процентная маржа банков снизилась в&nbsp;I&nbsp;квартале 2024 года незначительно&nbsp;&mdash; с&nbsp;4,8 до&nbsp;4,5%.</p>
+<p>В&nbsp;то&nbsp;же время с&nbsp;начала года доходности&nbsp;ОФЗ на&nbsp;10&nbsp;лет выросли почти на&nbsp;200&nbsp;б.п., до&nbsp;пиковых значений весны 2022&nbsp;года. Рост доходности&nbsp;ОФЗ происходит на&nbsp;фоне увеличения заимствований со&nbsp;стороны Минфина России и&nbsp;сохранения инфляционного давления. Риски бюджетной устойчивости крайне ограничены благодаря исторически низкому суверенному долгу и&nbsp;консервативной бюджетной политике Минфина России. Риски трансляции высокого уровня ставок в&nbsp;кредитные риски банков также являются низкими на&nbsp;фоне благоприятного финансового положения корпоративного сектора. <span style="text-decoration: line-through;"></span></p></div>    </div>
+</div>
+</div><div class="title-container"><div class="block-title"><h2><span class="referenceable" id="a_161151">Оценка устойчивости финансового сектора</span></h2></div>
+
+
+<div class="dropdown">
+<a aria-controls="DropDown7_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block161152/zone" id="a_161152" role="button" tabindex="0">Оценка устойчивости банковского сектора</a>
+
+    <div id="DropDown7_content" role="region" aria-labelledby="a_161152" class="dropdown_content">
+<div class="landing-text"><p>В&nbsp;банковском секторе отмечается стабильный уровень достаточности капитала (рост с&nbsp;12&nbsp;до&nbsp;12,1%), несмотря на&nbsp;высокий размер прибыли, поскольку банки активно расширяют кредитование. При&nbsp;этом за&nbsp;счет действия макропруденциальных надбавок в&nbsp;потребительском кредитовании и&nbsp;ипотеке банки накопили буфер капитала в&nbsp;размере 725&nbsp;млрд рублей на&nbsp;1&nbsp;апреля 2024&nbsp;года. Рентабельность активов несколько снизилась&nbsp;&mdash; с&nbsp;2,6 до&nbsp;2,1% к&nbsp;01.04.2024, но&nbsp;в&nbsp;основном это&nbsp;связано с&nbsp;отрицательной валютной переоценкой в&nbsp;IV квартале 2023 года на&nbsp;фоне укрепления рубля. Отношение экономической&nbsp;ОВП к&nbsp;капиталу оставалось на&nbsp;умеренном уровне&nbsp;&mdash; около&nbsp;4%, что&nbsp;характеризует устойчивость банков к&nbsp;валютному риску.</p></div>    </div>
+</div>
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown8_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block161155/zone" id="a_161155" role="button" tabindex="0">Оценка устойчивости некредитных финансовых организаций</a>
+
+    <div id="DropDown8_content" role="region" aria-labelledby="a_161155" class="dropdown_content">
+<div class="landing-text"><p>В&nbsp;2023 году страховщики и&nbsp;НПФ продемонстрировали значительные темпы роста бизнеса и&nbsp;чистой прибыли, сохранив высокое качество активов. Реализация ряда крупных страховых событий и&nbsp;рост процентных ставок в&nbsp;IV квартале 2023 года оказали умеренно негативное влияние на&nbsp;результаты деятельности страховщиков. Доходность пенсионных накоплений и&nbsp;пенсионных резервов несколько снизилась во&nbsp;втором полугодии 2023&nbsp;года, но&nbsp;опередила инфляцию. Лизинговый рынок растет ускоренными темпами, однако лизинговые компании демонстрируют снижение уровня достаточности капитала. Кредитные риски лизингового портфеля, который исторически сконцентрирован на&nbsp;отраслях, пострадавших от&nbsp;санкций, остаются повышенными: отмечается рост активов, предназначенных для&nbsp;продажи по&nbsp;расторгнутым договорам, на&nbsp;балансе лизингодателей (в&nbsp;2,9 раза до&nbsp;11% собственных средств).</p></div>    </div>
+</div>
+</div>
+                    
+<a class="longread-transition" href="/finstab/review/#a_48176">
+<div class="longread-transition_title">Узнать больше</div>
+</a>
+
+
+<!--noindex-->
+<div class="request_bottom btns">
+    
+    <a data-cms-save-to-pdf-btn="" data-cms-save-to-pdf-page-orientation="portrait" class="btn _medium _outline" href="/Content/SaveToPdf/Page?url=%2Fanalytics%2Ffinstab%2Fofs%2F4_2023_1_q_2024%2F" target="_blank" rel="nofollow">Сохранить в PDF</a>
+    <div class="copy-btn" data-copy-url="http://www.cbr.ru/analytics/finstab/ofs/4_2023_1_q_2024/" title="Ссылка скопирована">
+        <div class="chain"></div>
+        <button class="btn _small _copy ">Копировать ссылку</button>
+    </div>
+</div>
+<!--/noindex--><div class="responsible-unit">
+<div class="responsible-unit_text">Ответственное структурное подразделение: <a href="/about_br/bankstructute/dfs/"> Департамент финансовой стабильности</a></div>
+</div>                    <!--/index-->
+                    
+    <div class="page-info">
+        <!--noindex-->
+        
+
+
+<div class="page-info_helpful" data-page-feedback="" data-feedback-url="/Content/PageInfo/RegisterFeedback">
+    <!--noindex-->
+    <div class="helpful" data-helpful="">
+        Страница была полезной?
+        <div class="helpful_btns">
+            <button class="helpful_btn _yes" data-helpful-btn="yes"><i class="helpful_icon"></i><span>Да</span></button>
+            <button class="helpful_btn _no" data-helpful-btn="no"><i class="helpful_icon"></i><span>Нет</span></button>
+        </div>
+    </div>
+    <!--/noindex-->
+</div>
+
+            <div class="page-info_last-update">Последнее обновление страницы: 24.05.2024</div>
+        <!--/noindex-->
+    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer">
+    <div class="offsetMenu">
+        <div class="footer_main">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2">
+                <div class="footer_top">
+                    <a class="footer_logo" href="../../../../index.htm"></a>
+                    <div class="footer_up gotoUp">
+                        <div class="footer_up_title">Наверх</div>
+                        <div class="footer_up_icon"></div>
+                    </div>
+                </div>
+                
+<div class="footer_contacts">
+<div class="footer_address">107016, Москва, ул. Неглинная, д.&nbsp;12, к. В, Банк
+России</div>
+<div class="footer_phones">
+<div class="footer_phone"><a class="footer_phone_val" href="tel:300">300</a><span>(круглосуточно, бесплатно для&nbsp;звонков с&nbsp;мобильных телефонов)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:88003003000">8&nbsp;800 300-30-00</a><span>(круглосуточно, бесплатно для&nbsp;звонков из&nbsp;регионов России)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:+74993003000">+7&nbsp;499 300-30-00</a><span>(круглосуточно, в&nbsp;соответствии с&nbsp;тарифами вашего оператора)</span></div>
+
+</div>
+</div>
+<div class="footer_main_block">
+<div class="footer_left-menu">
+<div class="footer_left-menu_item"><a href="../../../../lk_uio/index.htm">Личный кабинет участников рынка</a></div>
+<div class="footer_left-menu_item"><a href="../../../../about_br/irp/index.htm">Отношения с&nbsp;инвесторами</a></div>
+<div class="footer_left-menu_item"><a href="../../../../rbr/list_inside/index.htm">Перечень инсайдерской информации Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../../../na_vr/index.htm">Официальное опубликование нормативных актов Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../../../../project_na/index.htm">Проекты нормативных актов Банка России</a></div>
+<div class="footer_left-menu_item"><a href="../../../../other/holidays/index.htm">Перечень нерабочих праздничных дней и&nbsp;перенесенных выходных дней</a></div>
+</div>
+<div class="networks-circle footer_networks">
+<a class="networks-circle_item _vk" href="https://vk.com/cbr_official"></a>
+<a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia"></a>
+<a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+<a class="networks-circle_item _ydzen" href="https://dzen.ru/cbr" title="Яндекс Дзен"></a>
+<a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+<div class="footer_menu">
+<div class="footer_menu_items">
+<div class="footer_menu_item"><a href="../../../../about/index.htm">О&nbsp;сайте</a></div>
+<div class="footer_menu_item"><a href="../../../../contacts/index.htm">Контакты</a></div>
+<div class="footer_menu_item"><a href="../../../../about_br/anticor/index.htm">Противодействие коррупции</a></div>
+<div class="footer_menu_item"><a href="../../../../development/index.htm">Технические ресурсы</a></div>
+</div>
+			 <div class="footer_menu_item _visually-impaired"><a href="#" title="Версия для слабовидящих"><span class="visually-impaired-on">Версия для&nbsp;слабовидящих</span><span class="visually-impaired-off">Обычная версия</span></a></div>
+</div>
+
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2 row">
+                <div class="footer_bottom_text col-md-12 col-xl-11">&#169; Банк России, 2000–2024.</div>
+<div class="footer_bottom_aic col-md-11">Дизайн сайта — <a href="https://aic.ru" target="_blank"><img src="/common/images/icons/aic-logo.svg"></a></div>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+        <div class="popup-cookies" data-popup-cookies="">
+            <div class="popup-cookies_title">
+                На сайте Банка России используются файлы cookie
+            </div>
+            <div class="popup-cookies_subtitle">
+                Оставаясь на <a href="../../../../index.htm">www.cbr.ru</a>, вы принимаете
+                <a href='/user_agreement/'>пользовательское соглашение</a>
+            </div>
+            <button class="btn _medium _blue " data-popup-cookies-btn="">
+                Подтвердить
+            </button>
+        </div>
+
+    
+<!--[if IE 9]><script>$('body').addClass('ie9')</script><![endif]-->
+<script src="/Modules/Content/Scripts/PageInfo.js?v=v3116962712" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            Content_PageInfo.init($('[data-page-feedback]'));
+        });
+    </script>
+
+
+
+</body>
+</html>
