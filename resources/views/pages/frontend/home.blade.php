@@ -690,7 +690,7 @@
                                                     <div class="news _in-feed col-md-17 _big _white">
                                                         <div class="news_inner"
                                                             style="
-                              background-image: url(./Content/images/hakimyat.png);
+                              background-image: url({{asset('assets/frontend/Content/images/hakimyat.png')}});
                             ">
                                                             <div class="news_text">
                                                                 <div class="news_info">
