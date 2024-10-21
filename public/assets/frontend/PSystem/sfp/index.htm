@@ -1,0 +1,935 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="zoom:lang" content="ru">
+    <meta name="zoom:last-modified" content="Thu, 08 Aug 2024 09:05:48 GMT">
+<title>Система быстрых платежей - что это за сервис  |Toshkent Invest Company</title>
+
+    <meta name="description" content="Система быстрых платежей, перевод по номеру телефона, оплата по QR-коду">
+
+
+    <meta property="og:image" content="/common/images/share-1.jpg">
+
+    
+
+
+            <link rel="stylesheet" type="text/css" href="../../common/libs/jquery-ui/jquery-ui.min.css?v=v478607061" media="all">
+
+            <!--[if IE 9]><link rel="stylesheet" type="text/css" href="/common/style/main-ie9.css?v=v2358109689" media="all"><![endif]-->
+
+            <!--[if gt IE 9]><!--><link rel="stylesheet" type="text/css" href="../../common/style/main.min.css?v=v2358109689" media="all"><!--<![endif]-->
+
+
+        <script type="text/javascript" src="/common/libs/jquery-3.6.1.min.js?v=v478607061"></script>
+
+
+
+        <script type="text/javascript" src="/common/libs/jquery-ui/jquery-ui.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.inputmask.min.js?v=v478607061"></script>
+
+
+        <script type="text/javascript" src="/common/scripts/vendor.js?v=v3694197594"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.floatThead.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/popper.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/tippy.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/scripts/main.min.js?v=v2358109689"></script>
+
+
+        <script type="text/javascript" src="/common/libs/localization-ru.js?v=v478607061"></script>
+        <script type="text/javascript" src="/js/jquery.ui.autocomplete-ru.js?v=v1043438991"></script>
+
+        <script type="text/javascript" src="/js/jquery.cookie.min.js?v=v4260771145"></script>
+
+        <script type="text/javascript" src="/js/site.js?v=v1395547681"></script>
+
+
+
+
+
+<script src="/Modules/Reception/js/TopicalMessages.js?v=v3986540667" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+        var $menu = $('[data-menu]'),
+            $menuItemBtn = $menu.find('[data-menu-item-btn]'),
+            $menuShow = $('[data-menu-show]'),
+            $menuClose = $('[data-menu-close]');
+        var config = $menu.data('config');
+
+        $menu.find('[data-cms-wholesite-header-right]').html($('#header .header_right').html());
+
+        $menuShow.on('click.cms_loadwholesite', function (event) {
+            loadWholeSite(true);
+        });
+        $menuShow.on('mouseenter.cms_loadwholesite', function (event) {
+            loadWholeSite(false);
+        });
+
+        var xhr = null, g_openMenu = false;
+        function loadWholeSite(openmenu) {
+            g_openMenu = g_openMenu || openmenu;
+            $menuShow.off('click.cms_loadwholesite mouseenter.cms_loadwholesite');
+            if (xhr === null) {
+                $('.menu_wrap .networks-circle').html($('.networks-circle.footer_networks').html());
+                $('.menu_wrap .header_search').html($('.header .offsetMenu .header_search').html());
+
+                xhr = $.ajax(config.url, {
+                    dataType: "html",
+                    method: "get",
+                    success: function (html) {
+                        $('[data-cms-wholesite-placeholder]').replaceWith(html);
+
+                        $menu.find('.menu_tab[data-tabs-tab]').each(function () {
+                            var tab = $(this).data('tabs-tab');
+                            $(this).toggle($menu.find('[data-tabs-content="' + tab + '"]').length != 0);
+                        });
+
+                        app.init($menu);
+
+                        for (var i in config.catalogPath) {
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .addClass("_active");
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .closest('[data-tabs-content]')
+                                .trigger('open-anchor');
+                        }
+
+                        
+                        xhr = true;
+                    },
+                    error: function () {
+                        xhr = null;
+                    }
+                });
+            }
+        }
+    });
+    </script>
+
+
+<script>
+    if (window.localStorage) {
+        if (localStorage.getItem('vision-impaired'))
+            document.getElementsByTagName('html')[0].className += ' vision-impaired';
+    }
+</script>
+<script>
+    document.documentElement.style.setProperty('--scrollbar-width', '17px');
+    setTimeout(function () {
+        
+        var div = document.createElement('div');
+
+        div.style.overflowY = 'scroll';
+        div.style.width = '50px';
+        div.style.height = '50px';
+
+        
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+        var scrollWidth = Math.max(div.offsetWidth - div.clientWidth, 0.15); 
+        document.body.removeChild(div);
+        
+        document.documentElement.style.setProperty('--scrollbar-width', scrollWidth + 'px');
+    }, 0);
+</script>
+
+
+
+    
+</head>
+<body>
+    
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(5774506, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/5774506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <!-- /Yandex.Metrika counter -->   
+
+    
+    
+
+    <div class="header-print">
+    <div class="offsetMenu">
+        <div class="header-print_inner">
+            <img class="header-print_logo" alt="cbr" src="/common/images/logo.svg">
+            <ul class="header-print_contacts">
+<li>Узбекистан, город Ташкент,
+улица Ислама Каримова, 51</li>
+<li><nobr class="phone">8 800 300-30-00</nobr></li>
+<li>www.cbr.ru</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+    <header class="header" id="header">
+        
+<div class="top-line" data-top-line="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="top-line_inner header_inner">
+                <div class="row">
+                    <div class="col-xl-5 col-md-9">
+                        <div class="header_left">
+                                <div class="header_menu" data-menu-show=""></div>
+                            <a class="header_logo" href="../../index.htm"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                        <div class="header_search">
+                                <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="header_right">
+                                <div class="header_link"><a href="../../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2FPSystem%2Fsfp%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="offsetMenu">
+            <div class="col-md-23 offset-md-1">
+                <div class="header_inner">
+                    <div class="row">
+                        <div class="col-xl-5 col-md-9">
+                            <div class="header_left">
+                                    <div class="header_menu" data-menu-show=""></div>
+                                <a class="header_logo" href="../../index.htm"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                            <div class="header_search">
+                                    <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                            </div>
+                            <div class="d-none d-md-block">
+                                <div class="header_right">
+                                    <div class="header_link"><a href="../../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2FPSystem%2Fsfp%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <form class="search-form" action="/search/" method="get" data-search-form="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="search-form_inner">
+                <div class="search-form_title">Что вы хотите найти?</div>
+                <div class="search-form_content">
+                    <div class="search-form_block">
+                        <div class="search-form_icon"></div>
+                        <div class="search-form_field">
+                            <input name="text" type="text" placeholder="Начните писать" data-search-form-input="">
+                        </div>
+                    </div>
+                    <div class="search-form_btn">
+                        <button class="b-btn _blue" data-search-form-btn="">Искать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<div class="menu_wrap" data-menu="" data-config="{&quot;catalogPath&quot;:[16442,15661],&quot;url&quot;:&quot;/Catalog/SiteMap/GetWholeSiteHtml?blockId=59191&quot;}">
+    <div class="offsetMenu">
+        <div class="header_menu _close menu_close d-none d-md-block" data-menu-close=""></div>
+        <div class="header_inner top-line_inner d-block d-md-none">
+            <div class="row">
+                <div class="col-xl-5 col-md-9">
+                    <div class="header_left">
+                        <div role="button" tabindex="0" aria-label="Закрыть меню" class="header_menu _close" data-menu-close=""></div><a class="header_logo" href="../../index.htm"></a>
+                    </div>
+                </div>
+                <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                    <div class="header_search"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu row" data-tabs="data-tabs">
+            <div class="menu_quick col-md-7">
+                <div role="tablist" class="menu_quick_tabs">
+    <a role="tab" id="menu_tab_Activity" aria-controls="menu_content_Activity" aria-selected="true" class="menu_tab _active" href="#" data-tabs-tab="Activity">Деятельность</a>
+    <a role="tab" id="menu_tab_FinancialMarkets" aria-controls="menu_content_FinancialMarkets" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="FinancialMarkets">Финансовые рынки</a>
+    <a role="tab" id="menu_tab_Documents" aria-controls="menu_content_Documents" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Documents">Документы и данные</a>
+    <a role="tab" id="menu_tab_AboutBank" aria-controls="menu_content_AboutBank" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="AboutBank">О Банке Узбекистана</a>
+    <a role="tab" id="menu_tab_Services" aria-controls="menu_content_Services" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Services">Сервисы</a>
+</div>
+<div class="menu_quick_links">
+    <div class="inner_links"><a href="../../support_measures/index.htm" title="Меры зашиты финансового рынка" style="color:red">Меры защиты финансового рынка</a>
+  </div>
+<div class="phones"><a class="menu_phone_val" href="tel:+74993003000">
+<div class="plus">+</div>7 499 300-30-00</a><a class="menu_phone_val" href="tel:88003003000">8 800 300-30-00</a><a class="menu_phone_val" href="tel:300">300</a><span>Бесплатно для звонков с мобильных телефонов</span></div>
+<div class="inner_links">
+  <a href="../../news/index.htm" title="Новости">Новости</a>
+  <a href="../../rbr/index.htm" title="Решения Банка Узбекистана">Решения Банка Узбекистана</a>
+  <a href="../../contacts/index.htm" title="Контактная информация">Контактная информация</a>
+  <a href="../../sitemap.html" title="Карта сайта">Карта сайта</a>
+  <a href="../../about/index.htm" title="О сайте">О сайте</a>
+  </div>
+<div class="networks-circle">
+  <a class="networks-circle_item _vk" href="https://vk.com/cbr_official" title="ВКонтакте"></a>
+  <a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia" title="Youtube"></a>
+  <a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+  <a class="networks-circle_item _ydzen" href="https://zen.yandex.ru/id/622372d6a565892091994ea9" title="Яндекс Дзен"></a>
+  <a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+            </div>
+            <div class="d-md-none link-above">
+                <div class="header_right" data-cms-wholesite-header-right="">
+                </div>
+                    <div class="header_right">
+                        <div class="header_link"><a href="../../finorg/index.htm">Проверить участника финансового рынка</a></div>
+                    </div>
+            </div>
+            <div class="menu_content_container col-md with-centered-loader" data-cms-wholesite-placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <main id="content">
+        <div class="offsetMenu ">
+            <div class="container-fluid">
+                <div class="col-md-23 offset-md-1">
+                    <div class="breadcrumbs">
+    <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="../../index.htm"></a></div>
+        <div class="breadcrumbs_item">
+            <a href="/PSystem/"><!--noindex-->Национальная платежная система<!--/noindex--></a>
+        </div>
+    </div>
+
+                    <!--index-->
+<h1><span class="referenceable">Система быстрых платежей</span>
+</h1>
+                                        
+
+
+
+
+
+
+                    <div class="intro">
+	<div class="intro_icon-wrap">
+		<div class="intro_icon" style="background-image: url('/StaticHtml/File/162018/sbp_logo_t.png');">
+		</div>
+	</div>
+	<div class="intro_title">
+		Система быстрых платежей (СБП)&nbsp;&mdash; круглосуточный сервис Банка Узбекистана, который позволяет мгновенно переводить деньги между счетами в&nbsp;разных банках по&nbsp;номеру мобильного телефона, оплачивать покупки, услуги и&nbsp;налоги, а&nbsp;также делать другие операции.
+	</div>
+</div>
+                                            <div class="landing-text">
+                            <style type='text/css'>
+/*<![CDATA[*/
+.vrez {
+background-color:#ebebeb;
+}
+*{
+ box-sizing:border-box; 
+}
+.sbp_img {
+margin-right:30px;
+  width:300px;
+  
+}
+
+.b-marquee {
+  font-family: 'Segoe UI', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.b-marquee__text {
+  -webkit-animation: animMarquee 5s linear infinite;
+  animation: animMarquee 5s linear infinite;
+}
+
+@-webkit-keyframes animMarquee {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animMarquee {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+
+/* text right to left*/
+
+.b-marquee--rtl {}
+
+.b-marquee--rtl .b-marquee__text {
+  -webkit-animation: animMarqueeRtl 5s linear infinite;
+  animation: animMarqueeRtl 5s linear infinite;
+}
+
+@-webkit-keyframes animMarqueeRtl {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animMarqueeRtl {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
+
+/*]]*/
+</style><p>Список банков, подключенных к&nbsp;СБП, а&nbsp;также другую полезную информацию можно посмотреть <span><a href="https://sbp.nspk.ru/">здесь</a></span>.</p>
+<p><span>В&nbsp;</span><span lang="EN-US">II<span>&nbsp;</span></span><span>квартале 2024 года переводами через&nbsp;СБП воспользовались 6&nbsp;из&nbsp;10&nbsp;жителей нашей страны, оплатой товаров и&nbsp;услуг&nbsp;&mdash; 4&nbsp;из&nbsp;10</span>. Подробнее с&nbsp;основными показателями развития&nbsp;СБП&nbsp;можно ознакомиться <u><a href="/analytics/nps/#a_135154">здесь</a></u>.</p>
+<p>Максимальная сумма одной операции в&nbsp;СБП&nbsp;составляет 1&nbsp;млн&nbsp;рублей, за&nbsp;исключением переводов физических лиц&nbsp;<a href="/press/event/?id=18694">между своими счетами в&nbsp;разных банках</a>.</p>
+                        </div>
+                                        
+
+
+<div class="dropdown">
+<a aria-controls="DropDown_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block124873/zone" id="a_124873" role="button" tabindex="0"><img src="/StaticHtml/File/103850/sbp_1.svg" class="sbp_img">Как перевести деньги через СБП по номеру телефона </a>
+
+    <div id="DropDown_content" role="region" aria-labelledby="a_124873" class="dropdown_content">
+<div class="landing-text"><p>Чтобы перевести деньги по&nbsp;номеру мобильного телефона себе или&nbsp;другому человеку, нужно, чтобы банк отправителя и&nbsp;банк получателя были подключены к&nbsp;СБП. При&nbsp;этом переводы через&nbsp;СБП возможны только между разными банками.</p>
+<p>Перевод доступен в&nbsp;мобильных приложениях или&nbsp;через интернет-банк.</p></div><div class="steps landing-text">
+<div class="col-md-7  step "><img class="step_img" src="/StaticHtml/File/124876/sbp_11-1.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">1.</div>
+<div class="col-md-5 body-2 step_info_text">Откройте приложение банка и&nbsp;выберите функцию перевода через СБП.</div>
+</div>
+</div>
+<div class="col-md-7 offset-md-1 step "><img class="step_img" src="/StaticHtml/File/124876/sbp_11-2.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">2.</div>
+<div class="col-md-5 body-2 step_info_text">Укажите номер телефона получателя. Если переводите между своими счетами&nbsp;&mdash; введите свой номер.</div>
+</div>
+</div>
+<div class="col-md-7  step "><img class="step_img" src="/StaticHtml/File/124876/sbp_11-3.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">3.</div>
+<div class="col-md-5 body-2 step_info_text">Выберите банк, в&nbsp;который нужно перевести деньги.</div>
+</div>
+</div>
+<div class="col-md-7  step offset-md-1"><img class="step_img" src="/StaticHtml/File/124876/sbp_11-4.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">4.</div>
+<div class="col-md-5 body-2 step_info_text">Введите сумму перевода.</div>
+</div>
+</div>
+<div class="col-md-7  step "><img class="step_img" src="/StaticHtml/File/124876/sbp_11-5.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">5.</div>
+<div class="col-md-5 body-2 step_info_text">Проверьте данные, ознакомьтесь с&nbsp;информацией о&nbsp;комиссии банка и&nbsp;подтвердите перевод.</div>
+</div>
+</div>
+</div><div class="landing-text"><div class="block-title"><h3><span class="referenceable" id="a_162027">Тарифы для граждан</span></h3></div><div class="vrez">
+<p>При&nbsp;переводе средств одного человека другому:</p>
+<ul>
+<li>на&nbsp;сумму до&nbsp;100&nbsp;тыс. рублей в&nbsp;календарный месяц&nbsp;&mdash; бесплатно;</li>
+<li>свыше 100&nbsp;тыс. рублей в&nbsp;календарный месяц&nbsp;&mdash; 0,5% от&nbsp;суммы, превышающей лимит перевода в&nbsp;календарный месяц, но&nbsp;не&nbsp;более 1,5&nbsp;тыс. рублей за&nbsp;перевод.</li>
+</ul>
+<p>При&nbsp;переводе средств между своими счетами, открытыми в&nbsp;разных банках:</p>
+<ul>
+<li>в&nbsp;размере в&nbsp;совокупности по&nbsp;всем счетам в&nbsp;банке ежемесячно не&nbsp;более 30&nbsp;млн&nbsp;рублей&nbsp;&mdash; бесплатно;</li>
+<li>свыше 30&nbsp;млн&nbsp;рублей в&nbsp;календарный месяц&nbsp;&mdash; 0,5% от&nbsp;суммы, превышающей лимит перевода в&nbsp;календарный месяц, но&nbsp;не&nbsp;более 1,5&nbsp;тыс. рублей за&nbsp;перевод.</li>
+</ul>
+<p>Такие ограничения применяются к&nbsp;переводам из&nbsp;каждого банка.</p>
+<p>Для&nbsp;удобства гражданToshkent Invest Company <span><a href="/faq/bank_s/#a_t1259">расширил</a></span> возможности&nbsp;СБП: между своими счетами в&nbsp;разных банках человек может перевести через&nbsp;СБП до&nbsp;30&nbsp;млн рублей одной операцией.</p>
+<p>По&nbsp;вопросам проведения переводов с&nbsp;использованием&nbsp;СБП, в&nbsp;том&nbsp;числе между своими счетами в&nbsp;разных банках, рекомендуем обращаться в&nbsp;обслуживающий банк.</p>
+</div></div>
+
+
+<div class="dropdown">
+<a aria-controls="DropDown5_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block162022/zone" id="a_162022" role="button" tabindex="0"><img src="/StaticHtml/File/162024/acc.svg" class="sbp_img">Как пополнить счет со своего счета в другом банке</a>
+
+    <div id="DropDown5_content" role="region" aria-labelledby="a_162022" class="dropdown_content">
+<div class="steps landing-text">
+<div class="col-md-7  step "><img class="step_img" src="/StaticHtml/File/162024/sbp_1-1.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">1.</div>
+<div class="col-md-5 body-2 step_info_text">Откройте приложение банка и&nbsp;выберите функцию перевода из&nbsp;другого банка.</div>
+</div>
+</div>
+<div class="col-md-7 offset-md-1 step "><img class="step_img" src="/StaticHtml/File/162024/sbp_1-2.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">2.</div>
+<div class="col-md-5 body-2 step_info_text">Выберите банк, со&nbsp;счета в&nbsp;котором нужно перевести деньги.</div>
+</div>
+</div>
+<div class="col-md-7  step "><img class="step_img" src="/StaticHtml/File/162024/sbp_1-3.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">3.</div>
+<div class="col-md-5 body-2 step_info_text">Введите запрашиваемую сумму.</div>
+</div>
+</div>
+<div class="col-md-7  step offset-md-1"><img class="step_img" src="/StaticHtml/File/162024/sbp_1-4.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">4.</div>
+<div class="col-md-5 body-2 step_info_text">Проверьте данные, ознакомьтесь с&nbsp;информацией о&nbsp;комиссии банка и&nbsp;подтвердите запрос.</div>
+</div>
+</div>
+<div class="col-md-7  step "><img class="step_img" src="/StaticHtml/File/162024/sbp_1-5.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">5.</div>
+<div class="col-md-5 body-2 step_info_text">При&nbsp;получении запроса на&nbsp;перевод перейдите в&nbsp;приложение выбранного банка и&nbsp;подтвердите выполнение перевода. Чтобы впоследствии переводить без&nbsp;подтверждения каждого запроса, дайте банку соответствующее разрешение.</div>
+</div>
+</div>
+</div>    </div>
+</div>
+    </div>
+</div>
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown2_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block124867/zone" id="a_124867" role="button" tabindex="0"><img src="/StaticHtml/File/103850/sbp_2.svg" class="sbp_img">Как оплатить покупку через СБП</a>
+
+    <div id="DropDown2_content" role="region" aria-labelledby="a_124867" class="dropdown_content">
+<div class="landing-text"><p>Оплатить покупку можно через мобильные приложения банков, подключенных к&nbsp;СБП, мобильное приложение СБПэй, со&nbsp;смартфона, планшета или&nbsp;компьютера.</p>
+<p>Перед оплатой убедитесь, что&nbsp;продавец поддерживает такой способ оплаты.</p>
+<p>Доступны такие варианты оплаты, как&nbsp;оплата по&nbsp;QR-коду, NFC, кнопке, ссылке<span>,&nbsp;</span><span>заранее привязанному счету</span>.</p>
+<p><img src="/StaticHtml/File/162234/5sbp.svg"></p><p>Клиент может заранее в&nbsp;мобильном приложении или&nbsp;на&nbsp;сайте продавца выбрать опцию &laquo;Привязка счета СБП&raquo;. Это&nbsp;решение единожды нужно подтвердить в&nbsp;приложении банка. Таким образом клиент предоставит поручение банку на&nbsp;перевод денег для&nbsp;оплаты дальнейших покупок у&nbsp;этого продавца без&nbsp;дополнительного подтверждения.</p>
+<p>Вводить данные счета и&nbsp;переходить в&nbsp;приложение банка при&nbsp;покупке не&nbsp;нужно&nbsp;&mdash; оплата пройдет автоматически.</p>
+<p>Управление подписками, оформленными через&nbsp;СБП, доступно в&nbsp;мобильном приложении банка: клиент может видеть актуальные подписки, отключать ненужные и&nbsp;устанавливать лимиты на&nbsp;списание средств.</p>
+<p>Оплачивая покупки через&nbsp;СБП, можно получать кешбэк от&nbsp;организаций. Для&nbsp;этого нужно зарегистрироваться в&nbsp;<span><a href="https://vamprivet.ru/">программе лояльности АО&nbsp;&laquo;НСПК&raquo;</a></span>.&nbsp;</p></div><div class="steps landing-text">
+<div class="col-md-7  step "><img class="step_img" src="/StaticHtml/File/124877/sbp_2_2.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">1.</div>
+<div class="col-md-5 body-2 step_info_text">Отсканируйте QR-код камерой смартфона, в&nbsp;приложении СБПэй или&nbsp;из&nbsp;мобильного приложения банка.</div>
+</div>
+</div>
+<div class="col-md-7  offset-md-1 step "><img class="step_img" src="/StaticHtml/File/124877/sbp_2_3.svg">
+<div class="step_info">
+<div class="title_20 step_info_number">2.</div>
+<div class="col-md-5 body-2 step_info_text">Проверьте данные платежа, включая получателя и&nbsp;сумму, и&nbsp;подтвердите платеж.</div>
+</div>
+</div>
+</div><div class="landing-text"><div class="block-title"><h3><span class="referenceable" id="a_162231">Тарифы для граждан и организаций при оплате покупок</span></h3></div><div class="vrez">
+<p>При&nbsp;оплате товаров и&nbsp;услуг через&nbsp;СБП с&nbsp;граждан комиссия не&nbsp;взимается. Кроме того, такая операция не&nbsp;расходует лимит <a href="index.htm#a_162027">бесплатных переводов</a>.</p>
+<p>Размер комиссии, которую организация платит банку, зависит от&nbsp;<a href="/PSystem/payment_system/2023-03-17/">вида деятельности торговой точки</a>. В&nbsp;целом для&nbsp;бизнеса размер комиссии не&nbsp;превышает 0,7%, для&nbsp;ряда категорий торговых точек, реализующих социально значимые товары,&nbsp;&mdash; 0,4%, для&nbsp;организаций сферы ЖКХ&nbsp;&mdash; 0,2%.</p>
+<p>При&nbsp;этом сумма комиссии не&nbsp;превышает 1,5&nbsp;тыс. рублей за&nbsp;операцию, а&nbsp;при&nbsp;оплате ЖКУ&nbsp;&mdash; не&nbsp;более 10&nbsp;рублей за&nbsp;операцию.</p>
+</div></div>    </div>
+</div>
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown3_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block124869/zone" id="a_124869" role="button" tabindex="0"><img src="/StaticHtml/File/103850/sbp_3.svg" class="sbp_img">Как организации выплатить деньги человеку через СБП</a>
+
+    <div id="DropDown3_content" role="region" aria-labelledby="a_124869" class="dropdown_content">
+<div class="landing-text">
+<p>Через СБП&nbsp;юридическое лицо может перевести деньги человеку (по&nbsp;номеру телефона) и&nbsp;банку (который выбрал получатель). Это&nbsp;могут быть как&nbsp;обычные платежи, так&nbsp;и&nbsp;возврат средств покупателю со&nbsp;стороны торговой точки по&nbsp;ранее совершенной покупке.</p>
+<p>Для&nbsp;перевода необходимо, чтобы банк организации и&nbsp;банк человека были подключены к&nbsp;системе.</p>
+<p class="vrez">Размер комиссий для&nbsp;организации при&nbsp;переводе средств человеку определяется обслуживающим ее&nbsp;банком.</p>
+</div>    </div>
+</div>
+
+
+
+<div class="dropdown">
+<a aria-controls="DropDown4_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block124871/zone" id="a_124871" role="button" tabindex="0"><img src="/StaticHtml/File/124872/Asset_18.svg" class="sbp_img">Переводы между организациями через СБП</a>
+
+    <div id="DropDown4_content" role="region" aria-labelledby="a_124871" class="dropdown_content">
+<div class="landing-text"><p>Юридические лица и&nbsp;индивидуальные предприниматели могут через&nbsp;СБП переводить деньги друг другу. Такие платежи могут применяться для&nbsp;удобных и&nbsp;быстрых расчетов с&nbsp;контрагентами. Чаще всего это&nbsp;происходит&nbsp;так:</p>
+<ol>
+<li>Организация-получатель формирует платежную ссылку через каналы дистанционного банковского обслуживания своего банка, указывая сумму платежа, копирует ее&nbsp;и&nbsp;отправляет плательщику.</li>
+<li>Организация-плательщик получает эту&nbsp;платежную ссылку (например, по&nbsp;почте, в&nbsp;мессенджере).</li>
+<li>По&nbsp;ссылке организации-плательщику доступна информация о&nbsp;сумме и&nbsp;назначении платежа, а&nbsp;также открывается возможность для&nbsp;оплаты онлайн.</li>
+<li>После оплаты контрагенту приходит уведомление о&nbsp;зачислении средств.</li>
+</ol>
+<p class="vrez">Для&nbsp;перевода необходимо, чтобы банки организаций предоставляли возможность переводов через&nbsp;СБП&nbsp;между юридическими лицами. Детальный процесс перевода и&nbsp;размер комиссий уточняйте в&nbsp;обслуживающем банке.</p></div>    </div>
+</div>
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            Reception_TopicalMessages.init({
+                registerViewUrl: '/Reception/TopicalMessage/RegisterView',
+                registerLikeUrl: '/Reception/TopicalMessage/RegisterLike',
+                registerDislikeReasonUrl: '/Reception/TopicalMessage/RegisterDislikeReason',
+            });  
+        });
+    </script>
+
+
+
+<h2><span class="referenceable" id="a_164640">Ответы на&#160;популярные вопросы</span></h2>
+<form action="/PSystem/sfp/" class="search __topicalMessageSearch" method="get">            <div class="block-part">
+                <div class="search">
+                    <div class="search_field">
+                        <input id="qlist_Search" name="qlist.Search" placeholder="Поиск по разделу" type="text" value="">
+                    </div>
+                    <div class="search_btn">
+                        <button class="b-btn _blue">Искать</button>
+                    </div>
+                </div>
+                <div class="filters_wrapper">
+                    <div class="filters">
+                        <div class="filter">
+                            <label class="filter_faq-indicator" data-faq-indicator-filter="">
+                                <input class="filter_faq-indicator-input" type="radio" name="qlist.Date" checked="checked" value="All">
+                                <div class="filter_faq-indicator-button">Все</div>
+                            </label>
+                        </div>
+                        <div class="filter">
+                            <label class="filter_faq-indicator" data-faq-indicator-filter="new">
+                                <input class="filter_faq-indicator-input" type="radio" name="qlist.Date" value="New">
+                                <div class="filter_faq-indicator-button"><span class="faq-indicator-new"></span>Новое</div>
+                            </label>
+                        </div>
+                        <div class="filter">
+                            <label class="filter_faq-indicator" data-faq-indicator-filter="update">
+                                <input class="filter_faq-indicator-input" type="radio" name="qlist.Date" value="Updated">
+                                <div class="filter_faq-indicator-button"><span class="faq-indicator-update"></span>Обновлено</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</form>
+
+
+<div class="dropdown question" data-topical-message-id="9720" data-faq-indicator="">
+<a aria-controls="qlist_message_content_9720_0" aria-expanded="false" class="dropdown_title" id="qlist_message_title_9720_0" role="button" tabindex="0">        <div class="question_num">1</div>
+<div class="question_title referenceable" id="a_tm9720"><h3>Что&nbsp;делать человеку, если он&nbsp;при&nbsp;переводе денег ошибся в&nbsp;реквизитах? Можно&nbsp;ли вернуть деньги?</h3>
+</div>
+</a>
+
+
+    <div id="qlist_message_content_9720_0" role="region" aria-labelledby="qlist_message_title_9720_0" class="dropdown_content">
+        <div class="dropdown_date">
+            Обновлено: 07.08.2024
+        </div>
+        <div class="additional-text-block">
+            <p>При&nbsp;переводе денег через&nbsp;СБП они&nbsp;зачисляются получателю в&nbsp;режиме реального времени.</p>
+<p>В&nbsp;соответствии с&nbsp;законодательством УзбекистанскойФедерации списание средств со&nbsp;счета без&nbsp;распоряжения его&nbsp;владельца возможно только по&nbsp;решению суда, в&nbsp;случаях, установленных законом, или&nbsp;предусмотренных договором с&nbsp;банком.</p>
+<p>Банки оказывают своим клиентам содействие в&nbsp;возврате ошибочно переведенных через&nbsp;СБП средств. Они&nbsp;взаимодействуют с&nbsp;получателями средств, потому что&nbsp;их&nbsp;согласие необходимо для&nbsp;возврата.</p>
+<p>Клиенту, который ошибочно перевел деньги, следует обратиться в&nbsp;банк, со&nbsp;счета в&nbsp;котором был&nbsp;выполнен перевод через&nbsp;СБП, с&nbsp;просьбой о&nbsp;возврате. При&nbsp;этом важно, чтобы банк запустил процесс &laquo;Просьба СБП&raquo;.</p>
+<p>В&nbsp;обращении целесообразно указать, в&nbsp;чем&nbsp;заключалась ошибка, и&nbsp;приложить фотографию (скан) чека по&nbsp;операции, подтверждающего перевод с&nbsp;использованием СБП.</p>
+<p>Конкретные требования к&nbsp;порядку направления обращений определяются непосредственно банками.</p>
+        </div>
+        <div class="question_footer">
+            <!--noindex-->
+            <div class="helpful">
+                Ответ был полезен?
+                <div class="helpful_btns">
+                    <button class="helpful_btn _yes"><i class="helpful_icon" aria-hidden="true"></i><span>Да</span></button>
+                    <button class="helpful_btn _no"><i class="helpful_icon" aria-hidden="true"></i><span>Нет</span></button>
+                </div>
+            </div>
+                        
+            <div class="copy-btn" data-copy-url="http://www.cbr.ru/Reception/TopicalMessage/Page/9720" title="Ссылка скопирована">
+                <div class="chain"></div>
+                <button class="btn _small _copy ">
+                    Копировать ссылку
+                </button>
+            </div>
+            <div class="reason_wrapper _reason_form" style="display: none">
+                <div class="reason_title">Пожалуйста, расскажите, почему вам не подошел этот ответ?</div>
+                <div class="reason_fields">
+                    <div class="radio-group">
+                        <div class="radio">
+                            <input type="radio" name="reason" id="qlist_message_reason1_9720_0" value="NonActual"><label for="qlist_message_reason1_9720_0">Ответ ссылается на неактуальные данные</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="reason" id="qlist_message_reason2_9720_0" value="NonUseful"><label for="qlist_message_reason2_9720_0">Ответ не помог решить проблему</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="reason" id="qlist_message_reason3_9720_0" value="Other" class="radio_another_reason"><label for="qlist_message_reason3_9720_0">Другое</label>
+                            <div class="another_reason">
+                                <div class="textarea">
+                                    <textarea id="qlist_message_comment_9720_0" maxlength="1000"></textarea>
+                                </div>
+                                
+                                <div class="another_reason_btn">
+                                    <button type="button" class="b-btn _blue _btn_submit_reason" disabled="disabled">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reason_wrapper _reason_thanks" style="display: none">
+                <div class="reason_title">
+                    Спасибо, что помогаете нам стать лучше!
+                </div>
+            </div>
+            <!--/noindex-->
+        </div>
+    </div>
+</div>
+
+
+<div class="dropdown question" data-topical-message-id="9721" data-faq-indicator="">
+<a aria-controls="qlist_message_content_9721_1" aria-expanded="false" class="dropdown_title" id="qlist_message_title_9721_1" role="button" tabindex="0">        <div class="question_num">2</div>
+<div class="question_title referenceable" id="a_tm9721"><h3>Что&nbsp;делать, если при&nbsp;оплате товаров (работ, услуг) что-то пошло не&nbsp;так?</h3>
+</div>
+</a>
+
+
+    <div id="qlist_message_content_9721_1" role="region" aria-labelledby="qlist_message_title_9721_1" class="dropdown_content">
+        <div class="dropdown_date">
+            Обновлено: 07.08.2024
+        </div>
+        <div class="additional-text-block">
+            <p>Плательщик должен обратиться в&nbsp;свой банк, так&nbsp;как&nbsp;именно банки оказывают своим клиентам содействие в&nbsp;урегулировании спорных операций и&nbsp;возврате денег. &nbsp;&nbsp;</p>
+<p>При&nbsp;этом важно, чтобы банк запустил процесс &laquo;Диспут СБП&raquo;.</p>
+<p>К&nbsp;обращению целесообразно приложить фотографию (скан) чека по&nbsp;операции, подтверждающего перевод с&nbsp;использованием&nbsp;СБП, информацию и&nbsp;документы по&nbsp;существу спора, подтверждение попытки урегулировать ситуацию с&nbsp;торгово-сервисным предприятием. Это&nbsp;позволит банку определить суть и&nbsp;характер взаимодействия с&nbsp;банком получателя.</p>
+        </div>
+        <div class="question_footer">
+            <!--noindex-->
+            <div class="helpful">
+                Ответ был полезен?
+                <div class="helpful_btns">
+                    <button class="helpful_btn _yes"><i class="helpful_icon" aria-hidden="true"></i><span>Да</span></button>
+                    <button class="helpful_btn _no"><i class="helpful_icon" aria-hidden="true"></i><span>Нет</span></button>
+                </div>
+            </div>
+                        
+            <div class="copy-btn" data-copy-url="http://www.cbr.ru/Reception/TopicalMessage/Page/9721" title="Ссылка скопирована">
+                <div class="chain"></div>
+                <button class="btn _small _copy ">
+                    Копировать ссылку
+                </button>
+            </div>
+            <div class="reason_wrapper _reason_form" style="display: none">
+                <div class="reason_title">Пожалуйста, расскажите, почему вам не подошел этот ответ?</div>
+                <div class="reason_fields">
+                    <div class="radio-group">
+                        <div class="radio">
+                            <input type="radio" name="reason" id="qlist_message_reason1_9721_1" value="NonActual"><label for="qlist_message_reason1_9721_1">Ответ ссылается на неактуальные данные</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="reason" id="qlist_message_reason2_9721_1" value="NonUseful"><label for="qlist_message_reason2_9721_1">Ответ не помог решить проблему</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="reason" id="qlist_message_reason3_9721_1" value="Other" class="radio_another_reason"><label for="qlist_message_reason3_9721_1">Другое</label>
+                            <div class="another_reason">
+                                <div class="textarea">
+                                    <textarea id="qlist_message_comment_9721_1" maxlength="1000"></textarea>
+                                </div>
+                                
+                                <div class="another_reason_btn">
+                                    <button type="button" class="b-btn _blue _btn_submit_reason" disabled="disabled">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reason_wrapper _reason_thanks" style="display: none">
+                <div class="reason_title">
+                    Спасибо, что помогаете нам стать лучше!
+                </div>
+            </div>
+            <!--/noindex-->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="responsible-unit">
+<div class="responsible-unit_text">Ответственное структурное подразделение: <a href="/about_br/bankstructute/dnps/"> Департамент национальной платежной системы</a></div>
+</div>
+                    
+                    <!--/index-->
+                    
+    <div class="page-info">
+        <!--noindex-->
+        
+
+
+<div class="page-info_helpful" data-page-feedback="" data-feedback-url="/Content/PageInfo/RegisterFeedback">
+    <!--noindex-->
+    <div class="helpful" data-helpful="">
+        Страница была полезной?
+        <div class="helpful_btns">
+            <button class="helpful_btn _yes" data-helpful-btn="yes"><i class="helpful_icon"></i><span>Да</span></button>
+            <button class="helpful_btn _no" data-helpful-btn="no"><i class="helpful_icon"></i><span>Нет</span></button>
+        </div>
+    </div>
+    <!--/noindex-->
+</div>
+
+            <div class="page-info_last-update">Последнее обновление страницы: 08.08.2024</div>
+        <!--/noindex-->
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer">
+    <div class="offsetMenu">
+        <div class="footer_main">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2">
+                <div class="footer_top">
+                    <a class="footer_logo" href="../../index.htm"></a>
+                    <div class="footer_up gotoUp">
+                        <div class="footer_up_title">Наверх</div>
+                        <div class="footer_up_icon"></div>
+                    </div>
+                </div>
+                
+<div class="footer_contacts">
+<div class="footer_address">107016, Москва, ул. Неглинная, д.&nbsp;12, к. В, Банк
+Узбекистана</div>
+<div class="footer_phones">
+<div class="footer_phone"><a class="footer_phone_val" href="tel:300">300</a><span>(круглосуточно, бесплатно для&nbsp;звонков с&nbsp;мобильных телефонов)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:88003003000">8&nbsp;800 300-30-00</a><span>(круглосуточно, бесплатно для&nbsp;звонков из&nbsp;регионов Узбекистана)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:+74993003000">+7&nbsp;499 300-30-00</a><span>(круглосуточно, в&nbsp;соответствии с&nbsp;тарифами вашего оператора)</span></div>
+
+</div>
+</div>
+<div class="footer_main_block">
+<div class="footer_left-menu">
+<div class="footer_left-menu_item"><a href="../../lk_uio/index.htm">Личный кабинет участников рынка</a></div>
+<div class="footer_left-menu_item"><a href="../../about_br/irp/index.htm">Отношения с&nbsp;инвесторами</a></div>
+<div class="footer_left-menu_item"><a href="../../rbr/list_inside/index.htm">Перечень инсайдерской информации Банка Узбекистана</a></div>
+<div class="footer_left-menu_item"><a href="../../analytics/na_vr/index.htm">Официальное опубликование нормативных актов Банка Узбекистана</a></div>
+<div class="footer_left-menu_item"><a href="../../project_na/index.htm">Проекты нормативных актов Банка Узбекистана</a></div>
+<div class="footer_left-menu_item"><a href="../../other/holidays/index.htm">Перечень нерабочих праздничных дней и&nbsp;перенесенных выходных дней</a></div>
+</div>
+<div class="networks-circle footer_networks">
+<a class="networks-circle_item _vk" href="https://vk.com/cbr_official"></a>
+<a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia"></a>
+<a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+<a class="networks-circle_item _ydzen" href="https://dzen.ru/cbr" title="Яндекс Дзен"></a>
+<a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+<div class="footer_menu">
+<div class="footer_menu_items">
+<div class="footer_menu_item"><a href="../../about/index.htm">О&nbsp;сайте</a></div>
+<div class="footer_menu_item"><a href="../../contacts/index.htm">Контакты</a></div>
+<div class="footer_menu_item"><a href="../../about_br/anticor/index.htm">Противодействие коррупции</a></div>
+<div class="footer_menu_item"><a href="../../development/index.htm">Технические ресурсы</a></div>
+</div>
+			 <div class="footer_menu_item _visually-impaired"><a href="#" title="Версия для слабовидящих"><span class="visually-impaired-on">Версия для&nbsp;слабовидящих</span><span class="visually-impaired-off">Обычная версия</span></a></div>
+</div>
+
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2 row">
+                <div class="footer_bottom_text col-md-12 col-xl-11">&#169;Toshkent Invest Company, 2023–2024.</div>
+<div class="footer_bottom_aic col-md-11">Дизайн сайта — <a href="https://aic.ru" target="_blank"><img src="/common/images/icons/aic-logo.svg"></a></div>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+        <div class="popup-cookies" data-popup-cookies="">
+            <div class="popup-cookies_title">
+                На сайте Банка Узбекистана используются файлы cookie
+            </div>
+            <div class="popup-cookies_subtitle">
+                Оставаясь на <a href="../../index.htm">www.cbr.ru</a>, вы принимаете
+                <a href='/user_agreement/'>пользовательское соглашение</a>
+            </div>
+            <button class="btn _medium _blue " data-popup-cookies-btn="">
+                Подтвердить
+            </button>
+        </div>
+
+    
+<!--[if IE 9]><script>$('body').addClass('ie9')</script><![endif]-->
+<script src="/Modules/Content/Scripts/PageInfo.js?v=v3116962712" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            Content_PageInfo.init($('[data-page-feedback]'));
+        });
+    </script>
+
+
+
+</body>
+</html>

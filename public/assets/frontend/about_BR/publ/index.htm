@@ -1,0 +1,1287 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="zoom:lang" content="ru">
+    <meta name="zoom:last-modified" content="Tue, 11 Jun 2024 09:13:01 GMT">
+<title>Издания Банка Узбекистана |Toshkent Invest Company</title>
+
+
+
+    <meta property="og:image" content="/common/images/share-1.jpg">
+
+    
+
+
+            <link rel="stylesheet" type="text/css" href="../../common/libs/jquery-ui/jquery-ui.min.css?v=v478607061" media="all">
+
+            <!--[if IE 9]><link rel="stylesheet" type="text/css" href="/common/style/main-ie9.css?v=v2358109689" media="all"><![endif]-->
+
+            <!--[if gt IE 9]><!--><link rel="stylesheet" type="text/css" href="../../common/style/main.min.css?v=v2358109689" media="all"><!--<![endif]-->
+
+
+        <script type="text/javascript" src="/common/libs/jquery-3.6.1.min.js?v=v478607061"></script>
+
+
+
+        <script type="text/javascript" src="/common/libs/jquery-ui/jquery-ui.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.inputmask.min.js?v=v478607061"></script>
+
+
+        <script type="text/javascript" src="/common/scripts/vendor.js?v=v3694197594"></script>
+
+        <script type="text/javascript" src="/common/libs/jquery.floatThead.min.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/popper.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/libs/tippy.js?v=v478607061"></script>
+
+        <script type="text/javascript" src="/common/scripts/main.min.js?v=v2358109689"></script>
+
+
+        <script type="text/javascript" src="/common/libs/localization-ru.js?v=v478607061"></script>
+        <script type="text/javascript" src="/js/jquery.ui.autocomplete-ru.js?v=v1043438991"></script>
+
+        <script type="text/javascript" src="/js/jquery.cookie.min.js?v=v4260771145"></script>
+
+        <script type="text/javascript" src="/js/site.js?v=v1395547681"></script>
+
+
+
+<link href="/Modules/Migration/Content/migration-ui.css?v=v3116962712" rel="stylesheet" type="text/css">
+
+
+    <script type="text/javascript">
+    $(function () {
+        var $menu = $('[data-menu]'),
+            $menuItemBtn = $menu.find('[data-menu-item-btn]'),
+            $menuShow = $('[data-menu-show]'),
+            $menuClose = $('[data-menu-close]');
+        var config = $menu.data('config');
+
+        $menu.find('[data-cms-wholesite-header-right]').html($('#header .header_right').html());
+
+        $menuShow.on('click.cms_loadwholesite', function (event) {
+            loadWholeSite(true);
+        });
+        $menuShow.on('mouseenter.cms_loadwholesite', function (event) {
+            loadWholeSite(false);
+        });
+
+        var xhr = null, g_openMenu = false;
+        function loadWholeSite(openmenu) {
+            g_openMenu = g_openMenu || openmenu;
+            $menuShow.off('click.cms_loadwholesite mouseenter.cms_loadwholesite');
+            if (xhr === null) {
+                $('.menu_wrap .networks-circle').html($('.networks-circle.footer_networks').html());
+                $('.menu_wrap .header_search').html($('.header .offsetMenu .header_search').html());
+
+                xhr = $.ajax(config.url, {
+                    dataType: "html",
+                    method: "get",
+                    success: function (html) {
+                        $('[data-cms-wholesite-placeholder]').replaceWith(html);
+
+                        $menu.find('.menu_tab[data-tabs-tab]').each(function () {
+                            var tab = $(this).data('tabs-tab');
+                            $(this).toggle($menu.find('[data-tabs-content="' + tab + '"]').length != 0);
+                        });
+
+                        app.init($menu);
+
+                        for (var i in config.catalogPath) {
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .addClass("_active");
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .closest('[data-tabs-content]')
+                                .trigger('open-anchor');
+                        }
+
+                        
+                        xhr = true;
+                    },
+                    error: function () {
+                        xhr = null;
+                    }
+                });
+            }
+        }
+    });
+    </script>
+
+
+<script>
+    if (window.localStorage) {
+        if (localStorage.getItem('vision-impaired'))
+            document.getElementsByTagName('html')[0].className += ' vision-impaired';
+    }
+</script>
+<script>
+    document.documentElement.style.setProperty('--scrollbar-width', '17px');
+    setTimeout(function () {
+        
+        var div = document.createElement('div');
+
+        div.style.overflowY = 'scroll';
+        div.style.width = '50px';
+        div.style.height = '50px';
+
+        
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+        var scrollWidth = Math.max(div.offsetWidth - div.clientWidth, 0.15); 
+        document.body.removeChild(div);
+        
+        document.documentElement.style.setProperty('--scrollbar-width', scrollWidth + 'px');
+    }, 0);
+</script>
+
+
+
+    
+</head>
+<body>
+    
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(5774506, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/5774506" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <!-- /Yandex.Metrika counter -->   
+
+    
+    
+
+    <div class="header-print">
+    <div class="offsetMenu">
+        <div class="header-print_inner">
+            <img class="header-print_logo" alt="cbr" src="/common/images/logo.svg">
+            <ul class="header-print_contacts">
+<li>Узбекистан, город Ташкент,
+улица Ислама Каримова, 51</li>
+<li><nobr class="phone">8 800 300-30-00</nobr></li>
+<li>www.cbr.ru</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+    <header class="header" id="header">
+        
+<div class="top-line" data-top-line="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="top-line_inner header_inner">
+                <div class="row">
+                    <div class="col-xl-5 col-md-9">
+                        <div class="header_left">
+                                <div class="header_menu" data-menu-show=""></div>
+                            <a class="header_logo" href="../../index.htm"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                        <div class="header_search">
+                                <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="header_right">
+                                <div class="header_link"><a href="../../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2Fabout_br%2Fpubl%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="offsetMenu">
+            <div class="col-md-23 offset-md-1">
+                <div class="header_inner">
+                    <div class="row">
+                        <div class="col-xl-5 col-md-9">
+                            <div class="header_left">
+                                    <div class="header_menu" data-menu-show=""></div>
+                                <a class="header_logo" href="../../index.htm"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                            <div class="header_search">
+                                    <a class="header_search_btn" href="#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+                            </div>
+                            <div class="d-none d-md-block">
+                                <div class="header_right">
+                                    <div class="header_link"><a href="../../reception/index.htm">Интернет-приемная</a></div><div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="/Localization/SwitchLanguage?url=%2Fabout_br%2Fpubl%2F&from=ru-RU&to=en-CB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <form class="search-form" action="/search/" method="get" data-search-form="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="search-form_inner">
+                <div class="search-form_title">Что вы хотите найти?</div>
+                <div class="search-form_content">
+                    <div class="search-form_block">
+                        <div class="search-form_icon"></div>
+                        <div class="search-form_field">
+                            <input name="text" type="text" placeholder="Начните писать" data-search-form-input="">
+                        </div>
+                    </div>
+                    <div class="search-form_btn">
+                        <button class="b-btn _blue" data-search-form-btn="">Искать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<div class="menu_wrap" data-menu="" data-config="{&quot;catalogPath&quot;:[17672,15717],&quot;url&quot;:&quot;/Catalog/SiteMap/GetWholeSiteHtml?blockId=59191&quot;}">
+    <div class="offsetMenu">
+        <div class="header_menu _close menu_close d-none d-md-block" data-menu-close=""></div>
+        <div class="header_inner top-line_inner d-block d-md-none">
+            <div class="row">
+                <div class="col-xl-5 col-md-9">
+                    <div class="header_left">
+                        <div role="button" tabindex="0" aria-label="Закрыть меню" class="header_menu _close" data-menu-close=""></div><a class="header_logo" href="../../index.htm"></a>
+                    </div>
+                </div>
+                <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                    <div class="header_search"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu row" data-tabs="data-tabs">
+            <div class="menu_quick col-md-7">
+                <div role="tablist" class="menu_quick_tabs">
+    <a role="tab" id="menu_tab_Activity" aria-controls="menu_content_Activity" aria-selected="true" class="menu_tab _active" href="#" data-tabs-tab="Activity">Деятельность</a>
+    <a role="tab" id="menu_tab_FinancialMarkets" aria-controls="menu_content_FinancialMarkets" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="FinancialMarkets">Финансовые рынки</a>
+    <a role="tab" id="menu_tab_Documents" aria-controls="menu_content_Documents" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Documents">Документы и данные</a>
+    <a role="tab" id="menu_tab_AboutBank" aria-controls="menu_content_AboutBank" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="AboutBank">О Банке Узбекистана</a>
+    <a role="tab" id="menu_tab_Services" aria-controls="menu_content_Services" aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Services">Сервисы</a>
+</div>
+<div class="menu_quick_links">
+    <div class="inner_links"><a href="../../support_measures/index.htm" title="Меры зашиты финансового рынка" style="color:red">Меры защиты финансового рынка</a>
+  </div>
+<div class="phones"><a class="menu_phone_val" href="tel:+74993003000">
+<div class="plus">+</div>7 499 300-30-00</a><a class="menu_phone_val" href="tel:88003003000">8 800 300-30-00</a><a class="menu_phone_val" href="tel:300">300</a><span>Бесплатно для звонков с мобильных телефонов</span></div>
+<div class="inner_links">
+  <a href="../../news/index.htm" title="Новости">Новости</a>
+  <a href="../../rbr/index.htm" title="Решения Банка Узбекистана">Решения Банка Узбекистана</a>
+  <a href="../../contacts/index.htm" title="Контактная информация">Контактная информация</a>
+  <a href="../../sitemap.html" title="Карта сайта">Карта сайта</a>
+  <a href="../../about/index.htm" title="О сайте">О сайте</a>
+  </div>
+<div class="networks-circle">
+  <a class="networks-circle_item _vk" href="https://vk.com/cbr_official" title="ВКонтакте"></a>
+  <a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia" title="Youtube"></a>
+  <a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+  <a class="networks-circle_item _ydzen" href="https://zen.yandex.ru/id/622372d6a565892091994ea9" title="Яндекс Дзен"></a>
+  <a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+            </div>
+            <div class="d-md-none link-above">
+                <div class="header_right" data-cms-wholesite-header-right="">
+                </div>
+                    <div class="header_right">
+                        <div class="header_link"><a href="../../finorg/index.htm">Проверить участника финансового рынка</a></div>
+                    </div>
+            </div>
+            <div class="menu_content_container col-md with-centered-loader" data-cms-wholesite-placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <main id="content">
+        <div class="offsetMenu ">
+            <div class="container-fluid">
+                <div class="col-md-23 offset-md-1">
+                    <div class="breadcrumbs">
+    <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="../../index.htm"></a></div>
+        <div class="breadcrumbs_item">
+            <a href="../index.htm"><!--noindex-->О&#160;Банке Узбекистана<!--/noindex--></a>
+        </div>
+    </div>
+
+                    <!--index-->
+<h1><span class="referenceable">Издания Банка Узбекистана</span>
+</h1>
+                                        
+
+
+
+
+
+
+                                                                                <div class="publications">
+<div class="publication">
+<div class="row">
+<div class="col-md-3">
+<div class="publication_image"><img src="/StaticHtml/File/85753/vestnik.jpg" alt="Вестник Банка Узбекистана"></div>
+</div>
+<div class="col-md-19 offset-md-1">
+<div class="publication_main">
+<div>
+<div class="col-md-15"><a class="publication_title" href="/about_br/publ/vestnik/">Вестник Банка Узбекистана</a>
+<div class="publication_text">Официальное издание Банка Узбекистана, в&nbsp;котором публикуются нормативные и&nbsp;иные акты Банка Узбекистана, а&nbsp;также информационные, статистические, обзорные, аналитические материалы.</div>
+</div>
+</div>
+<div class="publication_bottom">
+<div class="publication_frequency">Еженедельно (100&nbsp;номеров в&nbsp;год) на&nbsp;рус.&nbsp;яз.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="publication">
+<div class="row">
+<div class="col-md-3">
+<div class="publication_image"><img src="/StaticHtml/File/85753/report_year.jpg" alt="Годовой отчет Банка Узбекистана"></div>
+</div>
+<div class="col-md-19 offset-md-1">
+<div class="publication_main">
+<div>
+<div class="col-md-15"><a class="publication_title" href="/about_br/publ/god/">Годовой отчет Банка Узбекистана</a>
+<div class="publication_text">Итоги работы по&nbsp;основным направлениям деятельности Банка Узбекистана, включая анализ внешних и&nbsp;внутренних условий его&nbsp;функционирования, годовую финансовую отчетность, аудиторское заключение и&nbsp;заключение Счетной палаты УзбекистанскойФедерации.</div>
+</div>
+</div>
+<div class="publication_bottom">
+<div class="publication_frequency">Ежегодно на&nbsp;рус.&nbsp;и&nbsp;англ. языках</div>
+<a class="btn _outline _medium publication_btn" href="/eng/about_BR/publ/god/">English edition</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="publication">
+<div class="row">
+<div class="col-md-3">
+<div class="publication_image"><img src="/StaticHtml/File/85753/report_year_s.jpg" alt="Итоги работы Банка Узбекистана. Коротко о главном"></div>
+</div>
+<div class="col-md-19 offset-md-1">
+<div class="publication_main">
+<div>
+<div class="col-md-15"><a class="publication_title" href="/about_br/publ/results_work/">Итоги работы Банка Узбекистана: коротко о&nbsp;главном</a>
+<div class="publication_text">Итоги работы Банка Узбекистана за&nbsp;год&nbsp;по&nbsp;основным направлениям деятельности в&nbsp;кратком изложении.</div>
+</div>
+</div>
+<div class="publication_bottom">
+<div class="publication_frequency">Ежегодно на&nbsp;рус.&nbsp;и&nbsp;англ. языках</div>
+<a class="btn _outline _medium publication_btn" href="/eng/about_br/publ/results_work/">English edition</a></div>
+</div>
+</div>
+</div>
+</div>
+<!--<div class="publication">
+<div class="row">
+<div class="col-md-3">
+<div class="publication_image"><img src="/StaticHtml/File/85753/report_dev_bank_sector.jpg" alt="Отчет о развитии банковского сектора и банковского надзора" /></div>
+</div>
+<div class="col-md-19 offset-md-1">
+<div class="publication_main">
+<div>
+<div class="col-md-15"><a class="publication_title" href="/about_br/publ/nadzor/">Отчет о&nbsp;развитии банковского сектора и&nbsp;банковского надзора</a>
+<div class="publication_text">Итоги и&nbsp;перспективы развития банковского сектора, совершенствование подходов к&nbsp;надзору и&nbsp;регулированию в&nbsp;данной области. <br />Ответственные подразделения: Департамент обеспечения банковского надзора, Департамент по&nbsp;связям с&nbsp;общественностью (организация издания и&nbsp;рассылка)</div>
+</div>
+</div>
+<div class="publication_bottom">
+<div class="publication_frequency">Ежегодно на&nbsp;рус.&nbsp;и&nbsp;англ. языках</div>
+<a class="btn _outline _medium publication_btn" href="/eng/about_BR/publ/nadzor/">English edition</a></div>
+</div>
+</div>
+</div>
+</div>-->
+<div class="publication">
+<div class="row">
+<div class="col-md-3">
+<div class="publication_image"><img src="/StaticHtml/File/85753/ondkp_cover.jpg" alt="Основные направления единой государственной денежно-кредитной политики"></div>
+</div>
+<div class="col-md-19 offset-md-1">
+<div class="publication_main">
+<div>
+<div class="col-md-15"><a class="publication_title" href="ondkp/index.htm">Основные направления единой государственной денежно-кредитной политики</a>
+<div class="publication_text">Цели, основные принципы и&nbsp;подходы к&nbsp;проведению денежно-кредитной политики, а&nbsp;также сценарии макроэкономического прогноза на&nbsp;среднесрочную перспективу.</div>
+</div>
+</div>
+<div class="publication_bottom">
+<div class="publication_frequency">Ежегодно на&nbsp;рус.&nbsp;и&nbsp;англ. языках</div>
+<a class="btn _outline _medium publication_btn" href="/eng/about_BR/publ/ondkp/">English edition</a></div>
+</div>
+</div>
+</div>
+</div>
+<!--<div class="publication">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="publication_image"><img src="/StaticHtml/File/85753/ddkp.jpg" alt="Доклад о денежно-кредитной политике" /></div>
+			</div>
+			<div class="col-md-19 offset-md-1">
+				<div class="publication_main">
+					<div>
+						<div class="col-md-15"><a class="publication_title" href="/about_br/publ/ddkp/">Доклад о&nbsp;денежно-кредитной политике</a>
+							<div class="publication_text">Разъяснение причин и&nbsp;ожидаемых результатов решений Банка Узбекистана в&nbsp;области денежно-кредитной политики. Прогноз основных макроэкономических показателей. Сигнал о&nbsp;возможных дальнейших действиях Банка Узбекистана в&nbsp;сфере денежно-кредитной политики.<br />Ответственные подразделения: Департамент денежно-кредитной политики</div>
+						</div>
+					</div>
+					<div class="publication_bottom">
+						<div class="publication_frequency">Ежеквартально на&nbsp;рус.&nbsp;и&nbsp;англ. языках</div>
+						<a class="btn _outline _medium publication_btn" href="/eng/about_BR/publ/ddkp/">English edition</a></div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+<div class="publication">
+<div class="row">
+<div class="col-md-3">
+<div class="publication_image"><img src="/StaticHtml/File/85753/main_directions_fm.jpg" alt="Основные направления развития финансового рынка УзбекистанскойФедерации"></div>
+</div>
+<div class="col-md-19 offset-md-1">
+<div class="publication_main">
+<div>
+<div class="col-md-15"><a class="publication_title" href="/about_br/publ/onfinmarket/">Основные направления развития финансового рынка УзбекистанскойФедерации</a>
+<div class="publication_text">Цели и&nbsp;принципы деятельности Банка Узбекистана по&nbsp;развитию финансового рынка, текущее состояние финансового рынка, открывающиеся перспективы и&nbsp;конкретные меры по&nbsp;развитию на&nbsp;ближайшие три&nbsp;года.</div>
+</div>
+</div>
+<div class="publication_bottom">
+<div class="publication_frequency">Ежегодно на&nbsp;рус.&nbsp;и&nbsp;англ. языках</div>
+<a class="btn _outline _medium publication_btn" href="/eng/develop/develop/">English edition</a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="publication">
+<div class="row">
+<div class="col-md-3">
+<div class="publication_image"><img src="/StaticHtml/File/85753/main_directions_ft.jpg" alt="Основные направления развития финансовых технологий"></div>
+</div>
+<div class="col-md-19 offset-md-1">
+<div class="publication_main">
+<div>
+<div class="col-md-15"><a class="publication_title" href="/about_br/publ/onfintech/">Основные направления развития финансовых технологий</a>
+<div class="publication_text">Основные цели и&nbsp;задачи развития инновационных технологий на&nbsp;финансовом рынке УзбекистанскойФедерации и&nbsp;в&nbsp;Банке Узбекистана, в&nbsp;том&nbsp;числе поддержка инноваций и&nbsp;обеспечение доступности финансовых продуктов и&nbsp;услуг.</div>
+</div>
+</div>
+<div class="publication_bottom">
+<div class="publication_frequency">Один раз&nbsp;в&nbsp;три&nbsp;года на&nbsp;рус.&nbsp;яз.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="publication">
+<div class="row">
+<div class="col-md-3">
+<div class="publication_image"><img src="/StaticHtml/File/85753/onrib.jpg" alt="Основные направления
+					развития информационной безопасности кредитно-финансовой сферы"></div>
+</div>
+<div class="col-md-19 offset-md-1">
+<div class="publication_main">
+<div>
+<div class="col-md-15"><a class="publication_title" href="/about_br/publ/onrib/">Основные направления развития информационной безопасности кредитно-финансовой сферы</a>
+<div class="publication_text">Цели и&nbsp;задачи по&nbsp;развитию информационной безопасности кредитно-финансовой сферы, мероприятия по&nbsp;противодействию социальной инженерии на&nbsp;банковском рынке.</div>
+</div>
+</div>
+<div class="publication_bottom">
+<div class="publication_frequency">Один раз&nbsp;в&nbsp;три&nbsp;года на&nbsp;рус.&nbsp;и&nbsp;англ. языках</div>
+<a class="btn _outline _medium publication_btn" href="/eng/about_br/publ/onrib/">English edition</a></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="title-container"><div class="block-title"><h2><span class="referenceable" id="a_104900">Издания и ключевые аналитические публикации Банка Узбекистана</span></h2></div><div class="table-wrapper publications-table">
+<div class="table">
+<table class="data" style="">
+<tbody>
+<tr style="">
+<th style="">Название издания</th>
+<th style="">Ответственное подразделение</th>
+<th style="">Периодичность выпуска</th>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="https://rjmf.econs.online/">Деньги и&nbsp;кредит</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">Департамент по&nbsp;связям с&nbsp;общественностью</td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/statistics/bbs/#a_126313">Статистический бюллетень Банка Узбекистана</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td rowspan="2" style="">Департамент статистики</td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/statistics/macro_itm/svs/#a_71385file">Платежный баланс, международная инвестиционная позиция и&nbsp;внешний долг УзбекистанскойФедерации</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">
+<div class="period">Ежеквартально (рус.&nbsp;яз.)&nbsp;/ Ежегодно (англ.&nbsp;яз.)</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/bank_sector/develop/#a_48876">О&nbsp;развитии банковского сектора УзбекистанскойФедерации</a></td>
+<td rowspan="3" style="">Департамент банковского регулирования и&nbsp;аналитики</td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/bank_sector/#a_123445">Банковский сектор</a></td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/bank_sector/#a_120863">О&nbsp;проектном финансировании строительства жилья</a></td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/finstab/review/#a_48176">Обзор финансовой стабильности</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td rowspan="2" style="">Департамент финансовой стабильности</td>
+<td style="">
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/finstab/#a_50194">Обзор рисков финансовых рынков</a></td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/dkp/likvid/#a_17329">Денежно-кредитные условия и&nbsp;трансмиссионный механизм денежно-кредитной политики</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td rowspan="9" style="">Департамент денежно-кредитной политики</td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/dkp/dinamic/#a_17327">Динамика потребительских цен</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/dkp/inflationary_expectations/#a_102610">Инфляционные ожидания и&nbsp;потребительские настроения</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr>
+<td style=""><a class="title " href="/analytics/dkp/inflationary_expectations/#a_62825">Измерение инфляционных ожиданий и&nbsp;потребительских настроений на&nbsp;основе опросов населения (Отчет инФОМ)</a></td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/dkp/monitoring/#a_136157">Мониторинг предприятий: оценки, ожидания, комментарии</a></td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/dkp/bal/#a_84865">Платежный баланс Узбекистана</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/dkp/reg_review/#a_118418">Региональная экономика: комментарии ГУ</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">
+<div class="period">8&nbsp;раз&nbsp;в&nbsp;год</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/statistics/ddkp/mo_br/">Макроэкономический опрос Банка Узбекистана</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">
+<div class="period">8&nbsp;раз&nbsp;в&nbsp;год</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/dkp/regInflation/">Информационно-аналитические комментарии об&nbsp;инфляции в&nbsp;регионах</a></td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/statistics/cash_circulation/#a_77526">Данные о&nbsp;поддельных денежных знаках, выявленных в&nbsp;банковской системе Узбекистана</a></td>
+<td rowspan="2" style="">Департамент наличного денежного обращения</td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/ndo/#a_123657">Отношение населения УзбекистанскойФедерации к&nbsp;различным средствам платежа</a></td>
+<td style="">
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/microfinance/reveiw_mfo/#a_84043">Обзор ключевых показателей микрофинансовых институтов</a></td>
+<td rowspan="12" style="">Департамент исследований и&nbsp;прогнозирования</td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/RSCI/review_uk/#a_156354">Обзор ключевых показателей управляющих компаний</a></td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/rcb/review_broker/#a_156497">Обзор ключевых показателей брокеров</a></td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/insurance/overview_insurers/#a_85436">Обзор ключевых показателей деятельности страховщиков</a></td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/RSCI/activity_npf/rewiew_npf/#a_85256">Обзор ключевых показателей негосударственных пенсионных фондов</a></td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/rcb/#a_155846">Тенденции сегмента индивидуальных инвестиционных счетов</a></td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/ec_research/analitics/#a_159497">Обзор российских финансовых инструментов*</a></td>
+<td style="">
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/ec_research/analitics/">Обзор российского финансового сектора*</a></td>
+<td style="">
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title" href="/analytics/finflows/#a_107637">Мониторинг отраслевых финансовых потоков</a></td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/ec_research/mb/#a_16760">О&nbsp;чем&nbsp;говорят тренды</a>*<br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/ec_research/mb/#a_62316">Новостной индекс деловой активности</a>*</td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/ec_research/mb/#a_16761">Оценка трендовой инфляции</a>*</td>
+<td style="">
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/PSystem/analytics/">Раскрытие информации о&nbsp;платежной системе Банка Узбекистана</a></td>
+<td style="" rowspan="4">Департамент национальной платежной системы</td>
+<td style="">
+<div class="period">1&nbsp;раз&nbsp;в&nbsp;2&nbsp;года</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/PSystem/analytics/">Периодический статус-репорт по&nbsp;проекту &laquo;Цифровой рубль&raquo;</a></td>
+<td style="">
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="../../PSystem/b_doc/strategy_nps/index.htm">Стратегия развития национальной платежной системы</a></td>
+<td style="">
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/PSystem/monitoring_p/nablyudenie-v-nps/">Результаты наблюдения в&nbsp;национальной платежной системе</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td style="">
+<div class="period">Не&nbsp;реже 1&nbsp;раза в&nbsp;2&nbsp;года</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/podft/#a_83365">Структура подозрительных операций и&nbsp;секторы экономики, формировавшие спрос на&nbsp;теневые финансовые услуги</a></td>
+<td style="">Департамент финансового мониторинга и&nbsp;валютного контроля</td>
+<td style="">
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/microfinance/#a_103881">Тенденции на&nbsp;рынке&nbsp;МФО&nbsp;предпринимательского финансирования</a></td>
+<td rowspan="2" style="">Департамент небанковского кредитования</td>
+<td style="">
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/microfinance/#a_103884">Тенденции микрофинансового рынка</a></td>
+<td style="">
+<div class="period">3&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><a class="title " href="/analytics/RSCI/activity_npf/#a_108092">Доходность НПФ</a></td>
+<td style="">Департамент инвестиционных финансовых посредников</td>
+<td style="">
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr style="">
+<td style=""><span class="title" style="text-decoration: none;"> Основные направления развития цифровизации финансового рынка</span></td>
+<td style="">Департамент финансовых технологий</td>
+<td style="">
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="table-caption gray">*&nbsp;Выводы и&nbsp;рекомендации в&nbsp;издании могут не&nbsp;совпадать с&nbsp;официальной позицией Банка Узбекистана.</div>
+</div>
+</div></div>
+
+
+<div class="dropdown">
+<a aria-controls="DropDown_content" aria-expanded="false" class="dropdown_title referenceable" data-zone-code="/block104910/zone" id="a_104910" role="button" tabindex="0">Другие публикации Банка Узбекистана</a>
+
+    <div id="DropDown_content" role="region" aria-labelledby="a_104910" class="dropdown_content">
+<div class="table-wrapper publications-table">
+<div class="table">
+<table class="data">
+<tbody>
+<tr>
+<th>Название издания</th>
+<th>Ответственное подразделение</th>
+<th>Периодичность выпуска</th>
+</tr>
+<tr>
+<td><a class="title " href="/analytics/interaction_sro/#a_87332">Обзор взаимодействия Службы анализа рисков Банка Узбекистана и&nbsp;саморегулируемых организаций оценщиков</a></td>
+<td>Служба анализа рисков</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/counteraction_m_ter/reveiw_podft/#a_111821">Обзор событий в&nbsp;сфере противодействия отмыванию доходов, полученных преступным путем, и&nbsp;финансированию терроризма</a></td>
+<td>Департамент финансового мониторинга и&nbsp;валютного контроля</td>
+<td>
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/ib/#a_118726">Обзор отчетности об&nbsp;инцидентах информационной безопасности при&nbsp;переводе денежных средств</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td rowspan="2">Департамент информационной безопасности</td>
+<td>
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/ib/fincert/#a_119487">Обзор операций, совершенных без&nbsp;согласия клиентов финансовых организаций</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/na/banking_regulation_newsletter/#a_146625">Обзор банковского регулирования</a></td>
+<td>Департамент банковского регулирования и&nbsp;аналитики</td>
+<td>
+<div class="period">По&nbsp;мере поступления информации</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/analytics/issuers_corporate/#a_85612">Обзор практики корпоративного управления в&nbsp;российских публичных обществах</a></td>
+<td rowspan="2">Департамент корпоративных отношений</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td class="title">Обзор раскрытия информации в&nbsp;области устойчивого развития публичными акционерными обществами</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/statistics/macro_itm/fafbs/#a_116409">Финансовые счета системы национальных счетов УзбекистанскойФедерации</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td rowspan="5">Департамент статистики</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/statistics/bank_sector/#a_108513">Сведения о&nbsp;рынке ипотечного жилищного кредитования в&nbsp;Узбекистана</a></td>
+<td>
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/statistics/bank_sector/#a_108513">Сведения о&nbsp;рынке жилищного (ипотечного жилищного) кредитования в&nbsp;Узбекистана</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/statistics/bank_sector/sors/#a_112227">Кредитование субъектов малого и&nbsp;среднего предпринимательства</a></td>
+<td>
+<div class="period">Ежемесячно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/hd_base/ruonia/committee/#a_124801">Отчет о&nbsp;деятельности Комитета по&nbsp;наблюдению за&nbsp;процентной ставкой RUONIA</a></td>
+<td>
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/finstab/#a_118410">Анализ тенденций в&nbsp;сегменте розничного кредитования на&nbsp;основе данных бюро кредитных историй</a></td>
+<td>Департамент финансовой стабильности</td>
+<td>
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/statistics/cash_circulation/#a_25535">Структура наличной денежной массы в&nbsp;обращении</a></td>
+<td rowspan="3">Департамент наличного денежного обращения</td>
+<td>
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr>
+<td class="title"><a href="/statistics/cash_circulation/#a_160512">О&nbsp;наличном денежном обороте</a></td>
+<td>
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/cash_circulation/memorable_coins/Catalogs/">Памятные монеты Узбекистана</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/analytics/develop/#a_131964">Аналитический обзор рынка кредитования субъектов малого и&nbsp;среднего предпринимательства</a></td>
+<td rowspan="7">Служба по&nbsp;защите прав потребителей и&nbsp;обеспечению доступности финансовых услуг</td>
+<td>
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/statistics/protection/#a_11955">Отчет о&nbsp;работе с&nbsp;обращениями</a></td>
+<td>
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/analytics/drknb/#a_108509">Динамика реструктуризации кредитов населения и&nbsp;бизнеса</a></td>
+<td>
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/Content/Document/File/135131/fin_uslugi_2021.pdf">Инфраструктура точек доступа к&nbsp;финансовым услугам на&nbsp;территории Узбекистана в&nbsp;условиях развития дистанционных каналов обслуживания</a></td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/develop/fin_avail/fter/">Деятельность территориальных учреждений Банка Узбекистана по&nbsp;повышению финансовой доступности в&nbsp;сельской местности и&nbsp;на&nbsp;отдаленных, малонаселенных и&nbsp;труднодоступных территориях</a></td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/develop/fin_avail/">Индикаторы финансовой доступности</a></td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/develop/fin_avail/fdi/#a_123373">Исследование состояния финансовой доступности для&nbsp;лиц&nbsp;с&nbsp;инвалидностью</a></td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/vestnik_xbrl/">Вестник XBRL</a></td>
+<td>Департамент данных, проектов и&nbsp;процессов</td>
+<td>
+<div class="period"><nobr>1&ndash;2</nobr> раза в&nbsp;год</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/na/digist/">Дайджест новостей правового регулирования финансовых рынков</a></td>
+<td rowspan="2">Департамент стратегического развития финансового рынка</td>
+<td>
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/support_measures/nav_om/#a_155960file">Навигатор по&nbsp;ограничительным мерам</a></td>
+<td>
+<div class="period">По&nbsp;мере обновления информации</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/analytics/bank_sector/#a_48977">Информация о&nbsp;действующих кредитных организациях с&nbsp;участием нерезидентов</a></td>
+<td rowspan="3">Департамент допуска и&nbsp;прекращение деятельности финансовых организаций</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/bank_sector/#a_118369">Прекращение деятельности финансовых организаций</a></td>
+<td>
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/business_reputation/restoring_business_rep/#a_83336">Информация о&nbsp;деятельности Комиссии Банка Узбекистана по&nbsp;рассмотрению жалоб на&nbsp;решения, принятые должностными лицами Банка Узбекистана о&nbsp;признании лица не&nbsp;соответствующим квалификационным требованиям&nbsp;и&nbsp;(или) требованиям к&nbsp;деловой репутации</a></td>
+<td>
+<div class="period">По&nbsp;мере необходимости&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/microfinance/#a_128268">Тенденции на&nbsp;рынке ломбардов</a></td>
+<td rowspan="4">Департамент небанковского кредитования</td>
+<td>
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/microfinance/#a_130742">Тенденции на&nbsp;рынке кредитных потребительских кооперативов</a></td>
+<td>
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr>
+<td class="title">Противодействие нелегальной деятельности на&nbsp;финансовом рынке</td>
+<td>
+<div class="period">2&nbsp;раза в&nbsp;год</div>
+</td>
+</tr>
+<tr>
+<td class="title">Аналитический обзор системы кредитной информации</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/analytics/insurance/#a_98692">Мониторинг региональных рисков недобросовестных действий в&nbsp;ОСАГО</a></td>
+<td rowspan="2">Департамент страхового рынка</td>
+<td>
+<div class="period">Ежеквартально</div>
+</td>
+</tr>
+<tr>
+<td><a class="title " href="/statistics/insurance/#a_103864">Отчет по&nbsp;результатам ежегодного мониторинга значений страховых тарифов, применяемых при&nbsp;обязательном страховании гражданской ответственности перевозчика за&nbsp;причинение вреда жизни, здоровью, имуществу пассажиров, и&nbsp;их&nbsp;обоснованности, а&nbsp;также воздействия обязательного страхования на&nbsp;развитие субъектов предпринимательской деятельности в&nbsp;сфере транспорта</a></td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/rcb/#a_120235">Обзор биржевого и&nbsp;внебиржевого товарного рынка</a></td>
+<td>Департамент инфраструктуры финансового рынка<i> </i></td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/about_br/publ/af/">По&nbsp;страницам архивных фондов Центрального банка УзбекистанскойФедерации</a></td>
+<td>Административный департамент</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/about_br/publ/training_catalog/">Каталог программ профессионального обучения персонала центральных (национальных) банков</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td rowspan="2">Университет Банка Узбекистана</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/StaticHtml/File/144509/Shaping_the_Dialogue_2024_rus.pdf">Программа Банка Узбекистана &laquo;Shaping the&nbsp;Dialogue&raquo;</a> <br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td>
+<div class="period">Ежегодно</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/ec_research/ser/">Доклады об&nbsp;экономических исследованиях</a>*<br>
+<div class="text">(на&nbsp;рус.&nbsp;и&nbsp;англ.&nbsp;яз.)</div>
+</td>
+<td>Структурные подразделения Банка Узбекистана</td>
+<td>
+<div class="period">По&nbsp;мере поступления</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/ec_research/analitics/">Аналитические записки</a>*</td>
+<td>Структурные подразделения Банка Узбекистана</td>
+<td>
+<div class="period">По&nbsp;мере поступления</div>
+</td>
+</tr>
+<tr>
+<td><a class="title" href="/analytics/d_ok/">Доклады для&nbsp;общественных консультаций, отчеты об&nbsp;итогах публичного обсуждения докладов, доклады </a></td>
+<td>Структурные подразделения Банка Узбекистана</td>
+<td>
+<div class="period">По&nbsp;мере поступления</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="table-caption gray">*&nbsp;Выводы и&nbsp;рекомендации в&nbsp;издании могут не&nbsp;совпадать с&nbsp;официальной позицией Банка Узбекистана.</div>
+</div>
+</div>    </div>
+</div>
+<!-- не удалять-->
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_left_icon"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/publ/usl/" id="a_47891page">                        <span class="document-regular_name_visible">Условия распространения изданий Банка Узбекистана</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="document-regular">
+    <div class="document-regular_inner">
+        <div class="document-regular_top">
+                <div class="document-regular_left_icon"></div>
+                    </div>
+        <div class="body-2 document-regular_main">
+            <div class="document-regular_texts">
+                <div class="document-regular_name" data-toggle="">
+<a class="referenceable" href="/publ/red_new/" id="a_47893page">                        <span class="document-regular_name_visible">Редакционный совет Банка Узбекистана</span>
+</a>
+                                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                    
+                    <!--/index-->
+                    
+    <div class="page-info">
+        <!--noindex-->
+        
+
+
+<div class="page-info_helpful" data-page-feedback="" data-feedback-url="/Content/PageInfo/RegisterFeedback">
+    <!--noindex-->
+    <div class="helpful" data-helpful="">
+        Страница была полезной?
+        <div class="helpful_btns">
+            <button class="helpful_btn _yes" data-helpful-btn="yes"><i class="helpful_icon"></i><span>Да</span></button>
+            <button class="helpful_btn _no" data-helpful-btn="no"><i class="helpful_icon"></i><span>Нет</span></button>
+        </div>
+    </div>
+    <!--/noindex-->
+</div>
+
+            <div class="page-info_last-update">Последнее обновление страницы: 11.06.2024</div>
+        <!--/noindex-->
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer">
+    <div class="offsetMenu">
+        <div class="footer_main">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2">
+                <div class="footer_top">
+                    <a class="footer_logo" href="../../index.htm"></a>
+                    <div class="footer_up gotoUp">
+                        <div class="footer_up_title">Наверх</div>
+                        <div class="footer_up_icon"></div>
+                    </div>
+                </div>
+                
+<div class="footer_contacts">
+<div class="footer_address">107016, Москва, ул. Неглинная, д.&nbsp;12, к. В, Банк
+Узбекистана</div>
+<div class="footer_phones">
+<div class="footer_phone"><a class="footer_phone_val" href="tel:300">300</a><span>(круглосуточно, бесплатно для&nbsp;звонков с&nbsp;мобильных телефонов)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:88003003000">8&nbsp;800 300-30-00</a><span>(круглосуточно, бесплатно для&nbsp;звонков из&nbsp;регионов Узбекистана)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:+74993003000">+7&nbsp;499 300-30-00</a><span>(круглосуточно, в&nbsp;соответствии с&nbsp;тарифами вашего оператора)</span></div>
+
+</div>
+</div>
+<div class="footer_main_block">
+<div class="footer_left-menu">
+<div class="footer_left-menu_item"><a href="../../lk_uio/index.htm">Личный кабинет участников рынка</a></div>
+<div class="footer_left-menu_item"><a href="../irp/index.htm">Отношения с&nbsp;инвесторами</a></div>
+<div class="footer_left-menu_item"><a href="../../rbr/list_inside/index.htm">Перечень инсайдерской информации Банка Узбекистана</a></div>
+<div class="footer_left-menu_item"><a href="../../analytics/na_vr/index.htm">Официальное опубликование нормативных актов Банка Узбекистана</a></div>
+<div class="footer_left-menu_item"><a href="../../project_na/index.htm">Проекты нормативных актов Банка Узбекистана</a></div>
+<div class="footer_left-menu_item"><a href="../../other/holidays/index.htm">Перечень нерабочих праздничных дней и&nbsp;перенесенных выходных дней</a></div>
+</div>
+<div class="networks-circle footer_networks">
+<a class="networks-circle_item _vk" href="https://vk.com/cbr_official"></a>
+<a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia"></a>
+<a class="networks-circle_item _tg" href="https://t.me/centralbank_russia" title="Telegram"></a>
+<a class="networks-circle_item _ydzen" href="https://dzen.ru/cbr" title="Яндекс Дзен"></a>
+<a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580" title="Одноклассники"></a>
+</div>
+</div>
+<div class="footer_menu">
+<div class="footer_menu_items">
+<div class="footer_menu_item"><a href="../../about/index.htm">О&nbsp;сайте</a></div>
+<div class="footer_menu_item"><a href="../../contacts/index.htm">Контакты</a></div>
+<div class="footer_menu_item"><a href="../anticor/index.htm">Противодействие коррупции</a></div>
+<div class="footer_menu_item"><a href="../../development/index.htm">Технические ресурсы</a></div>
+</div>
+			 <div class="footer_menu_item _visually-impaired"><a href="#" title="Версия для слабовидящих"><span class="visually-impaired-on">Версия для&nbsp;слабовидящих</span><span class="visually-impaired-off">Обычная версия</span></a></div>
+</div>
+
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2 row">
+                <div class="footer_bottom_text col-md-12 col-xl-11">&#169;Toshkent Invest Company, 2023–2024.</div>
+<div class="footer_bottom_aic col-md-11">Дизайн сайта — <a href="https://aic.ru" target="_blank"><img src="/common/images/icons/aic-logo.svg"></a></div>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+    
+
+        <div class="popup-cookies" data-popup-cookies="">
+            <div class="popup-cookies_title">
+                На сайте Банка Узбекистана используются файлы cookie
+            </div>
+            <div class="popup-cookies_subtitle">
+                Оставаясь на <a href="../../index.htm">www.cbr.ru</a>, вы принимаете
+                <a href='/user_agreement/'>пользовательское соглашение</a>
+            </div>
+            <button class="btn _medium _blue " data-popup-cookies-btn="">
+                Подтвердить
+            </button>
+        </div>
+
+    
+<!--[if IE 9]><script>$('body').addClass('ie9')</script><![endif]-->
+<script src="/Modules/Content/Scripts/PageInfo.js?v=v3116962712" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            Content_PageInfo.init($('[data-page-feedback]'));
+        });
+    </script>
+
+
+
+</body>
+</html>
