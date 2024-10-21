@@ -128,7 +128,7 @@
                         <a class="header_logo" href="/"></a>
                         <style>
                             .home-header .header_logo {
-                                background: url(./Content/images/card-logo.png) no-repeat center center / contain !important;
+                                background: url({{asset('assets/frontend/Content/images/card-logo.png')}}) no-repeat center center / contain !important;
                                 width: 120px !important;
                                 height: 90px;
                             }
