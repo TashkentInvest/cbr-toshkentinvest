@@ -15,27 +15,12 @@
             Узбекистан, город Ташкент, улица Ислама Каримова, 51
           </div>
           <div class="footer_phones">
+            
             <div class="footer_phone">
-              <a class="footer_phone_val" href="tel:300">300</a
+              <a class="footer_phone_val" href="tel:+998 71 210 02 61"
+                >+998 71 210 02 61</a
               ><span
-                >(круглосуточно, бесплатно для&nbsp;звонков с&nbsp;мобильных
-                телефонов)</span
-              >
-            </div>
-            <div class="footer_phone">
-              <a class="footer_phone_val" href="tel:88003003000"
-                >8&nbsp;800 300-30-00</a
-              ><span
-                >(круглосуточно, бесплатно для&nbsp;звонков из&nbsp;регионов
-                Узбекистана)</span
-              >
-            </div>
-            <div class="footer_phone">
-              <a class="footer_phone_val" href="tel:+74993003000"
-                >+7&nbsp;499 300-30-00</a
-              ><span
-                >(круглосуточно, в&nbsp;соответствии с&nbsp;тарифами вашего
-                оператора)</span
+                >(круглосуточно)</span
               >
             </div>
           </div>

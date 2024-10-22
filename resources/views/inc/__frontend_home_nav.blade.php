@@ -169,12 +169,8 @@
                             защиты финансового рынка</a>
                     </div>
                     <div class="phones">
-                        <a class="menu_phone_val" href="tel:+74993003000">
-                            <div class="plus">+</div>
-                            7 499 300-30-00
-                        </a><a class="menu_phone_val" href="tel:88003003000">8 800 300-30-00</a><a
-                            class="menu_phone_val" href="tel:300">300</a><span>Бесплатно для звонков с мобильных
-                            телефонов</span>
+                       <a class="menu_phone_val" href="tel:+998 71 210 02 61">+998 71 210 02 61</a><a
+                            class="menu_phone_val" href="tel:+998 71 210 02 61">+998 71 210 02 61</a><span>круглосуточно</span>
                     </div>
                     <div class="inner_links">
                         <a href="/news/" title="Новости">Новости</a>
