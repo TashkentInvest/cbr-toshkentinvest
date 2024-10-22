@@ -38,7 +38,7 @@
                                                     <div class="news _in-feed col-md-17 _big _white">
                                                         <div class="news_inner"
                                                             style="
-                                                                background-image: url({{asset('assets/frontend/Content/images/hakimyat.png')}});
+                                                                background-image: url({{ asset('assets/frontend/Content/images/hakimyat.png') }});
                                                                 ">
                                                             <div class="news_text">
                                                                 <div class="news_info">
@@ -71,7 +71,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="{{route('frontend.news')}}" class="more-button _small _home-news">
+                                                <a href="{{ route('frontend.news') }}"
+                                                    class="more-button _small _home-news">
                                                     Все новости
                                                 </a>
                                             </div>
@@ -110,7 +111,7 @@
                         <div class="home-main_aside" style="min-height: 1974.31px">
                             <div class="home-main_sticky" data-home-main-aside-sticky=""
                                 xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
-                           
+
                                 <div class="main-indicator_rates">
                                     <div class="main-indicator_rates-table">
                                         <div class="main-indicator_rates-head">
@@ -378,12 +379,10 @@
                                     <div class="swiper-slide swiper-slide-active"
                                         style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
-                                            href="/Content/Document/File/160494/dbra_20240417.pdf"
-                                            data-zoom-title="Перспективные направления развития банковского регулирования и надзора: текущий статус и новые задачи"
-                                            data-zoom-tags="" target="_blank">
+                                            href="https://drive.google.com/file/d/1xUtsj_L9gsK6YGTSZsqgv1YEvqP3bU2q/view"
+                                            data-zoom-title="Устав компании" data-zoom-tags="" target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Перспективные направления развития банковского
-                                                регулирования и надзора: текущий статус и новые задачи
+                                                Устав компании
                                             </div>
                                             <div class="material_source">
                                                 <div class="material_format icon-pdf"></div>
@@ -393,27 +392,24 @@
                                     <div class="swiper-slide swiper-slide-next"
                                         style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
-                                            href="/Collection/Collection/File/49041/ar_2023.pdf"
-                                            data-zoom-title="Годовой отчет Банка Узбекистана" data-zoom-tags=""
+                                            href="https://drive.google.com/file/d/1Its9ckdTkiEf5M7TT5ZpU_MZSbbmcqDg/view"
+                                            data-zoom-title="Организационная структура" data-zoom-tags=""
                                             target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Годовой отчет Банка Узбекистана
+                                                Организационная структура
                                             </div>
                                             <div class="material_source">
                                                 <div class="material_format icon-pdf"></div>
-                                                <span data-line-cutter="2" style="position: relative">2023&nbsp;г.</span>
+                                                {{-- <span data-line-cutter="2" style="position: relative">2023&nbsp;г.</span> --}}
                                             </div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
-                                            href="/Content/Document/File/155957/onrfr_2024-26.pdf"
-                                            data-zoom-title="Основные направления развития финансового рынка УзбекистанскойФедерации на 2024 год и период 2025 и 2026 годов"
-                                            data-zoom-tags="">
+                                            href="https://drive.google.com/file/d/1idn27zGgPK7T-HiBlD5l1MxRmAp4gv75/view"
+                                            data-zoom-title="Решение о первичном выпуске акций" data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Основные направления развития финансового рынка
-                                                УзбекистанскойФедерации на 2024 год и период 2025 и
-                                                2026 годов
+                                                Решение о первичном выпуске акций
                                             </div>
                                             <div class="material_source">
                                                 <div class="material_format icon-pdf"></div>
@@ -422,51 +418,52 @@
                                         </a>
                                     </div>
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
-                                        <a class="material" href="/about_br/publ/ondkp/"
-                                            data-zoom-title="Основные направления единой государственной денежно-кредитной политики"
-                                            data-zoom-tags="">
+                                        <a class="material material-file pdf-format"
+                                            href="https://drive.google.com/file/d/1EYvD3ukqo22A8bgoMmPv-BDiVLEzzxqa/view"
+                                            data-zoom-title="Бухгалтерский баланс — 1 квартал 2024" data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Основные направления единой государственной
-                                                денежно-кредитной политики
+                                                Бухгалтерский баланс — 1 квартал 2024
                                             </div>
                                             <div class="material_source">
-                                                <span data-line-cutter="2" style="position: relative"></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
-                                        <a class="material" href="/about_br/publ/results_work/2023-g/"
-                                            data-zoom-title="Итоги работы Банка Узбекистана: коротко о&nbsp;главном"
-                                            data-zoom-tags="">
-                                            <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Итоги работы Банка Узбекистана: коротко о&nbsp;главном
-                                            </div>
-                                            <div class="material_source">
-                                                <span data-line-cutter="2" style="position: relative">2023&nbsp;г.</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
-                                        <a class="material" href="/PSystem/b_doc/strategy_nps/"
-                                            data-zoom-title="Стратегия развития национальной платежной системы на 2021 – 2023 годы"
-                                            data-zoom-tags="">
-                                            <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Стратегия развития национальной платежной системы на
-                                                2021 – 2023 годы
-                                            </div>
-                                            <div class="material_source">
+                                                <div class="material_format icon-pdf"></div>
                                                 <span data-line-cutter="2" style="position: relative"></span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
-                                            href="/Content/Document/File/119613/onrndo_2021-2025.pdf"
-                                            data-zoom-title="Основные направления развития наличного денежного обращения на 2021–2025 годы"
-                                            data-zoom-tags="" target="_blank">
+                                            href="https://drive.google.com/file/d/1pS0MACr1to93NL53nnVACxwLSejl7jQA/view"
+                                            data-zoom-title="Отчет о финансовых результатах – 1 квартал 2024"
+                                            data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Основные направления развития наличного денежного
-                                                обращения на 2021–2025 годы
+                                                Отчет о финансовых результатах – 1 квартал 2024
+                                            </div>
+                                            <div class="material_source">
+                                                <div class="material_format icon-pdf"></div>
+                                                {{-- <span data-line-cutter="2" style="position: relative">2023&nbsp;г.</span> --}}
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
+                                        <a class="material material-file pdf-format"
+                                            href="https://drive.google.com/file/d/1_lCgKih4Yru3sHmKHIWreB43Uqg_fQXI/view"
+                                            data-zoom-title="Список аффилированных лиц" data-zoom-tags="">
+                                            <div class="material_title" data-line-cutter="8" style="position: relative">
+                                                Список аффилированных лиц
+                                            </div>
+                                            <div class="material_source">
+                                                <div class="material_format icon-pdf"></div>
+                                                <span data-line-cutter="2" style="position: relative"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
+                                        <a class="material material-file pdf-format"
+                                            href="https://drive.google.com/file/d/1UuT6P6HBe_nVKuFdBH2ZlHiI5lhFS26P/view"
+                                            data-zoom-title="Кодекс корпоративного управления" data-zoom-tags=""
+                                            target="_blank">
+                                            <div class="material_title" data-line-cutter="8" style="position: relative">
+                                                Кодекс корпоративного управления
                                             </div>
                                             <div class="material_source">
                                                 <div class="material_format icon-pdf"></div>
@@ -475,79 +472,72 @@
                                     </div>
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
-                                            href="/Content/Document/File/120709/SupTech_RegTech_2021-2023.pdf"
-                                            data-zoom-title="Основные направления развития технологий SupTech и RegTech на период 2021 – 2023 годов"
-                                            data-zoom-tags="" target="_blank">
+                                            href="https://drive.google.com/file/d/1L5wG3AEPZMyvsd723vnCRcDfG-UM3cTa/view"
+                                            data-zoom-title="Правила корпоративного управления" data-zoom-tags=""
+                                            target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Основные направления развития технологий SupTech и
-                                                RegTech на период 2021 – 2023 годов
+                                                Правила корпоративного управления
                                             </div>
                                             <div class="material_source">
                                                 <div class="material_format icon-pdf"></div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
-                                        <a class="material"
-                                            href="/dkp/mp_dec/decision_key_rate/summary_key_rate_25092024/"
-                                            data-zoom-title="Резюме обсуждения ключевой ставки" data-zoom-tags="">
-                                            <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Резюме обсуждения ключевой ставки
-                                            </div>
-                                            <div class="material_source">
-                                                <span data-line-cutter="2" style="position: relative">Материалы
-                                                    по&nbsp;итогам заседаний Сов...</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
-                                            href="/Content/Document/File/162516/comment_07082024.pdf"
-                                            data-zoom-title="Комментарий к среднесрочному прогнозу Банка Узбекистана"
-                                            data-zoom-tags="" target="_blank">
+                                            href="https://drive.google.com/file/d/1ruf4z4qfecZDd81yioCkfSkQ2lCATMag/view"
+                                            data-zoom-title="Результаты оценки системы корпоративного управления"
+                                            data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Комментарий к среднесрочному прогнозу Банка
-                                                Узбекистана
+                                                Результаты оценки системы корпоративного управления
                                             </div>
                                             <div class="material_source">
                                                 <div class="material_format icon-pdf"></div>
-                                                <span data-line-cutter="2" style="position: relative">07.08.2024</span>
+
+                                                {{-- <span data-line-cutter="2" style="position: relative">Материалы
+                                                    по&nbsp;итогам заседаний Сов...</span> --}}
                                             </div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
-                                        <a class="material" href="/analytics/finstab/ofs/4_2023_1_q_2024/"
-                                            data-zoom-title="Обзор финансовой стабильности" data-zoom-tags="">
+                                        <a class="material material-file pdf-format"
+                                            href="https://drive.google.com/file/d/1TFvghHgmYuoRSSxDdYWaLoX5Q9CMVh8J/view"
+                                            data-zoom-title="Сообщение о принятии Правил корпоративного управления в своей деятельности"
+                                            data-zoom-tags="" target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Обзор финансовой стабильности
+                                                Сообщение о принятии Правил корпоративного управления в своей деятельности
                                             </div>
                                             <div class="material_source">
-                                                <span data-line-cutter="2"
+                                                <div class="material_format icon-pdf"></div>
+                                                {{-- <span data-line-cutter="2" style="position: relative">07.08.2024</span> --}}
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
+                                        <a class="material material-file pdf-format"
+                                            href="https://drive.google.com/file/d/1CJXescFyTKxU5wMSK9c0AtMkkIbm5eoI/view"
+                                            data-zoom-title="Сообщение о принятии рекомендаций Кодекса корпоративного управления в своей деятельности"
+                                            data-zoom-tags="">
+                                            <div class="material_title" data-line-cutter="8" style="position: relative">
+                                                Сообщение о принятии рекомендаций Кодекса корпоративного управления в своей
+                                                деятельности
+                                            </div>
+                                            <div class="material_source">
+                                                <div class="material_format icon-pdf"></div>
+
+                                                {{-- <span data-line-cutter="2"
                                                     style="position: relative">IV&nbsp;квартал&nbsp;2023&nbsp;г.&nbsp;—
-                                                    I&nbsp;квартал&nbsp;2024&nbsp;г.</span>
+                                                    I&nbsp;квартал&nbsp;2024&nbsp;г.</span> --}}
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
-                                        <a class="material material-file pdf-format"
-                                            href="/Content/Document/File/143838/dbra_20221227.pdf"
-                                            data-zoom-title="Перспективные направления развития банковского регулирования и надзора"
-                                            data-zoom-tags="" target="_blank">
-                                            <div class="material_title" data-line-cutter="8" style="position: relative">
-                                                Перспективные направления развития банковского
-                                                регулирования и надзора
-                                            </div>
-                                            <div class="material_source">
-                                                <div class="material_format icon-pdf"></div>
-                                            </div>
-                                        </a>
-                                    </div>
+
                                 </div>
                                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                             </div>
                         </div>
                     </div>
-                    
+
                     {{-- partners logos --}}
                     @include('inc.__partners_logos')
                 </div>
