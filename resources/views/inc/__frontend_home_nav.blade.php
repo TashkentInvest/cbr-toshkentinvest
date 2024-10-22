@@ -27,8 +27,7 @@
                                             <span><!--noindex-->RU<!--/noindex--></span>
                                         </div>
                                         <div class="header_lang_item">
-                                            <a
-                                                href="#!"><!--noindex-->EN<!--/noindex--></a>
+                                            <a href="#!"><!--noindex-->EN<!--/noindex--></a>
                                         </div>
                                     </div>
                                 </div>
@@ -61,12 +60,10 @@
                             </div>
                             <div class="header_right d-none d-md-flex">
                                 <div class="networks header_networks">
-                                    <a class="networks_item _vk" href="https://vk.com/#!"
-                                        title="ВКонтакте"></a>
+                                    <a class="networks_item _vk" href="https://vk.com/#!" title="ВКонтакте"></a>
                                     <a class="networks_item _yt" href="https://www.youtube.com/user/#!"
                                         title="Youtube"></a>
-                                    <a class="networks_item _tg" href="https://t.me/#!"
-                                        title="Telegram"></a>
+                                    <a class="networks_item _tg" href="https://t.me/#!" title="Telegram"></a>
                                     <a class="networks_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a>
                                     <a class="networks_item _ok" href="https://ok.ru/group/#!"
                                         title="Одноклассники"></a>
@@ -128,7 +125,7 @@
                         <a class="header_logo" href="/"></a>
                         <style>
                             .home-header .header_logo {
-                                background: url({{asset('assets/frontend/Content/images/card-logo.png')}}) no-repeat center center / contain !important;
+                                background: url({{ asset('assets/frontend/Content/images/card-logo.png') }}) no-repeat center center / contain !important;
                                 width: 120px !important;
                                 height: 90px;
                             }
@@ -169,8 +166,8 @@
                             защиты финансового рынка</a>
                     </div>
                     <div class="phones">
-                       <a class="menu_phone_val" href="tel:+998 71 210 02 61">+998 71 210 02 61</a><a
-                            class="menu_phone_val" href="tel:+998 71 210 02 61">+998 71 210 02 61</a><span>круглосуточно</span>
+                        <a class="menu_phone_val" href="tel:+998 71 210 02 61">+998 71 210 02
+                            61</a><span>круглосуточно</span>
                     </div>
                     <div class="inner_links">
                         <a href="/news/" title="Новости">Новости</a>
