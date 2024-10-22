@@ -71,9 +71,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button id="_buttonLoadNextEvt" class="more-button _small _home-news">
-                                                    Загрузить еще
-                                                </button>
+                                                <a href="{{route('frontend.news')}}" class="more-button _small _home-news">
+                                                    Все новости
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="hide" data-tabs-content="0" style="display: none">
@@ -295,7 +295,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a class="main-indicator_rates-link" href="/key-indicators/">Все показатели</a>
+                                    {{-- <a class="main-indicator_rates-link" href="/key-indicators/">Все показатели</a> --}}
                                 </div>
                                 <div class="home-main_resources d-none d-md-block">
                                     <div class="external-resources">
