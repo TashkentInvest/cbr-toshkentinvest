@@ -25,7 +25,7 @@
             </div>
           </div>
         </div>
-        <div class="footer_main_block">
+        {{-- <div class="footer_main_block">
           <div class="footer_left-menu">
             <div class="footer_left-menu_item">
               <a href="/lk_uio/">Личный кабинет участников рынка</a>
@@ -81,7 +81,7 @@
               title="Одноклассники"
             ></a>
           </div>
-        </div>
+        </div> --}}
         <div class="footer_menu">
           <div class="footer_menu_items">
             <div class="footer_menu_item">

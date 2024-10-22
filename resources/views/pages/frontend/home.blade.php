@@ -110,53 +110,7 @@
                         <div class="home-main_aside" style="min-height: 1974.31px">
                             <div class="home-main_sticky" data-home-main-aside-sticky=""
                                 xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
-                                <div class="main-indicator">
-                                    <div class="main-indicator_content">
-                                        <div class="main-indicator_text">
-                                            <span class="main-indicator_info" data-tooltip=""
-                                                data-tooltip-content="<p>Цель по инфляции устанавливается для показателя инфляции, отражающего темп прироста потребительских цен к соответствующему месяцу предыдущего года</p>"
-                                                data-tooltip-class="main-indicator_info-tooltip"
-                                                data-tooltip-at="right bottom" data-tooltip-position="right+22 top+7"
-                                                data-tooltip-type="black" aria-expanded="false">Цель по инфляции</span>
-                                        </div>
-                                    </div>
-                                    <div class="main-indicator_value">4,0%</div>
-                                </div>
-                                <div class="main-indicator">
-                                    <div class="main-indicator_content">
-                                        <div class="main-indicator_sub">
-                                            <span class="main-indicator_info" data-tooltip=""
-                                                data-tooltip-content='<p>Показатель инфляции отражает темп прироста потребительских цен к соответствующему месяцу предыдущего года</p><p>(источник:  <a href="https://rosstat.gov.ru/statistics/price">Федеральная служба государственной статистики</a>)</p>'
-                                                data-tooltip-class="main-indicator_info-tooltip"
-                                                data-tooltip-at="right bottom" data-tooltip-position="right+22 top+7"
-                                                data-tooltip-type="black" aria-expanded="false">Инфляция</span>
-                                        </div>
-                                        <div class="main-indicator_text">
-                                            <a href="/hd_base/infl/">сентябрь 2024</a>
-                                        </div>
-                                    </div>
-                                    <div class="main-indicator_value">8,6%</div>
-                                </div>
-                                <div class="main-indicator">
-                                    <div class="main-indicator_content">
-                                        <div class="main-indicator_sub">
-                                            <a href="/hd_base/KeyRate/">Ключевая ставка</a>
-                                        </div>
-                                        <div class="main-indicator_text">
-                                            <a href="/press/keypr/"> с 16.09.2024</a>
-                                        </div>
-                                    </div>
-                                    <div class="main-indicator_value">19,00%</div>
-                                </div>
-                                <div class="main-indicator">
-                                    <div class="main-indicator_content">
-                                        <div class="main-indicator_sub">
-                                            <a href="/hd_base/ruonia/dynamics/">Ставка RUONIA</a>
-                                        </div>
-                                        <div class="main-indicator_text">11.10.2024</div>
-                                    </div>
-                                    <div class="main-indicator_value">18,62%</div>
-                                </div>
+                           
                                 <div class="main-indicator_rates">
                                     <div class="main-indicator_rates-table">
                                         <div class="main-indicator_rates-head">
