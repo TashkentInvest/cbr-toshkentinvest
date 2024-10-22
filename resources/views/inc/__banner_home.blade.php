@@ -127,20 +127,20 @@
                         <li>
                             <a href="/about_BR/">О нас</a>
                         </li>
-                        <li><a href="/Reception">Интернет-приемная</a></li>
+                        <li><a href="/Reception">Контакты</a></li>
                         <li><a href="/faq/">Вопросы и&nbsp;ответы</a></li>
                     </ul>
                 </div>
                 <div class="col-7 offset-1">
                     <ul class="without_dash without_indent">
                         <li>
-                            <a href="/finorg/">Проверить участника финансового рынка</a>
+                            <a href="https://www.tashkent.uz/">tashkent.uz</a>
                         </li>
                         <li>
-                            <a href="/lk_uio/">Личный кабинет участника информационного обмена</a>
+                            <a href="https://projects.toshkentinvest.uz/">projects.toshkentinvest.uz</a>
                         </li>
                         <li>
-                            <a href="/params/">Параметры операций Банка Узбекистана</a>
+                            <a href="/investoram/">Строительные инвестиционные проекты</a>
                         </li>
                     </ul>
                 </div>
