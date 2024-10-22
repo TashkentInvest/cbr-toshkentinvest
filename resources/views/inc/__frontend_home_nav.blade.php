@@ -1,37 +1,33 @@
-@if (!Request::is('/'))
-    <header class="header" id="header">
-
-        <div class="top-line" data-top-line="">
-            <div class="offsetMenu">
-                <div class="col-md-23 offset-md-1">
-                    <div class="top-line_inner header_inner">
-                        <div class="row">
-                            <div class="col-xl-5 col-md-9">
-                                <div class="header_left">
-                                    <div class="header_menu" data-menu-show=""></div>
-                                    <a class="header_logo" href="/"></a>
+<header class="home-header" id="header">
+<div class="top-line" data-top-line="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="top-line_inner header_inner">
+                <div class="row">
+                    <div class="col-xl-5 col-md-9">
+                        <div class="header_left">
+                            <div class="header_menu" data-menu-show=""></div>
+                            <a class="header_logo" href="/"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                        <div class="header_search">
+                            <a class="header_search_btn" href="#" data-search-form-show>
+                                <div class="header_search_icon"></div>
+                                <span class="d-none d-xl-block">Поиск по сайту</span>
+                            </a>
+                        </div>
+                        <div class="d-none d-md-block">
+                            <div class="header_right">
+                                <div class="header_link">
+                                    <a href="/reception/">Интернет-приемная</a>
                                 </div>
-                            </div>
-                            <div class="col-xl-17 col-md-13 offset-md-1 header_block">
-                                <div class="header_search">
-                                    <a class="header_search_btn" href="#" data-search-form-show>
-                                        <div class="header_search_icon"></div>
-                                        <span class="d-none d-xl-block">Поиск по сайту</span>
-                                    </a>
-                                </div>
-                                <div class="d-none d-md-block">
-                                    <div class="header_right">
-                                        <div class="header_link">
-                                            <a href="/reception/">Интернет-приемная</a>
-                                        </div>
-                                        <div class="header_lang">
-                                            <div class="header_lang_item _active">
-                                                <span><!--noindex-->RU<!--/noindex--></span>
-                                            </div>
-                                            <div class="header_lang_item">
-                                                <a href="#!"><!--noindex-->EN<!--/noindex--></a>
-                                            </div>
-                                        </div>
+                                <div class="header_lang">
+                                    <div class="header_lang_item _active">
+                                        <span><!--noindex-->RU<!--/noindex--></span>
+                                    </div>
+                                    <div class="header_lang_item">
+                                        <a href="#!"><!--noindex-->EN<!--/noindex--></a>
                                     </div>
                                 </div>
                             </div>
@@ -40,146 +36,63 @@
                 </div>
             </div>
         </div>
-        <div class="offsetMenu">
-            <div class="col-md-23 offset-md-1">
-                <div class="header_content">
-                    <div class="header_top header_inner">
-                        <div class="row">
-                            <div class="col-xl-5 col-md-7">
-                                <div class="header_left">
-                                    <div class="header_menu" data-menu-show=""></div>
-                                    <a class="header_logo" href="/"></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-18 col-md-16 header_block">
-                                <div class="header_search">
-                                    <a class="header_search_btn _hide" href="#" data-search-form-show
-                                        data-search>
-                                        <div class="header_search_icon"></div>
-                                        <span class="d-none d-md-block">Поиск по сайту</span>
-                                    </a>
-                                </div>
-                                <div class="header_right d-none d-md-flex">
-                                    <div class="networks header_networks">
-                                        <a class="networks_item _vk" href="https://vk.com/#!" title="ВКонтакте"></a>
-                                        <a class="networks_item _yt" href="https://www.youtube.com/user/#!"
-                                            title="Youtube"></a>
-                                        <a class="networks_item _tg" href="https://t.me/#!" title="Telegram"></a>
-                                        <a class="networks_item _ydzen" href="https://dzen.ru/#!"
-                                            title="Яндекс Дзен"></a>
-                                        <a class="networks_item _ok" href="https://ok.ru/group/#!"
-                                            title="Одноклассники"></a>
-                                    </div>
-                                    <div class="header_lang">
-                                        <div class="header_lang_item _active">
-                                            <span><!--noindex-->RU<!--/noindex--></span>
-                                        </div>
-                                        <div class="header_lang_item">
-                                            <a
-                                                href="/Localization/SwitchLanguage?url=%2F&amp;from=ru-RU&amp;to=en-CB"><!--noindex-->EN<!--/noindex--></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </header>
-@else
-    <header class="home-header" id="header">
-        <div class="top-line" data-top-line="">
-            <div class="offsetMenu">
-                <div class="col-md-23 offset-md-1">
-                    <div class="top-line_inner header_inner">
-                        <div class="row">
-                            <div class="col-xl-5 col-md-9">
-                                <div class="header_left">
-                                    <div class="header_menu" data-menu-show=""></div>
-                                    <a class="header_logo" href="/"></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-17 col-md-13 offset-md-1 header_block">
-                                <div class="header_search">
-                                    <a class="header_search_btn" href="#" data-search-form-show>
-                                        <div class="header_search_icon"></div>
-                                        <span class="d-none d-xl-block">Поиск по сайту</span>
-                                    </a>
-                                </div>
-                                <div class="d-none d-md-block">
-                                    <div class="header_right">
-                                        <div class="header_link">
-                                            <a href="/reception/">Интернет-приемная</a>
-                                        </div>
-                                        <div class="header_lang">
-                                            <div class="header_lang_item _active">
-                                                <span><!--noindex-->RU<!--/noindex--></span>
-                                            </div>
-                                            <div class="header_lang_item">
-                                                <a href="#!"><!--noindex-->EN<!--/noindex--></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="home-header_shadow"></div>
-        <div class="offsetMenu">
-            <div class="col-md-23 offset-md-1">
-                <div class="home-header_content">
-                    <div class="home-header_top header_inner">
-                        <div class="row">
-                            <div class="col-xl-5 col-md-7">
-                                <div class="header_left">
-                                    <div class="header_menu" data-menu-show=""></div>
-                                    <a class="header_logo" href="/"></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-18 col-md-16 header_block">
-                                <div class="header_search">
-                                    <a class="header_search_btn _hide" href="#" data-search-form-show
-                                        data-home-search>
-                                        <div class="header_search_icon"></div>
-                                        <span class="d-none d-md-block">Поиск по сайту</span>
-                                    </a>
-                                </div>
-                                <div class="header_right d-none d-md-flex">
-                                    <div class="networks header_networks">
-                                        <a class="networks_item _vk" href="https://vk.com/#!" title="ВКонтакте"></a>
-                                        <a class="networks_item _yt" href="https://www.youtube.com/user/#!"
-                                            title="Youtube"></a>
-                                        <a class="networks_item _tg" href="https://t.me/#!" title="Telegram"></a>
-                                        <a class="networks_item _ydzen" href="https://dzen.ru/#!"
-                                            title="Яндекс Дзен"></a>
-                                        <a class="networks_item _ok" href="https://ok.ru/group/#!"
-                                            title="Одноклассники"></a>
-                                    </div>
-                                    <div class="header_lang">
-                                        <div class="header_lang_item _active">
-                                            <span><!--noindex-->RU<!--/noindex--></span>
-                                        </div>
-                                        <div class="header_lang_item">
-                                            <a
-                                                href="/Localization/SwitchLanguage?url=%2F&amp;from=ru-RU&amp;to=en-CB"><!--noindex-->EN<!--/noindex--></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    @include('inc.__banner_home')
-                </div>
-            </div>
-        </div>
-    </header>
+    </div>
+</div>
+@if(Request::is('/'))
+<div class="home-header_shadow"></div>
 @endif
+<div class="offsetMenu">
+    <div class="col-md-23 offset-md-1">
+        <div class="{{ Request::is('/') ? 'home-header_content' : 'header_content' }}">
+            <div class="{{ Request::is('/') ? 'home-header_top' : 'header_top' }} header_inner">
+                <div class="row">
+                    <div class="col-xl-5 col-md-7">
+                        <div class="header_left">
+                            <div class="header_menu" data-menu-show=""></div>
+                            <a class="header_logo" href="/"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-18 col-md-16 header_block">
+                        <div class="header_search">
+                            <a class="header_search_btn _hide" href="#" data-search-form-show
+                                data-home-search>
+                                <div class="header_search_icon"></div>
+                                <span class="d-none d-md-block">Поиск по сайту</span>
+                            </a>
+                        </div>
+                        <div class="header_right d-none d-md-flex">
+                            <div class="networks header_networks">
+                                <a class="networks_item _vk" href="https://vk.com/#!" title="ВКонтакте"></a>
+                                <a class="networks_item _yt" href="https://www.youtube.com/user/#!"
+                                    title="Youtube"></a>
+                                <a class="networks_item _tg" href="https://t.me/#!" title="Telegram"></a>
+                                <a class="networks_item _ydzen" href="https://dzen.ru/#!"
+                                    title="Яндекс Дзен"></a>
+                                <a class="networks_item _ok" href="https://ok.ru/group/#!"
+                                    title="Одноклассники"></a>
+                            </div>
+                            <div class="header_lang">
+                                <div class="header_lang_item _active">
+                                    <span><!--noindex-->RU<!--/noindex--></span>
+                                </div>
+                                <div class="header_lang_item">
+                                    <a
+                                        href="/Localization/SwitchLanguage?url=%2F&amp;from=ru-RU&amp;to=en-CB"><!--noindex-->EN<!--/noindex--></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @if(Request::is('/'))
+            @include('inc.__banner_home')
+            @endif
+        </div>
+    </div>
+</div>
+</header>
+
 
 <form class="search-form" action="/search/" method="get" data-search-form="">
     <div class="offsetMenu">
