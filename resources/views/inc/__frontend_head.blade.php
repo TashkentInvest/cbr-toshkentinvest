@@ -5,7 +5,7 @@
 <meta name="zoom:lang" content="ru" />
 <meta name="zoom:last-modified" content="Wed, 09 Oct 2024 08:00:02 GMT" />
 <title>
-    Центральный банк Узбекистанской Федерации |Toshkent Invest Company
+   Toshkent Invest Company
 </title>
 
 <meta property="og:image" content="{{ asset('assets/frontend/common/images/hakimyat.png') }}" />

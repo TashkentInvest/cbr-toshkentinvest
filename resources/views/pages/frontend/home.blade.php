@@ -65,8 +65,7 @@
                                                                 </div>
                                                                 <a class="news_title"
                                                                     href="/press/pr/?file=638634076116259914COINS.htm"
-                                                                    target="_blank">Ювелирное искусство в&nbsp;Узбекистана:
-                                                                    новые монеты</a>
+                                                                    target="_blank">Узбекистана: новые моменты</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -539,7 +538,7 @@
                     </div>
 
                     {{-- partners logos --}}
-                    @include('inc.__partners_logos')
+                    {{-- @include('inc.__partners_logos') --}}
                 </div>
             </div>
         </div>
