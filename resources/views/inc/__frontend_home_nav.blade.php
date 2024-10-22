@@ -28,7 +28,7 @@
                                         </div>
                                         <div class="header_lang_item">
                                             <a
-                                                href="https://www.cbr.ru/Localization/SwitchLanguage?url=%2F&amp;from=ru-RU&amp;to=en-CB"><!--noindex-->EN<!--/noindex--></a>
+                                                href="#!"><!--noindex-->EN<!--/noindex--></a>
                                         </div>
                                     </div>
                                 </div>
@@ -61,14 +61,14 @@
                             </div>
                             <div class="header_right d-none d-md-flex">
                                 <div class="networks header_networks">
-                                    <a class="networks_item _vk" href="https://vk.com/cbr_official"
+                                    <a class="networks_item _vk" href="https://vk.com/#!"
                                         title="ВКонтакте"></a>
-                                    <a class="networks_item _yt" href="https://www.youtube.com/user/BankofRussia"
+                                    <a class="networks_item _yt" href="https://www.youtube.com/user/#!"
                                         title="Youtube"></a>
-                                    <a class="networks_item _tg" href="https://t.me/centralbank_russia"
+                                    <a class="networks_item _tg" href="https://t.me/#!"
                                         title="Telegram"></a>
-                                    <a class="networks_item _ydzen" href="https://dzen.ru/cbr" title="Яндекс Дзен"></a>
-                                    <a class="networks_item _ok" href="https://ok.ru/group/68858679787580"
+                                    <a class="networks_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a>
+                                    <a class="networks_item _ok" href="https://ok.ru/group/#!"
                                         title="Одноклассники"></a>
                                 </div>
                                 <div class="header_lang">
@@ -184,11 +184,11 @@
                         <a href="/about/" title="О сайте">О сайте</a>
                     </div>
                     <div class="networks-circle">
-                        <a class="networks-circle_item _vk" href="https://vk.com/cbr_official"></a>
+                        <a class="networks-circle_item _vk" href="https://vk.com/#!"></a>
                         <a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia"></a>
                         <a class="networks-circle_item _tg" href="https://t.me/centralbank_russia"
                             title="Telegram"></a>
-                        <a class="networks-circle_item _ydzen" href="https://dzen.ru/cbr" title="Яндекс Дзен"></a>
+                        <a class="networks-circle_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a>
                         <a class="networks-circle_item _ok" href="https://ok.ru/group/68858679787580"
                             title="Одноклассники"></a>
                     </div>
@@ -1641,7 +1641,7 @@
                         </li>
                         <li class="item row" data-menu-item="" data-catalog-id="27112">
                             <div class="col-md-1 container_toggle"></div>
-                            <a href="https://ratings.cbr.ru" class="col-md-15">Информация о&nbsp;кредитных
+                            <a href="#!" class="col-md-15">Информация о&nbsp;кредитных
                                 рейтингах</a>
                         </li>
                     </ul>

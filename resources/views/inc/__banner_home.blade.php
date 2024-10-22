@@ -15,7 +15,7 @@
 
         <a
           class="swiper-slide"
-          href="https://finzachet.ru/?utm_source=event2024&amp;utm_medium=br&amp;utm_campaign=banner_na_sajte_br_cbr_ru&amp;utm_content=2024_10_01"
+          href="#!"
           data-background-image="{{asset('assets/frontend/Content/Gallery/Image/banner2.webp')}}"
           target="_blank"
         >
@@ -110,7 +110,7 @@
         <a
           class="swiper-slide"
           data-background-image="{{asset('assets/frontend/Content/Gallery/Image/banner3.webp')}}"
-          href="https://finzachet.ru/?utm_source=event2024&amp;utm_medium=br&amp;utm_campaign=banner_na_sajte_br_cbr_ru&amp;utm_content=2024_10_01"
+          href="#!"
           target="_blank"
         >
           <div class="col-md-19">

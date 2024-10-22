@@ -74,25 +74,25 @@
           <div class="networks-circle footer_networks">
             <a
               class="networks-circle_item _vk"
-              href="https://vk.com/cbr_official"
+              href="https://vk.com/#!"
             ></a>
             <a
               class="networks-circle_item _yt"
-              href="https://www.youtube.com/user/BankofRussia"
+              href="https://www.youtube.com/#!"
             ></a>
             <a
               class="networks-circle_item _tg"
-              href="https://t.me/centralbank_russia"
+              href="https://t.me/#!"
               title="Telegram"
             ></a>
             <a
               class="networks-circle_item _ydzen"
-              href="https://dzen.ru/cbr"
+              href="https://dzen.ru/#!"
               title="Яндекс Дзен"
             ></a>
             <a
               class="networks-circle_item _ok"
-              href="https://ok.ru/group/68858679787580"
+              href="https://ok.ru/group/#!"
               title="Одноклассники"
             ></a>
           </div>
