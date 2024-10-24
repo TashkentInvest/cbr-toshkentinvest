@@ -167,10 +167,7 @@
                         aria-selected="false" class="menu_tab" href="#" data-tabs-tab="Services">Сервисы</a>
                 </div>
                 <div class="menu_quick_links">
-                    <div class="inner_links">
-                        <a href="/support_measures/" title="Меры зашиты финансового рынка" style="color: red">Меры
-                            защиты финансового рынка</a>
-                    </div>
+                  
                     <div class="phones">
                         <a class="menu_phone_val" href="tel:+998 71 210 02 61">+998 71 210 02
                             61</a><span>круглосуточно</span>
@@ -178,7 +175,7 @@
                     <div class="inner_links">
                         <a href="/news/" title="Новости">Новости</a>
                         <a href="/rbr/" title="Решения Банка Узбекистана">Решения Банка Узбекистана</a>
-                        <a href="/contacts/" title="Контактная информация">Контактная информация</a>
+                        <a href="/contact/" title="Контактная информация">Контактная информация</a>
                         <a href="/sitemap" title="Карта сайта">Карта сайта</a>
                         <a href="/about/" title="О сайте">О сайте</a>
                     </div>
