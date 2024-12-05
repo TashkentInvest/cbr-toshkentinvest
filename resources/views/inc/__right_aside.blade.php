@@ -1,6 +1,26 @@
+@php
+    // Use the fully qualified class name since 'use' statements are not allowed in Blade templates
+    $response = \Illuminate\Support\Facades\Http::get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
+
+    // Check if the request was successful
+    if ($response->successful()) {
+        $exchangeRates = $response->json();
+    } else {
+        // Handle the error accordingly
+        $exchangeRates = [];
+    }
+
+    $currencies = ['USD', 'EUR', 'RUB'];
+
+    // Filter for specific currencies
+    $filteredRates = array_filter($exchangeRates, function ($rate) use ($currencies) {
+        return in_array($rate['Ccy'], $currencies);
+    });
+@endphp
+
 <div class="home-main_aside" style="min-height: 1974.31px">
-    <div class="home-main_sticky" data-home-main-aside-sticky=""
-        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+    <div class="home-main_sticky" data-home-main-aside-sticky="" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 
         <div class="main-indicator_rates">
             <div class="main-indicator_rates-table">
@@ -9,182 +29,62 @@
                         <a href="/currency_base/">Курсы валют</a>
                     </div>
                     <div class="col-md-2 col-xs-7 _right">
-                        <a
-                            href="/currency_base/daily/?UniDbQuery.Posted=True&amp;UniDbQuery.To=11.10.2024">11.10.2024</a>
+                        <a href="#">{{ date('d.m.Y') }}</a>
                     </div>
                     <div class="col-md-2 col-xs-7 _right">
-                        <a
-                            href="/currency_base/daily/?UniDbQuery.Posted=True&amp;UniDbQuery.To=12.10.2024">12.10.2024</a>
+                        <a href="#">{{ date('d.m.Y', strtotime('-1 day')) }}</a>
                     </div>
                 </div>
-                <div class="main-indicator_rate">
-                    <div class="col-md-2 col-xs-9 _yuan">
-                        CNY,&nbsp;<span>1¥ </span>
-                    </div>
-                    <div class="col-md-2 col-xs-9 _right mono-num">
-                        13,6922 ₽
-                    </div>
-                    <div class="col-md-2 col-xs-9 _right mono-num">
-                        13,4752 ₽
-                    </div>
-                    <div class="main-indicator_tooltip" id="V_R01375">
-                        <div class="main-indicator_tooltip-head">
-                            <button class="main-indicator_tooltip-head-btn _left"></button>
-                            <div class="main-indicator_tooltip-head-text">
-                                08.10.2024 - 12.10.2024
+                @foreach($filteredRates as $rate)
+                    @php
+                        $currentRate = floatval($rate['Rate']);
+                        $diff = floatval($rate['Diff']);
+                        $previousRate = $currentRate - $diff;
+                    @endphp
+                    <div class="main-indicator_rate">
+                        <div class="col-md-2 col-xs-9 _{{ strtolower($rate['Ccy']) }}">
+                            {{ $rate['Ccy'] }},&nbsp;
+                            <span>
+                                1
+                                @if($rate['Ccy'] == 'USD')
+                                    $
+                                @elseif($rate['Ccy'] == 'EUR')
+                                    €
+                                @elseif($rate['Ccy'] == 'RUB')
+                                    ₽
+                                @endif
+                            </span>
+                        </div>
+                        <div class="col-md-2 col-xs-9 _right mono-num">
+                            {{ number_format($currentRate, 2, ',', ' ') }} UZS
+                        </div>
+                        <div class="col-md-2 col-xs-9 _right mono-num">
+                            {{ number_format($previousRate, 2, ',', ' ') }} UZS
+                        </div>
+                        <div class="main-indicator_tooltip" id="V_{{ $rate['Ccy'] }}">
+                            <div class="main-indicator_tooltip-head">
+                                <button class="main-indicator_tooltip-head-btn _left"></button>
+                                <div class="main-indicator_tooltip-head-text">
+                                    {{ $rate['Date'] }}
+                                </div>
+                                <button class="main-indicator_tooltip-head-btn _right _disabled"></button>
                             </div>
-                            <button
-                                class="main-indicator_tooltip-head-btn _right _disabled"></button>
-                        </div>
-                        <table class="main-indicator_tooltip-table">
-                            <tr>
-                                <td class="_day">вт</td>
-                                <td class="_date">08.10</td>
-                                <td>13,5537&nbsp;₽</td>
-                                <td class="_red">+0,1410&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">ср</td>
-                                <td class="_date">09.10</td>
-                                <td>13,5810&nbsp;₽</td>
-                                <td class="_red">+0,0273&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">чт</td>
-                                <td class="_date">10.10</td>
-                                <td>13,6869&nbsp;₽</td>
-                                <td class="_red">+0,1059&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">пт</td>
-                                <td class="_date">11.10</td>
-                                <td>13,6922&nbsp;₽</td>
-                                <td class="_red">+0,0053&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">сб</td>
-                                <td class="_date">12.10</td>
-                                <td>13,4752&nbsp;₽</td>
-                                <td class="_green">-0,2170&nbsp;₽</td>
-                            </tr>
-                        </table>
-                        <div class="main-indicator_tooltip-footer">
-                            Официальный курс Банка Узбекистана
-                        </div>
-                    </div>
-                </div>
-                <div class="main-indicator_rate">
-                    <div class="col-md-2 col-xs-9 _dollar">
-                        USD,&nbsp;<span>1$</span>
-                    </div>
-                    <div class="col-md-2 col-xs-9 _right mono-num">
-                        97,2394 ₽
-                    </div>
-                    <div class="col-md-2 col-xs-9 _right mono-num">
-                        96,0686 ₽
-                    </div>
-                    <div class="main-indicator_tooltip" id="V_R01235">
-                        <div class="main-indicator_tooltip-head">
-                            <button class="main-indicator_tooltip-head-btn _left"></button>
-                            <div class="main-indicator_tooltip-head-text">
-                                08.10.2024 - 12.10.2024
+                            <table class="main-indicator_tooltip-table">
+                                <tr>
+                                    <td class="_day">День</td>
+                                    <td class="_date">{{ $rate['Date'] }}</td>
+                                    <td>{{ number_format($currentRate, 2, ',', ' ') }}&nbsp;UZS</td>
+                                    <td class="{{ $diff >= 0 ? '_green' : '_red' }}">
+                                        {{ $diff >= 0 ? '+' : '' }}{{ number_format($diff, 2, ',', ' ') }}&nbsp;UZS
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="main-indicator_tooltip-footer">
+                                Официальный курс Банка Узбекистана
                             </div>
-                            <button
-                                class="main-indicator_tooltip-head-btn _right _disabled"></button>
-                        </div>
-                        <table class="main-indicator_tooltip-table">
-                            <tr>
-                                <td class="_day">вт</td>
-                                <td class="_date">08.10</td>
-                                <td>96,0649&nbsp;₽</td>
-                                <td class="_red">+1,1949&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">ср</td>
-                                <td class="_date">09.10</td>
-                                <td>96,1079&nbsp;₽</td>
-                                <td class="_red">+0,0430&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">чт</td>
-                                <td class="_date">10.10</td>
-                                <td>96,9483&nbsp;₽</td>
-                                <td class="_red">+0,8404&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">пт</td>
-                                <td class="_date">11.10</td>
-                                <td>97,2394&nbsp;₽</td>
-                                <td class="_red">+0,2911&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">сб</td>
-                                <td class="_date">12.10</td>
-                                <td>96,0686&nbsp;₽</td>
-                                <td class="_green">-1,1708&nbsp;₽</td>
-                            </tr>
-                        </table>
-                        <div class="main-indicator_tooltip-footer">
-                            Официальный курс Банка Узбекистана
                         </div>
                     </div>
-                </div>
-                <div class="main-indicator_rate">
-                    <div class="col-md-2 col-xs-9 _euro">
-                        EUR,&nbsp;<span>1€</span>
-                    </div>
-                    <div class="col-md-2 col-xs-9 _right mono-num">
-                        106,5074 ₽
-                    </div>
-                    <div class="col-md-2 col-xs-9 _right mono-num">
-                        105,1095 ₽
-                    </div>
-                    <div class="main-indicator_tooltip" id="V_R01239">
-                        <div class="main-indicator_tooltip-head">
-                            <button class="main-indicator_tooltip-head-btn _left"></button>
-                            <div class="main-indicator_tooltip-head-text">
-                                08.10.2024 - 12.10.2024
-                            </div>
-                            <button
-                                class="main-indicator_tooltip-head-btn _right _disabled"></button>
-                        </div>
-                        <table class="main-indicator_tooltip-table">
-                            <tr>
-                                <td class="_day">вт</td>
-                                <td class="_date">08.10</td>
-                                <td>105,3069&nbsp;₽</td>
-                                <td class="_red">+0,5645&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">ср</td>
-                                <td class="_date">09.10</td>
-                                <td>105,6891&nbsp;₽</td>
-                                <td class="_red">+0,3822&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">чт</td>
-                                <td class="_date">10.10</td>
-                                <td>106,4175&nbsp;₽</td>
-                                <td class="_red">+0,7284&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">пт</td>
-                                <td class="_date">11.10</td>
-                                <td>106,5074&nbsp;₽</td>
-                                <td class="_red">+0,0899&nbsp;₽</td>
-                            </tr>
-                            <tr>
-                                <td class="_day">сб</td>
-                                <td class="_date">12.10</td>
-                                <td>105,1095&nbsp;₽</td>
-                                <td class="_green">-1,3979&nbsp;₽</td>
-                            </tr>
-                        </table>
-                        <div class="main-indicator_tooltip-footer">
-                            Официальный курс Банка Узбекистана
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             {{-- <a class="main-indicator_rates-link" href="/key-indicators/">Все показатели</a> --}}
         </div>
