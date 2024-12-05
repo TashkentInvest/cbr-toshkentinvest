@@ -25,58 +25,8 @@
             }
         </style>
         <ul role="list" class="t531__container t-container">
-            <li class="t531__row" style="">
-                <div class="t-col t-col_2 t-prefix_3 t531__leftcol">
-                    <div class="t531__imgwrapper t531__imgwrapper_2">
-                        <div class="t531__blockimg t-bgimg loaded"
-                            data-original="https://static.tildacdn.one/tild6463-3265-4636-b533-383765396565/photo.jpg"
-                            bgimgfield="li_img__6237107501540" data-image-width="160" data-image-height="200"
-                            style="background-image: url(&quot;https://optim.tildacdn.one/tild6463-3265-4636-b533-383765396565/-/cover/320x400/center/center/-/format/webp/photo.jpg&quot;); padding-bottom: 125%;"
-                            itemscope="" itemtype="http://schema.org/ImageObject">
-                            <meta itemprop="image"
-                                content="https://static.tildacdn.one/tild6463-3265-4636-b533-383765396565/photo.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="t-col t-col_5 t531__rightcol">
-                    <div class="t531__textwrapper t-align_left" style="height: 200px;">
-                        <div class="t531__content t-valign_middle">
-                            <div class="t531__box">
-                                <div class="t531__title t-name t-name_xl t531__bottommargin_sm"
-                                    field="li_persname__6237107501540">Умурзаков Шавкат Буранович</div>
-                                <div class="t531__persdescr t-descr t-descr_xs " field="li_persdescr__6237107501540">
-                                    Председатель наблюдательного совета<br>Хоким города Ташкента</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="t531__row" style="">
-                <div class="t-col t-col_2 t-prefix_3 t531__leftcol">
-                    <div class="t531__imgwrapper t531__imgwrapper_2">
-                        <div class="t531__blockimg t-bgimg loaded"
-                            data-original="https://static.tildacdn.one/tild6533-3266-4265-b966-376336363163/__.jpg"
-                            bgimgfield="li_img__6237107501541" data-image-width="160" data-image-height="200"
-                            style="background-image: url(&quot;https://optim.tildacdn.one/tild6533-3266-4265-b966-376336363163/-/cover/320x400/center/center/-/format/webp/__.jpg&quot;); padding-bottom: 125%;"
-                            itemscope="" itemtype="http://schema.org/ImageObject">
-                            <meta itemprop="image"
-                                content="https://static.tildacdn.one/tild6533-3266-4265-b966-376336363163/__.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="t-col t-col_5 t531__rightcol">
-                    <div class="t531__textwrapper t-align_left" style="height: 200px;">
-                        <div class="t531__content t-valign_middle">
-                            <div class="t531__box">
-                                <div class="t531__title t-name t-name_xl t531__bottommargin_sm"
-                                    field="li_persname__6237107501541">Рахманов Шароф Диерович</div>
-                                <div class="t531__persdescr t-descr t-descr_xs " field="li_persdescr__6237107501541">Член
-                                    наблюдательного совета<br>Заместитель Хокима города Ташкента</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
+          
+          
             <li class="t531__row" style="">
                 <div class="t-col t-col_2 t-prefix_3 t531__leftcol">
                     <div class="t531__imgwrapper t531__imgwrapper_2">
