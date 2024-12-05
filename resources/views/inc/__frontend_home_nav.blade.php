@@ -170,8 +170,10 @@
                             61</a><span>круглосуточно</span>
                     </div>
                     <div class="inner_links">
+                        <a href="{{ route('frontend.supervisory_board') }}"
+                            title="Наблюдательный совет">Наблюдательный совет</a>
                         <a href="/news/" title="Новости">Новости</a>
-                        <a href="/contact/" title="Контактная информация">Контактная информация</a>
+                        <a href="{{route('frontend.contact')}}" title="Контактная информация">Контактная информация</a>
                         <a href="/about/" title="О сайте">О сайте</a>
                     </div>
                     <div class="networks-circle">
@@ -241,6 +243,11 @@
                                         <li class="item_deep" data-catalog-id="15939">
                                             <a href="/dkp/news/" class="">Новости</a>
                                         </li>
+                                        <li class="item_deep" data-catalog-id="15939">
+                                            <a href="{{ route('frontend.supervisory_board') }}"
+                                                title="Наблюдательный совет">Наблюдательный совет</a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
