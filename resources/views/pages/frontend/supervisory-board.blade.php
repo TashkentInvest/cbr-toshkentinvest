@@ -11,10 +11,10 @@
                         </div>
                     </div>
 
-
                     <div class="title-container">
                         <div class="block-title">
-                            <h2><span class="referenceable" id="a_83561">Состав Совета директоров:</span></h2>
+                            <h2><span class="referenceable" id="a_83561">Наблюдательный
+                                    совет:</span></h2>
                         </div>
                         <div class="title-container">
 
@@ -47,9 +47,6 @@
                                 </a>
 
 
-
-
-
                                 <a class="person" href="/about_br/bankstructute/gabuniafg/"><img
                                         src="/StaticHtml/File/83579/gabuniafg.jpg" alt="Габуния Филипп">
                                     <div class="person_name">Габуния Филипп<br>Георгиевич
@@ -57,72 +54,6 @@
                                     <div class="person_position">Заместитель Председателя Банка России</div>
                                 </a>
 
-                                <a class="person" href="/about_br/guznovag/"><img src="/StaticHtml/File/83579/guznovag.jpg"
-                                        alt="Гузнов Алексей">
-                                    <div class="person_name">Гузнов Алексей<br>Геннадьевич
-                                    </div>
-                                    <div class="person_position">Статс-секретарь&nbsp;&mdash; заместитель Председателя Банка
-                                        России</div>
-                                </a>
-
-                                <a class="person" href="/about_br/bankstructute/zabotkinab/"><img
-                                        src="/StaticHtml/File/83579/zabotkinab.jpg" alt="Заботкин Алексей">
-                                    <div class="person_name">Заботкин Алексей<br>Борисович
-                                    </div>
-
-
-                                    <div class="person_position">Заместитель Председателя Банка России</div>
-                                </a>
-
-                                <a class="person" href="/about_br/polyakovaov/"><img
-                                        src="/StaticHtml/File/83579/polyakovaov.jpg" alt="Полякова Ольга">
-                                    <div class="person_name">Полякова Ольга<br>Васильевна
-                                    </div>
-                                    <div class="person_position">Заместитель Председателя Банка России</div>
-                                </a>
-
-
-                                <a class="person" href="/about_br/mamutamv/"><img src="/StaticHtml/File/83579/mamutamv.jpg"
-                                        alt="Мамута Михаил">
-                                    <div class="person_name">Мамута Михаил<br>Валерьевич
-                                    </div>
-                                    <div class="person_position">Руководитель Службы по&nbsp;защите прав потребителей
-                                        и&nbsp;обеспечению доступности финансовых услуг Банка России</div>
-                                </a>
-
-                                <a class="person" href="/about_br/bankstructute/dfs/danilovaeo/"><img
-                                        src="/StaticHtml/File/83579/danilova.jpg" alt="Данилова Елизавета">
-                                    <div class="person_name">Данилова Елизавета<br>Олеговна
-                                    </div>
-                                    <div class="person_position">Директор Департамента финансовой стабильности Банка России
-                                    </div>
-                                </a>
-
-                                <a class="person" href="/cfo/org_structure/mardanovrkh/"><img
-                                        src="/StaticHtml/File/83579/mardanov.jpg" alt="Марданов Рустэм">
-                                    <div class="person_name">Марданов Рустэм<br>Хабибович
-                                    </div>
-                                    <div class="person_position">Начальник Главного управления Банка России
-                                        по&nbsp;Центральному федеральному округу</div>
-                                </a>
-
-
-                                <a class="person" href="/nnov/org_structure/pavlovalv/"><img
-                                        src="/StaticHtml/File/83579/pavlova.jpg" alt="Павлова Лариса">
-                                    <div class="person_name">Павлова Лариса<br>Вальтеровна
-                                    </div>
-                                    <div class="person_position">Начальник Волго-Вятского главного управления Банка России
-                                    </div>
-                                </a>
-
-
-
-                                <a class="person" href="/about_br/simanovskiyayu/"><img
-                                        src="/StaticHtml/File/83579/simanovskiyau.jpg" alt="Симановский Алексей">
-                                    <div class="person_name">Симановский Алексей<br>Юрьевич
-                                    </div>
-                                    <div class="person_position">Советник Председателя Банка России</div>
-                                </a>
 
                             </div>
                         </div>
