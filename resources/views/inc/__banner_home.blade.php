@@ -2,7 +2,7 @@
     <div class="swiper-container home-header_gall_mobile">
         <div class="swiper-wrapper">
             <div class="swiper-slide"
-                data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner1.webp') }}">
+                data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner3.webp') }}">
                 <div>
                     <div class="home-header_title">
                         Центральный банк <br />
@@ -23,7 +23,7 @@
                 </div>
             </a>
             <a class="swiper-slide" href="/Queries/XsltBlock/File/131643/-1/2511"
-                data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner3.webp') }}"
+                data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner1.webp') }}"
                 target="_blank">
                 <div>
                     <div class="home-header_subtitle _orange">
@@ -43,7 +43,7 @@
     <div class="swiper-container home-header_gall">
         <div class="swiper-wrapper">
             <div class="swiper-slide"
-                data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner1.webp') }}">
+                data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner3.webp') }}">
                 <div class="col-md-19">
                     <div class="home-header_title">
                         ИНВЕСТИРУЙТЕ <br />
@@ -87,7 +87,7 @@
                 </div>
             </a>
             <a class="swiper-slide"
-                data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner3.webp') }}" href="#!"
+                data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner1.webp') }}" href="#!"
                 target="_blank">
                 <div class="col-md-19">
                     <div class="home-header_title">

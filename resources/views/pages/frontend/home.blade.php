@@ -19,17 +19,8 @@
                                             <div class="tabs">
                                                 <a class="tab _active" href="#" data-tabs-tab="100"
                                                     aria-selected="true">Новости</a>
-                                                {{-- <a class="tab" href="#" data-tabs-tab="0"
-                                                    aria-selected="false">Все</a>
-                                                <a class="tab" href="#" data-tabs-tab="4"
-                                                    aria-selected="false">Пресс-релизы</a>
-                                                <a class="tab" href="#" data-tabs-tab="2"
-                                                    aria-selected="false">Интервью</a>
-                                                <a class="tab" href="#" data-tabs-tab="1"
-                                                    aria-selected="false">Выступления</a> --}}
-                                                <span class="tab-separator"></span>
-                                                <a class="tab" href="#" data-tabs-tab="7"
-                                                    aria-selected="false">Новое на&nbsp;сайте</a>
+                        
+                                            
                                             </div>
                                         </div>
                                         <div class="home-sticky_compensation"></div>
