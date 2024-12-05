@@ -26,7 +26,7 @@
             <div class="main-indicator_rates-table">
                 <div class="main-indicator_rates-head">
                     <div class="col-md-2 col-xs-7">
-                        <a href="/currency_base/">Курсы валют</a>
+                        <a target="_blank" href="https://cbu.uz/ru/">Курсы валют</a>
                     </div>
                     <div class="col-md-2 col-xs-7 _right">
                         <a href="#">{{ date('d.m.Y') }}</a>

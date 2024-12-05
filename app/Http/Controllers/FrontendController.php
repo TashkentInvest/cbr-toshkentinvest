@@ -15,6 +15,9 @@ class FrontendController extends Controller
     public function rukavodstva(){
         return view('pages.frontend.rukavodstva');
     }
+    public function search(){
+        return view('pages.frontend.search');
+    }
     public function investoram(){
         return view('pages.frontend.investoram');
     }

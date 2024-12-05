@@ -150,6 +150,7 @@ Route::prefix('')->name('frontend.')->group(function () {
     Route::get('/news', [FrontendController::class, 'news'])->name('news');
     Route::get('/contacts', [FrontendController::class, 'contact'])->name('contact');
     Route::get('/rukavodstva', [FrontendController::class, 'rukavodstva'])->name('rukavodstva');
+    Route::get('/search', [FrontendController::class, 'search'])->name('search');
 
     Route::get('/investoram', [FrontendController::class, 'investoram'])->name('investoram');
     Route::get('/zakupki', [FrontendController::class, 'zakupki'])->name('zakupki');
