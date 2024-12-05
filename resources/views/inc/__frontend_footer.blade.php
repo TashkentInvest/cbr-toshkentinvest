@@ -90,12 +90,7 @@
             <div class="footer_menu_item">
               <a href="/contacts/">Контакты</a>
             </div>
-            <div class="footer_menu_item">
-              <a href="/about_br/anticor/">Противодействие коррупции</a>
-            </div>
-            <div class="footer_menu_item">
-              <a href="/development/">Технические ресурсы</a>
-            </div>
+     
           </div>
           <div class="footer_menu_item _visually-impaired">
             <a href="#" title="Версия для слабовидящих"
