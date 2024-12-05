@@ -19,10 +19,10 @@
 @endphp
 
 <div class="home-main_aside" style="min-height: 1974.31px">
-    <div class="home-main_sticky" data-home-main-aside-sticky="" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+    <div class="home-main_sticky" data-home-main-aside-sticky="">
 
         <div class="main-indicator_rates">
+            <h4>Марказий банк</h4>
             <div class="main-indicator_rates-table">
                 <div class="main-indicator_rates-head">
                     <div class="col-md-2 col-xs-7">
@@ -99,51 +99,7 @@
                 </div>
             </div>
         </div>
-        <div class="home-main_resources d-none d-md-block">
-            <div class="popular">
-                <div class="popular_links">
-                    <div class="popular_link">
-                        <a href="/about_br/press/">Контакты для СМИ</a>
-                    </div>
-                    <div class="popular_link">
-                        <a href="/about_br/publ/">Издания Банка Узбекистана</a>
-                    </div>
-                    <div class="popular_link">
-                        <a href="/calendar/">График публикаций</a>
-                    </div>
-                    <div class="popular_link">
-                        <a href="/development/RSS/">RSS-каналы</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="home-main_resources d-md-none">
-    <div class="external-resources">
-        <div class="subscribe-block">
-            <div class="subscribe-block_title">Подписка</div>
-            <div class="subscribe-block_subtitle">
-                Новости и обновления сайта
-            </div>
-            <a class="btn _medium _outline" href="/news/subscribe">Подписаться</a>
-        </div>
-    </div>
-</div>
-<div class="home-main_resources d-md-none">
-    <div class="popular">
-        <div class="popular_links">
-            <div class="popular_link">
-                <a href="/about_br/press/">Контакты для СМИ</a>
-            </div>
-            <div class="popular_link">
-                <a href="/about_br/publ/">Издания Банка Узбекистана</a>
-            </div>
-            <div class="popular_link">
-                <a href="/calendar/">График публикаций</a>
-            </div>
-            <div class="popular_link">
-                <a href="/development/RSS/">RSS-каналы</a>
+      
             </div>
         </div>
     </div>
