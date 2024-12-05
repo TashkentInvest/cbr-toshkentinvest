@@ -1,136 +1,163 @@
 @extends('layouts.frontend_app')
 @section('frontend_content')
-    <div class="t531">
-        <div class="t-section__container t-container t-container_flex">
-            <div class="t-col t-col_12 ">
-                <div class="t-section__title t-title t-title_xs t-align_center t-margin_auto" field="btitle">Наблюдательный
-                    совет</div>
+    <main id="content">
+        <div class="offsetMenu ">
+            <div class="container-fluid">
+                <div class="col-md-23 offset-md-1">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="/"></a></div>
+                        <div class="breadcrumbs_item">
+                            <a href="/about_br/"><!--noindex-->О&#160;Банке России<!--/noindex--></a>
+                        </div>
+                    </div>
+
+
+                    <div class="title-container">
+                        <div class="block-title">
+                            <h2><span class="referenceable" id="a_83561">Состав Совета директоров:</span></h2>
+                        </div>
+                        <div class="title-container">
+
+                            <div class="persons"><a class="person" href="/about_br/nabiullinaes/"><img
+                                        src="/StaticHtml/File/83579/nabiullina.jpg" alt="Набиуллина Эльвира">
+                                    <div class="person_name">Набиуллина Эльвира<br>Сахипзадовна
+                                    </div>
+                                    <div class="person_position">Председатель Центрального банка Российской Федерации (Банка
+                                        России)</div>
+                                </a>
+                            </div>
+                            <div class="persons"><span class="person" href="#"><img
+                                        src="/StaticHtml/File/83579/skorobogatovaon.jpg" alt="Скоробогатова Ольга">
+                                    <div class="person_name">Скоробогатова Ольга<br>Николаевна
+                                    </div>
+                                    <div class="person_position"></div>
+                                </span><a class="person" href="/about_br/tulindv/"><img
+                                        src="/StaticHtml/File/83579/tulindv.jpg" alt="Тулин Дмитрий">
+                                    <div class="person_name">Тулин Дмитрий<br>Владиславович
+                                    </div>
+                                    <div class="person_position">Первый заместитель Председателя Банка России</div>
+                                </a>
+
+
+                                <a class="person" href="/about_br/chistyukhinvv/"><img
+                                        src="/StaticHtml/File/83579/chistukhinvv.jpg" alt="Чистюхин Владимир">
+                                    <div class="person_name">Чистюхин Владимир<br>Викторович
+                                    </div>
+                                    <div class="person_position">Первый заместитель Председателя Банка России </div>
+                                </a>
+
+
+
+
+
+                                <a class="person" href="/about_br/bankstructute/gabuniafg/"><img
+                                        src="/StaticHtml/File/83579/gabuniafg.jpg" alt="Габуния Филипп">
+                                    <div class="person_name">Габуния Филипп<br>Георгиевич
+                                    </div>
+                                    <div class="person_position">Заместитель Председателя Банка России</div>
+                                </a>
+
+                                <a class="person" href="/about_br/guznovag/"><img src="/StaticHtml/File/83579/guznovag.jpg"
+                                        alt="Гузнов Алексей">
+                                    <div class="person_name">Гузнов Алексей<br>Геннадьевич
+                                    </div>
+                                    <div class="person_position">Статс-секретарь&nbsp;&mdash; заместитель Председателя Банка
+                                        России</div>
+                                </a>
+
+                                <a class="person" href="/about_br/bankstructute/zabotkinab/"><img
+                                        src="/StaticHtml/File/83579/zabotkinab.jpg" alt="Заботкин Алексей">
+                                    <div class="person_name">Заботкин Алексей<br>Борисович
+                                    </div>
+
+
+                                    <div class="person_position">Заместитель Председателя Банка России</div>
+                                </a>
+
+                                <a class="person" href="/about_br/polyakovaov/"><img
+                                        src="/StaticHtml/File/83579/polyakovaov.jpg" alt="Полякова Ольга">
+                                    <div class="person_name">Полякова Ольга<br>Васильевна
+                                    </div>
+                                    <div class="person_position">Заместитель Председателя Банка России</div>
+                                </a>
+
+
+                                <a class="person" href="/about_br/mamutamv/"><img src="/StaticHtml/File/83579/mamutamv.jpg"
+                                        alt="Мамута Михаил">
+                                    <div class="person_name">Мамута Михаил<br>Валерьевич
+                                    </div>
+                                    <div class="person_position">Руководитель Службы по&nbsp;защите прав потребителей
+                                        и&nbsp;обеспечению доступности финансовых услуг Банка России</div>
+                                </a>
+
+                                <a class="person" href="/about_br/bankstructute/dfs/danilovaeo/"><img
+                                        src="/StaticHtml/File/83579/danilova.jpg" alt="Данилова Елизавета">
+                                    <div class="person_name">Данилова Елизавета<br>Олеговна
+                                    </div>
+                                    <div class="person_position">Директор Департамента финансовой стабильности Банка России
+                                    </div>
+                                </a>
+
+                                <a class="person" href="/cfo/org_structure/mardanovrkh/"><img
+                                        src="/StaticHtml/File/83579/mardanov.jpg" alt="Марданов Рустэм">
+                                    <div class="person_name">Марданов Рустэм<br>Хабибович
+                                    </div>
+                                    <div class="person_position">Начальник Главного управления Банка России
+                                        по&nbsp;Центральному федеральному округу</div>
+                                </a>
+
+
+                                <a class="person" href="/nnov/org_structure/pavlovalv/"><img
+                                        src="/StaticHtml/File/83579/pavlova.jpg" alt="Павлова Лариса">
+                                    <div class="person_name">Павлова Лариса<br>Вальтеровна
+                                    </div>
+                                    <div class="person_position">Начальник Волго-Вятского главного управления Банка России
+                                    </div>
+                                </a>
+
+
+
+                                <a class="person" href="/about_br/simanovskiyayu/"><img
+                                        src="/StaticHtml/File/83579/simanovskiyau.jpg" alt="Симановский Алексей">
+                                    <div class="person_name">Симановский Алексей<br>Юрьевич
+                                    </div>
+                                    <div class="person_position">Советник Председателя Банка России</div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-container"></div>
+
+
+                    <!--/index-->
+
+                    <div class="page-info">
+                        <!--noindex-->
+
+
+
+                        <div class="page-info_helpful" data-page-feedback=""
+                            data-feedback-url="/Content/PageInfo/RegisterFeedback">
+                            <!--noindex-->
+                            <div class="helpful" data-helpful="">
+                                Страница была полезной?
+                                <div class="helpful_btns">
+                                    <button class="helpful_btn _yes" data-helpful-btn="yes"><i
+                                            class="helpful_icon"></i><span>Да</span></button>
+                                    <button class="helpful_btn _no" data-helpful-btn="no"><i
+                                            class="helpful_icon"></i><span>Нет</span></button>
+                                </div>
+                            </div>
+                            <!--/noindex-->
+                        </div>
+
+                        <div class="page-info_last-update">Последнее обновление страницы: 05.12.2024</div>
+                        <!--/noindex-->
+                    </div>
+
+                </div>
             </div>
         </div>
-        <style>
-            .t-section__descr {
-                max-width: 560px;
-            }
-
-            #rec748152320 .t-section__title {
-                margin-bottom: 105px;
-            }
-
-            #rec748152320 .t-section__descr {}
-
-            @media screen and (max-width: 960px) {
-                #rec748152320 .t-section__title {
-                    margin-bottom: 45px;
-                }
-            }
-        </style>
-        <ul role="list" class="t531__container t-container">
-            <li class="t531__row" style="">
-                <div class="t-col t-col_2 t-prefix_3 t531__leftcol">
-                    <div class="t531__imgwrapper t531__imgwrapper_2">
-                        <div class="t531__blockimg t-bgimg loaded"
-                            data-original="https://static.tildacdn.one/tild6463-3265-4636-b533-383765396565/photo.jpg"
-                            bgimgfield="li_img__6237107501540" data-image-width="160" data-image-height="200"
-                            style="background-image: url(&quot;https://optim.tildacdn.one/tild6463-3265-4636-b533-383765396565/-/cover/320x400/center/center/-/format/webp/photo.jpg&quot;); padding-bottom: 125%;"
-                            itemscope="" itemtype="http://schema.org/ImageObject">
-                            <meta itemprop="image"
-                                content="https://static.tildacdn.one/tild6463-3265-4636-b533-383765396565/photo.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="t-col t-col_5 t531__rightcol">
-                    <div class="t531__textwrapper t-align_left" style="height: 200px;">
-                        <div class="t531__content t-valign_middle">
-                            <div class="t531__box">
-                                <div class="t531__title t-name t-name_xl t531__bottommargin_sm"
-                                    field="li_persname__6237107501540">Умурзаков Шавкат Буранович</div>
-                                <div class="t531__persdescr t-descr t-descr_xs " field="li_persdescr__6237107501540">
-                                    Председатель наблюдательного совета<br>Хоким города Ташкента</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="t531__row" style="">
-                <div class="t-col t-col_2 t-prefix_3 t531__leftcol">
-                    <div class="t531__imgwrapper t531__imgwrapper_2">
-                        <div class="t531__blockimg t-bgimg loaded"
-                            data-original="https://static.tildacdn.one/tild6533-3266-4265-b966-376336363163/__.jpg"
-                            bgimgfield="li_img__6237107501541" data-image-width="160" data-image-height="200"
-                            style="background-image: url(&quot;https://optim.tildacdn.one/tild6533-3266-4265-b966-376336363163/-/cover/320x400/center/center/-/format/webp/__.jpg&quot;); padding-bottom: 125%;"
-                            itemscope="" itemtype="http://schema.org/ImageObject">
-                            <meta itemprop="image"
-                                content="https://static.tildacdn.one/tild6533-3266-4265-b966-376336363163/__.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="t-col t-col_5 t531__rightcol">
-                    <div class="t531__textwrapper t-align_left" style="height: 200px;">
-                        <div class="t531__content t-valign_middle">
-                            <div class="t531__box">
-                                <div class="t531__title t-name t-name_xl t531__bottommargin_sm"
-                                    field="li_persname__6237107501541">Рахманов Шароф Диерович</div>
-                                <div class="t531__persdescr t-descr t-descr_xs " field="li_persdescr__6237107501541">Член
-                                    наблюдательного совета<br>Заместитель Хокима города Ташкента</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="t531__row" style="">
-                <div class="t-col t-col_2 t-prefix_3 t531__leftcol">
-                    <div class="t531__imgwrapper t531__imgwrapper_2">
-                        <div class="t531__blockimg t-bgimg loaded"
-                            data-original="https://static.tildacdn.one/tild3031-6336-4637-a639-346461626662/__.jpg"
-                            bgimgfield="li_img__1715689478485" data-image-width="160" data-image-height="200"
-                            style="background-image: url(&quot;https://optim.tildacdn.one/tild3031-6336-4637-a639-346461626662/-/cover/320x400/center/center/-/format/webp/__.jpg&quot;); padding-bottom: 125%;"
-                            itemscope="" itemtype="http://schema.org/ImageObject">
-                            <meta itemprop="image"
-                                content="https://static.tildacdn.one/tild3031-6336-4637-a639-346461626662/__.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="t-col t-col_5 t531__rightcol">
-                    <div class="t531__textwrapper t-align_left" style="height: 200px;">
-                        <div class="t531__content t-valign_middle">
-                            <div class="t531__box">
-                                <div class="t531__title t-name t-name_xl t531__bottommargin_sm"
-                                    field="li_persname__1715689478485">Тогаев Наби Исмоилович</div>
-                                <div class="t531__persdescr t-descr t-descr_xs " field="li_persdescr__1715689478485">Член
-                                    наблюдательного совета<br>Начальник отдела ООО «Узбекско-Оманская<br>Инвестиционная
-                                    Компания»</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="t531__row" style="">
-                <div class="t-col t-col_2 t-prefix_3 t531__leftcol">
-                    <div class="t531__imgwrapper t531__imgwrapper_2">
-                        <div class="t531__blockimg t-bgimg loaded"
-                            data-original="https://static.tildacdn.one/tild6430-6239-4361-b062-313631343137/_-2.jpg"
-                            bgimgfield="li_img__1715689492116" data-image-width="160" data-image-height="200"
-                            style="background-image: url(&quot;https://optim.tildacdn.one/tild6430-6239-4361-b062-313631343137/-/cover/320x400/center/center/-/format/webp/_-2.jpg&quot;); padding-bottom: 125%;"
-                            itemscope="" itemtype="http://schema.org/ImageObject">
-                            <meta itemprop="image"
-                                content="https://static.tildacdn.one/tild6430-6239-4361-b062-313631343137/_-2.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="t-col t-col_5 t531__rightcol">
-                    <div class="t531__textwrapper t-align_left" style="height: 200px;">
-                        <div class="t531__content t-valign_middle">
-                            <div class="t531__box">
-                                <div class="t531__title t-name t-name_xl t531__bottommargin_sm"
-                                    field="li_persname__1715689492116">Прияткин Алексей Николаевич</div>
-                                <div class="t531__persdescr t-descr t-descr_xs " field="li_persdescr__1715689492116">Член
-                                    наблюдательного совета<br>Партнер Компании «Orbita Capital Partners»<br>(Российская
-                                    Федерация)</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
+    </main>
 @endsection

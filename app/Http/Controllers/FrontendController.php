@@ -19,7 +19,7 @@ class FrontendController extends Controller
         return view('pages.frontend.search');
     }
     public function investoram(){
-        return view('pages.frontend.investoram');
+        return view('pages.frontend.investoram_org');
     }
     public function zakupki(){
         return view('pages.frontend.zakupki');
