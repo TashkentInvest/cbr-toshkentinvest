@@ -173,7 +173,8 @@
                         <a href="{{ route('frontend.supervisory_board') }}"
                             title="Наблюдательный совет">Наблюдательный совет</a>
                         <a href="/news/" title="Новости">Новости</a>
-                        <a href="{{route('frontend.contact')}}" title="Контактная информация">Контактная информация</a>
+                        <a href="{{ route('frontend.contact') }}" title="Контактная информация">Контактная
+                            информация</a>
                         <a href="/about/" title="О сайте">О сайте</a>
                     </div>
                     <div class="networks-circle">

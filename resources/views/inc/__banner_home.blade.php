@@ -58,7 +58,7 @@
                     </div>
                     <div class="home-header_search">
                         <div class="col-9">
-                            <form action="{{route('frontend.search')}}" method="POST">
+                            <form action="{{ route('frontend.search') }}" method="POST">
                                 <div class="home-header_search_field">
                                     <input name="text" class="home-header_search_inp" placeholder="Поиск по сайту" />
                                     <button class="b-btn _blue home-header_search_btn">
@@ -95,7 +95,7 @@
 
                     </div>
                     <div class="home-header_desc">
-                      {{-- с 8 по 29 октября --}}
+                        {{-- с 8 по 29 октября --}}
                     </div>
                     <div class="home-header_btn">
                         <div class="b-btn _blue">Перейти</div>

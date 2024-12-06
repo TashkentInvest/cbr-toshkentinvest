@@ -1,6 +1,5 @@
     <!-- Apz Yaratish Modal -->
-    <div class="modal fade" id="createApzModal" tabindex="-1" aria-labelledby="createApzModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="createApzModal" tabindex="-1" aria-labelledby="createApzModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -9,7 +8,7 @@
                 </div>
                 <form action="{{ route('apz.store') }}" method="POST">
                     @csrf
-                    <input type="hidden" value="{{$monitoring->id}}" name="shartnoma_id">
+                    <input type="hidden" value="{{ $monitoring->id }}" name="shartnoma_id">
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="ariza-raqami" class="form-label">Ariza Raqami</label>
@@ -58,7 +57,7 @@
                 </div>
                 <form action="{{ route('kengash.store') }}" method="POST">
                     @csrf
-                    <input type="hidden" value="{{$monitoring->id}}" name="shartnoma_id">
+                    <input type="hidden" value="{{ $monitoring->id }}" name="shartnoma_id">
 
                     <div class="modal-body">
 
@@ -128,19 +127,21 @@
                 </div>
                 <form action="{{ route('expertiza.store') }}" method="POST">
                     @csrf
-                    <input type="hidden" value="{{$monitoring->id}}" name="shartnoma_id">
+                    <input type="hidden" value="{{ $monitoring->id }}" name="shartnoma_id">
 
                     <div class="modal-body">
                         <!-- Raqami Field -->
                         <div class="mb-3">
                             <label for="expertiza-raqami" class="form-label">Raqami</label>
-                            <input type="text" class="form-control" id="expertiza-raqami" name="raqami" required>
+                            <input type="text" class="form-control" id="expertiza-raqami" name="raqami"
+                                required>
                         </div>
 
                         <!-- Sanasi Field -->
                         <div class="mb-3">
                             <label for="expertiza-sanasi" class="form-label">Sanasi</label>
-                            <input type="date" class="form-control" id="expertiza-sanasi" name="sanasi" required>
+                            <input type="date" class="form-control" id="expertiza-sanasi" name="sanasi"
+                                required>
                         </div>
 
                         <!-- Tashkilot Nomi Field -->
@@ -204,19 +205,21 @@
                 </div>
                 <form action="{{ route('dakn.store') }}" method="POST">
                     @csrf
-                    <input type="hidden" value="{{$monitoring->id}}" name="shartnoma_id">
+                    <input type="hidden" value="{{ $monitoring->id }}" name="shartnoma_id">
 
                     <div class="modal-body">
                         <!-- Ariza Raqami Field -->
                         <div class="mb-3">
                             <label for="ariza-raqami" class="form-label">Ariza Raqami</label>
-                            <input type="text" class="form-control" id="ariza-raqami" name="ariza_raqami" required>
+                            <input type="text" class="form-control" id="ariza-raqami" name="ariza_raqami"
+                                required>
                         </div>
 
                         <!-- Ariza Sanasi Field -->
                         <div class="mb-3">
                             <label for="ariza-sanasi" class="form-label">Ariza Sanasi</label>
-                            <input type="date" class="form-control" id="ariza-sanasi" name="ariza_sanasi" required>
+                            <input type="date" class="form-control" id="ariza-sanasi" name="ariza_sanasi"
+                                required>
                         </div>
 
                         <!-- Ko'chirma GASN Raqami Field -->

@@ -35,7 +35,7 @@
                         <a href="#">{{ date('d.m.Y', strtotime('-1 day')) }}</a>
                     </div>
                 </div>
-                @foreach($filteredRates as $rate)
+                @foreach ($filteredRates as $rate)
                     @php
                         $currentRate = floatval($rate['Rate']);
                         $diff = floatval($rate['Diff']);
@@ -46,7 +46,7 @@
                             {{ $rate['Ccy'] }},&nbsp;
                             <span>
                                 1
-                                @if($rate['Ccy'] == 'USD')
+                                @if ($rate['Ccy'] == 'USD')
                                     $
                                 @elseif($rate['Ccy'] == 'EUR')
                                     €
@@ -99,8 +99,8 @@
                 </div>
             </div>
         </div>
-      
-            </div>
-        </div>
+
     </div>
+</div>
+</div>
 </div>

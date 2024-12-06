@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
     <!-- Include your CSS and other assets here -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css" rel="stylesheet" />
     <style>
-        .select2 .select2-container .select2-container--default .select2-container--below{
+        .select2 .select2-container .select2-container--default .select2-container--below {
             width: 100% !important;
         }
     </style>
 </head>
+
 <body>
     <div class="card mb-3">
         <div class="card-header">
@@ -23,7 +25,8 @@
                 <select class="form-control region_id select2" name="region_id" id="region_id">
                     <option value="">Худудни танланг</option>
                     @foreach ($regions as $region)
-                        <option value="{{ $region->id }}" {{ $region->id == old('region_id', $bank->substreet->street->district->region_id ?? '') ? 'selected' : '' }}>
+                        <option value="{{ $region->id }}"
+                            {{ $region->id == old('region_id', $bank->substreet->street->district->region_id ?? '') ? 'selected' : '' }}>
                             {{ $region->name_uz }}
                         </option>
                     @endforeach
@@ -34,7 +37,8 @@
                 <select class="form-control district_id select2" name="district_id" id="district_id">
                     <option value="">Туманни танланг</option>
                     @foreach ($districts as $district)
-                        <option value="{{ $district->id }}" {{ $district->id == old('district_id', $bank->substreet->street->district_id ?? '') ? 'selected' : '' }}>
+                        <option value="{{ $district->id }}"
+                            {{ $district->id == old('district_id', $bank->substreet->street->district_id ?? '') ? 'selected' : '' }}>
                             {{ $district->name_uz }}
                         </option>
                     @endforeach
@@ -46,7 +50,8 @@
                     <select class="form-control street_id select2" name="street_id" id="street_id">
                         <option value="">Мфй ни танланг</option>
                         @foreach ($streets as $street)
-                            <option value="{{ $street->id }}" {{ $street->id == old('street_id', $bank->substreet->street_id ?? '') ? 'selected' : '' }}>
+                            <option value="{{ $street->id }}"
+                                {{ $street->id == old('street_id', $bank->substreet->street_id ?? '') ? 'selected' : '' }}>
                                 {{ $street->name }}
                             </option>
                         @endforeach
@@ -61,12 +66,14 @@
                     <select class="form-control sub_street_id select2" name="sub_street_id" id="substreet_id">
                         <option value="">Кўчани танланг</option>
                         @foreach ($substreets as $substreet)
-                            <option value="{{ $substreet->id }}" {{ $substreet->id == old('sub_street_id', $bank->sub_street_id ?? '') ? 'selected' : '' }}>
+                            <option value="{{ $substreet->id }}"
+                                {{ $substreet->id == old('sub_street_id', $bank->sub_street_id ?? '') ? 'selected' : '' }}>
                                 {{ $substreet->name }}
                             </option>
                         @endforeach
                     </select>
-                    <button type="button" class="btn btn-primary ms-2" id="add_substreet_btn" title="Кўча қошиш">+</button>
+                    <button type="button" class="btn btn-primary ms-2" id="add_substreet_btn"
+                        title="Кўча қошиш">+</button>
                 </div>
             </div>
         </div>
@@ -87,15 +94,21 @@
                     $.ajax({
                         url: "{{ route('get.Obdistricts') }}",
                         type: "GET",
-                        data: { region_id: regionId },
+                        data: {
+                            region_id: regionId
+                        },
                         success: function(data) {
-                            $('.district_id').empty().append('<option value="">Туманни танланг</option>');
+                            $('.district_id').empty().append(
+                                '<option value="">Туманни танланг</option>');
                             $.each(data, function(key, value) {
-                                $('.district_id').append('<option value="' + key + '">' + value + '</option>');
+                                $('.district_id').append('<option value="' + key +
+                                    '">' + value + '</option>');
                             });
                             // Reset dependent fields
-                            $('.street_id').empty().append('<option value="">Мфй ни танланг</option>');
-                            $('.sub_street_id').empty().append('<option value="">Кўчани танланг</option>');
+                            $('.street_id').empty().append(
+                                '<option value="">Мфй ни танланг</option>');
+                            $('.sub_street_id').empty().append(
+                                '<option value="">Кўчани танланг</option>');
                         }
                     });
                 } else {
@@ -112,14 +125,19 @@
                     $.ajax({
                         url: "{{ route('get.Obstreets') }}",
                         type: "GET",
-                        data: { district_id: districtId },
+                        data: {
+                            district_id: districtId
+                        },
                         success: function(data) {
-                            $('.street_id').empty().append('<option value="">Мфй ни танланг</option>');
+                            $('.street_id').empty().append(
+                                '<option value="">Мфй ни танланг</option>');
                             $.each(data, function(key, value) {
-                                $('.street_id').append('<option value="' + key + '">' + value + '</option>');
+                                $('.street_id').append('<option value="' + key + '">' +
+                                    value + '</option>');
                             });
                             // Reset dependent field
-                            $('.sub_street_id').empty().append('<option value="">Кўчани танланг</option>');
+                            $('.sub_street_id').empty().append(
+                                '<option value="">Кўчани танланг</option>');
                         }
                     });
                 } else {
@@ -135,11 +153,15 @@
                     $.ajax({
                         url: "{{ route('get.Obsubstreets') }}",
                         type: "GET",
-                        data: { street_id: streetId },
+                        data: {
+                            street_id: streetId
+                        },
                         success: function(data) {
-                            $('.sub_street_id').empty().append('<option value="">Кўчани танланг</option>');
+                            $('.sub_street_id').empty().append(
+                                '<option value="">Кўчани танланг</option>');
                             $.each(data, function(key, value) {
-                                $('.sub_street_id').append('<option value="' + key + '">' + value + '</option>');
+                                $('.sub_street_id').append('<option value="' + key +
+                                    '">' + value + '</option>');
                             });
                         }
                     });
@@ -166,7 +188,8 @@
                             street_name: newStreetName
                         },
                         success: function(response) {
-                            $('.street_id').append('<option value="' + response.id + '">' + response.name + '</option>');
+                            $('.street_id').append('<option value="' + response.id + '">' +
+                                response.name + '</option>');
                             $('.street_id').val(response.id);
                             alert('Улица успешно добавлена: ' + response.name);
                         },
@@ -196,13 +219,15 @@
                             sub_street_name: newSubStreetName
                         },
                         success: function(response) {
-                            $('.sub_street_id').append('<option value="' + response.id + '">' + response.name + '</option>');
+                            $('.sub_street_id').append('<option value="' + response.id + '">' +
+                                response.name + '</option>');
                             $('.sub_street_id').val(response.id);
                             alert('Подулица успешно добавлена: ' + response.name);
                         },
                         error: function(xhr, status, error) {
                             console.error(error);
-                            alert('Ошибка при добавлении подулицы. Пожалуйста, попробуйте снова.');
+                            alert(
+                                'Ошибка при добавлении подулицы. Пожалуйста, попробуйте снова.');
                         }
                     });
                 }
@@ -210,4 +235,5 @@
         });
     </script>
 </body>
+
 </html>

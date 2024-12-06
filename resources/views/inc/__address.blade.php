@@ -138,7 +138,7 @@
                             success: function(substreets) {
                                 $('#sub_street_id').empty().append(
                                     '<option value="">Кўчани танланг</option>'
-                                    );
+                                );
                                 $.each(substreets, function(key, value) {
                                     $('#sub_street_id').append(
                                         '<option value="' + key +
@@ -150,7 +150,7 @@
                                     error);
                                 $('#sub_street_id').empty().append(
                                     '<option value="">Кўчани танланг</option>'
-                                    );
+                                );
                             }
                         });
                     },
@@ -200,6 +200,6 @@
             }
         });
 
-     
+
     });
 </script>

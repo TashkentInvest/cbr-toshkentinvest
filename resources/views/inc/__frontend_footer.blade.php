@@ -3,7 +3,6 @@
     <div class="footer_main">
       <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2">
         <div class="footer_top">
-          <!-- <a class="footer_logo" href="/"></a> -->
           <div class="footer_up gotoUp">
             <div class="footer_up_title">Наверх</div>
             <div class="footer_up_icon"></div>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAnUwWTguBMsDU8UrQ7Re-caVeYCmcHQY&libraries=geometry"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAnUwWTguBMsDU8UrQ7Re-caVeYCmcHQY&libraries=geometry">
+    </script>
     <style>
         #map {
             height: 500px;
@@ -31,6 +33,7 @@
     </style>
     <title>Map with Persistent Polygons</title>
 </head>
+
 <body>
     <h1>Керакли зонани танланг</h1>
     <form method="POST" id="zone-form">
@@ -43,11 +46,21 @@
     </form>
     <div class="legend">
         <h5>SHARTLI BELGILAR:</h5>
-        <div><div class="color-box" style="background-color: #f79e66;"></div> 1-hudud</div>
-        <div><div class="color-box" style="background-color: #f0d29a;"></div> 2-hudud</div>
-        <div><div class="color-box" style="background-color: #91c29b;"></div> 3-hudud</div>
-        <div><div class="color-box" style="background-color: #9798f3;"></div> 4-hudud</div>
-        <div><div class="color-box" style="background-color: #c498c7;"></div> 5-hudud</div>
+        <div>
+            <div class="color-box" style="background-color: #f79e66;"></div> 1-hudud
+        </div>
+        <div>
+            <div class="color-box" style="background-color: #f0d29a;"></div> 2-hudud
+        </div>
+        <div>
+            <div class="color-box" style="background-color: #91c29b;"></div> 3-hudud
+        </div>
+        <div>
+            <div class="color-box" style="background-color: #9798f3;"></div> 4-hudud
+        </div>
+        <div>
+            <div class="color-box" style="background-color: #c498c7;"></div> 5-hudud
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -59,7 +72,10 @@
 
         function initMap() {
             const mapOptions = {
-                center: { lat: 41.2995, lng: 69.2401 },
+                center: {
+                    lat: 41.2995,
+                    lng: 69.2401
+                },
                 zoom: 10,
             };
 
@@ -69,7 +85,10 @@
             const savedLng = parseFloat(document.getElementById('longitude').value);
 
             if (!isNaN(savedLat) && !isNaN(savedLng)) {
-                const savedLocation = { lat: savedLat, lng: savedLng };
+                const savedLocation = {
+                    lat: savedLat,
+                    lng: savedLng
+                };
                 placeMarker(savedLocation);
             }
 
@@ -94,13 +113,17 @@
 
                     Array.from(placemarks).forEach(placemark => {
                         const name = placemark.getElementsByTagName('SimpleData')[3]?.textContent.trim();
-                        const coordinatesText = placemark.getElementsByTagName('coordinates')[0]?.textContent.trim();
+                        const coordinatesText = placemark.getElementsByTagName('coordinates')[0]?.textContent
+                            .trim();
                         const color = colors[name] || 'grey';
 
                         if (coordinatesText) {
                             const coordinates = coordinatesText.split(' ').map(coord => {
                                 const [lng, lat] = coord.split(',').map(Number);
-                                return { lat, lng };
+                                return {
+                                    lat,
+                                    lng
+                                };
                             });
 
                             const polygon = new google.maps.Polygon({
@@ -113,7 +136,10 @@
                                 map: map
                             });
 
-                            polygons.push({ polygon, name });
+                            polygons.push({
+                                polygon,
+                                name
+                            });
 
                             polygon.addListener('click', function(event) {
                                 placeMarker(event.latLng, name);
@@ -132,7 +158,10 @@
                 placeMarker(event.latLng);
 
                 let selectedZone = null;
-                polygons.forEach(({ polygon, name }) => {
+                polygons.forEach(({
+                    polygon,
+                    name
+                }) => {
                     if (google.maps.geometry.poly.containsLocation(event.latLng, polygon)) {
                         selectedZone = name;
                     }
@@ -169,9 +198,14 @@
         }
 
         function highlightSelectedZone(zoneName) {
-            polygons.forEach(({ polygon, name }) => {
+            polygons.forEach(({
+                polygon,
+                name
+            }) => {
                 if (name === zoneName) {
-                    polygon.setOptions({ fillOpacity: 0.6 });
+                    polygon.setOptions({
+                        fillOpacity: 0.6
+                    });
                 }
             });
         }
@@ -179,4 +213,5 @@
         window.onload = initMap;
     </script>
 </body>
+
 </html>

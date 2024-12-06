@@ -4,9 +4,21 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="zoom:lang" content="ru" />
 <meta name="zoom:last-modified" content="Wed, 09 Oct 2024 08:00:02 GMT" />
-<title>
-   Tashkent Invest Company
-</title>
+
+<meta property="og:image" content="{{ asset('assets/frontend/Content/images/card-logo.png') }}">
+<meta property="og:url" content="{{ asset('assets/frontend/Content/images/card-logo.png') }}">
+
+<title>Инвестиции в Ташкенте | Проекты компании TOSHKENT INVEST</title>
+<meta property="og:title" content="Инвестиционные проекты в Ташкенте | TOSHKENT INVEST">
+<meta property="og:description"
+    content="TOSHKENT INVEST — ведущая инвестиционная компания Узбекистана. Откройте инвестиционные возможности в Ташкенте!">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+
+<meta name="keywords" content="инвестиции, Ташкент, Узбекистан, проекты, TOSHKENT INVEST">
+
+<meta name="robots" content="index, follow">
+
 
 <link rel="stylesheet" href="{{ asset('assets/frontend/Content/images/card-logo.png') }}">
 
