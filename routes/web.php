@@ -162,7 +162,7 @@ Route::prefix('')->name('frontend.')->group(function () {
     Route::get('/supervisory-board', [FrontendController::class, 'supervisory_board'])->name('supervisory_board'); // +++
     
     
-    Route::get('/rukavodstva', [FrontendController::class, 'rukavodstva'])->name('rukavodstva'); // ---
+    Route::get('/rukavodstva', [FrontendController::class, 'rukavodstva'])->name('rukavodstva'); // +++
     Route::get('/investoram', [FrontendController::class, 'investoram'])->name('investoram'); // ---
     Route::get('/zakupki', [FrontendController::class, 'zakupki'])->name('zakupki');  // ---
     Route::get('/media', [FrontendController::class, 'media'])->name('media'); // ---
