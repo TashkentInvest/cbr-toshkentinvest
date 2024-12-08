@@ -172,6 +172,9 @@
                     <div class="inner_links">
                         <a href="{{ route('frontend.supervisory_board') }}"
                             title="Наблюдательный совет">Наблюдательный совет</a>
+
+                             <a href="{{ route('frontend.rukavodstva') }}"
+                            title="Руководство">Руководство</a>
                         <a href="/news/" title="Новости">Новости</a>
                         <a href="{{ route('frontend.contact') }}" title="Контактная информация">Контактная
                             информация</a>
