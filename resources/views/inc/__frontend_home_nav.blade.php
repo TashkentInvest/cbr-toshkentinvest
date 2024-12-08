@@ -174,7 +174,7 @@
                             title="Наблюдательный совет">Наблюдательный совет</a>
 
                         <a href="{{ route('frontend.rukavodstva') }}" title="Руководство">Руководство</a>
-                        <a href="{{ route('frontend.zakupki') }}" title="Закупки">Закупки</a>
+                        <a href="{{ route('frontend.zakupki.index') }}" title="Закупки">Закупки</a>
 
 
                         <a href="/news/" title="Новости">Новости</a>

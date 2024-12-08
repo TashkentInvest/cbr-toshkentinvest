@@ -15,6 +15,7 @@ use App\Http\Controllers\Blade\RoleController;
 use App\Http\Controllers\Blade\UserController;
 use App\Http\Controllers\Blade\ApiUserController;
 use App\Http\Controllers\Blade\PermissionController;
+use App\Http\Controllers\Frontend\ZakupkiController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
 
@@ -36,9 +37,9 @@ Route::group(['middleware' => ['auth', 'checkUserRole']], function () {
     Route::get('products/jarayonda', [ProductController::class, 'jarayonda'])->name('products.jarayonda');
     Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
     Route::post('products', [ProductController::class, 'store'])->name('products.store');
- 
+
     Route::get('products/add', [ProductController::class, 'add'])->name('productAdd');
-    
+
     Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
     Route::get('products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
     Route::put('products/{product}', [ProductController::class, 'update'])->name('products.update');
@@ -155,16 +156,22 @@ Route::get('search', [SearchController::class, 'search'])->name('search');
 
 
 Route::prefix('')->name('frontend.')->group(function () {
+
+    Route::get('/zakupki', [ZakupkiController::class, 'index'])->name('zakupki.index');
+    Route::get('/zakupki/{id}', [ZakupkiController::class, 'show'])->name('zakupki.show');
+
+    
     Route::get('/', [FrontendController::class, 'index'])->name('index');
     Route::get('/news', [FrontendController::class, 'news'])->name('news'); // +++
     Route::get('/contacts', [FrontendController::class, 'contact'])->name('contact'); // +++
     Route::get('/search', [FrontendController::class, 'search'])->name('search'); // +++
     Route::get('/supervisory-board', [FrontendController::class, 'supervisory_board'])->name('supervisory_board'); // +++
-    
-    
+
+
     Route::get('/rukavodstva', [FrontendController::class, 'rukavodstva'])->name('rukavodstva'); // +++
     Route::get('/investoram', [FrontendController::class, 'investoram'])->name('investoram'); // ---
-    Route::get('/zakupki', [FrontendController::class, 'zakupki'])->name('zakupki');  // ---
+    // Route::get('/zakupki', [FrontendController::class, 'zakupki'])->name('zakupki');  // ---
+ 
     Route::get('/media', [FrontendController::class, 'media'])->name('media'); // ---
 
     // docs
