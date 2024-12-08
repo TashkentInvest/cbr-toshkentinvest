@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="{{ asset('assets/new/assets/css/style.css') }}" id="main-style-link">
     <link rel="stylesheet" href="{{ asset('assets/new/assets/css/style-preset.css') }}">
 
-    <link rel="stylesheet" href="{{asset('assets/new/assets/css/plugins/dropzone.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/new/assets/css/plugins/dropzone.min.css') }}">
 
 
 
@@ -74,9 +74,11 @@
                 .card-body {
                     overflow: scroll !important;
                 }
+
+             
             }
         </style>
-    
+
         <header class="pc-header">
             <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
                 <div class="me-auto pc-mob-drp">
@@ -100,21 +102,24 @@
                             <div class="dropdown-menu pc-h-dropdown drp-search">
                                 <form action="{{ route('search') }}" method="GET" class="px-3">
                                     <div class="mb-0 d-flex align-items-center">
-                                        <input type="search" name="query" class="form-control border-0 shadow-none" placeholder="Search...">
-                                        <button type="submit" class="btn btn-light-secondary btn-search">Qidirish</button>
+                                        <input type="search" name="query" class="form-control border-0 shadow-none"
+                                            placeholder="Search...">
+                                        <button type="submit"
+                                            class="btn btn-light-secondary btn-search">Qidirish</button>
                                     </div>
-                                </form>    
+                                </form>
                             </div>
                         </li>
-                   
+
                         <li class="pc-h-item d-none d-md-inline-flex">
                             <form action="{{ route('search') }}" method="GET" class="form-search">
                                 <i class="ph-duotone ph-magnifying-glass icon-search"></i>
                                 <input type="search" name="query" class="form-control" placeholder="Search...">
-                                <button type="submit" class="btn btn-search" style="padding: 0"><kbd>ctrl+k</kbd></button>
+                                <button type="submit" class="btn btn-search"
+                                    style="padding: 0"><kbd>ctrl+k</kbd></button>
                             </form>
-                            
-                            
+
+
                             {{-- <h6 class="text-danger text-bold px-2">MG, MFY, Manzili va Maydoni orqali qidirishingiz mumkin !</h4> --}}
                         </li>
 
@@ -144,7 +149,7 @@
                                 </a>
                             </div>
                         </li>
-                       
+
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
@@ -173,8 +178,9 @@
                         </div>
 
                         <div class="dropdown d-inline-block">
-                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn header-item waves-effect"
+                                id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                                 <img class="rounded-circle header-profile-user"
                                     src="{{ asset('assets/images/avatar-dafault.png') }}" alt="Header Avatar">
                                 <span class="d-none d-xl-inline-block ms-1" key="t-henry">
@@ -189,7 +195,8 @@
                                 <!-- <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
                                               <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My Wallet</span></a> -->
                                 @if (auth()->user())
-                                    <a class="dropdown-item d-block" href="{{ route('userEdit', auth()->user()->id) }}">
+                                    <a class="dropdown-item d-block"
+                                        href="{{ route('userEdit', auth()->user()->id) }}">
                                         <!-- <span class="badge bg-success float-end">11</span> -->
                                         <i class="bx bx-wrench font-size-16 align-middle me-1"></i>
                                         <span key="t-settings">@lang('global.settings')</span>
@@ -209,7 +216,7 @@
                                 </a>
                             </div>
                         </div>
-                      
+
                     </ul>
                 </div>
             </div>
@@ -222,28 +229,28 @@
         <div class="pc-container">
             <div class="pc-content">
                 @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
 
-        <!-- Display error message -->
-        @if (session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
+                <!-- Display error message -->
+                @if (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
 
-        <!-- Display validation errors -->
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+                <!-- Display validation errors -->
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
                 @yield('content')
             </div>
@@ -261,7 +268,7 @@
                         <p class="m-0">Copyright &copy; {{ date('Y') }} by <a target="_blank"
                                 href="https://toshkentinvest.uz">toshkentinvest.uz</a></a></p>
                     </div>
-                  
+
                 </div>
             </div>
         </footer>
@@ -270,9 +277,9 @@
     {{-- new --}}
     <!-- [Page Specific JS] start -->
 
-    <script src="{{asset('assets/new/assets/js/plugins/dropzone-amd-module.min.js')}}"></script>
+    <script src="{{ asset('assets/new/assets/js/plugins/dropzone-amd-module.min.js') }}"></script>
 
-    
+
     <script src="{{ asset('assets/new/assets/js/plugins/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/new/assets/js/plugins/jsvectormap.min.js') }}"></script>
     <script src="{{ asset('assets/new/assets/js/plugins/world.js') }}"></script>
@@ -499,13 +506,13 @@
     <script>
         $(document).ready(function() {
             $('.phone2').inputmask('+998 (99) 999-99-99');
-            
+
             $('#contact').on('focus', function() {
                 if ($(this).val().startsWith('+998') === false) {
                     $(this).val('+998 ');
                 }
             });
-            
+
             $('#contact').on('input', function() {
                 if ($(this).val().length > 14) {
                     $(this).val($(this).val().substring(0, 14));
