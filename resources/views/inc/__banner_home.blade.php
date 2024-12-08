@@ -72,7 +72,7 @@
             </div>
             <a class="swiper-slide"
                 data-background-image="{{ asset('assets/frontend/Content/Gallery/Image/banner2.webp') }}"
-                href="https://finopolis.ru/" target="_blank">
+                href="#!" target="_blank">
                 <div class="col-md-19">
                     <div class="home-header_title">
                         Цель деятельности <br> компании
@@ -134,10 +134,10 @@
                 <div class="col-7 offset-1">
                     <ul class="without_dash without_indent">
                         <li>
-                            <a href="https://www.tashkent.uz/">tashkent.uz</a>
+                            <a href="https://www.tashkent.uz/" target="_blank">tashkent.uz</a>
                         </li>
                         <li>
-                            <a href="https://projects.toshkentinvest.uz/">projects.toshkentinvest.uz</a>
+                            <a href="https://projects.toshkentinvest.uz/" target="_blank">projects.toshkentinvest.uz</a>
                         </li>
                         <li>
                             <a href="/investoram/">Строительные инвестиционные проекты</a>
