@@ -1,154 +1,89 @@
 @extends('layouts.frontend_app')
 @section('frontend_content')
-    <div class="page">
-        <div class="page__top-panel">
-            <div class="page__top-panel__photo" style="background-image: url({{asset('assets/frontend/img/src/promo3.jpg')}})"></div>
-          
-            <div class="container">
-                <div class="page__top-panel__in">
-                    <h1 class="page__top-panel__title">Руководство</h1>
-                    <nav class="bread-crumbs">
-                        <ul>
-                            <li>
-                                <a href="index.html">Главная</a><i>/</i>
-                            </li>
-                            <li>
-                                <span>Руководство</span>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <section class="section">
-            <div class="container">
-                <div class="section__in">
-                    <div class="section__content">
-                        <ul class="partners-list">
-                            <li>
-                                <div class="partners-list__item first-animation">
-                                    <div class="partners-list__photo">
-                                        <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/dealers/Baxrom.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
-                                        </a>
-                                    </div>
-                                    <span class="partners-list__name">
-                                        <a href="partners-info.html">Бахром Шакиров<br /></a>
-                                    </span>
-                                    <small class="partners-list__post">Председатель правления </small>
-                                    <a href="partners-info.html" class="more-link">Подробнее</a>
-                                </div>
-                            </li>
-                          
-                            <li>
-                                <div class="partners-list__item second-animation">
-                                    <div class="partners-list__photo">
-                                        <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/dealers/Peregudov.png')}}" loading="lazy" data-load="lazy" alt="photo" />
-                                        </a>
-                                    </div>
-                                    <span class="partners-list__name">
-                                        <a href="partners-info.html">Андрей Перегудов
-                                            <br /> </a>
-                                    </span>
-                                    <small class="partners-list__post">Заместитель председателя правления
-                                        по строительству и реновации
-                                    </small>
-                                    <a href="partners-info.html" class="more-link">Подробнее</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="partners-list__item first-animation">
-                                    <div class="partners-list__photo">
-                                        <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/dealers/Nargiza.png')}}" loading="lazy" data-load="lazy" alt="photo" />
-                                        </a>
-                                    </div>
-                                    <span class="partners-list__name">
-                                        <a href="partners-info.html">Наргизахон Отахонова
-                                            <br /> </a>
-                                    </span>
-                                    <small class="partners-list__post">Заместитель председателя правления
-                                        по управлению проектами
-                                    </small>
-                                    <a href="partners-info.html" class="more-link">Подробнее</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="partners-list__item third-animation">
-                                    <div class="partners-list__photo">
-                                        <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/dealers/Rustam.png')}}" loading="lazy" data-load="lazy" alt="photo" />
-                                        </a>
-                                    </div>
-                                    <span class="partners-list__name">
-                                        <a href="partners-info.html">Рустам Кодиров
-                                            <br /> </a>
-                                    </span>
-                                    <small class="partners-list__post">Заместитель председателя правления
-                                        по стратегическому развитию
-                                    </small>
-                                    <a href="partners-info.html" class="more-link">Подробнее</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="partners-list__item second-animation">
-                                    <div class="partners-list__photo">
-                                        <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/dealers/Nikita.png')}}" loading="lazy" data-load="lazy" alt="photo" />
-                                        </a>
-                                    </div>
-                                    <span class="partners-list__name">
-                                        <a href="partners-info.html">Никита Рябов
-                                            <br /> </a>
-                                    </span>
-                                    <small class="partners-list__post">Заместитель председателя правления
-                                        по инвестициям
-                                    </small>
-                                    <a href="partners-info.html" class="more-link">Подробнее</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="partners-list__item first-animation">
-                                    <div class="partners-list__photo">
-                                        <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/dealers/Baxtiyor.png')}}" loading="lazy" data-load="lazy" alt="photo" />
-                                        </a>
-                                    </div>
-                                    <span class="partners-list__name">
-                                        <a href="partners-info.html">Бахтиёр Мирзаев
-                                            <br /> </a>
-                                    </span>
-                                    <small class="partners-list__post">Заместитель председателя правления
-                                        по финансам
-                                    </small>
-                                    <a href="partners-info.html" class="more-link">Подробнее</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="partners-list__item third-animation">
-                                    <div class="partners-list__photo">
-                                        <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/dealers/Murat.png')}}" loading="lazy" data-load="lazy" alt="photo" />
-                                        </a>
-                                    </div>
-                                    <span class="partners-list__name">
-                                        <a href="partners-info.html">Мурат Бараев
-                                            <br /> </a>
-                                    </span>
-                                    <small class="partners-list__post">Руководитель администрации
-                                    </small>
-                                    <a href="partners-info.html" class="more-link">Подробнее</a>
-                                </div>
-                            </li>
+    <main id="content">
+        <div class="offsetMenu">
+            <div class="container-fluid">
+                <div class="col-md-23 offset-md-1">
+                    <!-- Breadcrumbs -->
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="/"></a></div>
+                        <div class="breadcrumbs_item">
+                            <a href="/about_br/">О Нас</a>
+                        </div>
+                    </div>
 
+                    <!-- Title Section -->
+                    <div class="title-container">
+                        <div class="block-title">
+                            <h2><span class="referenceable" id="a_83561">Руководство:</span></h2>
+                        </div>
+                        <div class="title-container">
+                            <!-- Members Section -->
+                            <div class="persons-container">
+                                <div class="persons">
+                                    <a class="person" href="partners-info.html">
+                                        <img src="{{ asset('assets/frontend/img/dealers/Baxrom.jpg') }}" alt="Бахром Шакиров" style="width: 320px; height: 400px; object-fit: cover;">
+                                        <div class="person_name">Бахром<br>Шакиров</div>
+                                        <div class="person_position">Председатель правления</div>
+                                    </a>
+                                </div>
 
-                        </ul>
-                      
+                                <div class="persons">
+                                    <a class="person" href="partners-info.html">
+                                        <img src="{{ asset('assets/frontend/img/dealers/Peregudov.png') }}" alt="Андрей Перегудов" style="width: 320px; height: 400px; object-fit: cover;">
+                                        <div class="person_name">Андрей<br>Перегудов</div>
+                                        <div class="person_position">Заместитель председателя правления<br>по строительству и реновации</div>
+                                    </a>
+
+                                    <a class="person" href="partners-info.html">
+                                        <img src="{{ asset('assets/frontend/img/dealers/Nargiza.png') }}" alt="Наргизахон Отахонова" style="width: 320px; height: 400px; object-fit: cover;">
+                                        <div class="person_name">Наргизахон<br>Отахонова</div>
+                                        <div class="person_position">Заместитель председателя правления<br>по управлению проектами</div>
+                                    </a>
+                                    <a class="person" href="partners-info.html">
+                                        <img src="{{ asset('assets/frontend/img/dealers/Rustam.png') }}" alt="Рустам Кодиров" style="width: 320px; height: 400px; object-fit: cover;">
+                                        <div class="person_name">Рустам<br>Кодиров</div>
+                                        <div class="person_position">Заместитель председателя правления<br>по стратегическому развитию</div>
+                                    </a>
+                                    <a class="person" href="partners-info.html">
+                                        <img src="{{ asset('assets/frontend/img/dealers/Nikita.png') }}" alt="Никита Рябов" style="width: 320px; height: 400px; object-fit: cover;">
+                                        <div class="person_name">Никита<br>Рябов</div>
+                                        <div class="person_position">Заместитель председателя правления<br>по инвестициям</div>
+                                    </a>
+                                    <a class="person" href="partners-info.html">
+                                        <img src="{{ asset('assets/frontend/img/dealers/Baxtiyor.png') }}" alt="Бахтиёр Мирзаев" style="width: 320px; height: 400px; object-fit: cover;">
+                                        <div class="person_name">Бахтиёр<br>Мирзаев</div>
+                                        <div class="person_position">Заместитель председателя правления<br>по финансам</div>
+                                    </a>
+                                    <a class="person" href="partners-info.html">
+                                        <img src="{{ asset('assets/frontend/img/dealers/Murat.png') }}" alt="Мурат Бараев" style="width: 320px; height: 400px; object-fit: cover;">
+                                        <div class="person_name">Мурат<br>Бараев</div>
+                                        <div class="person_position">Руководитель администрации</div>
+                                    </a>
+                                </div>
+
+                           
+
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Section -->
+                    <div class="page-info">
+                        <div class="page-info_helpful" data-page-feedback="" data-feedback-url="/Content/PageInfo/RegisterFeedback">
+                            <div class="helpful" data-helpful="">
+                                Страница была полезной?
+                                <div class="helpful_btns">
+                                    <button class="helpful_btn _yes" data-helpful-btn="yes"><i class="helpful_icon"></i><span>Да</span></button>
+                                    <button class="helpful_btn _no" data-helpful-btn="no"><i class="helpful_icon"></i><span>Нет</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-info_last-update">Последнее обновление страницы: 05.12.2024</div>
                     </div>
                 </div>
             </div>
-        </section>
-        <div class="bt-indent">&nbsp;</div>
-    </div>
+        </div>
+    </main>
 @endsection

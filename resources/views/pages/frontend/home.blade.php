@@ -150,7 +150,7 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1idn27zGgPK7T-HiBlD5l1MxRmAp4gv75/view"
-                                            data-zoom-title="Решение о первичном выпуске акций" data-zoom-tags="">
+                                            data-zoom-title="Решение о первичном выпуске акций" data-zoom-tags=""  target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Решение о первичном выпуске акций
                                             </div>
@@ -163,7 +163,7 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1EYvD3ukqo22A8bgoMmPv-BDiVLEzzxqa/view"
-                                            data-zoom-title="Бухгалтерский баланс — 1 квартал 2024" data-zoom-tags="">
+                                            data-zoom-title="Бухгалтерский баланс — 1 квартал 2024" data-zoom-tags=""  target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Бухгалтерский баланс — 1 квартал 2024
                                             </div>
@@ -176,7 +176,7 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1pS0MACr1to93NL53nnVACxwLSejl7jQA/view"
-                                            data-zoom-title="Отчет о финансовых результатах – 1 квартал 2024"
+                                            data-zoom-title="Отчет о финансовых результатах – 1 квартал 2024"  target="_blank"
                                             data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Отчет о финансовых результатах – 1 квартал 2024
@@ -190,7 +190,7 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1_lCgKih4Yru3sHmKHIWreB43Uqg_fQXI/view"
-                                            data-zoom-title="Список аффилированных лиц" data-zoom-tags="">
+                                            data-zoom-title="Список аффилированных лиц" data-zoom-tags=""  target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Список аффилированных лиц
                                             </div>
@@ -229,7 +229,7 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1ruf4z4qfecZDd81yioCkfSkQ2lCATMag/view"
-                                            data-zoom-title="Результаты оценки системы корпоративного управления"
+                                            data-zoom-title="Результаты оценки системы корпоративного управления"  target="_blank"
                                             data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Результаты оценки системы корпоративного управления
@@ -259,7 +259,7 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1CJXescFyTKxU5wMSK9c0AtMkkIbm5eoI/view"
-                                            data-zoom-title="Сообщение о принятии рекомендаций Кодекса корпоративного управления в своей деятельности"
+                                            data-zoom-title="Сообщение о принятии рекомендаций Кодекса корпоративного управления в своей деятельности"  target="_blank"
                                             data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Сообщение о принятии рекомендаций Кодекса корпоративного управления в своей
