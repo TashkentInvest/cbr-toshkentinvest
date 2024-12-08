@@ -145,25 +145,44 @@ Route::get('analytics/statistic', [AnalyticsController::class, 'statistic'])->na
 Route::get('calendar', [CalendarController::class, 'index'])->name('calendar.index');
 Route::get('search', [SearchController::class, 'search'])->name('search');
 
+
+
+
+
+
+
+
+
+
 Route::prefix('')->name('frontend.')->group(function () {
     Route::get('/', [FrontendController::class, 'index'])->name('index');
-    Route::get('/news', [FrontendController::class, 'news'])->name('news');
-    Route::get('/contacts', [FrontendController::class, 'contact'])->name('contact');
-    Route::get('/rukavodstva', [FrontendController::class, 'rukavodstva'])->name('rukavodstva');
-    Route::get('/search', [FrontendController::class, 'search'])->name('search');
+    Route::get('/news', [FrontendController::class, 'news'])->name('news'); // +++
+    Route::get('/contacts', [FrontendController::class, 'contact'])->name('contact'); // +++
+    Route::get('/search', [FrontendController::class, 'search'])->name('search'); // +++
+    Route::get('/supervisory-board', [FrontendController::class, 'supervisory_board'])->name('supervisory_board'); // +++
+    
+    
+    Route::get('/rukavodstva', [FrontendController::class, 'rukavodstva'])->name('rukavodstva'); // ---
+    Route::get('/investoram', [FrontendController::class, 'investoram'])->name('investoram'); // ---
+    Route::get('/zakupki', [FrontendController::class, 'zakupki'])->name('zakupki');  // ---
+    Route::get('/media', [FrontendController::class, 'media'])->name('media'); // ---
 
-    Route::get('/investoram', [FrontendController::class, 'investoram'])->name('investoram');
-    Route::get('/zakupki', [FrontendController::class, 'zakupki'])->name('zakupki');
-    Route::get('/media', [FrontendController::class, 'media'])->name('media');
-    Route::get('/ustav', [FrontendController::class, 'ustav'])->name('ustav');
-    Route::get('/supervisory-board', [FrontendController::class, 'supervisory_board'])->name('supervisory_board');
-    Route::get('/struktura', [FrontendController::class, 'struktura'])->name('struktura');
+    // docs
+    Route::get('/ustav', [FrontendController::class, 'ustav'])->name('ustav'); // +++
+    Route::get('/struktura', [FrontendController::class, 'struktura'])->name('struktura'); // +++
+    Route::get('/decision-on-the-initial-issue', [FrontendController::class, 'decision'])->name('decision'); // +++
+    Route::get('/balance', [FrontendController::class, 'balance'])->name('balance'); // +++
+    Route::get('/income', [FrontendController::class, 'income'])->name('income'); // +++
+    Route::get('/spisok', [FrontendController::class, 'spisok'])->name('spisok'); // +++
+
+
+
+    // docs end
+
+
+    Route::get('/reports', [FrontendController::class, 'reports'])->name('reports'); // page isset but not designed +- 
+    Route::get('/share-struktura', [FrontendController::class, 'share_struktura'])->name('share_struktura');  // page isset but not designed +- 
+
     Route::get('/board', [FrontendController::class, 'board'])->name('board');
-    Route::get('/decision-on-the-initial-issue', [FrontendController::class, 'decision'])->name('decision');
-    Route::get('/reports', [FrontendController::class, 'reports'])->name('reports');
-    Route::get('/balance', [FrontendController::class, 'balance'])->name('balance');
-    Route::get('/income', [FrontendController::class, 'income'])->name('income');
-    Route::get('/spisok', [FrontendController::class, 'spisok'])->name('spisok');
-    Route::get('/share-struktura', [FrontendController::class, 'share_struktura'])->name('share_struktura');
     Route::get('/kodeks', [FrontendController::class, 'kodeks'])->name('kodeks');
 });

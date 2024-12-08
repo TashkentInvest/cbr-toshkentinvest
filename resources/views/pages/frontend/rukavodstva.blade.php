@@ -29,7 +29,7 @@
                                 <div class="partners-list__item first-animation">
                                     <div class="partners-list__photo">
                                         <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/src/dealers/Бахром ака 3х4.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
+                                            <img src="{{asset('assets/frontend/img/dealers/Baxrom.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
                                         </a>
                                     </div>
                                     <span class="partners-list__name">
@@ -39,27 +39,12 @@
                                     <a href="partners-info.html" class="more-link">Подробнее</a>
                                 </div>
                             </li>
-                            <li>
-                                <div class="partners-list__item third-animation">
-                                    <div class="partners-list__photo">
-                                        <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/src/dealers/gurko.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
-                                        </a>
-                                    </div>
-                                    <span class="partners-list__name">
-                                        <a href="partners-info.html">Александр Гурко<br /></a>
-                                    </span>
-                                    <small class="partners-list__post">Первый заместитель председателя правления
-                                        по цифровизации
-                                    </small>
-                                    <a href="partners-info.html" class="more-link">Подробнее</a>
-                                </div>
-                            </li>
+                          
                             <li>
                                 <div class="partners-list__item second-animation">
                                     <div class="partners-list__photo">
                                         <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/src/dealers/Рисунок1.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
+                                            <img src="{{asset('assets/frontend/img/dealers/Peregudov.png')}}" loading="lazy" data-load="lazy" alt="photo" />
                                         </a>
                                     </div>
                                     <span class="partners-list__name">
@@ -76,7 +61,7 @@
                                 <div class="partners-list__item first-animation">
                                     <div class="partners-list__photo">
                                         <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/src/dealers/nargizahon.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
+                                            <img src="{{asset('assets/frontend/img/dealers/Nargiza.png')}}" loading="lazy" data-load="lazy" alt="photo" />
                                         </a>
                                     </div>
                                     <span class="partners-list__name">
@@ -93,7 +78,7 @@
                                 <div class="partners-list__item third-animation">
                                     <div class="partners-list__photo">
                                         <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/src/dealers/rustam.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
+                                            <img src="{{asset('assets/frontend/img/dealers/Rustam.png')}}" loading="lazy" data-load="lazy" alt="photo" />
                                         </a>
                                     </div>
                                     <span class="partners-list__name">
@@ -110,7 +95,7 @@
                                 <div class="partners-list__item second-animation">
                                     <div class="partners-list__photo">
                                         <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/src/dealers/Рисунок1.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
+                                            <img src="{{asset('assets/frontend/img/dealers/Nikita.png')}}" loading="lazy" data-load="lazy" alt="photo" />
                                         </a>
                                     </div>
                                     <span class="partners-list__name">
@@ -127,7 +112,7 @@
                                 <div class="partners-list__item first-animation">
                                     <div class="partners-list__photo">
                                         <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/src/dealers/baxtiyor.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
+                                            <img src="{{asset('assets/frontend/img/dealers/Baxtiyor.png')}}" loading="lazy" data-load="lazy" alt="photo" />
                                         </a>
                                     </div>
                                     <span class="partners-list__name">
@@ -144,7 +129,7 @@
                                 <div class="partners-list__item third-animation">
                                     <div class="partners-list__photo">
                                         <a href="partners-info.html">
-                                            <img src="{{asset('assets/frontend/img/src/dealers/murat.jpg')}}" loading="lazy" data-load="lazy" alt="photo" />
+                                            <img src="{{asset('assets/frontend/img/dealers/Murat.png')}}" loading="lazy" data-load="lazy" alt="photo" />
                                         </a>
                                     </div>
                                     <span class="partners-list__name">
@@ -159,25 +144,7 @@
 
 
                         </ul>
-                        <!--<ul class="page-navi first-animation">
-                            <li>
-                                <a class="page-numbers current" href="#">1</a>
-                            </li>
-                            <li>
-                                <a class="page-numbers" href="#">2</a>
-                            </li>
-                            <li>
-                                <a class="page-numbers" href="#">3</a>
-                            </li>
-                            <li>
-                                <a class="page-numbers" href="#">4</a>
-                            </li>
-                            <li>
-                                <span class="next page-numbers">
-                                    <a href="#">Вперед</a>
-                                </span>
-                            </li>
-                        </ul>-->
+                      
                     </div>
                 </div>
             </div>
