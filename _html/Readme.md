@@ -13,4 +13,5 @@ CBR Clone for tashkentinvest
     7) Multi Lang
     8) Vakansiya
     9) Вопросы и ответы
+    10) Zakupki (CRUD)
 ```

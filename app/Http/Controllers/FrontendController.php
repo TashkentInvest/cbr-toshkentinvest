@@ -22,7 +22,7 @@ class FrontendController extends Controller
         return view('pages.frontend.investoram_org');
     }
     public function zakupki(){
-        return view('pages.frontend.zakupki');
+        return view('pages.frontend.zakupki.index');
     }
     public function media(){
         return view('pages.frontend.media');

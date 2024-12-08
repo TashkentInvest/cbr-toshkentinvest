@@ -173,8 +173,10 @@
                         <a href="{{ route('frontend.supervisory_board') }}"
                             title="Наблюдательный совет">Наблюдательный совет</a>
 
-                             <a href="{{ route('frontend.rukavodstva') }}"
-                            title="Руководство">Руководство</a>
+                        <a href="{{ route('frontend.rukavodstva') }}" title="Руководство">Руководство</a>
+                        <a href="{{ route('frontend.zakupki') }}" title="Закупки">Закупки</a>
+
+
                         <a href="/news/" title="Новости">Новости</a>
                         <a href="{{ route('frontend.contact') }}" title="Контактная информация">Контактная
                             информация</a>
