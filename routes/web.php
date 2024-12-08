@@ -151,11 +151,6 @@ Route::get('search', [SearchController::class, 'search'])->name('search');
 
 
 
-
-
-
-
-
 Route::prefix('')->name('frontend.')->group(function () {
 
     Route::get('/zakupki', [ZakupkiController::class, 'index'])->name('zakupki.index');

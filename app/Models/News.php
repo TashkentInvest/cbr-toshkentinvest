@@ -11,4 +11,14 @@ class News extends Model
 
     protected $fillable = ['title', 'image', 'content', 'link', 'published_at'];
 
+    public function getImagePath()
+    {
+        // Check if the image is a URL
+        if (filter_var($this->image, FILTER_VALIDATE_URL)) {
+            return $this->image; // Return the URL
+        }
+
+        // Assume it's a local image and return the public path
+        return asset('storage/' . $this->image);
+    }
 }

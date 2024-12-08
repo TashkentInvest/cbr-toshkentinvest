@@ -71,7 +71,7 @@ class OrderController extends Controller
 
         $item->user_id = Auth::id();
         $item->status = 2;
-        $item->order_atkaz_id = $request->input('order_atkaz_id');
+            
 
         if ($request->filled('comment')) {
             $item->comment = $request->input('comment');
