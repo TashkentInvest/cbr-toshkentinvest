@@ -17,6 +17,7 @@ use App\Http\Controllers\Blade\ApiUserController;
 use App\Http\Controllers\Blade\PermissionController;
 use App\Http\Controllers\Frontend\ZakupkiController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductController;
 
 Auth::routes(['register' => false]);
@@ -160,9 +161,14 @@ Route::prefix('')->name('frontend.')->group(function () {
     Route::get('/zakupki', [ZakupkiController::class, 'index'])->name('zakupki.index');
     Route::get('/zakupki/{id}', [ZakupkiController::class, 'show'])->name('zakupki.show');
 
-    
+    Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+    Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');
+
+
+
     Route::get('/', [FrontendController::class, 'index'])->name('index');
-    Route::get('/news', [FrontendController::class, 'news'])->name('news'); // +++
+    // Route::get('/news', [FrontendController::class, 'news'])->name('news'); // +++
+
     Route::get('/contacts', [FrontendController::class, 'contact'])->name('contact'); // +++
     Route::get('/search', [FrontendController::class, 'search'])->name('search'); // +++
     Route::get('/supervisory-board', [FrontendController::class, 'supervisory_board'])->name('supervisory_board'); // +++
@@ -170,9 +176,7 @@ Route::prefix('')->name('frontend.')->group(function () {
 
     Route::get('/rukavodstva', [FrontendController::class, 'rukavodstva'])->name('rukavodstva'); // +++
     Route::get('/investoram', [FrontendController::class, 'investoram'])->name('investoram'); // ---
-    // Route::get('/zakupki', [FrontendController::class, 'zakupki'])->name('zakupki');  // ---
- 
-    Route::get('/media', [FrontendController::class, 'media'])->name('media'); // ---
+
 
     // docs
     Route::get('/ustav', [FrontendController::class, 'ustav'])->name('ustav'); // +++

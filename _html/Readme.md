@@ -8,10 +8,10 @@ CBR Clone for tashkentinvest
     2) Brand(Partners) (CRUD)
     3) News (CRUD)
     4) Investoram Posts (CRUD)
-    5) Valyuta integratsa
+    5) Valyuta integratsa +++
     6) Poisk search
     7) Multi Lang
     8) Vakansiya
     9) Вопросы и ответы
-    10) Zakupki (CRUD)
+    10) Zakupki (Controller) +++
 ```

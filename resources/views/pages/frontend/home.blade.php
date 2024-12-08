@@ -63,7 +63,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="{{ route('frontend.news') }}"
+                                                <a href="{{ route('frontend.news.index') }}"
                                                     class="more-button _small _home-news">
                                                     Все новости
                                                 </a>
