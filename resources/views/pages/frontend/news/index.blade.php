@@ -17,99 +17,14 @@
                                         <div data-tabs-content="100" id="events_tab100" role="tabpanel"
                                             aria-labelledby="tab_100">
                                             <div class="form-indent">
-                                                <form>
+                                                <form id="filterForm">
                                                     <div class="search">
                                                         <div class="search_field">
                                                             <input placeholder="Поиск по разделу" type="text"
-                                                                value="">
+                                                                name="search" value="{{ request('search') ?? '' }}">
                                                         </div>
                                                         <div class="search_btn">
-                                                            <button type="button" class="b-btn _blue">Искать</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="filters_wrapper _block">
-                                                        <div class="filters">
-                                                            <div id="DatesFilterRange_100">
-                                                                <div class="filter-select-with-date"
-                                                                    data-select-with-date="">
-                                                                    <div class="filter" data-filter="select">
-                                                                        <div class="datepicker-filter_placeholder">Выберите
-                                                                            период</div>
-                                                                        <button class="filter_title" type="button"
-                                                                            data-filter-title="" title="За все время">
-                                                                            За&nbsp;все&nbsp;время
-                                                                        </button>
-                                                                        <div class="filter_content" data-filter-content=""
-                                                                            style="display: none;">
-                                                                            <div class="filter_content_top">
-                                                                                <div class="filter_content_close"
-                                                                                    data-filter-close=""></div>
-                                                                            </div>
-                                                                            <div class="filter-select">
-                                                                                <div class="filter-select_option">
-                                                                                    <input type="radio" checked=""
-                                                                                        value="1" id="ui-id-22"
-                                                                                        name="nm_ui-id-22">
-                                                                                    <label
-                                                                                        for="ui-id-22">За&nbsp;все&nbsp;время</label>
-                                                                                </div>
-                                                                                <div class="filter-select_option">
-                                                                                    <label for="ui-id-23">Выбрать
-                                                                                        период</label>
-                                                                                    <input type="radio" value="4"
-                                                                                        data-select-date="" id="ui-id-23"
-                                                                                        name="nm_ui-id-22">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="filter">
-                                                                        <div class="datepicker-filter"
-                                                                            data-datepicker-period-filter=""
-                                                                            data-min-date="" data-max-date=""
-                                                                            data-default-value-from=""
-                                                                            data-default-value-to="">
-                                                                            <input class="datepicker-filter_input-from"
-                                                                                type="hidden" id="ui-id-24"
-                                                                                name="datepicker-from-ui-id-24">
-                                                                            <input class="datepicker-filter_input-to"
-                                                                                type="hidden" id="ui-id-25"
-                                                                                name="datepicker-to-ui-id-25">
-                                                                            <button class="datepicker-filter_button"
-                                                                                type="button">
-                                                                                <span>ДД.ММ.ГГГГ</span>
-                                                                                <span> - </span>
-                                                                                <span>ДД.ММ.ГГГГ</span>
-                                                                            </button>
-                                                                            <div class="datepicker-filter_modal">
-                                                                                <div class="datepicker-filter_head">
-                                                                                    <div class="datepicker-filter_close">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="datepicker-filter_tabs">
-                                                                                    <div class="datepicker-filter_tab-from">
-                                                                                        <span>ДД.ММ.ГГГГ</span></div>
-                                                                                    &nbsp;-&nbsp;
-                                                                                    <div class="datepicker-filter_tab-to">
-                                                                                        <span>ДД.ММ.ГГГГ</span></div>
-                                                                                </div>
-                                                                                <div
-                                                                                    class="datepicker-filter_footer _right">
-                                                                                    <button
-                                                                                        class="datepicker-filter_clear-btn"
-                                                                                        type="button"
-                                                                                        id="ui-id-26">Сбросить</button>
-                                                                                    <button
-                                                                                        class="datepicker-filter_apply-btn"
-                                                                                        type="button" id="ui-id-27"
-                                                                                        disabled="disabled">Применить</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div id="ThemasFilterRange_100"></div>
+                                                            <button type="submit" class="b-btn _blue">Искать</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -130,7 +45,8 @@
                                                                         {{ $latestNews->published_at->format('d F Y') }}
                                                                     </div>
                                                                     <div class="news_category">
-                                                                        {{ $latestNews->category ?? 'Новость' }}</div>
+                                                                        {{ $latestNews->category ?? 'Новость' }}
+                                                                    </div>
                                                                 </div>
                                                                 <a class="news_title"
                                                                     href="{{ route('frontend.news.show', $latestNews->id) }}">
@@ -151,8 +67,9 @@
 
                                             </div>
 
-                                            @if($news->hasMorePages())
-                                                <button id="_buttonLoadNextEvt" class="more-button _small">Загрузить еще</button>
+                                            @if ($news->hasMorePages())
+                                                <button id="_buttonLoadNextEvt" class="more-button _small">Загрузить
+                                                    еще</button>
                                             @endif
                                         </div>
 
@@ -185,35 +102,68 @@
             </div>
         </div>
     </main>
-@endsection
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let loadMoreBtn = document.getElementById('_buttonLoadNextEvt');
-        if (!loadMoreBtn) return;
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let loadMoreBtn = document.getElementById('_buttonLoadNextEvt');
+            let filterForm = document.getElementById('filterForm');
+            let newsContainer = document.getElementById('newsContainer');
 
-        let currentPage = {{ $news->currentPage() }};
-        let lastPage = {{ $news->lastPage() }};
+            let currentPage = {{ $news->currentPage() }};
+            let lastPage = {{ $news->lastPage() }};
 
-        loadMoreBtn.addEventListener('click', function() {
-            currentPage++;
-            if (currentPage <= lastPage) {
-                fetch('?page=' + currentPage, {
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('newsContainer').insertAdjacentHTML('beforeend', data.html);
-                    if (currentPage >= lastPage) {
-                        loadMoreBtn.style.display = 'none';
-                    }
-                })
-                .catch(error => console.error('Error loading more news:', error));
-            } else {
-                loadMoreBtn.style.display = 'none';
+            // Extract current filters
+            function getFilters() {
+                let formData = new FormData(filterForm);
+                let search = formData.get('search') || '';
+                return { search };
+            }
+
+            // On Filter Form submit (for search)
+            filterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                currentPage = 1; // reset to first page
+                loadNews(true);
+            });
+
+            // Load more button
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    currentPage++;
+                    loadNews(false);
+                });
+            }
+
+            function loadNews(replace = false) {
+                let params = getFilters();
+                let query = new URLSearchParams({
+                    page: currentPage,
+                    search: params.search
+                }).toString();
+
+                fetch('?' + query, {
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (replace) {
+                            // Replace entire content including featured news
+                            newsContainer.innerHTML = data.html;
+                        } else {
+                            newsContainer.insertAdjacentHTML('beforeend', data.html);
+                        }
+
+                        // If no more pages, hide load more button
+                        if (currentPage >= {{ $news->lastPage() }}) {
+                            loadMoreBtn && (loadMoreBtn.style.display = 'none');
+                        } else {
+                            loadMoreBtn && (loadMoreBtn.style.display = 'block');
+                        }
+                    })
+                    .catch(error => console.error('Error loading news:', error));
             }
         });
-    });
-</script>
+    </script>
+@endsection

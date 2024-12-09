@@ -9,10 +9,16 @@ class NewsController extends Controller
 {
     public function index(Request $request)
     {
-        // Load 5 items per page (adjust as needed)
-        $news = News::orderBy('published_at', 'desc')->paginate(5);
+        $query = News::query()->orderBy('published_at', 'desc');
 
-        // If it's an AJAX request (e.g. from the Load More button), return JSON with rendered HTML
+        // Filter by search keyword if provided
+        if ($request->filled('search')) {
+            $search = $request->input('search');
+            $query->where('title', 'like', "%{$search}%");
+        }
+
+        $news = $query->paginate(3); // Adjust per page as needed
+
         if ($request->ajax()) {
             $html = view('pages.frontend.news._news_items', compact('news'))->render();
             return response()->json(['html' => $html]);
