@@ -11,6 +11,9 @@ class News extends Model
 
     protected $fillable = ['title', 'image', 'content', 'link', 'published_at'];
 
+    protected $casts = [
+        'published_at'=>'date',
+    ];
     public function getImagePath()
     {
         // Check if the image is a URL
