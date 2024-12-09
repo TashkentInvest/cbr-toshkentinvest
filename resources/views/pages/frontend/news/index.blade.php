@@ -188,7 +188,6 @@
 @endsection
 
 <script>
-    alert('dwa')
     document.addEventListener('DOMContentLoaded', function() {
         let loadMoreBtn = document.getElementById('_buttonLoadNextEvt');
         if (!loadMoreBtn) return;
