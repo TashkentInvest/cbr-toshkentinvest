@@ -24,17 +24,17 @@
                             <span class="news-info-line_share-btn" tabindex="0"
                                 data-share-btn="data-share-btn">Поделиться</span>
                             <div class="news-info-line_share-select _hide">
-                                <a class="news-info-line_share-vkontakte" target="_blank"
-                                    href="https://vkontakte.ru/share.php?url=https%3a%2f%2fwww.cbr.ru%2fpress%2fpr%2f%3ffile%3d638690900179458946BANK_SECTOR.htm">ВКонтакте</a>
+                                {{-- <a class="news-info-line_share-vkontakte" target="_blank"
+                                    href="https://vkontakte.ru/share.php?url={{Request::url()}}">ВКонтакте</a>
                                 <a class="news-info-line_share-whatsapp" target="_blank"
-                                    href="https://web.whatsapp.com/send?text=https%3a%2f%2fwww.cbr.ru%2fpress%2fpr%2f%3ffile%3d638690900179458946BANK_SECTOR.htm&amp;utm_source=share2"
-                                    data-action="share/whatsapp/share">WhatsApp</a>
+                                    href="https://web.whatsapp.com/send?text={{Request::url()}}&amp;utm_source=share2"
+                                    data-action="share/whatsapp/share">WhatsApp</a> --}}
                                 <a class="news-info-line_share-telegram" target="_blank"
-                                    href="https://t.me/share/url?url=https%3a%2f%2fwww.cbr.ru%2fpress%2fpr%2f%3ffile%3d638690900179458946BANK_SECTOR.htm">Telegram</a>
+                                    href="https://t.me/share/url?url={{Request::url()}}">Telegram</a>
                             </div>
                         </div>
                     </div>
-                    <div class="landing-text">
+                    <div class="landFing-text">
                         <p>{{ $zakupka['description'] }}</p>
 
                        

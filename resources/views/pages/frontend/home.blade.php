@@ -48,11 +48,11 @@
                                                                     </div>
                                                                     <a class="news_title"
                                                                         href="{{ route('frontend.news.show', $latestNews->id) }}"
-                                                                        target="_blank">
+                                                                       >
                                                                         {{ $latestNews->title }}
                                                                     </a>
                                                                 </div>
-                                                                <a target="_blank"
+                                                                <a
                                                                     href="{{ route('frontend.news.show', $latestNews->id) }}"
                                                                     class="col-md-5 offset-md-1 news_image">
                                                                     <img src="{{ Str::startsWith($latestNews->image, ['http://', 'https://']) ? $latestNews->image : asset($latestNews->image) }}"
@@ -74,13 +74,13 @@
                                                                     </div>
                                                                     <a class="news_title"
                                                                         href="{{ route('frontend.news.show', $item->id) }}"
-                                                                        target="_blank">
+                                                                       >
                                                                         {{ $item->title }}
                                                                     </a>
                                                                 </div>
 
                                                                 @if ($item->image)
-                                                                    <a target="_blank"
+                                                                    <a
                                                                         href="{{ route('frontend.news.show', $item->id) }}"
                                                                         class="col-md-5 offset-md-1 news_image">
                                                                         <img src="{{ Str::startsWith($item->image, ['http://', 'https://']) ? $item->image : asset($item->image) }}"

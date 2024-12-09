@@ -180,7 +180,8 @@
                         <a href="/news/" title="Новости">Новости</a>
                         <a href="{{ route('frontend.contact') }}" title="Контактная информация">Контактная
                             информация</a>
-                        <a href="/about/" title="О сайте">О сайте</a>
+
+                        <a href="{{route('frontend.about')}}" title="О Нас">О Нас</a>
                     </div>
                     <div class="networks-circle">
                         <a class="networks-circle_item _vk" href="https://vk.com/#!"></a>

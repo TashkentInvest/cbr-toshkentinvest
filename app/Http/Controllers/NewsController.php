@@ -17,7 +17,7 @@ class NewsController extends Controller
             $query->where('title', 'like', "%{$search}%");
         }
 
-        $news = $query->paginate(3); // Adjust per page as needed
+        $news = $query->paginate(3); 
 
         if ($request->ajax()) {
             $html = view('pages.frontend.news._news_items', compact('news'))->render();

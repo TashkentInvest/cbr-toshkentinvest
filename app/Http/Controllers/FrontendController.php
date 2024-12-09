@@ -13,6 +13,10 @@ class FrontendController extends Controller
         return view('pages.frontend.home',compact('news'));
     }
 
+    
+    public function about(){
+        return view('pages.frontend.about');
+    }
     public function rukavodstva(){
         return view('pages.frontend.rukavodstva');
     }

@@ -160,6 +160,8 @@ Route::prefix('')->name('frontend.')->group(function () {
     Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.show');
 
 
+    Route::get('/about', [FrontendController::class, 'about'])->name('about');
+
 
     Route::get('/', [FrontendController::class, 'index'])->name('index');
     // Route::get('/news', [FrontendController::class, 'news'])->name('news'); // +++

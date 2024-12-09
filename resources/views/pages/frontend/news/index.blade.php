@@ -63,7 +63,9 @@
                                                     </div>
                                                 @endif
 
-                                                @include('pages.frontend.news._news_items', ['news' => $news])
+                                                @include('pages.frontend.news._news_items', [
+                                                    'news' => $news,
+                                                ])
 
                                             </div>
 
@@ -73,19 +75,19 @@
                                             @endif
                                         </div>
 
-                                        <div data-tabs-content="0" id="events_tab0" role="tabpanel"
-                                            aria-labelledby="tab_0" style="display: none;">
+                                        <div data-tabs-content="0" id="events_tab0" role="tabpanel" aria-labelledby="tab_0"
+                                            style="display: none;">
                                             <div class="news-speeches_wrap items_data"></div>
                                         </div>
 
-                                        <div data-tabs-content="4" id="events_tab4" role="tabpanel"
-                                            aria-labelledby="tab_4" style="display: none;">
+                                        <div data-tabs-content="4" id="events_tab4" role="tabpanel" aria-labelledby="tab_4"
+                                            style="display: none;">
                                             <div class="form-indent"></div>
                                             <div class="news-speeches_wrap items_data"></div>
                                         </div>
 
-                                        <div data-tabs-content="2" id="events_tab2" role="tabpanel"
-                                            aria-labelledby="tab_2" style="display: none;">
+                                        <div data-tabs-content="2" id="events_tab2" role="tabpanel" aria-labelledby="tab_2"
+                                            style="display: none;">
                                             <div class="form-indent"></div>
                                             <div class="news-speeches_wrap items_data"></div>
                                         </div>
@@ -116,17 +118,17 @@
             function getFilters() {
                 let formData = new FormData(filterForm);
                 let search = formData.get('search') || '';
-                return { search };
+                return {
+                    search
+                };
             }
 
-            // On Filter Form submit (for search)
             filterForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                currentPage = 1; // reset to first page
+                currentPage = 1;
                 loadNews(true);
             });
 
-            // Load more button
             if (loadMoreBtn) {
                 loadMoreBtn.addEventListener('click', function() {
                     currentPage++;
@@ -149,13 +151,11 @@
                     .then(response => response.json())
                     .then(data => {
                         if (replace) {
-                            // Replace entire content including featured news
                             newsContainer.innerHTML = data.html;
                         } else {
                             newsContainer.insertAdjacentHTML('beforeend', data.html);
                         }
 
-                        // If no more pages, hide load more button
                         if (currentPage >= {{ $news->lastPage() }}) {
                             loadMoreBtn && (loadMoreBtn.style.display = 'none');
                         } else {

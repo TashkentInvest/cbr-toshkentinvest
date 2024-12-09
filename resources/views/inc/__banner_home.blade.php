@@ -127,7 +127,7 @@
                         <li>
                             <a href="/about_BR/">О нас</a>
                         </li>
-                        <li><a href="/Reception">Контакты</a></li>
+                        <li><a href="{{route('frontend.contact')}}">Контакты</a></li>
                         <li><a href="/faq/">Вопросы и&nbsp;ответы</a></li>
                     </ul>
                 </div>
