@@ -62,13 +62,13 @@
                             </div>
                             <div class="header_right d-none d-md-flex">
                                 <div class="networks header_networks">
-                                    <a class="networks_item _vk" href="https://vk.com/#!" title="ВКонтакте"></a>
+                                    {{-- <a class="networks_item _vk" href="https://vk.com/#!" title="ВКонтакте"></a> --}}
                                     <a class="networks_item _yt" href="https://www.youtube.com/user/#!"
                                         title="Youtube"></a>
                                     <a class="networks_item _tg" href="https://t.me/#!" title="Telegram"></a>
-                                    <a class="networks_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a>
-                                    <a class="networks_item _ok" href="https://ok.ru/group/#!"
-                                        title="Одноклассники"></a>
+                                    {{-- <a class="networks_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a> --}}
+                                    {{-- <a class="networks_item _ok" href="https://ok.ru/group/#!"
+                                        title="Одноклассники"></a> --}}
                                 </div>
                                 <div class="header_lang">
                                     <div class="header_lang_item _active">

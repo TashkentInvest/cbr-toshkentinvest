@@ -90,15 +90,14 @@
         </div>
         <div class="home-main_resources d-none d-md-block">
             <div class="external-resources">
-                <div class="subscribe-block">
-                    <div class="subscribe-block_title">Подписка</div>
-                    <div class="subscribe-block_subtitle">
-                        Новости и обновления сайта
-                    </div>
-                    <a class="btn _medium _outline" href="/news/subscribe">Подписаться</a>
+                <div class="subscribe-block" style="background: url('https://www.spot.uz/media/img/2024/08/0QsMmu17234502958814_l.jpg') no-repeat center center / cover; padding: 20px; color: #fff; text-align: center; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <div class="subscribe-block_title" style="font-size: 24px; font-weight: bold;">Интерактивная карта</div>
+                    <div class="subscribe-block_subtitle" style="font-size: 16px; margin-top: 10px;">Новости и обновления сайта</div>
+                    <a class="btn _medium _outline" target="_blank" href="https://projects.toshkentinvest.uz" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; border: 2px solid #fff; color: #fff; text-decoration: none; background-color: transparent;">Узнать больше</a>
                 </div>
             </div>
         </div>
+        
 
     </div>
 </div>
