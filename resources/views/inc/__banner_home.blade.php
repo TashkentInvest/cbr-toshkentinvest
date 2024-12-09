@@ -125,7 +125,7 @@
                 <div class="col-5">
                     <ul class="without_dash without_indent">
                         <li>
-                            <a href="/about_BR/">О нас</a>
+                            <a href="{{route('frontend.about')}}">О нас</a>
                         </li>
                         <li><a href="{{route('frontend.contact')}}">Контакты</a></li>
                         <li><a href="/faq/">Вопросы и&nbsp;ответы</a></li>

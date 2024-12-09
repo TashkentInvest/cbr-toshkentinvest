@@ -9,7 +9,7 @@
                 <!-- Breadcrumbs -->
                 <div class="breadcrumbs mb-4">
                     <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="/" title="Home"></a></div>
-                    <div class="breadcrumbs_item"><a href="/about_br/">О Нас</a></div>
+                    <div class="breadcrumbs_item"><a href="{{route('frontend.about')}}">О Нас</a></div>
                 </div>
 
                 <!-- Title Section -->
