@@ -167,7 +167,7 @@ Route::prefix('')->name('frontend.')->group(function () {
     // Route::get('/news', [FrontendController::class, 'news'])->name('news'); // +++
 
     Route::get('/contacts', [FrontendController::class, 'contact'])->name('contact'); // +++
-    Route::get('/search', [FrontendController::class, 'search'])->name('search'); // +++
+    Route::get('/search/item', [FrontendController::class, 'search'])->name('search'); // +++
     Route::get('/supervisory-board', [FrontendController::class, 'supervisory_board'])->name('supervisory_board'); // +++
 
 
