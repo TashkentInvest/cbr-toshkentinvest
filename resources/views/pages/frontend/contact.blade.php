@@ -1,28 +1,6 @@
 @extends('layouts.frontend_app')
 @section('frontend_content')
-    <div class="header-print">
-        <div class="offsetMenu">
-            <div class="header-print_inner">
-                <img class="header-print_logo" alt="cbr" src="/common/images/logo.svg">
-                <ul class="header-print_contacts">
-                    <li>Узбекистан, город Ташкент,
-                        улица Ислама Каримова, 51</li>
-                    <li>
-                        <nobr class="phone">8 800 300-30-00</nobr>
-                    </li>
-                    <li>www.cbr.ru</li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
+    
     <main id="content">
         <div class="offsetMenu ">
             <div class="container-fluid">
@@ -39,10 +17,6 @@
                             <nobr class="phone"><a href="tel:+998 71 210 02 61">+998 71 210 02 61</a><br></nobr>
                         </div>
                     </div>
-
-
-
-
 
                     <div class="title-container">
 

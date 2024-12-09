@@ -209,7 +209,7 @@
                                 </div>
 
                                 <div class="rubric_sub"></div>
-                                <a class="rubric_title" href="/faq/ucbr/">Удостоверяющий центр Банка России</a>
+                                <a class="rubric_title" href="#!">Удостоверяющий центр Банка России</a>
                             </div>
                             <div class="rubric" data-faq-indicator="">
                                 <div class="rubric_sub">
