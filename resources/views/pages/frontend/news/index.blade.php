@@ -115,9 +115,9 @@
                                                 </form>
                                             </div>
 
-                                            <div class="news-speeches_wrap items_data">
+                                            <div class="news-speeches_wrap items_data" id="newsContainer">
                                                 @php
-                                                    $latestNews = $news->first(); // Fetch the latest news item
+                                                    $latestNews = $news->first();
                                                 @endphp
 
                                                 @if ($latestNews)
@@ -146,32 +146,14 @@
                                                         </div>
                                                     </div>
                                                 @endif
-                                                @foreach ($news as $item)
-                                                    <div class="news _in-feed col-md-17">
-                                                        <div class="news_inner">
-                                                            <div class="news_text">
-                                                                <div class="news_info">
-                                                                    <div class="news_date">{{ $item->published_at }}</div>
-                                                                    <div class="news_category">
-                                                                        {{ $item->category ?? 'Новость' }}</div>
-                                                                </div>
-                                                                <a class="news_title"
-                                                                    href="{{ route('frontend.news.show', $item->id) }}">
-                                                                    {{ $item->title }}
-                                                                </a>
-                                                            </div>
-                                                            <a target="_blank"
-                                                                href="{{ route('frontend.news.show', $item->id) }}"
-                                                                class="col-md-5 offset-md-1 news_image">
-                                                                <img src="{{ $item->getImagePath() }}"
-                                                                    alt="{{ $item->title }}">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                @endforeach
+
+                                                @include('pages.frontend.news._news_items', ['news' => $news])
+
                                             </div>
-                                            <button id="_buttonLoadNextEvt" class="more-button _small">Загрузить
-                                                еще</button>
+
+                                            @if($news->hasMorePages())
+                                                <button id="_buttonLoadNextEvt" class="more-button _small">Загрузить еще</button>
+                                            @endif
                                         </div>
 
                                         <div data-tabs-content="0" id="events_tab0" role="tabpanel"
@@ -204,3 +186,35 @@
         </div>
     </main>
 @endsection
+
+<script>
+    alert('dwa')
+    document.addEventListener('DOMContentLoaded', function() {
+        let loadMoreBtn = document.getElementById('_buttonLoadNextEvt');
+        if (!loadMoreBtn) return;
+
+        let currentPage = {{ $news->currentPage() }};
+        let lastPage = {{ $news->lastPage() }};
+
+        loadMoreBtn.addEventListener('click', function() {
+            currentPage++;
+            if (currentPage <= lastPage) {
+                fetch('?page=' + currentPage, {
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('newsContainer').insertAdjacentHTML('beforeend', data.html);
+                    if (currentPage >= lastPage) {
+                        loadMoreBtn.style.display = 'none';
+                    }
+                })
+                .catch(error => console.error('Error loading more news:', error));
+            } else {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+    });
+</script>
