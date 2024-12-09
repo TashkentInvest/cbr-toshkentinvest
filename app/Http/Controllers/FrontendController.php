@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index(){
-        return view('pages.frontend.home');
+        $news = News::orderBy('published_at', 'desc')->get();
+
+        return view('pages.frontend.home',compact('news'));
     }
 
     public function rukavodstva(){

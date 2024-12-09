@@ -1,7 +1,6 @@
 @extends('layouts.frontend_app')
 
 @section('frontend_content')
-  
     <main class="home-content" id="content">
         <!--index-->
         <div class="offsetMenu">
@@ -10,58 +9,88 @@
                     <div class="home-main">
                         <div class="home-main_content col-md-16">
                             <div class="col-md-15">
+                                @php
+                                    use Illuminate\Support\Str;
+
+                                    $latestNews = $news->first();
+
+                                    $otherNews = $news->first()->skip(1)->take(5)->get();
+                                @endphp
+
                                 <div class="col-md-15">
                                     <h2 class="home-main_header">
                                         <a href="/news/">Новости</a>
                                     </h2>
                                     <div class="home-main_tabs home-sticky_parent" data-tabs="">
-                                        <div class="home-sticky" data-home-sticky="" style="">
+                                        <div class="home-sticky" data-home-sticky="">
                                             <div class="tabs">
                                                 <a class="tab _active" href="#" data-tabs-tab="100"
                                                     aria-selected="true">Новости</a>
-                        
-                                            
                                             </div>
                                         </div>
                                         <div class="home-sticky_compensation"></div>
 
-                                        <div data-tabs-content="100" style="">
+                                        <div data-tabs-content="100">
                                             <div class="news-speeches_wrap">
                                                 <div id="events_tab100">
-                                                    <div class="news _in-feed col-md-17 _big _white">
-                                                        <div class="news_inner"
-                                                            style="
-                                                                background-image: url({{ asset('assets/frontend/Content/images/hakimyat.png') }});
-                                                                ">
-                                                            <div class="news_text">
-                                                                <div class="news_info">
-                                                                    <div class="news_date">11 октября 2024</div>
-                                                                    <div class="news_category">Новость</div>
-                                                                </div>
-                                                                <a class="news_title" href="/press/event/?id=21080"
-                                                                    target="_blank">Специальная госкомпания станет «мостом»
-                                                                    между хокимиятом Ташкента и бизнесом</a>
-                                                            </div>
-                                                            <a target="_blank" href="/press/event/?id=21080"
-                                                                class="col-md-5 offset-md-1 news_image"><img
-                                                                    src="./Content/images/hakimyat.png"
-                                                                    alt="cropped image" /></a>
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="news _in-feed col-md-17">
-                                                        <div class="news_inner">
-                                                            <div class="news_text">
-                                                                <div class="news_info">
-                                                                    <div class="news_date">07 мая 2024</div>
-                                                                    <div class="news_category">Пресс-релиз</div>
+                                                    @if ($latestNews)
+                                                        <div class="news _in-feed col-md-17 _big _white">
+                                                            <div class="news_inner"
+                                                                style="background-image: url({{ Str::startsWith($latestNews->image, ['http://', 'https://']) ? $latestNews->image : asset($latestNews->image) }});">
+                                                                <div class="news_text">
+                                                                    <div class="news_info">
+                                                                        <div class="news_date">
+                                                                            {{ $latestNews->published_at->format('d F Y') }}
+                                                                        </div>
+                                                                        <div class="news_category">
+                                                                            {{ $latestNews->category ?? 'Новость' }}</div>
+                                                                    </div>
+                                                                    <a class="news_title"
+                                                                        href="{{ route('frontend.news.show', $latestNews->id) }}"
+                                                                        target="_blank">
+                                                                        {{ $latestNews->title }}
+                                                                    </a>
                                                                 </div>
-                                                                <a class="news_title"
-                                                                    href="/press/pr/?file=638634076116259914COINS.htm"
-                                                                    target="_blank">Узбекистана: новые моменты</a>
+                                                                <a target="_blank"
+                                                                    href="{{ route('frontend.news.show', $latestNews->id) }}"
+                                                                    class="col-md-5 offset-md-1 news_image">
+                                                                    <img src="{{ Str::startsWith($latestNews->image, ['http://', 'https://']) ? $latestNews->image : asset($latestNews->image) }}"
+                                                                        alt="{{ $latestNews->title }}" />
+                                                                </a>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    @endif
+
+                                                    @foreach ($otherNews as $item)
+                                                        <div class="news _in-feed col-md-17">
+                                                            <div class="news_inner">
+                                                                <div class="news_text">
+                                                                    <div class="news_info">
+                                                                        <div class="news_date">
+                                                                            {{ $item->published_at->format('d F Y') }}</div>
+                                                                        <div class="news_category">
+                                                                            {{ $item->category ?? 'Новость' }}</div>
+                                                                    </div>
+                                                                    <a class="news_title"
+                                                                        href="{{ route('frontend.news.show', $item->id) }}"
+                                                                        target="_blank">
+                                                                        {{ $item->title }}
+                                                                    </a>
+                                                                </div>
+
+                                                                @if ($item->image)
+                                                                    <a target="_blank"
+                                                                        href="{{ route('frontend.news.show', $item->id) }}"
+                                                                        class="col-md-5 offset-md-1 news_image">
+                                                                        <img src="{{ Str::startsWith($item->image, ['http://', 'https://']) ? $item->image : asset($item->image) }}"
+                                                                            alt="{{ $item->title }}" />
+                                                                    </a>
+                                                                @endif
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
+
                                                 </div>
                                                 <a href="{{ route('frontend.news.index') }}"
                                                     class="more-button _small _home-news">
@@ -69,38 +98,14 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="hide" data-tabs-content="0" style="display: none">
-                                            <div class="news-section_content">
-                                                <div class="news-speeches_wrap">
-                                                    <div id="events_tab0"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hide" data-tabs-content="4" style="display: none">
-                                            <div class="news-speeches_wrap">
-                                                <div id="events_tab4"></div>
-                                            </div>
-                                        </div>
-                                        <div class="hide" data-tabs-content="1" style="display: none">
-                                            <div class="news-speeches_wrap">
-                                                <div id="events_tab1"></div>
-                                            </div>
-                                        </div>
-                                        <div class="hide" data-tabs-content="2" style="display: none">
-                                            <div class="news-speeches_wrap">
-                                                <div id="events_tab2"></div>
-                                            </div>
-                                        </div>
-                                        <div class="hide" data-tabs-content="7" style="display: none">
-                                            <div class="news-section_content">
-                                                <div class="home-previews" id="events_tab7"></div>
-                                            </div>
-                                        </div>
+
+                                    
                                     </div>
                                 </div>
+
                             </div>
                         </div>
-                      @include('inc.__right_aside')
+                        @include('inc.__right_aside')
                     </div>
 
                     <div class="materials">
@@ -111,8 +116,8 @@
                             <div class="materials_nav">
                                 <div class="materials_nav_btn _prev swiper-button-disabled" tabindex="0" role="button"
                                     aria-label="Previous slide" aria-disabled="true"></div>
-                                <div class="materials_nav_btn _next" tabindex="0" role="button"
-                                    aria-label="Next slide" aria-disabled="false"></div>
+                                <div class="materials_nav_btn _next" tabindex="0" role="button" aria-label="Next slide"
+                                    aria-disabled="false"></div>
                             </div>
                         </div>
                         <div class="materials_items">
@@ -150,7 +155,8 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1idn27zGgPK7T-HiBlD5l1MxRmAp4gv75/view"
-                                            data-zoom-title="Решение о первичном выпуске акций" data-zoom-tags=""  target="_blank">
+                                            data-zoom-title="Решение о первичном выпуске акций" data-zoom-tags=""
+                                            target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Решение о первичном выпуске акций
                                             </div>
@@ -163,7 +169,8 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1EYvD3ukqo22A8bgoMmPv-BDiVLEzzxqa/view"
-                                            data-zoom-title="Бухгалтерский баланс — 1 квартал 2024" data-zoom-tags=""  target="_blank">
+                                            data-zoom-title="Бухгалтерский баланс — 1 квартал 2024" data-zoom-tags=""
+                                            target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Бухгалтерский баланс — 1 квартал 2024
                                             </div>
@@ -176,8 +183,8 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1pS0MACr1to93NL53nnVACxwLSejl7jQA/view"
-                                            data-zoom-title="Отчет о финансовых результатах – 1 квартал 2024"  target="_blank"
-                                            data-zoom-tags="">
+                                            data-zoom-title="Отчет о финансовых результатах – 1 квартал 2024"
+                                            target="_blank" data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Отчет о финансовых результатах – 1 квартал 2024
                                             </div>
@@ -190,7 +197,8 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1_lCgKih4Yru3sHmKHIWreB43Uqg_fQXI/view"
-                                            data-zoom-title="Список аффилированных лиц" data-zoom-tags=""  target="_blank">
+                                            data-zoom-title="Список аффилированных лиц" data-zoom-tags=""
+                                            target="_blank">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Список аффилированных лиц
                                             </div>
@@ -229,8 +237,8 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1ruf4z4qfecZDd81yioCkfSkQ2lCATMag/view"
-                                            data-zoom-title="Результаты оценки системы корпоративного управления"  target="_blank"
-                                            data-zoom-tags="">
+                                            data-zoom-title="Результаты оценки системы корпоративного управления"
+                                            target="_blank" data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Результаты оценки системы корпоративного управления
                                             </div>
@@ -259,8 +267,8 @@
                                     <div class="swiper-slide" style="width: 231.25px; margin-right: 50px">
                                         <a class="material material-file pdf-format"
                                             href="https://drive.google.com/file/d/1CJXescFyTKxU5wMSK9c0AtMkkIbm5eoI/view"
-                                            data-zoom-title="Сообщение о принятии рекомендаций Кодекса корпоративного управления в своей деятельности"  target="_blank"
-                                            data-zoom-tags="">
+                                            data-zoom-title="Сообщение о принятии рекомендаций Кодекса корпоративного управления в своей деятельности"
+                                            target="_blank" data-zoom-tags="">
                                             <div class="material_title" data-line-cutter="8" style="position: relative">
                                                 Сообщение о принятии рекомендаций Кодекса корпоративного управления в своей
                                                 деятельности
