@@ -8,7 +8,7 @@
                     <div class="breadcrumbs">
                         <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="/"></a></div>
                         <div class="breadcrumbs_item">
-                            <a href="/about_br/">О Нас</a>
+                            <a href="{{route('frontend.about')}}">О Нас</a>
                         </div>
                     </div>
 
@@ -21,7 +21,7 @@
                             <!-- Members Section -->
                             <div class="persons-container">
                                 <div class="persons">
-                                    <a class="person" href="partners-info.html">
+                                    <a class="person" href="#!">
                                         <img src="{{ asset('assets/frontend/img/dealers/Baxrom.jpg') }}"
                                             alt="Бахром Шакиров" style="width: 320px; height: 400px; object-fit: cover;">
                                         <div class="person_name">Бахром<br>Шакиров</div>
@@ -30,13 +30,13 @@
                                 </div>
 
                                 <div class="persons">
-                                    <a class="person" href="partners-info.html">
+                                    <a class="person" href="#!">
                                         <img src="{{ asset('assets/frontend/img/dealers/Baxtiyor.png') }}"
                                             alt="Бахтиёр Мирзаев" style="width: 320px; height: 400px; object-fit: cover;">
                                         <div class="person_name">Бахтиёр<br>Мирзаев</div>
                                         <div class="person_position">Заместитель председателя правления<br>по финансам</div>
                                     </a>
-                                    <a class="person" href="partners-info.html">
+                                    <a class="person" href="#!">
                                         <img src="{{ asset('assets/frontend/img/dealers/Rustam.png') }}"
                                             alt="Рустам Кодиров" style="width: 320px; height: 400px; object-fit: cover;">
                                         <div class="person_name">Рустам<br>Кодиров</div>
@@ -44,7 +44,7 @@
                                             стратегическому развитию</div>
                                     </a>
 
-                                    <a class="person" href="partners-info.html">
+                                    <a class="person" href="#!">
                                         <img src="{{ asset('assets/frontend/img/dealers/Nargiza.png') }}"
                                             alt="Наргизахон Отахонова"
                                             style="width: 320px; height: 400px; object-fit: cover;">
@@ -53,13 +53,13 @@
                                             проектами</div>
                                     </a>
                                
-                                    <a class="person" href="partners-info.html">
+                                    <a class="person" href="#!">
                                         <img src="{{ asset('assets/frontend/img/dealers/Murat.png') }}" alt="Мурат Бараев"
                                             style="width: 320px; height: 400px; object-fit: cover;">
                                         <div class="person_name">Мурат<br>Бараев</div>
                                         <div class="person_position">Руководитель администрации</div>
                                     </a>
-                                    <a class="person" href="partners-info.html">
+                                    <a class="person" href="#!">
                                         <img src="{{ asset('assets/frontend/img/dealers/Nikita.png') }}" alt="Никита Рябов"
                                             style="width: 320px; height: 400px; object-fit: cover;">
                                         <div class="person_name">Никита<br>Рябов</div>
@@ -67,7 +67,7 @@
                                         </div>
                                     </a>
 
-                                    <a class="person" href="partners-info.html">
+                                    <a class="person" href="#!">
                                         <img src="{{ asset('assets/frontend/img/dealers/Peregudov.png') }}"
                                             alt="Андрей Перегудов" style="width: 320px; height: 400px; object-fit: cover;">
                                         <div class="person_name">Андрей<br>Перегудов</div>
