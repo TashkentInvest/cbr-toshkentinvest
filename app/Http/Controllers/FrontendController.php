@@ -27,19 +27,23 @@ class FrontendController extends Controller
     }
     public function investoram(Request $request, $subcategory = null)
     {
-        // Получаем категорию по slug
+        // Получаем категорию по slug (опционально, если категории есть)
         $category = Category::where('slug', $subcategory)->first();
     
-        // Фильтрация по статусу
+        // Получаем статус из запроса
         $status = $request->status;
     
-        // Выполняем запрос с учетом фильтров
-        $projects = Project::with('category')
-            ->when($status, function ($query, $status) {
-                return $query->where('status', $status);
+        // Выполняем запрос к проектам с учетом фильтров
+        // Поиск по уникальному номеру, району или махалле
+        $projects = Project::when($status, function ($query, $status) {
+                $query->where('status', $status);
             })
             ->when($request->q, function ($query, $search) {
-                return $query->where('name', 'LIKE', '%' . $search . '%');
+                $query->where(function($q) use ($search) {
+                    $q->where('unique_number', 'LIKE', '%' . $search . '%')
+                      ->orWhere('district', 'LIKE', '%' . $search . '%')
+                      ->orWhere('mahalla', 'LIKE', '%' . $search . '%');
+                });
             })
             ->get();
     
