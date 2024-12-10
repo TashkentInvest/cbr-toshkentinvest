@@ -34,8 +34,7 @@ Route::get('/statistics', [HomeController::class, 'statistics'])->name('statisti
 // Web pages
 Route::group(['middleware' => ['auth', 'checkUserRole']], function () {
 
-    Route::resource('categories', CategoryController::class);
-    Route::resource('projects', ProjectController::class);
+
 
     Route::get('/optimize-cache', [HomeController::class, 'optimize'])->name('optimize.command');
 
