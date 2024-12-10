@@ -31,10 +31,11 @@ class ProjectsTableSeeder extends Seeder
             $secondStageDates = $this->parseDateRange($row[5] ?? null);
 
             Project::create([
-                'unique_number' => $row[0] ?? null,
-                'district' => $row[1] ?? null,
-                'mahalla' => $row[2] ?? null,
-                'territory' => isset($row[3]) ? floatval($row[3]) : null,
+                'unique_number' => null,
+                'district' => $row[0] ?? null,
+                'mahalla' => $row[1] ?? null,
+                'land' => $row[2] ?? null,
+                'srok_realizatsi' => isset($row[3]) ? floatval($row[3]) : null,
                 'implementation_period' => isset($row[4]) ? intval($row[4]) : null,
                 'start_date' => $startDates['start_date'],
                 'end_date' => $startDates['end_date'],

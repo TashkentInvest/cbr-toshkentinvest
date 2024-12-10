@@ -19,7 +19,8 @@ class Project extends Model
         'hokim_resolution_no',
         'image',
         'implementation_period',
-        'status'
+        'status',
+        'srok_realizatsi'
     ];
 
     // Relationships

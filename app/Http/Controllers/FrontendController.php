@@ -40,8 +40,7 @@ class FrontendController extends Controller
             })
             ->when($request->q, function ($query, $search) {
                 $query->where(function($q) use ($search) {
-                    $q->where('unique_number', 'LIKE', '%' . $search . '%')
-                      ->orWhere('district', 'LIKE', '%' . $search . '%')
+                    $q->where('district', 'LIKE', '%' . $search . '%')
                       ->orWhere('mahalla', 'LIKE', '%' . $search . '%');
                 });
             })

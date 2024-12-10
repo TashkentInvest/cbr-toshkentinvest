@@ -18,7 +18,8 @@ class CreateProjectsTable extends Migration
             $table->string('unique_number')->nullable();
             $table->string('district')->nullable();
             $table->string('mahalla')->nullable();
-            $table->decimal('territory', 10, 2)->nullable();
+            $table->decimal('srok_realizatsi', 10, 2)->nullable();
+            $table->decimal('land', 10, 2)->nullable();
             $table->integer('implementation_period')->nullable(); // e.g., 36 months
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();

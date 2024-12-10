@@ -28,75 +28,86 @@
                                     <input type="hidden" name="from" value="91954">
                                 </div>
                             </div>
-                            {{-- <div class="filters_wrapper">
-                                <div class="filters">
-                                    <div class="filter">
+                    
+                          
+
+                            <div class="filters_wrapper mb-4">
+                                <div class="filters d-flex justify-content-center flex-wrap">
+                                    <div class="filter mx-2">
                                         <label class="filter_faq-indicator" data-faq-indicator-filter="">
-                                            <input class="filter_faq-indicator-input" type="radio" name="Date"
-                                                checked="checked" value="All">
-                                            <div class="filter_faq-indicator-button">Все</div>
+                                            <input class="filter_faq-indicator-input" type="radio" name="status" 
+                                                onchange="window.location.href='{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '']) }}'" 
+                                                {{ request('status') ? '' : 'checked' }}>
+                                            <div class="filter_faq-indicator-button {{ request('status') ? '' : 'active' }}">Все</div>
                                         </label>
                                     </div>
-                                    <div class="filter">
+                                    <div class="filter mx-2">
                                         <label class="filter_faq-indicator" data-faq-indicator-filter="new">
-                                            <input class="filter_faq-indicator-input" type="radio" name="Date"
-                                                value="New">
-                                            <div class="filter_faq-indicator-button"><span
-                                                    class="faq-indicator-new"></span>Новое</div>
+                                            <input class="filter_faq-indicator-input" type="radio" name="status" 
+                                                onchange="window.location.href='{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '', 'status' => '1_step']) }}'" 
+                                                {{ request('status') == '1_step' ? 'checked' : '' }}>
+                                            <div class="filter_faq-indicator-button {{ request('status') == '1_step' ? 'active' : '' }}">1 Этап</div>
                                         </label>
                                     </div>
-                                    <div class="filter">
+                                    <div class="filter mx-2">
                                         <label class="filter_faq-indicator" data-faq-indicator-filter="update">
-                                            <input class="filter_faq-indicator-input" type="radio" name="Date"
-                                                value="Updated">
-                                            <div class="filter_faq-indicator-button"><span
-                                                    class="faq-indicator-update"></span>Обновлено</div>
+                                            <input class="filter_faq-indicator-input" type="radio" name="status" 
+                                                onchange="window.location.href='{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '', 'status' => '2_step']) }}'" 
+                                                {{ request('status') == '2_step' ? 'checked' : '' }}>
+                                            <div class="filter_faq-indicator-button {{ request('status') == '2_step' ? 'active' : '' }}">2 Этап</div>
+                                        </label>
+                                    </div>
+                                    <div class="filter mx-2">
+                                        <label class="filter_faq-indicator" data-faq-indicator-filter="completed">
+                                            <input class="filter_faq-indicator-input" type="radio" name="status" 
+                                                onchange="window.location.href='{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '', 'status' => 'completed']) }}'" 
+                                                {{ request('status') == 'completed' ? 'checked' : '' }}>
+                                            <div class="filter_faq-indicator-button {{ request('status') == 'completed' ? 'active' : '' }}">Завершено</div>
+                                        </label>
+                                    </div>
+                                    <div class="filter mx-2">
+                                        <label class="filter_faq-indicator" data-faq-indicator-filter="archive">
+                                            <input class="filter_faq-indicator-input" type="radio" name="status" 
+                                                onchange="window.location.href='{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '', 'status' => 'archive']) }}'" 
+                                                {{ request('status') == 'archive' ? 'checked' : '' }}>
+                                            <div class="filter_faq-indicator-button {{ request('status') == 'archive' ? 'active' : '' }}">Архив</div>
                                         </label>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
+
+                            
                         </div>
 
+                        
                     </form>
 
+            
+
+                   
 
                     <div class="rubric-wrap">
                         <h2 class="rubric-title">Рубрикатор</h2>
                         <div class="row-fixed">
                             @if ($projects->count())
                                 @foreach ($projects as $project)
-                                    {{-- <div class="card-body">
-                                    <h5 class="card-title text-primary">
-                                        Проект ID: {{ $project->id }}
-                                    </h5>
-                                    <p class="card-text">
-                                        <strong>Категория:</strong> {{ $project->category->name ?? 'Не указано' }}<br>
-                                        <strong>Район:</strong> {{ $project->district ?? 'Не указано' }}<br>
-                                        <strong>Улица:</strong> {{ $project->street ?? 'Не указано' }}<br>
-                                        <strong>Площадь земли:</strong> {{ $project->land ?? 'Не указано' }} га<br>
-                                        <strong>Период реализации:</strong> {{ $project->implementation_period ?? 'Не указано' }} мес.<br>
-                                        <strong>Статус:</strong>
-                                        <span class="badge 
-                                            {{ $project->status == '1_step' ? 'bg-info' : '' }}
-                                            {{ $project->status == '2_step' ? 'bg-warning' : '' }}
-                                            {{ $project->status == 'completed' ? 'bg-success' : '' }}
-                                            {{ $project->status == 'archive' ? 'bg-secondary' : '' }}">
-                                            {{ $project->status ?? 'Не указано' }}
-                                        </span>
-                                    </p>
-                                </div>
-                             --}}
+                                 
 
                                     <div class="rubric" data-faq-indicator="">
                                         <div class="rubric_sub">
                                             {{ $project->district ?? 'Не указано' }}
-                                            {{ $project->street ?? 'Не указано' }}
+                                            {{ $project->mahalla     ?? 'Не указано' }}
                                             {{ $project->land ?? 'Не указано' }} га
                                         </div>
 
                                         <div class="rubric_sub"></div>
                                         <a class="rubric_title"
-                                            href="/faq/w_fin_sector/">{{ $project->implementation_period ?? 'Не указано' }}</a>
+                                            href="/faq/w_fin_sector/">Первый этап:
+                                            {{ $project->start_date ?? 'Не указано' }} -
+                                            {{ $project->end_date ?? 'Не указано' }}
+                                            <br>Второй этап:
+                                            {{ $project->second_stage_start_date ?? 'Не указано' }} -
+                                            {{ $project->second_stage_end_date ?? 'Не указано' }}</a>
                                     </div>
                                 @endforeach
                             @else
