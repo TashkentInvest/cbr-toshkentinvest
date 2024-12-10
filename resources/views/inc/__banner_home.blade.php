@@ -140,8 +140,12 @@
                             <a href="https://projects.toshkentinvest.uz/" target="_blank">projects.toshkentinvest.uz</a>
                         </li>
                         <li>
-                            <a href="/investoram/">Строительные инвестиционные проекты</a>
+                            <a href="/investoram/stroitelnye-investicionnye-proekty">Строительные инвестиционные проекты</a>
                         </li>
+
+
+           
+                        
                     </ul>
                 </div>
             </div>

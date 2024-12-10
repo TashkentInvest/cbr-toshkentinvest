@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\News;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
-    public function index(){
+    public function index() {
         $news = News::orderBy('published_at', 'desc')->get();
-
-        return view('pages.frontend.home',compact('news'));
+        $subcategory = Category::where('slug', 'stroitelnye-investicionnye-proekty')->first();
+        return view('pages.frontend.home', compact('news','subcategory'));
     }
 
     
@@ -23,8 +25,17 @@ class FrontendController extends Controller
     public function search(){
         return view('pages.frontend.search');
     }
-    public function investoram(){
-        return view('pages.frontend.investoram_org');
+    public function investoram(Request $request, $subcategory = null)
+    {
+        // Retrieve necessary data for the view
+        $category = Category::where('slug', $subcategory)->first();
+        $projects = Project::where('category_id', $category->id ?? null)
+        ->when($request->status, function ($query, $status) {
+            return $query->where('status', $status);
+        })
+        ->get();
+
+        return view('pages.frontend.investoram_org', compact('category', 'projects'));
     }
  
     public function media(){

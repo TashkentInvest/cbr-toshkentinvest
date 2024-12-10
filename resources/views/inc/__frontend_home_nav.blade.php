@@ -20,7 +20,7 @@
                             <div class="d-none d-md-block">
                                 <div class="header_right">
                                     <div class="header_link">
-                                        <a href="/reception/">Интернет-приемная</a>
+                                        <a href="/reception/">Розыгрыш</a>
                                     </div>
                                     <div class="header_lang">
                                         <div class="header_lang_item _active">
@@ -150,7 +150,7 @@
         <div class="menu row" data-tabs="data-tabs">
             <div class="menu_quick col-md-7">
                 <div role="tablist" class="menu_quick_tabs">
-                    <a role="tab" id="menu_tab_Activity" aria-controls="menu_content_Activity"
+                    {{-- <a role="tab" id="menu_tab_Activity" aria-controls="menu_content_Activity"
                         aria-selected="true" class="menu_tab _active" href="#"
                         data-tabs-tab="Activity">Деятельность</a>
 
@@ -160,7 +160,19 @@
                     <a role="tab" id="menu_tab_AboutTashkentInvest"
                         aria-controls="menu_content_AboutTashkentInvest" aria-selected="false" class="menu_tab"
                         href="#" data-tabs-tab="AboutTashkentInvest">Информация о Ташкент Инвест</a>
-                 
+                  --}}
+
+
+                  <a role="tab" 
+                  aria-controls="Наблюдательный совет"class="menu_tab"
+                  href="{{ route('frontend.supervisory_board') }}" >Наблюдательный совет</a>
+
+
+                  <a role="tab" 
+                  aria-controls="Наблюдательный совет" class="menu_tab"
+                  href="{{ route('frontend.rukavodstva') }}">Руководство</a>
+
+
                 </div>
                 <div class="menu_quick_links">
 
@@ -169,10 +181,10 @@
                             61</a><span>круглосуточно</span>
                     </div>
                     <div class="inner_links">
-                        <a href="{{ route('frontend.supervisory_board') }}"
+                        {{-- <a href="{{ route('frontend.supervisory_board') }}"
                             title="Наблюдательный совет">Наблюдательный совет</a>
 
-                        <a href="{{ route('frontend.rukavodstva') }}" title="Руководство">Руководство</a>
+                        <a href="{{ route('frontend.rukavodstva') }}" title="Руководство">Руководство</a> --}}
                         <a href="{{ route('frontend.zakupki.index') }}" title="Закупки">Закупки</a>
 
 
@@ -194,7 +206,7 @@
             <div class="d-md-none link-above">
                 <div class="header_right" data-cms-wholesite-header-right="">
                     <div class="header_link">
-                        <a href="/reception/">Интернет-приемная</a>
+                        <a href="/reception/">Розыгрыш</a>
                     </div>
                     <div class="header_lang">
                         <div class="header_lang_item _active">
@@ -213,7 +225,7 @@
                 </div>
             </div>
 
-            <div role="tabpanel" id="menu_content_Activity" aria-labelledby="menu_tab_Activity"
+            {{-- <div role="tabpanel" id="menu_content_Activity" aria-labelledby="menu_tab_Activity"
                 class="menu_content_container col-md" data-tabs-content="Activity" style="">
                 <div class="menu_content offset-md-1">
                     <ul class="list without_dash">
@@ -258,43 +270,11 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="item row" data-menu-item="" data-catalog-id="15886">
-                            <div class="col-md-1 container_toggle">
-                                <div class="toggle_content_deep" data-menu-item-btn=""></div>
-                            </div>
-                            <a href="/finstab/" class="col-md-15">Финансовая стабильность</a>
-                            <div class="col-md-16">
-                                <div class="row-fixed content_deep">
-                                    <ul class="list_deep col-md-7 offset-md-1">
-                                        <li class="item_deep" data-catalog-id="16152">
-                                            <a href="/finstab/review/" class="">Обзор финансовой
-                                                стабильности</a>
-                                        </li>
-                                        <li class="item_deep" data-catalog-id="15901">
-                                            <a href="/finstab/instruments/" class="">Инструменты</a>
-                                        </li>
-
-                                    </ul>
-                                    <ul class="list_deep col-md-7 offset-md-1">
-                                        <li class="item_deep" data-catalog-id="16463">
-                                            <a href="/finstab/international_activity/" class="">Международная
-                                                деятельность</a>
-                                        </li>
-
-                                        <li class="item_deep" data-catalog-id="21272">
-                                            <a href="/finstab/explain/" class="">Разъяснения</a>
-                                        </li>
-                                        <li class="item_deep" data-catalog-id="21997">
-                                            <a href="/finstab/news/" class="">Новости</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
+                     
 
                     </ul>
                 </div>
-            </div>
+            </div> --}}
 
             <div role="tabpanel" id="menu_content_Documents" aria-labelledby="menu_tab_Documents"
                 class="menu_content_container hidden col-md" data-tabs-content="Documents" style="display: none">

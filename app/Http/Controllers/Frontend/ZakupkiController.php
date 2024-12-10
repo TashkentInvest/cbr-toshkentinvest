@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ZakupkiController extends Controller
@@ -29,6 +30,7 @@ class ZakupkiController extends Controller
 
     public function index()
     {
+     
         return view('pages.frontend.zakupki.index', ['zakupki' => $this->zakupki]);
     }
 

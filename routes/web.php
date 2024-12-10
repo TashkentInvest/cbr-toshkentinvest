@@ -172,7 +172,10 @@ Route::prefix('')->name('frontend.')->group(function () {
 
 
     Route::get('/rukavodstva', [FrontendController::class, 'rukavodstva'])->name('rukavodstva'); // +++
-    Route::get('/investoram', [FrontendController::class, 'investoram'])->name('investoram'); // ---
+
+    // In routes/web.php
+    Route::get('/investoram/{subcategory?}', [FrontendController::class, 'investoram'])->name('investoram');
+
 
 
     // docs

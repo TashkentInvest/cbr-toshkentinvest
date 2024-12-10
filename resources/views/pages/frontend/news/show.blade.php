@@ -25,7 +25,7 @@
 
                     <div class="landing-text">
                         @if ($newsItem->image)
-                            <div class="news-image">
+                            <div class="news-image mb-4">
                                 <img src="{{ $newsItem->getImagePath() }}" alt="{{ $newsItem->title }}" class="img-fluid">
                             </div>
                         @endif
