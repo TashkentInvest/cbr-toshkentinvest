@@ -27,16 +27,25 @@ class FrontendController extends Controller
     }
     public function investoram(Request $request, $subcategory = null)
     {
-        // Retrieve necessary data for the view
+        // Получаем категорию по slug
         $category = Category::where('slug', $subcategory)->first();
-        $projects = Project::where('category_id', $category->id ?? null)
-        ->when($request->status, function ($query, $status) {
-            return $query->where('status', $status);
-        })
-        ->get();
-
+    
+        // Фильтрация по статусу
+        $status = $request->status;
+    
+        // Выполняем запрос с учетом фильтров
+        $projects = Project::with('category')
+            ->when($status, function ($query, $status) {
+                return $query->where('status', $status);
+            })
+            ->when($request->q, function ($query, $search) {
+                return $query->where('name', 'LIKE', '%' . $search . '%');
+            })
+            ->get();
+    
         return view('pages.frontend.investoram_org', compact('category', 'projects'));
     }
+    
  
     public function media(){
         return view('pages.frontend.media');

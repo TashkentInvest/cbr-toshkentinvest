@@ -19,14 +19,12 @@ class CreateProjectsTable extends Migration
             $table->string('district')->nullable();
             $table->string('mahalla')->nullable();
             $table->decimal('territory', 10, 2)->nullable();
+            $table->integer('implementation_period')->nullable(); // e.g., 36 months
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
-            $table->text('participants')->nullable();
-            $table->text('contacts')->nullable();
-            $table->string('bankruptcy_check')->nullable();
-            $table->boolean('protocol_created')->default(false);
-            $table->boolean('protocol_signed')->default(false);
-            $table->text('status')->nullable();
+            $table->date('second_stage_start_date')->nullable();
+            $table->date('second_stage_end_date')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

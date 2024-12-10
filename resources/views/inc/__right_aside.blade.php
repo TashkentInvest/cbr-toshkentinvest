@@ -1,5 +1,5 @@
 @php
-    if (App::isDownForMaintenance()){
+    if (App::isDownForMaintenance()){ //if connection isset
         $response = \Illuminate\Support\Facades\Http::get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
 
           // Check if the request was successful
