@@ -1,0 +1,99 @@
+@extends('layouts.app')
+
+@section('content')
+    <h1>Create Project</h1>
+
+    <form action="{{ route('projects.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+
+        <!-- Unique Number -->
+        <div class="form-group">
+            <label for="unique_number">Unique Number</label>
+            <input type="text" name="unique_number" class="form-control" placeholder="e.g., YUN0001">
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+            <label for="category_id">Category</label>
+            <select name="category_id" class="form-control">
+                <option value="">— Select Category —</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <!-- District -->
+        <div class="form-group">
+            <label for="district">District</label>
+            <input type="text" name="district" class="form-control" placeholder="Enter district" required>
+        </div>
+
+        <!-- Street -->
+        <div class="form-group">
+            <label for="street">Street</label>
+            <input type="text" name="street" class="form-control" placeholder="Enter street">
+        </div>
+
+        <!-- Mahalla Name -->
+        <div class="form-group">
+            <label for="mahalla_name">Mahalla Name</label>
+            <input type="text" name="mahalla_name" class="form-control" placeholder="Enter mahalla name">
+        </div>
+
+        <!-- Land -->
+        <div class="form-group">
+            <label for="land">Land (ha)</label>
+            <input type="number" step="0.01" name="land" class="form-control" placeholder="e.g., 0.12">
+        </div>
+
+        <!-- Investor Initiative Date -->
+        <div class="form-group">
+            <label for="investor_initiative_date">Investor Initiative Date</label>
+            <input type="date" name="investor_initiative_date" class="form-control">
+        </div>
+
+        <!-- Company Name -->
+        <div class="form-group">
+            <label for="company_name">Company Name</label>
+            <input type="text" name="company_name" class="form-control" placeholder="Enter company name">
+        </div>
+
+        <!-- Contact Person -->
+        <div class="form-group">
+            <label for="contact_person">Contact Person</label>
+            <input type="text" name="contact_person" class="form-control" placeholder="Enter contact person">
+        </div>
+
+        <!-- Hokim Resolution Number -->
+        <div class="form-group">
+            <label for="hokim_resolution_no">Hokim Resolution No</label>
+            <input type="text" name="hokim_resolution_no" class="form-control" placeholder="Enter Hokim resolution number">
+        </div>
+
+        <!-- Image -->
+        <div class="form-group">
+            <label for="image">Project Image</label>
+            <input type="file" name="image" class="form-control-file">
+        </div>
+
+        <!-- Implementation Period -->
+        <div class="form-group">
+            <label for="implementation_period">Implementation Period (months)</label>
+            <input type="number" name="implementation_period" class="form-control" placeholder="e.g., 36">
+        </div>
+
+        <!-- Status -->
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select name="status" class="form-control">
+                <option value="step_1">Step 1</option>
+                <option value="step_2">Step 2</option>
+                <option value="archived">Archived</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Create Project</button>
+    </form>
+@endsection

@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProjectDocument extends Model
 {
-    protected $fillable = ['project_id', 'title', 'file_path'];
+    protected $fillable = [
+        'project_id',
+        'title',
+        'file_path'
+    ];
 
     public function project()
     {

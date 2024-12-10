@@ -18,9 +18,13 @@ class DatabaseSeeder extends Seeder
             SystemInitSeeder::class,
             StreetsTableSeeder::class,
             NewsSeeder::class,
-            ProjectQualificationSeeder::class,
             // ProductsTableSeeder::class,
             // ProductSeeder::class,
+
+            CategoriesTableSeeder::class,
+            ProjectsTableSeeder::class,
+            ProjectStagesTableSeeder::class,
+            ProjectDocumentsTableSeeder::class,
 
         ]);
     }

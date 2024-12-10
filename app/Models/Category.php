@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable = ['parent_id', 'name', 'slug'];
+    protected $fillable = ['parent_id','name','slug'];
 
     public function parent()
     {
@@ -23,4 +23,3 @@ class Category extends Model
         return $this->hasMany(Project::class);
     }
 }
-    

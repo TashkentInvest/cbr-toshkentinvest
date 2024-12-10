@@ -22,13 +22,8 @@ class Street extends Model
     }
 
 
-    public function substreets()
+    public function projects()
     {
-        return $this->hasMany(SubStreet::class);
-    }
-
-    public function branches()
-    {
-        return $this->hasMany(Branch::class);
+        return $this->hasMany(Project::class);
     }
 }

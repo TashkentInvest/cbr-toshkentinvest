@@ -20,6 +20,7 @@ class CreateProjectStagesTable extends Migration
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->text('description')->nullable();
+            $table->boolean('protocol_signed')->default(false);
             $table->timestamps();
     
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');

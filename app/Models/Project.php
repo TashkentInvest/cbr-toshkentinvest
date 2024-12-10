@@ -7,10 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     protected $fillable = [
-        'category_id', 'image', 'district_id', 'street_id',
-        'land', 'implementation_period', 'status'
+        'category_id',
+        'unique_number',
+        'district',
+        'street',
+        'mahalla_name',
+        'land',
+        'investor_initiative_date',
+        'company_name',
+        'contact_person',
+        'hokim_resolution_no',
+        'image',
+        'implementation_period',
+        'status'
     ];
 
+    // Relationships
     public function category()
     {
         return $this->belongsTo(Category::class);

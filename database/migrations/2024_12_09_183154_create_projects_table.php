@@ -15,19 +15,29 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
-            $table->string('image')->nullable();
 
-            $table->unsignedBigInteger('district_id');
-            $table->foreign('district_id')->references('id')->on('districts')->onDelete('cascade');
-
-            $table->unsignedBigInteger('street_id')->nullable();
-            $table->decimal('land', 10, 2)->nullable(); // e.g. 1.46
-            $table->integer('implementation_period')->nullable(); // e.g. 36 (months)
-            $table->enum('status', ['step_1', 'step_2', 'archived', 'completed'])->default('step_1');
-            $table->timestamps();
-    
+            // Category (assuming categories table exists)
+            $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+            // Basic info from your table
+            $table->string('unique_number')->nullable();
+            $table->string('district');
+            $table->string('street')->nullable();
+            $table->string('mahalla_name')->nullable();
+            $table->decimal('land', 10, 2)->nullable(); // Territory, га
+            $table->date('investor_initiative_date')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('contact_person')->nullable();
+            $table->string('hokim_resolution_no')->nullable();
+
+            $table->string('image')->nullable();
+            $table->integer('implementation_period')->nullable(); // e.g., 36 (months)
+
+            // Status fields
+            $table->enum('status', ['step_1', 'step_2', 'archived', 'completed'])->default('step_1');
+
+            $table->timestamps();
         });
     }
 

@@ -15,10 +15,12 @@ use App\Http\Controllers\Blade\RoleController;
 use App\Http\Controllers\Blade\UserController;
 use App\Http\Controllers\Blade\ApiUserController;
 use App\Http\Controllers\Blade\PermissionController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Frontend\ZakupkiController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProjectController;
 
 Auth::routes(['register' => false]);
 
@@ -31,6 +33,9 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/statistics', [HomeController::class, 'statistics'])->name('statistics.show');
 // Web pages
 Route::group(['middleware' => ['auth', 'checkUserRole']], function () {
+
+    Route::resource('categories', CategoryController::class);
+    Route::resource('projects', ProjectController::class);
 
     Route::get('/optimize-cache', [HomeController::class, 'optimize'])->name('optimize.command');
 
