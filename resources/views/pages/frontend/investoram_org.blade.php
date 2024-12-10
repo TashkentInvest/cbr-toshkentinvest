@@ -4,7 +4,7 @@
         <div class="offsetMenu">
             <div class="container-fluid">
                 <div class="col-md-23 offset-md-1">
-                    <h1><span class="referenceable">{{ $category->name }}</span></h1>
+                    <h1><span class="referenceable">{{ $category->name ?? ''}}</span></h1>
                     <p>АО «Компания Ташкент Инвест» объявляет конкурс для отбора наилучшего предложения в соответствии с
                         Поставлением Кабинета Министров Республики Узбекистан №149 от 25 марта 2024 года</p>
 
@@ -28,17 +28,17 @@
                     <div class="tabs_wrap mb-4">
                         <div class="tabs">
                             <a class="tab {{ request('status') ? '' : '_active' }}"
-                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug]) }}">Все</a>
+                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '']) }}">Все</a>
                             <a class="tab {{ request('status') == 'step_1' ? '_active' : '' }}"
-                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug, 'status' => 'step_1']) }}">1
+                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '', 'status' => 'step_1']) }}">1
                                 Этап</a>
                             <a class="tab {{ request('status') == 'step_2' ? '_active' : '' }}"
-                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug, 'status' => 'step_2']) }}">2
+                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '', 'status' => 'step_2']) }}">2
                                 Этап</a>
                             <a class="tab {{ request('status') == 'completed' ? '_active' : '' }}"
-                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug, 'status' => 'completed']) }}">Завершено</a>
+                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '', 'status' => 'completed']) }}">Завершено</a>
                             <a class="tab {{ request('status') == 'archived' ? '_active' : '' }}"
-                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug, 'status' => 'archived']) }}">Архив</a>
+                                href="{{ route('frontend.investoram', ['subcategory' => $category->slug ?? '', 'status' => 'archived']) }}">Архив</a>
                         </div>
                     </div>
 

@@ -2,50 +2,75 @@
 
 namespace Database\Seeders;
 
-use App\Models\Project;
 use Illuminate\Database\Seeder;
+use App\Models\Project;
+use Maatwebsite\Excel\Facades\Excel;
+use Carbon\Carbon;
 
 class ProjectsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
-        $projects = [
-            [
-                'unique_number' => 'YUN0001',
-                'category_id' => 1, // Adjust based on your categories
-                'district' => 'Юнусабадский',
-                'street' => 'Кашгар',
-                'mahalla_name' => 'Кашгар',
-                'land' => 0.12,
-                'investor_initiative_date' => '2024-05-16',
-                'company_name' => 'Dream Visualization',
-                'contact_person' => 'Дильноза (77) 777-21-21',
-                'hokim_resolution_no' => '520-14-0-Q/24 от 1 августа 2024',
-                'status' => 'step_1',
-            ],
-            [
-                'unique_number' => 'CHL0001',
-                'category_id' => 1,
-                'district' => 'Чиланзарский',
-                'street' => 'Катта Козиробод',
-                'mahalla_name' => 'Катта Козиробод',
-                'land' => 3.77,
-                'investor_initiative_date' => '2024-05-16',
-                'company_name' => 'Nur Hayat Classics, Isaar Development',
-                'contact_person' => 'Вохиб (93) 001-39-99, Раупжон (77)737-00-40, Сунат (90)957-30-30',
-                'hokim_resolution_no' => '523-14-0-Q/24 от 1 августа 2024',
-                'status' => 'step_1',
-            ],
-            // Add more projects as needed
-        ];
+        $filePath = public_path('storage/renovation1.xlsx'); // Path to the Excel file
 
-        foreach ($projects as $project) {
-            Project::create($project);
+        // Load the Excel file
+        $data = Excel::toArray([], $filePath);
+
+        // Ensure the Excel file is loaded properly
+        if (empty($data) || !isset($data[0])) {
+            $this->command->error("Failed to load data from Excel file: $filePath");
+            return;
         }
+
+        $rows = $data[0]; // First sheet data
+
+        // Skip the header row and process the rest
+        foreach (array_slice($rows, 1) as $row) {
+            // Try to parse dates, or leave them null if parsing fails
+            $startDate = $this->parseDate($row[5] ?? null);
+            $endDate = $this->parseDate($row[6] ?? null);
+
+            Project::create([
+                'unique_number' => $row[0] ?? null,
+                'district' => $row[2] ?? null,
+                'mahalla' => $row[3] ?? null,
+                'territory' => isset($row[4]) ? floatval($row[4]) : null,
+                'start_date' => $startDate,
+                'end_date' => $endDate,
+                'participants' => $row[7] ?? null,
+                'contacts' => $row[8] ?? null,
+                'bankruptcy_check' => $row[9] ?? null,
+                'protocol_created' => $row[10] === '+' ? true : false,
+                'protocol_signed' => $row[11] === '+' ? true : false,
+                'status' => $row[12] ?? null,
+            ]);
+        }
+
+        $this->command->info("Projects table seeded successfully from Excel file!");
+    }
+
+    /**
+     * Parse a date string into a valid Carbon date or return null.
+     *
+     * @param string|null $date
+     * @return string|null
+     */
+    private function parseDate($date)
+    {
+        if (!$date) {
+            return null;
+        }
+
+        $formats = ['d/m/Y', 'm/d/Y', 'Y-m-d']; // Common date formats
+        foreach ($formats as $format) {
+            try {
+                return Carbon::createFromFormat($format, $date)->format('Y-m-d');
+            } catch (\Exception $e) {
+                // Continue to the next format
+            }
+        }
+
+        // Return null if no format matches
+        return null;
     }
 }

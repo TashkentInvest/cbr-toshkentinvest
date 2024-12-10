@@ -1,14 +1,20 @@
 @php
-    // Use the fully qualified class name since 'use' statements are not allowed in Blade templates
-    $response = \Illuminate\Support\Facades\Http::get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
+    if (App::isDownForMaintenance()){
+        $response = \Illuminate\Support\Facades\Http::get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
 
-    // Check if the request was successful
+          // Check if the request was successful
     if ($response->successful()) {
         $exchangeRates = $response->json();
     } else {
         // Handle the error accordingly
         $exchangeRates = [];
     }
+    }
+    else{
+        $response = [];
+        $exchangeRates = [];
+    }
+  
 
     $currencies = ['USD', 'EUR', 'RUB'];
 
