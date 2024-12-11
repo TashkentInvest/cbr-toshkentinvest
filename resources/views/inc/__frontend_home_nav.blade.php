@@ -20,15 +20,16 @@
                             <div class="d-none d-md-block">
                                 <div class="header_right">
                                     <div class="header_link">
-                                        <a href="/reception/">Розыгрыш</a>
+                                        <a href="{{ route('frontend.supervisory_board') }}">Наблюдательный совет</a> <br>
+                                        <a href="{{ route('frontend.rukavodstva') }}">Руководство</a>
                                     </div>
                                     <div class="header_lang">
                                         <div class="header_lang_item _active">
                                             <span><!--noindex-->RU<!--/noindex--></span>
                                         </div>
-                                        <div class="header_lang_item">
+                                        {{-- <div class="header_lang_item">
                                             <a href="#!"><!--noindex-->EN<!--/noindex--></a>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -63,9 +64,10 @@
                             <div class="header_right d-none d-md-flex">
                                 <div class="networks header_networks">
                                     {{-- <a class="networks_item _vk" href="https://vk.com/#!" title="ВКонтакте"></a> --}}
-                                    <a class="networks_item _yt" href="https://www.youtube.com/user/#!"
+                                    <a class="networks_item _yt" href="https://www.youtube.com/@ToshkentInvest_uz"
                                         title="Youtube"></a>
-                                    <a class="networks_item _tg" href="https://t.me/#!" title="Telegram"></a>
+                                    <a class="networks_item _tg" href="https://t.me/Toshkentinvestuz"
+                                        title="Telegram"></a>
                                     {{-- <a class="networks_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a> --}}
                                     {{-- <a class="networks_item _ok" href="https://ok.ru/group/#!"
                                         title="Одноклассники"></a> --}}
@@ -74,10 +76,10 @@
                                     <div class="header_lang_item _active">
                                         <span><!--noindex-->RU<!--/noindex--></span>
                                     </div>
-                                    <div class="header_lang_item">
+                                    {{-- <div class="header_lang_item">
                                         <a
                                             href="/Localization/SwitchLanguage?url=%2F&amp;from=ru-RU&amp;to=en-CB"><!--noindex-->EN<!--/noindex--></a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -163,14 +165,12 @@
                   --}}
 
 
-                  <a role="tab" 
-                  aria-controls="Наблюдательный совет"class="menu_tab"
-                  href="{{ route('frontend.supervisory_board') }}" >Наблюдательный совет</a>
+                    <a role="tab" aria-controls="Наблюдательный совет"class="menu_tab"
+                        href="{{ route('frontend.supervisory_board') }}">Наблюдательный совет</a>
 
 
-                  <a role="tab" 
-                  aria-controls="Наблюдательный совет" class="menu_tab"
-                  href="{{ route('frontend.rukavodstva') }}">Руководство</a>
+                    <a role="tab" aria-controls="Наблюдательный совет" class="menu_tab"
+                        href="{{ route('frontend.rukavodstva') }}">Руководство</a>
 
 
                 </div>
@@ -192,12 +192,13 @@
                         <a href="{{ route('frontend.contact') }}" title="Контактная информация">Контактная
                             информация</a>
 
-                        <a href="{{route('frontend.about')}}" title="О Нас">О Нас</a>
+                        <a href="{{ route('frontend.about') }}" title="О Нас">О Нас</a>
                     </div>
                     <div class="networks-circle">
                         {{-- <a class="networks-circle_item _vk" href="https://vk.com/#!"></a> --}}
-                        <a class="networks-circle_item _yt" href="https://www.youtube.com/user/#!"></a>
-                        <a class="networks-circle_item _tg" href="https://t.me/#!" title="Telegram"></a>
+                        <a class="networks-circle_item _yt" href="https://www.youtube.com/@ToshkentInvest_uz"></a>
+                        <a class="networks-circle_item _tg" href="https://t.me/Toshkentinvestuz"
+                            title="Telegram"></a>
                         {{-- <a class="networks-circle_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a>
                         <a class="networks-circle_item _ok" href="https://ok.ru/group/#!" title="Одноклассники"></a> --}}
                     </div>
@@ -206,110 +207,32 @@
             <div class="d-md-none link-above">
                 <div class="header_right" data-cms-wholesite-header-right="">
                     <div class="header_link">
-                        <a href="/reception/">Розыгрыш</a>
+                        <a href="{{ route('frontend.supervisory_board') }}">Наблюдательный совет</a>
+                        <a href="{{ route('frontend.rukavodstva') }}">Руководство</a>
                     </div>
                     <div class="header_lang">
                         <div class="header_lang_item _active">
                             <span><!--noindex-->RU<!--/noindex--></span>
                         </div>
-                        <div class="header_lang_item">
+                        {{-- <div class="header_lang_item">
                             <a
                                 href="/Localization/SwitchLanguage?url=%2F&amp;from=ru-RU&amp;to=en-CB"><!--noindex-->EN<!--/noindex--></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="header_right">
                     <div class="header_link">
-                        <a href="/fmp_check/">Проверить участника финансового рынка</a>
+
+
+                        {{-- <a href="/fmp_check/">Проверить участника финансового рынка</a> --}}
                     </div>
                 </div>
             </div>
 
-            {{-- <div role="tabpanel" id="menu_content_Activity" aria-labelledby="menu_tab_Activity"
-                class="menu_content_container col-md" data-tabs-content="Activity" style="">
-                <div class="menu_content offset-md-1">
-                    <ul class="list without_dash">
-                        <li class="item row" data-menu-item="" data-catalog-id="15917">
-                            <div class="col-md-1 container_toggle">
-                                <div class="toggle_content_deep" data-menu-item-btn=""></div>
-                            </div>
-                            <a href="/dkp/" class="col-md-15">Денежно-кредитная политика</a>
-                            <div class="col-md-16">
-                                <div class="row-fixed content_deep">
-                                    <ul class="list_deep col-md-7 offset-md-1">
-                                        <li class="item_deep" data-catalog-id="16458">
-                                            <a href="/dkp/objective_and_principles/" class="">Цели
-                                                и&nbsp;принципы денежно-кредитной политики</a>
-                                        </li>
-                                        <li class="item_deep" data-catalog-id="16208">
-                                            <a href="/dkp/about_inflation/" class="">Что&nbsp;такое инфляция</a>
-                                        </li>
 
-                                    </ul>
-                                    <ul class="list_deep col-md-7 offset-md-1">
 
-                                        <li class="item_deep" data-catalog-id="22176">
-                                            <a href="/dkp/mp/" class="">Мониторинг предприятий</a>
-                                        </li>
-                                        <li class="item_deep" data-catalog-id="16216">
-                                            <a href="/dkp/statistics/" class="">Статистика</a>
-                                        </li>
 
-                                        <li class="item_deep" data-catalog-id="15944">
-                                            <a href="/dkp/faq/" class="">Вопросы и&nbsp;ответы</a>
-                                        </li>
-                                        <li class="item_deep" data-catalog-id="15939">
-                                            <a href="/dkp/news/" class="">Новости</a>
-                                        </li>
-                                        <li class="item_deep" data-catalog-id="15939">
-                                            <a href="{{ route('frontend.supervisory_board') }}"
-                                                title="Наблюдательный совет">Наблюдательный совет</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                     
-
-                    </ul>
-                </div>
-            </div> --}}
-
-            <div role="tabpanel" id="menu_content_Documents" aria-labelledby="menu_tab_Documents"
-                class="menu_content_container hidden col-md" data-tabs-content="Documents" style="display: none">
-                <div class="menu_content offset-md-1">
-                    <ul class="list without_dash">
-                        <li class="item row" data-menu-item="" data-catalog-id="19457">
-                            <div class="col-md-1 container_toggle"></div>
-                            <a href="/key-indicators/" class="col-md-15">Ключевые показатели</a>
-                        </li>
-                        <li class="item row" data-menu-item="" data-catalog-id="21269">
-                            <div class="col-md-1 container_toggle"></div>
-                            <a href="/params/" class="col-md-15">Параметры операций Банка Узбекистана</a>
-                        </li>
-                    </ul>
-
-                    <ul class="list without_dash">
-                        <li class="item row" data-menu-item="" data-catalog-id="16628">
-                            <div class="col-md-1 container_toggle"></div>
-                            <a href="/statistics/" class="col-md-15">Статистика</a>
-                        </li>
-                        <li class="item row" data-menu-item="" data-catalog-id="16629">
-                            <div class="col-md-1 container_toggle"></div>
-                            <a href="/analytics/" class="col-md-15">Аналитика</a>
-                        </li>
-                    </ul>
-
-                    <ul class="list without_dash">
-                        <li class="item row" data-menu-item="" data-catalog-id="16634">
-                            <div class="col-md-1 container_toggle"></div>
-                            <a href="/archive/" class="col-md-15">Архив</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div role="tabpanel" id="menu_content_AboutTashkentInvest" aria-labelledby="menu_tab_AboutTashkentInvest"
+            {{-- <div role="tabpanel" id="menu_content_AboutTashkentInvest" aria-labelledby="menu_tab_AboutTashkentInvest"
                 class="menu_content_container hidden col-md" data-tabs-content="AboutTashkentInvest"
                 style="display: none">
                 <div class="menu_content offset-md-1">
@@ -354,8 +277,8 @@
                         </ul>
                     </ul>
                 </div>
-            </div>
-         
+            </div> --}}
+
         </div>
     </div>
 </div>

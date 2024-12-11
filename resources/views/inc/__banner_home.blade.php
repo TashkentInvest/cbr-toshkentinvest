@@ -127,8 +127,8 @@
                         <li>
                             <a href="{{route('frontend.about')}}">О нас</a>
                         </li>
+                        <li><a href="{{route('frontend.news.index')}}">Новости</a></li>
                         <li><a href="{{route('frontend.contact')}}">Контакты</a></li>
-                        <li><a href="/faq/">Вопросы и&nbsp;ответы</a></li>
                     </ul>
                 </div>
                 <div class="col-7 offset-1">
