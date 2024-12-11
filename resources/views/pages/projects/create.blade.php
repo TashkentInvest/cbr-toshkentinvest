@@ -72,6 +72,26 @@
                 placeholder="Enter Hokim resolution number">
         </div>
 
+        <div class="form-group mb-3">
+            <label for="start_date">Start Date</label>
+            <input type="date" name="start_date" class="form-control" value="{{ old('start_date') }}" placeholder="Enter start date">
+        </div>
+        
+        <div class="form-group mb-3">
+            <label for="end_date">End Date</label>
+            <input type="date" name="end_date" class="form-control" value="{{ old('end_date') }}" placeholder="Enter end date">
+        </div>
+        
+        <div class="form-group mb-3">
+            <label for="second_stage_start_date">Second Stage Start Date</label>
+            <input type="date" name="second_stage_start_date" class="form-control" value="{{ old('second_stage_start_date') }}" placeholder="Enter second stage start date">
+        </div>
+        
+        <div class="form-group mb-3">
+            <label for="second_stage_end_date">Second Stage End Date</label>
+            <input type="date" name="second_stage_end_date" class="form-control" value="{{ old('second_stage_end_date') }}" placeholder="Enter second stage end date">
+        </div>
+        
         <!-- Image -->
         
         <div class="form-group mb-3">
@@ -88,6 +108,8 @@
             <label for="qoshimcha_fayl">Qoshimcha Image</label>
             <input type="file" name="qoshimcha_fayl" class="form-control-file">
         </div>
+
+
 
         <!-- Implementation Period -->
         <div class="form-group mb-3">

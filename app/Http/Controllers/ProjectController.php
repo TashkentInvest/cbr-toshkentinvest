@@ -42,7 +42,11 @@ class ProjectController extends Controller
             'qoshimcha_fayl' => 'nullable',
             'implementation_period' => 'nullable|integer',
             'status' => 'required|in:step_1,step_2,archived,completed',
-            'srok_realizatsi' => 'nullable|integer'
+            'srok_realizatsi' => 'nullable|integer',
+            'start_date' => 'nullable',
+            'end_date' => 'nullable',
+            'second_stage_start_date' => 'nullable',
+            'second_stage_end_date' => 'nullable',
         ]);
 
         $data = $request->all();
@@ -91,7 +95,11 @@ class ProjectController extends Controller
             'qoshimcha_fayl' => 'nullable',
             'implementation_period' => 'nullable|integer',
             'status' => 'required|in:step_1,step_2,archived,completed',
-            'srok_realizatsi' => 'nullable|integer'
+            'srok_realizatsi' => 'nullable|integer',
+            'start_date' => 'nullable',
+            'end_date' => 'nullable',
+            'second_stage_start_date' => 'nullable',
+            'second_stage_end_date' => 'nullable',
         ]);
 
         $data = $request->all();
