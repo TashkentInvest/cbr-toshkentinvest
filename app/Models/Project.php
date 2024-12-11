@@ -17,22 +17,18 @@ class Project extends Model
         'image',
         'implementation_period',
         'status',
-        'srok_realizatsi'
+        'srok_realizatsi',
+        'start_date',
+        'end_date',
+        'second_stage_start_date',
+        'second_stage_end_date',
+        'investor_initiative_date',
+        'company_name',
+        'hokim_resolution_no',
     ];
 
-    // Relationships
     public function category()
     {
         return $this->belongsTo(Category::class);
-    }
-
-    public function stages()
-    {
-        return $this->hasMany(ProjectStage::class);
-    }
-
-    public function documents()
-    {
-        return $this->hasMany(ProjectDocument::class);
     }
 }

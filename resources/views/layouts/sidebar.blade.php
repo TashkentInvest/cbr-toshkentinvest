@@ -53,7 +53,7 @@
                         </li>
 
                         <li class="pc-item">
-                            <a class="pc-link" href="{{ route('projectsIndex') }}">
+                            <a class="pc-link" href="{{ route('projects.index') }}">
                                 Investorlar uchun
                             </a>
                             

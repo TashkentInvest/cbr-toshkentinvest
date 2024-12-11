@@ -11,24 +11,29 @@ class ProjectsTableSeeder extends Seeder
 {
     public function run()
     {
-        $filePath = public_path('storage/Renovatsiya_posts.xlsx'); // Path to the Excel file
+        $filePath = public_path('storage/Renovatsiya_posts.xlsx'); // Update path if needed
 
-        // Load the Excel file
+        // Load the Excel file into an array
         $data = Excel::toArray([], $filePath);
 
-        // Ensure the Excel file is loaded properly
         if (empty($data) || !isset($data[0])) {
             $this->command->error("Failed to load data from Excel file: $filePath");
             return;
         }
 
-        $rows = $data[0]; // First sheet data
+        $rows = $data[0]; // Take the first sheet's data
 
-        // Skip the header row and process the rest
+        // Assuming the first row is a header row, we skip it
         foreach (array_slice($rows, 1) as $row) {
-            // Parse date ranges for start and end dates
+            // Parse the first and second stage date ranges
             $startDates = $this->parseDateRange($row[4] ?? null);
             $secondStageDates = $this->parseDateRange($row[5] ?? null);
+
+            // Map the status from Excel to a valid enum value if needed
+            $statusValue = $row[6] ?? null;
+            if ($statusValue === '1_step') {
+                $statusValue = 'step_1';
+            }
 
             Project::create([
                 'unique_number' => null,
@@ -36,12 +41,13 @@ class ProjectsTableSeeder extends Seeder
                 'mahalla' => $row[1] ?? null,
                 'land' => $row[2] ?? null,
                 'srok_realizatsi' => isset($row[3]) ? floatval($row[3]) : null,
-                'implementation_period' => isset($row[4]) ? intval($row[4]) : null,
+                // Set implementation_period to null or derive if needed
+                'implementation_period' => null,
                 'start_date' => $startDates['start_date'],
                 'end_date' => $startDates['end_date'],
                 'second_stage_start_date' => $secondStageDates['start_date'],
                 'second_stage_end_date' => $secondStageDates['end_date'],
-                'status' => $row[6] ?? null,
+                'status' => $statusValue,
             ]);
         }
 
@@ -63,8 +69,12 @@ class ProjectsTableSeeder extends Seeder
         $dates = explode(' - ', $dateRange);
 
         try {
-            $startDate = isset($dates[0]) ? Carbon::createFromFormat('d.m.Y', trim($dates[0]))->format('Y-m-d') : null;
-            $endDate = isset($dates[1]) ? Carbon::createFromFormat('d.m.Y', trim($dates[1]))->format('Y-m-d') : null;
+            $startDate = isset($dates[0]) 
+                ? Carbon::createFromFormat('d.m.Y', trim($dates[0]))->format('Y-m-d') 
+                : null;
+            $endDate = isset($dates[1]) 
+                ? Carbon::createFromFormat('d.m.Y', trim($dates[1]))->format('Y-m-d') 
+                : null;
         } catch (\Exception $e) {
             $startDate = null;
             $endDate = null;

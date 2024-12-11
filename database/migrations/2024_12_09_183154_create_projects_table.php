@@ -15,25 +15,29 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-
             $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-
-
             $table->string('unique_number')->nullable();
-            $table->string('district')->nullable();
+            $table->string('district')->nullable(false);
             $table->string('street')->nullable();
-            $table->string('contact_person')->nullable();
             $table->string('mahalla')->nullable();
-            $table->decimal('srok_realizatsi', 10, 2)->nullable();
             $table->decimal('land', 10, 2)->nullable();
-            $table->integer('implementation_period')->nullable(); // e.g., 36 months
+            $table->date('investor_initiative_date')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('contact_person')->nullable();
+            $table->string('hokim_resolution_no')->nullable();
+            $table->string('image')->nullable();
+            $table->integer('implementation_period')->nullable();
+            $table->string('status')->default('step_1');
+            $table->integer('srok_realizatsi')->nullable(); // If needed
+
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->date('second_stage_start_date')->nullable();
             $table->date('second_stage_end_date')->nullable();
-            $table->string('status')->nullable();
+
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');
         });
     }
 
