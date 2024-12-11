@@ -41,8 +41,8 @@
 
         <!-- Mahalla Name -->
         <div class="form-group">
-            <label for="mahalla_name">Mahalla Name</label>
-            <input type="text" name="mahalla_name" class="form-control" value="{{ $project->mahalla_name }}" placeholder="Enter mahalla name">
+            <label for="mahalla">Mahalla Name</label>
+            <input type="text" name="mahalla" class="form-control" value="{{ $project->mahalla }}" placeholder="Enter mahalla name">
         </div>
 
         <!-- Land -->

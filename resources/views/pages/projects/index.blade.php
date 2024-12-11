@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Loyihalar</h1>
-    <a href="{{ route('projectsIndex') }}" class="btn btn-primary mb-3">Loyiha yaratish</a>
+    <a href="{{ route('projectsCreate') }}" class="btn btn-primary mb-3">Loyiha yaratish</a>
 
     <table class="table table-bordered">
         <thead>
@@ -12,7 +12,6 @@
                 <th>Mahalla</th>
                 <th>Yer maydoni (ga)</th>
                 <th>Realizatisiya muddati</th>
-                <th>Kompaniya</th>
                 <th>Holati</th>
                 <th>Harakatlar</th>
             </tr>
@@ -25,7 +24,6 @@
                     <td>{{ $project->mahalla }}</td>
                     <td>{{ $project->land }}</td>
                     <td>{{ $project->srok_realizatsi ?? ''}}</td>
-                    <td>{{ $project->company_name }}</td>
                     <td>{{ $project->status }}</td>
                     <td>
                         <a href="{{ route('projectsEdit', $project->id) }}" class="btn btn-sm btn-warning">Tahrirlash</a>

@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <h1>Create Project</h1>
 
-    <form action="{{ route('projects.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('projectsStore') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <!-- Unique Number -->
@@ -37,8 +37,8 @@
 
         <!-- Mahalla Name -->
         <div class="form-group">
-            <label for="mahalla_name">Mahalla Name</label>
-            <input type="text" name="mahalla_name" class="form-control" placeholder="Enter mahalla name">
+            <label for="mahalla">Mahalla Name</label>
+            <input type="text" name="mahalla" class="form-control" placeholder="Enter mahalla name">
         </div>
 
         <!-- Land -->

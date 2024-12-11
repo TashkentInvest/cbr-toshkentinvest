@@ -53,8 +53,8 @@ Route::group(['middleware' => ['auth', 'checkUserRole']], function () {
 
     Route::prefix('projects')->group(function () {
         Route::get('/', [ProjectController::class, 'index'])->name('projectsIndex');
-        Route::get('/add', [ProjectController::class, 'add'])->name('projectsAdd');
-        Route::post('/create', [ProjectController::class, 'create'])->name('projectsCreate');
+        Route::get('/create', [ProjectController::class, 'create'])->name('projectsCreate');
+        Route::post('/store', [ProjectController::class, 'store'])->name('projectsStore');
         Route::get('/{id}/edit', [ProjectController::class, 'edit'])->name('projectsEdit');
         Route::post('/update/{id}', [ProjectController::class, 'update'])->name('projectsUpdate');
         Route::delete('/delete/{id}', [ProjectController::class, 'destroy'])->name('projectsDestroy');

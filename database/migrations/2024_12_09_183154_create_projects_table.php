@@ -15,8 +15,15 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+
             $table->string('unique_number')->nullable();
             $table->string('district')->nullable();
+            $table->string('street')->nullable();
+            $table->string('contact_person')->nullable();
             $table->string('mahalla')->nullable();
             $table->decimal('srok_realizatsi', 10, 2)->nullable();
             $table->decimal('land', 10, 2)->nullable();
