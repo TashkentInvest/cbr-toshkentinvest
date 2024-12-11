@@ -27,10 +27,19 @@
                     <td>{{ $project->srok_realizatsi ?? '' }}</td>
                     <td>{{ $project->status }}</td>
                     <td>
-                        <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->elon_fayl) }}">E'lon</a>
-                        <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->pratakol_fayl) }}">Pratokol</a>
-                        <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->qoshimcha_fayl) }}">Qoshimcha</a>
+                        @if($project->elon_fayl && file_exists(public_path('storage/' . $project->elon_fayl)))
+                            <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->elon_fayl) }}">E'lon</a>
+                        @endif
+                    
+                        @if($project->pratakol_fayl && file_exists(public_path('storage/' . $project->pratakol_fayl)))
+                            <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->pratakol_fayl) }}">Pratokol</a>
+                        @endif
+                    
+                        @if($project->qoshimcha_fayl && file_exists(public_path('storage/' . $project->qoshimcha_fayl)))
+                            <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->qoshimcha_fayl) }}">Qoshimcha</a>
+                        @endif
                     </td>
+                    
                     <td>
                         <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         <form action="{{ route('projects.destroy', $project->id) }}" method="POST" style="display:inline-block;">
