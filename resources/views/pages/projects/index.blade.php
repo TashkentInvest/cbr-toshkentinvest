@@ -13,6 +13,7 @@
                 <th>Land (ha)</th>
                 <th>Realizatsiya muddati</th>
                 <th>Status</th>
+                <th>Fayllar</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -25,6 +26,9 @@
                     <td>{{ $project->land }}</td>
                     <td>{{ $project->srok_realizatsi ?? '' }}</td>
                     <td>{{ $project->status }}</td>
+                    <td>
+                        <a class="btn btn-sm" href="{{ asset('storage/' . $project->elon_fayl) }}">E'lon</a>
+                    </td>
                     <td>
                         <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning">Edit</a>
                         <form action="{{ route('projects.destroy', $project->id) }}" method="POST" style="display:inline-block;">

@@ -117,7 +117,7 @@ class ProjectController extends Controller
             if ($project->qoshimcha_fayl) {
                 Storage::disk('public')->delete($project->qoshimcha_fayl);
             }
-            $data['qoshimcha_fayl'] = $request->file('image')->store('project_images/qoshimcha', 'public');
+            $data['qoshimcha_fayl'] = $request->file('qoshimcha_fayl')->store('project_images/qoshimcha', 'public');
         }
 
         $project->update($data);
