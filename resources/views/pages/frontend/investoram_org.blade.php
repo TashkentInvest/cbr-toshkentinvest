@@ -158,18 +158,13 @@
                         @if ($projects->count())
                             @foreach ($projects as $project)
                                 <div class="rubric" data-faq-indicator="">
-                                      {{-- <a class="rubric_title">
-                                        Первый этап: {{ $project->start_date ?? 'Не указано' }} -
-                                        {{ $project->end_date ?? 'Не указано' }}<br>
-                                        Второй этап: {{ $project->second_stage_start_date ?? 'Не указано' }} -
-                                        {{ $project->second_stage_end_date ?? 'Не указано' }}
-                                    </a> --}}
-                                    <div class="rubric_sub ">
-                                        <strong>Район:</strong> {{ $project->district ?? 'Не указано' }}<br>
-                                        <strong>Махалля:</strong> {{ $project->mahalla ?? 'Не указано' }}<br>
-                                        <strong>Площадь:</strong> {{ $project->land ?? 'Не указано' }} га
-                                    </div>
-                                    <a class="rubric_title">
+                                      <a class="rubric_title">
+                                        Район: {{ $project->district ?? 'Не указано' }} <br>
+                                        Махалля: {{ $project->mahalla ?? 'Не указано' }} <br>
+                                        Площадь: {{ $project->land ?? 'Не указано' }} <br>
+                                    </a>
+                                   
+                                    <a class="rubric_sub">
                                         Первый этап: {{ $project->start_date ?? 'Не указано' }} -
                                         {{ $project->end_date ?? 'Не указано' }}<br>
                                         Второй этап: {{ $project->second_stage_start_date ?? 'Не указано' }} -
