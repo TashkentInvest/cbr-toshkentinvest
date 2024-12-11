@@ -1,11 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <h1>Edit Project</h1>
 
-    <form action="{{ route('projects.update', $project->id) }}" method="POST" enctype="multipart/form-data">
+    {{-- @dd($project->id) --}}
+    <form action="{{ route('projectsUpdate', $project->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
-        @method('PUT')
+        {{-- @method('POST') --}}
 
         <!-- Unique Number -->
         <div class="form-group">

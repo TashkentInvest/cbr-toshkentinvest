@@ -11,7 +11,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::with('category')->get();
-        return view('projects.index', compact('projects'));
+        return view('pages.projects.index', compact('projects'));
     }
 
     // Show the form for creating a new project
@@ -53,10 +53,11 @@ class ProjectController extends Controller
     }
 
     // Show the form for editing the specified project
-    public function edit(Project $project)
+    public function edit(Project $project, $id)
     {
         $categories = Category::all();
-        return view('projects.edit', compact('project', 'categories'));
+        $project = Project::find($id);
+        return view('pages.projects.edit', compact('project', 'categories'));
     }
 
     // Update the specified project in storage
@@ -91,7 +92,7 @@ class ProjectController extends Controller
 
         $project->update($data);
 
-        return redirect()->route('projects.index')->with('success', 'Project updated successfully.');
+        return redirect()->route('projectsIndex')->with('success', 'Project updated successfully.');
     }
 
     // Remove the specified project from storage

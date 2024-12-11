@@ -44,13 +44,21 @@ Route::group(['middleware' => ['auth', 'checkUserRole']], function () {
     Route::post('products', [ProductController::class, 'store'])->name('products.store');
 
     Route::get('products/add', [ProductController::class, 'add'])->name('productAdd');
-
     Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
     Route::get('products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
     Route::put('products/{product}', [ProductController::class, 'update'])->name('products.update');
     Route::delete('products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
     Route::post('products/check-yer-uchastkasi-uniq', [ProductController::class, 'checkYerUchastkasiUniq'])->name('products.checkYerUchastkasiUniq');
 
+
+    Route::prefix('projects')->group(function () {
+        Route::get('/', [ProjectController::class, 'index'])->name('projectsIndex');
+        Route::get('/add', [ProjectController::class, 'add'])->name('projectsAdd');
+        Route::post('/create', [ProjectController::class, 'create'])->name('projectsCreate');
+        Route::get('/{id}/edit', [ProjectController::class, 'edit'])->name('projectsEdit');
+        Route::post('/update/{id}', [ProjectController::class, 'update'])->name('projectsUpdate');
+        Route::delete('/delete/{id}', [ProjectController::class, 'destroy'])->name('projectsDestroy');
+    });
 
     // Permissions
     Route::prefix('permissions')->group(function () {

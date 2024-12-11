@@ -1,21 +1,21 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-    <h1>Projects</h1>
-    <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">Create Project</a>
+    <h1>Loyihalar</h1>
+    <a href="{{ route('projectsIndex') }}" class="btn btn-primary mb-3">Loyiha yaratish</a>
 
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Unique Number</th>
-                <th>Category</th>
-                <th>District</th>
-                <th>Street</th>
+                <th>Yagona raqam</th>
+                <th>Kategoriya</th>
+                <th>Tuman</th>
+                <th>Ko‘cha</th>
                 <th>Mahalla</th>
-                <th>Land (ha)</th>
-                <th>Company</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>Yer maydoni (ga)</th>
+                <th>Kompaniya</th>
+                <th>Holati</th>
+                <th>Harakatlar</th>
             </tr>
         </thead>
         <tbody>
@@ -30,11 +30,11 @@
                     <td>{{ $project->company_name }}</td>
                     <td>{{ $project->status }}</td>
                     <td>
-                        <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                        <form action="{{ route('projects.destroy', $project->id) }}" method="POST" style="display:inline-block;">
+                        <a href="{{ route('projectsEdit', $project->id) }}" class="btn btn-sm btn-warning">Tahrirlash</a>
+                        <form action="{{ route('projectsDestroy', $project->id) }}" method="POST" style="display:inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Aniq o‘chirasizmi?')">O‘chirish</button>
                         </form>
                     </td>
                 </tr>
