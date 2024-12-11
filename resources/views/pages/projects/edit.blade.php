@@ -75,13 +75,34 @@
 
         <!-- Image -->
         <div class="form-group mb-3">
-            <label for="image">Project Image</label>
-            @if($project->image)
+            <label for="elon_fayl">Project Image</label>
+            @if($project->elon_fayl)
                 <div class="mb-2">
-                    <img src="{{ asset('storage/' . $project->image) }}" alt="Project Image" width="200">
+                    <img src="{{ asset('storage/' . $project->elon_fayl) }}" alt="Project Image" width="200">
                 </div>
             @endif
-            <input type="file" name="image" class="form-control-file">
+            <input type="file" name="elon_fayl" class="form-control-file">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="pratakol_fayl">Project Image</label>
+            @if($project->pratakol_fayl)
+                <div class="mb-2">
+                    <img src="{{ asset('storage/' . $project->pratakol_fayl) }}" alt="Project Image" width="200">
+                </div>
+            @endif
+            <input type="file" name="pratakol_fayl" class="form-control-file">
+        </div>
+
+
+        <div class="form-group mb-3">
+            <label for="qoshimcha_fayl">Project Image</label>
+            @if($project->qoshimcha_fayl)
+                <div class="mb-2">
+                    <img src="{{ asset('storage/' . $project->qoshimcha_fayl) }}" alt="Project Image" width="200">
+                </div>
+            @endif
+            <input type="file" name="qoshimcha_fayl" class="form-control-file">
         </div>
 
         <!-- Implementation Period -->

@@ -17,7 +17,7 @@
             <label for="category_id">Category</label>
             <select name="category_id" class="form-control">
                 <option value="">— Select Category —</option>
-                @foreach($categories as $category)
+                @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
             </select>
@@ -68,13 +68,24 @@
         <!-- Hokim Resolution Number -->
         <div class="form-group mb-3">
             <label for="hokim_resolution_no">Hokim Resolution No</label>
-            <input type="text" name="hokim_resolution_no" class="form-control" placeholder="Enter Hokim resolution number">
+            <input type="text" name="hokim_resolution_no" class="form-control"
+                placeholder="Enter Hokim resolution number">
         </div>
 
         <!-- Image -->
         <div class="form-group mb-3">
-            <label for="image">Project Image</label>
-            <input type="file" name="image" class="form-control-file">
+            <label for="elon_fayl">Elon Fayl</label>
+            <input type="file" name="elon_fayl" class="form-control-file">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="pratakol_fayl">Pratakol Fayl</label>
+            <input type="file" name="pratakol_fayl" class="form-control-file">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="qoshimcha_fayl">Qoshimcha Image</label>
+            <input type="file" name="qoshimcha_fayl" class="form-control-file">
         </div>
 
         <!-- Implementation Period -->

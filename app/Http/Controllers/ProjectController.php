@@ -37,7 +37,9 @@ class ProjectController extends Controller
             'company_name' => 'nullable|string',
             'contact_person' => 'nullable|string',
             'hokim_resolution_no' => 'nullable|string',
-            'image' => 'nullable|image',
+            'elon_fayl' => 'nullable',
+            'pratakol_fayl' => 'nullable',
+            'qoshimcha_fayl' => 'nullable',
             'implementation_period' => 'nullable|integer',
             'status' => 'required|in:step_1,step_2,archived,completed',
             'srok_realizatsi' => 'nullable|integer'
@@ -45,8 +47,14 @@ class ProjectController extends Controller
 
         $data = $request->all();
 
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('project_images', 'public');
+        if ($request->hasFile('elon_fayl')) {
+            $data['elon_fayl'] = $request->file('elon_fayl')->store('project_images/elon', 'public');
+        }
+        if ($request->hasFile('pratakol_fayl')) {
+            $data['pratakol_fayl'] = $request->file('pratakol_fayl')->store('project_images/pratakol', 'public');
+        }
+        if ($request->hasFile('qoshimcha_fayl')) {
+            $data['qoshimcha_fayl'] = $request->file('qoshimcha_fayl')->store('project_images/qoshimcha', 'public');
         }
 
         Project::create($data);
@@ -78,7 +86,9 @@ class ProjectController extends Controller
             'company_name' => 'nullable|string',
             'contact_person' => 'nullable|string',
             'hokim_resolution_no' => 'nullable|string',
-            'image' => 'nullable|image',
+            'elon_fayl' => 'nullable',
+            'pratakol_fayl' => 'nullable',
+            'qoshimcha_fayl' => 'nullable',
             'implementation_period' => 'nullable|integer',
             'status' => 'required|in:step_1,step_2,archived,completed',
             'srok_realizatsi' => 'nullable|integer'
@@ -86,12 +96,28 @@ class ProjectController extends Controller
 
         $data = $request->all();
 
-        if ($request->hasFile('image')) {
-            // Delete old image if exists
-            if ($project->image) {
-                Storage::disk('public')->delete($project->image);
+        if ($request->hasFile('elon_fayl')) {
+            // Delete old elon_fayl if exists
+            if ($project->elon_fayl) {
+                Storage::disk('public')->delete($project->elon_fayl);
             }
-            $data['image'] = $request->file('image')->store('project_images', 'public');
+            $data['elon_fayl'] = $request->file('elon_fayl')->store('project_images/pratakol', 'public');
+        }
+
+        if ($request->hasFile('pratakol_fayl')) {
+            // Delete old pratakol_fayl if exists
+            if ($project->pratakol_fayl) {
+                Storage::disk('public')->delete($project->pratakol_fayl);
+            }
+            $data['pratakol_fayl'] = $request->file('pratakol_fayl')->store('project_images', 'public');
+        }
+
+        if ($request->hasFile('qoshimcha_fayl')) {
+            // Delete old qoshimcha_fayl if exists
+            if ($project->qoshimcha_fayl) {
+                Storage::disk('public')->delete($project->qoshimcha_fayl);
+            }
+            $data['qoshimcha_fayl'] = $request->file('image')->store('project_images/qoshimcha', 'public');
         }
 
         $project->update($data);

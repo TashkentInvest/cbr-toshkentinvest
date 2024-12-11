@@ -25,7 +25,9 @@ class CreateProjectsTable extends Migration
             $table->string('company_name')->nullable();
             $table->string('contact_person')->nullable();
             $table->string('hokim_resolution_no')->nullable();
-            $table->string('image')->nullable();
+            $table->string('elon_fayl')->nullable();
+            $table->string('pratakol_fayl')->nullable();
+            $table->string('qoshimcha_fayl')->nullable();
             $table->integer('implementation_period')->nullable();
             $table->string('status')->default('step_1');
             $table->integer('srok_realizatsi')->nullable(); // If needed
