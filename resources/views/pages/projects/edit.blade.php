@@ -75,7 +75,7 @@
 
         <!-- Image -->
         <div class="form-group mb-3">
-            <label for="elon_fayl">Project Image</label>
+            <label for="elon_fayl">Elon</label>
             @if($project->elon_fayl)
                 <div class="mb-2">
                     <img src="{{ asset('storage/' . $project->elon_fayl) }}" alt="Project Image" width="200">
@@ -85,7 +85,7 @@
         </div>
 
         <div class="form-group mb-3">
-            <label for="pratakol_fayl">Project Image</label>
+            <label for="pratakol_fayl">Protokol</label>
             @if($project->pratakol_fayl)
                 <div class="mb-2">
                     <img src="{{ asset('storage/' . $project->pratakol_fayl) }}" alt="Project Image" width="200">
@@ -96,7 +96,7 @@
 
 
         <div class="form-group mb-3">
-            <label for="qoshimcha_fayl">Project Image</label>
+            <label for="qoshimcha_fayl">Qoshimcha</label>
             @if($project->qoshimcha_fayl)
                 <div class="mb-2">
                     <img src="{{ asset('storage/' . $project->qoshimcha_fayl) }}" alt="Project Image" width="200">

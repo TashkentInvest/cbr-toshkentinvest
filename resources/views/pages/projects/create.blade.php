@@ -73,6 +73,7 @@
         </div>
 
         <!-- Image -->
+        
         <div class="form-group mb-3">
             <label for="elon_fayl">Elon Fayl</label>
             <input type="file" name="elon_fayl" class="form-control-file">
