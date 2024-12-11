@@ -95,9 +95,35 @@
                 </form>
 
                 <!-- Project List -->
-                <div class="rubric-wrap px-3 my-3>
-                    <h2 class="rubric-title">Строительные инвестиционные
-                    проекты</h2>
+                <style>
+                    .rubric {
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        padding: 15px;
+                        margin-bottom: 15px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow added */
+                        transition: box-shadow 0.3s ease-in-out;
+                        background-color: #fff; /* Optional for better contrast */
+                    }
+                
+                    .rubric:hover {
+                        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+                    }
+                
+                    .rubric_title {
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #007bff; /* Optional: link color */
+                        text-decoration: none;
+                    }
+                
+                    .rubric_title:hover {
+                        text-decoration: underline;
+                    }
+                </style>
+                
+                <div class="rubric-wrap px-3 my-3">
+                    <h2 class="rubric-title">Строительные инвестиционные проекты</h2>
                     <div class="row-fixed">
                         @if ($projects->count())
                             @foreach ($projects as $project)
@@ -124,7 +150,7 @@
                         @endif
                     </div>
                 </div>
-
+                
                 <!-- Footer -->
                 <div class="page-info">
                     <div class="page-info_helpful">
