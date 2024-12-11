@@ -28,7 +28,6 @@
                                 </div>
                                 <div class="search_btn">
                                     <button type="submit" class="b-btn _blue">Искать</button>
-
                                 </div>
                             </div>
 
@@ -89,123 +88,157 @@
                             </div>
 
                         </div>
+                    </form>
 
+                    <!-- View Toggle Buttons -->
+                    <div class="view-toggle d-flex justify-content-end mb-3 px-3">
+                        <button id="cardViewBtn" class="b-btn _blue mr-2">Карточки</button>
+                        <button id="listViewBtn" class="b-btn _blue">Список</button>
+                    </div>
 
-                </div>
-                </form>
+                    <!-- Project List -->
+                    <style>
+                        .rubric {
+                            border: 1px solid #ddd;
+                            border-radius: 5px;
+                            padding: 15px;
+                            margin-bottom: 15px;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            background-color: #fff;
+                            transition: box-shadow 0.3s ease-in-out, transform 0.3s;
+                        }
 
-                <!-- Project List -->
-                <style>
-                    .rubric {
-                        border: 1px solid #ddd;
-                        border-radius: 5px;
-                        padding: 15px;
-                        margin-bottom: 15px;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                        /* Box shadow added */
-                        transition: box-shadow 0.3s ease-in-out;
-                        background-color: #fff;
-                        /* Optional for better contrast */
-                    }
+                        .rubric:hover {
+                            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+                        }
 
-                    .rubric:hover {
-                        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-                        /* Enhanced shadow on hover */
-                    }
+                        .rubric_title {
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: #007bff;
+                            text-decoration: none;
+                        }
 
-                    .rubric_title {
-                        font-size: 16px;
-                        font-weight: bold;
-                        color: #007bff;
-                        /* Optional: link color */
-                        text-decoration: none;
-                    }
+                        .rubric_title:hover {
+                            text-decoration: underline;
+                        }
 
-                    .rubric_title:hover {
-                        text-decoration: underline;
-                    }
+                        .download-button {
+                            display: inline-block;
+                            padding: 8px 12px;
+                            margin: 5px 5px 0 0;
+                            border: 1px solid #ddd;
+                            border-radius: 5px;
+                            background-color: #f9f9f9;
+                            color: #333;
+                            text-decoration: none;
+                            font-size: 14px;
+                            text-align: center;
+                            transition: background-color 0.3s, color 0.3s;
+                        }
 
-                    .download-button {
-                        display: inline-block;
-                        padding: 8px 12px;
-                        margin: 5px 5px 0 0;
-                        border: 1px solid #ddd;
-                        border-radius: 5px;
-                        background-color: #f9f9f9;
-                        color: #333;
-                        text-decoration: none;
-                        font-size: 14px;
-                        text-align: center;
-                        transition: background-color 0.3s, color 0.3s;
-                    }
+                        .download-button:hover {
+                            background-color: #007bff;
+                            color: #fff;
+                        }
 
-                    .download-button:hover {
-                        background-color: #007bff;
-                        color: #fff;
-                    }
+                        .download-icon {
+                            margin-right: 8px;
+                        }
 
-                    .download-icon {
-                        margin-right: 8px;
-                    }
-                </style>
+                        /* Styles for list view */
+                        .list-view .row-fixed {
+                            display: flex;
+                            flex-direction: column;
+                        }
 
-                <!-- Add Font Awesome for icons -->
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+                        .list-view .rubric {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
 
-                <div class="rubric-wrap px-3 my-3">
-                    <h2 class="rubric-title">Строительные инвестиционные проекты</h2>
-                    <div class="row-fixed">
-                        @if ($projects->count())
-                            @foreach ($projects as $project)
-                                <div class="rubric" data-faq-indicator="">
-                                      <a class="rubric_title">
-                                        Район: {{ $project->district ?? 'Не указано' }} <br>
-                                        Махалля: {{ $project->mahalla ?? 'Не указано' }} <br>
-                                        Площадь: {{ $project->land ?? 'Не указано' }} <br>
-                                    </a>
-                                   
-                                    <a class="rubric_sub">
-                                        Первый этап: {{ $project->start_date ?? 'Не указано' }} -
-                                        {{ $project->end_date ?? 'Не указано' }}<br>
-                                        Второй этап: {{ $project->second_stage_start_date ?? 'Не указано' }} -
-                                        {{ $project->second_stage_end_date ?? 'Не указано' }}
-                                    </a>
-                                    <div class="mt-2">
-                                        <a href="{{ $project->announcement_file_url }}" class="download-button" download>
-                                            <i class="fas fa-file-download download-icon"></i> "Объявление 1 этапа"
+                        .list-view .rubric .rubric_title,
+                        .list-view .rubric .rubric_sub {
+                            margin-right: 20px;
+                        }
+                    </style>
+
+                    <!-- Add Font Awesome for icons -->
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+                    <div class="rubric-wrap px-3 my-3">
+                        <h2 class="rubric-title">Строительные инвестиционные проекты</h2>
+                        <div class="row-fixed">
+                            @if ($projects->count())
+                                @foreach ($projects as $project)
+                                    <div class="rubric" data-faq-indicator="">
+                                        <a class="rubric_title">
+                                            Район: {{ $project->district ?? 'Не указано' }} <br>
+                                            Махалля: {{ $project->mahalla ?? 'Не указано' }} <br>
+                                            Площадь: {{ $project->land ?? 'Не указано' }} <br>
+                                            Срок реализации: {{ $project->srok_realizatsi ?? 'Не указано' }} <br>
                                         </a>
-                                        <a href="{{ $project->protocol_file_url }}" class="download-button" download>
-                                            <i class="fas fa-file-download download-icon"></i> "Протокол 1 этапа"
+
+                                        <a class="rubric_sub">
+                                            Первый этап: {{ $project->start_date ?? 'Не указано' }} -
+                                            {{ $project->end_date ?? 'Не указано' }}<br>
+                                            Второй этап: {{ $project->second_stage_start_date ?? 'Не указано' }} -
+                                            {{ $project->second_stage_end_date ?? 'Не указано' }}
                                         </a>
+                                        <div class="mt-2">
+                                            <a href="{{ $project->announcement_file_url }}" class="download-button" download>
+                                                <i class="fas fa-file-download download-icon"></i> "Объявление 1 этапа"
+                                            </a>
+                                            <a href="{{ $project->protocol_file_url }}" class="download-button" download>
+                                                <i class="fas fa-file-download download-icon"></i> "Протокол 1 этапа"
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @else
+                                <div class="col-12">
+                                    <div class="alert alert-warning text-center">
+                                        В этой категории пока нет проектов или они не найдены по вашему фильтру.
                                     </div>
                                 </div>
-                            @endforeach
-                        @else
-                            <div class="col-12">
-                                <div class="alert alert-warning text-center">
-                                    В этой категории пока нет проектов или они не найдены по вашему фильтру.
-                                </div>
-                            </div>
-                        @endif
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <div class="page-info">
-                    <div class="page-info_helpful">
-                        <div class="helpful">
-                            Страница была полезной?
-                            <div class="helpful_btns">
-                                <button class="helpful_btn _yes"><i class="helpful_icon"></i><span>Да</span></button>
-                                <button class="helpful_btn _no"><i class="helpful_icon"></i><span>Нет</span></button>
-                            </div>
+                            @endif
                         </div>
                     </div>
-                    <div class="page-info_last-update">Последнее обновление страницы: {{ now()->format('d.m.Y') }}</div>
-                </div>
 
+                    <!-- Footer -->
+                    <div class="page-info">
+                        <div class="page-info_helpful">
+                            <div class="helpful">
+                                Страница была полезной?
+                                <div class="helpful_btns">
+                                    <button class="helpful_btn _yes"><i class="helpful_icon"></i><span>Да</span></button>
+                                    <button class="helpful_btn _no"><i class="helpful_icon"></i><span>Нет</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-info_last-update">Последнее обновление страницы: {{ now()->format('d.m.Y') }}</div>
+                    </div>
+
+                </div>
             </div>
         </div>
-        </div>
     </main>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const rubricWrap = document.querySelector('.rubric-wrap');
+                const cardViewBtn = document.getElementById('cardViewBtn');
+                const listViewBtn = document.getElementById('listViewBtn');
+
+                cardViewBtn.addEventListener('click', function() {
+                    rubricWrap.classList.remove('list-view');
+                });
+
+                listViewBtn.addEventListener('click', function() {
+                    rubricWrap.classList.add('list-view');
+                });
+            });
+        </script>
 @endsection

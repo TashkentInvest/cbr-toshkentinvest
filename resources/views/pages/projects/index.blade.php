@@ -8,11 +8,10 @@
         <thead>
             <tr>
                 <th>Yagona raqam</th>
-                <th>Kategoriya</th>
                 <th>Tuman</th>
-                <th>Ko‘cha</th>
                 <th>Mahalla</th>
                 <th>Yer maydoni (ga)</th>
+                <th>Realizatisiya muddati</th>
                 <th>Kompaniya</th>
                 <th>Holati</th>
                 <th>Harakatlar</th>
@@ -22,11 +21,10 @@
             @foreach($projects as $project)
                 <tr>
                     <td>{{ $project->unique_number }}</td>
-                    <td>{{ $project->category ? $project->category->name : '—' }}</td>
                     <td>{{ $project->district }}</td>
-                    <td>{{ $project->street }}</td>
-                    <td>{{ $project->mahalla_name }}</td>
+                    <td>{{ $project->mahalla }}</td>
                     <td>{{ $project->land }}</td>
+                    <td>{{ $project->srok_realizatsi ?? ''}}</td>
                     <td>{{ $project->company_name }}</td>
                     <td>{{ $project->status }}</td>
                     <td>

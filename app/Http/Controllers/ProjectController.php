@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Project;
@@ -96,14 +97,17 @@ class ProjectController extends Controller
     }
 
     // Remove the specified project from storage
-    public function destroy(Project $project)
+    public function destroy(Project $project, $id)
     {
         // Delete the image if exists
+        $project = Project::find($id);
+
         if ($project->image) {
             \Storage::disk('public')->delete($project->image);
         }
-
         $project->delete();
-        return redirect()->route('projects.index')->with('success', 'Project deleted successfully.');
+        $project->save();
+        
+        return redirect()->route('projectsIndex')->with('success', 'Project deleted successfully.');
     }
 }
