@@ -74,22 +74,22 @@
         </div>
 
         <div class="form-group mb-3">
-            <label for="start_date">Start Date</label>
+            <label for="start_date">1-etap Start Date</label>
             <input type="date" name="start_date" class="form-control" value="{{ old('start_date', $project->start_date ?? '') }}" placeholder="Enter start date">
         </div>
         
         <div class="form-group mb-3">
-            <label for="end_date">End Date</label>
+            <label for="end_date">1-etap End Date</label>
             <input type="date" name="end_date" class="form-control" value="{{ old('end_date', $project->end_date ?? '') }}" placeholder="Enter end date">
         </div>
         
         <div class="form-group mb-3">
-            <label for="second_stage_start_date">Second Stage Start Date</label>
+            <label for="second_stage_start_date">2-etap Second Stage Start Date</label>
             <input type="date" name="second_stage_start_date" class="form-control" value="{{ old('second_stage_start_date', $project->second_stage_start_date ?? '') }}" placeholder="Enter second stage start date">
         </div>
         
         <div class="form-group mb-3">
-            <label for="second_stage_end_date">Second Stage End Date</label>
+            <label for="second_stage_end_date">2-etap Second Stage End Date</label>
             <input type="date" name="second_stage_end_date" class="form-control" value="{{ old('second_stage_end_date', $project->second_stage_end_date ?? '') }}" placeholder="Enter second stage end date">
         </div>
         
