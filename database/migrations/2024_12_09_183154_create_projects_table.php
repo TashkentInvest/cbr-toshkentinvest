@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->string('unique_number')->nullable();
-            $table->string('district')->nullable(false);
+            $table->string('district')->nullable();
             $table->string('street')->nullable();
             $table->string('mahalla')->nullable();
             $table->decimal('land', 10, 2)->nullable();
@@ -29,7 +29,7 @@ class CreateProjectsTable extends Migration
             $table->string('pratakol_fayl')->nullable();
             $table->string('qoshimcha_fayl')->nullable();
             $table->integer('implementation_period')->nullable();
-            $table->string('status')->default('step_1');
+            $table->string('status')->default('step_1')->nullable();
             $table->integer('srok_realizatsi')->nullable(); // If needed
 
             $table->date('start_date')->nullable();

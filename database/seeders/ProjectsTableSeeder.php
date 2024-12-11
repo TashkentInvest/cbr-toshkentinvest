@@ -11,7 +11,7 @@ class ProjectsTableSeeder extends Seeder
 {
     public function run()
     {
-        $filePath = public_path('storage/Renovatsiya_posts.xlsx'); // Update path if needed
+        $filePath = public_path('assets/Renovatsiya_posts.xlsx'); // Update path if needed
 
         // Load the Excel file into an array
         $data = Excel::toArray([], $filePath);
