@@ -27,7 +27,9 @@
                     <td>{{ $project->srok_realizatsi ?? '' }}</td>
                     <td>{{ $project->status }}</td>
                     <td>
-                        <a class="btn btn-sm" href="{{ asset('storage/' . $project->elon_fayl) }}">E'lon</a>
+                        <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->elon_fayl) }}">E'lon</a>
+                        <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->pratakol_fayl) }}">Pratokol</a>
+                        <a class="btn btn-sm btn-primary text-light" target="_blank" href="{{ asset('storage/' . $project->qoshimcha_fayl) }}">Qoshimcha</a>
                     </td>
                     <td>
                         <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-warning">Edit</a>
