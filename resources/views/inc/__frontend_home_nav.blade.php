@@ -195,11 +195,11 @@
                         <a href="{{route('frontend.about')}}" title="О Нас">О Нас</a>
                     </div>
                     <div class="networks-circle">
-                        <a class="networks-circle_item _vk" href="https://vk.com/#!"></a>
+                        {{-- <a class="networks-circle_item _vk" href="https://vk.com/#!"></a> --}}
                         <a class="networks-circle_item _yt" href="https://www.youtube.com/user/#!"></a>
                         <a class="networks-circle_item _tg" href="https://t.me/#!" title="Telegram"></a>
-                        <a class="networks-circle_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a>
-                        <a class="networks-circle_item _ok" href="https://ok.ru/group/#!" title="Одноклассники"></a>
+                        {{-- <a class="networks-circle_item _ydzen" href="https://dzen.ru/#!" title="Яндекс Дзен"></a>
+                        <a class="networks-circle_item _ok" href="https://ok.ru/group/#!" title="Одноклассники"></a> --}}
                     </div>
                 </div>
             </div>

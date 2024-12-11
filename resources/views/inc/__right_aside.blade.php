@@ -1,27 +1,28 @@
 @php
-    if (App::isDownForMaintenance()){ //if connection isset
-        $response = \Illuminate\Support\Facades\Http::get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
-
-          // Check if the request was successful
-    if ($response->successful()) {
-        $exchangeRates = $response->json();
-    } else {
-        // Handle the error accordingly
-        $exchangeRates = [];
-    }
-    }
-    else{
-        $response = [];
-        $exchangeRates = [];
-    }
-  
-
+    // Initialize variables
+    $exchangeRates = [];
+    $filteredRates = [];
     $currencies = ['USD', 'EUR', 'RUB'];
 
-    // Filter for specific currencies
-    $filteredRates = array_filter($exchangeRates, function ($rate) use ($currencies) {
-        return in_array($rate['Ccy'], $currencies);
-    });
+    // Check if the application is online
+    if (!\Illuminate\Support\Facades\App::isDownForMaintenance()) {
+        try {
+            // Make the API call
+            $response = \Illuminate\Support\Facades\Http::get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
+
+            if ($response->successful()) {
+                $exchangeRates = $response->json();
+
+                // Filter for specific currencies
+                $filteredRates = array_filter($exchangeRates, function ($rate) use ($currencies) {
+                    return isset($rate['Ccy']) && in_array($rate['Ccy'], $currencies);
+                });
+            }
+        } catch (\Exception $e) {
+            // Log error for debugging (optional)
+            \Log::error('Failed to fetch exchange rates: ' . $e->getMessage());
+        }
+    }
 @endphp
 
 <div class="home-main_aside" style="min-height: 1974.31px">
