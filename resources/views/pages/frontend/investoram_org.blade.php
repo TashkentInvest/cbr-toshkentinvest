@@ -86,14 +86,13 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </form>
 
                     <!-- View Toggle Buttons -->
                     <div class="view-toggle d-flex justify-content-end mb-3 px-3">
-                        <button id="cardViewBtn" class="b-btn _blue mr-2">Карточки</button>
-                        <button id="listViewBtn" class="b-btn _blue">Список</button>
+                        {{-- <button id="cardViewBtn" class="b-btn _blue mr-2">Карточки</button>
+                        <button id="listViewBtn" class="b-btn _blue">Список</button> --}}
                     </div>
 
                     <!-- Project List -->
@@ -150,18 +149,52 @@
                         .list-view .row-fixed {
                             display: flex;
                             flex-direction: column;
+                            width: 100%;
                         }
 
                         .list-view .rubric {
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: space-between;
+                            border: none;
+                            border-radius: 0;
+                            box-shadow: none;
+                            background: #f9f9f9;
+                            margin-bottom: 0;
+                            padding: 15px 0;
+                            border-bottom: 1px solid #ddd;
+                            width: 100%;
                         }
 
-                        .list-view .rubric .rubric_title,
-                        .list-view .rubric .rubric_sub {
-                            margin-right: 20px;
+                        .list-view .rubric:hover {
+                            box-shadow: none;
+                            background: #f2f2f2;
+                        }
+
+                        .list-view .rubric a.rubric_title {
+                            font-size: 14px;
+                            font-weight: normal;
+                            color: #333;
+                        }
+
+                        .list-view .rubric a.rubric_sub {
+                            font-size: 14px;
+                            color: #666;
+                        }
+
+                        .list-view .rubric a.rubric_title,
+                        .list-view .rubric a.rubric_sub {
+                            display: block;
+                            margin-bottom: 5px;
+                        }
+
+                        .list-view .rubric .mt-2 {
+                            margin-top: 10px;
+                        }
+
+                        .list-view .rubric .download-button {
+                            margin-top: 5px;
+                        }
+
+                        .list-view .rubric:hover .download-button {
+                            background-color: #e9e9e9;
                         }
                     </style>
 
@@ -180,7 +213,6 @@
                                             Площадь: {{ $project->land ?? 'Не указано' }} <br>
                                             Срок реализации: {{ $project->srok_realizatsi ?? 'Не указано' }} <br>
                                         </a>
-
                                         <a class="rubric_sub">
                                             Первый этап: {{ $project->start_date ?? 'Не указано' }} -
                                             {{ $project->end_date ?? 'Не указано' }}<br>
@@ -226,19 +258,19 @@
         </div>
     </main>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const rubricWrap = document.querySelector('.rubric-wrap');
-                const cardViewBtn = document.getElementById('cardViewBtn');
-                const listViewBtn = document.getElementById('listViewBtn');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const rubricWrap = document.querySelector('.rubric-wrap');
+            const cardViewBtn = document.getElementById('cardViewBtn');
+            const listViewBtn = document.getElementById('listViewBtn');
 
-                cardViewBtn.addEventListener('click', function() {
-                    rubricWrap.classList.remove('list-view');
-                });
-
-                listViewBtn.addEventListener('click', function() {
-                    rubricWrap.classList.add('list-view');
-                });
+            cardViewBtn.addEventListener('click', function() {
+                rubricWrap.classList.remove('list-view');
             });
-        </script>
+
+            listViewBtn.addEventListener('click', function() {
+                rubricWrap.classList.add('list-view');
+            });
+        });
+    </script>
 @endsection
