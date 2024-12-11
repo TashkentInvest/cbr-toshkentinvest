@@ -32,7 +32,7 @@ class ProjectsTableSeeder extends Seeder
             // Map the status from Excel to a valid enum value if needed
             $statusValue = $row[6] ?? null;
             if ($statusValue === '1_step') {
-                $statusValue = 'step_1';
+                $statusValue = '1_step';
             }
 
             Project::create([

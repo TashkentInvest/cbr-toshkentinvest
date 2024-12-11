@@ -29,7 +29,7 @@ class CreateProjectsTable extends Migration
             $table->string('pratakol_fayl')->nullable();
             $table->string('qoshimcha_fayl')->nullable();
             $table->integer('implementation_period')->nullable();
-            $table->string('status')->default('step_1')->nullable();
+            $table->string('status')->default('1_step')->nullable();
             $table->integer('srok_realizatsi')->nullable(); // If needed
 
             $table->date('start_date')->nullable();

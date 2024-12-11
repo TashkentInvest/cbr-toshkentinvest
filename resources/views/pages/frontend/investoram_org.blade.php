@@ -212,6 +212,7 @@
                                             Махалля: {{ $project->mahalla ?? 'Не указано' }} <br>
                                             Площадь: {{ $project->land ?? 'Не указано' }} <br>
                                             Срок реализации: {{ $project->srok_realizatsi ?? 'Не указано' }} <br>
+                                            status: {{ $project->status ?? 'Не указано' }} <br>
                                         </a>
                                         <a class="rubric_sub">
                                             Первый этап: {{ $project->start_date ?? 'Не указано' }} -
@@ -220,12 +221,22 @@
                                             {{ $project->second_stage_end_date ?? 'Не указано' }}
                                         </a>
                                         <div class="mt-2">
-                                            <a href="{{ $project->announcement_file_url }}" class="download-button" download>
-                                                <i class="fas fa-file-download download-icon"></i> "Объявление 1 этапа"
-                                            </a>
-                                            <a href="{{ $project->protocol_file_url }}" class="download-button" download>
-                                                <i class="fas fa-file-download download-icon"></i> "Протокол 1 этапа"
-                                            </a>
+
+                                            @if ($project->elon_fayl && file_exists(public_path('storage/' . $project->elon_fayl)))
+                                                <a class="download-button" target="_blank"
+                                                    href="{{ asset('storage/' . $project->elon_fayl) }}"> <i
+                                                        class="fas fa-file-download download-icon"></i> Объявление 1
+                                                    этапа"</a>
+                                            @endif
+
+                                            @if ($project->pratakol_fayl && file_exists(public_path('storage/' . $project->pratakol_fayl)))
+                                                <a class="download-button" target="_blank"
+                                                    href="{{ asset('storage/' . $project->pratakol_fayl) }}"> <i
+                                                        class="fas fa-file-download download-icon"></i>Протокол 1 этапа</a>
+                                            @endif
+
+
+
                                         </div>
                                     </div>
                                 @endforeach
@@ -250,7 +261,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="page-info_last-update">Последнее обновление страницы: {{ now()->format('d.m.Y') }}</div>
+                        <div class="page-info_last-update">Последнее обновление страницы: {{ now()->format('d.m.Y') }}
+                        </div>
                     </div>
 
                 </div>
